@@ -68,4 +68,6 @@ Chính sách có thể được cập nhật và sẽ được thông báo trong
 
 Nếu bạn có câu hỏi, vui lòng liên hệ:  
 **Email:** iamsuunc@gmail.com  
-**Website:** https://github.com/imsuunc
+**Website:** https://imsuunc.github.io
+
+[EULA](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/)
