@@ -18,8 +18,7 @@ Xin chào! Tôi là **IMSUUNC**, một nhà phát triển ứng dụng độc l�
 ### 🌙 Lịch Vạn Niên – Vạn Sự
 Ứng dụng xem lịch âm dương chuẩn Việt, tra cứu ngày tốt – xấu, giờ hoàng đạo, văn khấn truyền thống.
 
-👉 App Store:  
-[Lịch Vạn Niên](https://apps.apple.com/vn/app/id6755689329)
+👉 App Store:  [Lịch Vạn Niên](https://apps.apple.com/vn/app/id6755689329)
 
 ---
 
