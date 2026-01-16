@@ -1,10 +1,10 @@
-# Điều Khoản Sử Dụng - Lịch Vạn Niên – Vạn Sự
+# Điều Khoản Sử Dụng - Lịch Vạn Niên – Lịch Âm Tử Vi
 
 Cập nhật lần cuối: 16/01/2026
 
 ## 1. Chấp Nhận Điều Khoản
 
-Bằng việc tải xuống, cài đặt và sử dụng ứng dụng **Lịch Vạn Niên – Vạn Sự** ("Ứng dụng"), bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này. Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.
+Bằng việc tải xuống, cài đặt và sử dụng ứng dụng **Lịch Vạn Niên – Lịch Âm Tử Vi** ("Ứng dụng"), bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này. Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.
 
 ## 2. Giấy Phép Sử Dụng
 

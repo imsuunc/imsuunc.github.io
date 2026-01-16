@@ -1,4 +1,4 @@
-# Hỗ Trợ - Lịch Vạn Niên – Vạn Sự
+# Hỗ Trợ - Lịch Vạn Niên – Lịch Âm Tử Vi
 
 ## Liên Hệ Hỗ Trợ
 
@@ -33,7 +33,7 @@ Thời gian phản hồi: Trong vòng 24-48 giờ làm việc
 ### 5. Làm sao để hủy đăng ký Premium?
 - Mở **Cài đặt** trên iPhone/iPad
 - Chọn tên của bạn > **Đăng ký**
-- Tìm "Lịch Vạn Niên – Vạn Sự" và chọn **Hủy đăng ký**
+- Tìm "Lịch Vạn Niên – Lịch Âm Tử Vi" và chọn **Hủy đăng ký**
 
 ---
 

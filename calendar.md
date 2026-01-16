@@ -1,8 +1,8 @@
-# Chính Sách Quyền Riêng Tư – Lịch Vạn Niên – Vạn Sự
+# Chính Sách Quyền Riêng Tư – Lịch Vạn Niên – Lịch Âm Tử Vi
 
 Cập nhật lần cuối: 28/11/2025
 
-Ứng dụng **Lịch Vạn Niên – Vạn Sự** (“Ứng dụng”, “chúng tôi”) cam kết bảo vệ quyền riêng tư và dữ liệu cá nhân của người dùng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin khi bạn sử dụng ứng dụng.
+Ứng dụng **Lịch Vạn Niên – Lịch Âm Tử Vi** (“Ứng dụng”, “chúng tôi”) cam kết bảo vệ quyền riêng tư và dữ liệu cá nhân của người dùng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin khi bạn sử dụng ứng dụng.
 
 ## 1. Thông tin chúng tôi thu thập
 
