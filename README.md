@@ -29,7 +29,7 @@ Xin chào! Tôi là **IMSUUNC**, một nhà phát triển ứng dụng độc l�
 > Các URL `privacy.html` / `terms.html` / `support.html` ở gốc domain giữ nguyên vị trí
 > (đã khai báo trên App Store Connect từ trước) — không di chuyển hay đổi tên.
 
-### 🧭 Phong Thủy Của Bạn
+### 🧭 Phong Thủy - La Bàn, Xem Tuổi
 Tra cứu phong thủy cá nhân theo ngày sinh: cung mệnh, hướng nhà, ngày tốt, tuổi hợp, la bàn phong thủy. (Sắp ra mắt trên App Store)
 
 📄 Trang quan trọng:
