@@ -38,6 +38,15 @@ Tra cứu phong thủy cá nhân theo ngày sinh: cung mệnh, hướng nhà, ng
 - [Chính sách quyền riêng tư](https://imsuunc.github.io/phong-thuy/privacy.html)
 - [Điều khoản sử dụng](https://imsuunc.github.io/phong-thuy/terms.html)
 
+### 🎬 Vivis - Chỉnh Sửa Video & Slideshow
+Dựng video, ghép ảnh thành slideshow ngay trên điện thoại: cắt ghép, hiệu ứng chuyển cảnh, sticker động, chữ đẹp, xuất video chất lượng cao. (Sắp ra mắt trên App Store & Google Play)
+
+📄 Trang quan trọng:
+- [Trang chủ](https://imsuunc.github.io/vivis/)
+- [Hỗ trợ](https://imsuunc.github.io/vivis/support.html)
+- [Chính sách quyền riêng tư](https://imsuunc.github.io/vivis/privacy.html)
+- [Điều khoản sử dụng](https://imsuunc.github.io/vivis/terms.html)
+
 ---
 
 ## 🌐 Website
