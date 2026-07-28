@@ -86,6 +86,28 @@
             margin: 8px 0;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #3f3f5a;
+            vertical-align: top;
+        }
+
+        th {
+            color: #8b9cff;
+            font-size: 0.95em;
+        }
+
+        td {
+            font-size: 0.95em;
+        }
+
         .warning-box {
             background: #4a3f00;
             border-left: 4px solid #ffc107;
@@ -139,6 +161,19 @@
             h2 {
                 font-size: 1.5em;
             }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            td {
+                padding-top: 4px;
+            }
         }
     </style>
 </head>
@@ -149,7 +184,7 @@
         <header>
             <h1>📋 Điều Khoản Sử Dụng</h1>
             <p>Vivis - Chỉnh Sửa Video & Slideshow</p>
-            <p class="update-date">Cập nhật lần cuối: 26/07/2026</p>
+            <p class="update-date">Cập nhật lần cuối: 28/07/2026</p>
         </header>
 
         <section>
@@ -172,11 +207,68 @@
         </section>
 
         <section>
-            <h2>3. Miễn Phí — Không Mua Hàng Trong Ứng Dụng</h2>
+            <h2>3. Vivis Pro — Mua Hàng Trong Ứng Dụng</h2>
             <p>
-                Vivis hiện là ứng dụng <strong>hoàn toàn miễn phí</strong>, không có gói nâng cấp hay mua hàng trong
-                ứng dụng nào. Nếu điều này thay đổi trong tương lai, Điều khoản sẽ được cập nhật tương ứng.
+                Vivis dùng <strong>miễn phí</strong> với đầy đủ bộ lọc, hiệu ứng, template và sticker. Gói nâng cấp
+                tùy chọn <strong>Vivis Pro</strong> mở khoá xuất video <strong>không watermark</strong> và
+                <strong>độ phân giải đầy đủ (bao gồm 4K)</strong>.
             </p>
+
+            <h3>3.1 Các gói Vivis Pro</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gói</th>
+                        <th>Hình thức</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gói tháng</td>
+                        <td>Thuê bao tự động gia hạn hàng tháng</td>
+                    </tr>
+                    <tr>
+                        <td>Gói năm</td>
+                        <td>Thuê bao tự động gia hạn hàng năm</td>
+                    </tr>
+                    <tr>
+                        <td>Trọn đời</td>
+                        <td>Mua một lần, sử dụng vĩnh viễn, không gia hạn</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.2 Thanh toán &amp; tự động gia hạn (gói tháng/năm)</h3>
+            <ul>
+                <li>Khoản thanh toán được trừ vào tài khoản Apple ID / Google Play của bạn ngay khi xác nhận mua</li>
+                <li>Gói thuê bao <strong>tự động gia hạn</strong> trừ khi bạn tắt tự động gia hạn ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại</li>
+                <li>Khoản phí gia hạn được trừ trong vòng 24 giờ trước khi kết thúc chu kỳ hiện tại, với cùng mức giá trừ khi có thông báo thay đổi giá trước đó</li>
+                <li>Bạn có thể quản lý hoặc huỷ thuê bao bất cứ lúc nào trong phần Cài đặt tài khoản của App Store (iOS) hoặc Google Play (Android) — <strong>không thể huỷ trực tiếp trong Ứng dụng</strong></li>
+                <li>Huỷ gia hạn không hoàn lại phần thời gian đã sử dụng trong chu kỳ hiện tại; bạn vẫn dùng được Pro tới hết chu kỳ đã thanh toán</li>
+            </ul>
+
+            <h3>3.3 Hoàn tiền</h3>
+            <p>
+                Mọi giao dịch mua được xử lý bởi Apple App Store hoặc Google Play. Yêu cầu hoàn tiền vui lòng thực
+                hiện trực tiếp qua Apple hoặc Google theo chính sách hoàn tiền của họ — chúng tôi không trực tiếp xử
+                lý hoặc đảm bảo hoàn tiền cho các giao dịch mua.
+            </p>
+
+            <h3>3.4 Khuyến mãi/miễn phí tạm thời</h3>
+            <p>
+                Chúng tôi có thể, tuỳ thời điểm và theo quyết định riêng, mở miễn phí tạm thời một phần hoặc toàn bộ
+                tính năng Pro cho tất cả người dùng (ví dụ nhân dịp khuyến mãi). Chương trình này có thể kết thúc bất
+                cứ lúc nào mà không cần báo trước; tính năng sẽ trở lại yêu cầu mua như bình thường sau khi kết thúc,
+                trừ người dùng đã mua gói thật sự.
+            </p>
+
+            <div class="info-section">
+                <p>
+                    Giá hiển thị tại thời điểm mua có thể khác nhau theo khu vực/loại tiền tệ theo quy định của Apple
+                    App Store / Google Play, và có thể thay đổi theo thời gian; giá mới không áp dụng cho chu kỳ đã
+                    thanh toán.
+                </p>
+            </div>
         </section>
 
         <section>
@@ -221,14 +313,15 @@
                 <li>Mất mát dự án hoặc dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng</li>
                 <li>Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng</li>
                 <li>Nội dung do người dùng tạo ra hoặc chia sẻ bằng Ứng dụng</li>
+                <li>Các vấn đề thanh toán, gia hạn hoặc hoàn tiền thuộc phạm vi xử lý của Apple App Store / Google Play</li>
             </ul>
         </section>
 
         <section>
             <h2>7. Thay Đổi Điều Khoản</h2>
             <p>
-                Chúng tôi có quyền cập nhật Điều khoản này. Thay đổi sẽ có hiệu lực ngay khi được công bố.
-                Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.
+                Chúng tôi có quyền cập nhật Điều khoản này, kể cả cách tính giá hoặc gói Vivis Pro. Thay đổi sẽ có
+                hiệu lực ngay khi được công bố tại trang này. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.
             </p>
         </section>
 
@@ -247,7 +340,7 @@
             <p>Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:</p>
 
             <div class="contact-info">
-                <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
                 <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">https://imsuunc.github.io/vivis/</a></p>
                 <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/vivis/support.html</a></p>
             </div>
@@ -259,6 +352,7 @@
                 <li><a href="privacy.html" style="color: #667eea; font-weight: 500;">Chính Sách Quyền Riêng Tư</a></li>
                 <li><a href="support.html" style="color: #667eea; font-weight: 500;">Trang Hỗ Trợ</a></li>
                 <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #667eea; font-weight: 500;">Apple Standard EULA</a></li>
+                <li><a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" style="color: #667eea; font-weight: 500;">Google Play Terms of Service</a></li>
             </ul>
         </section>
 
@@ -269,8 +363,8 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 IMSUUNC Developer. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 26/07/2026</em></p>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 28/07/2026</em></p>
         </footer>
     </div>
 </body>

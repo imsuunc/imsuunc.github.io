@@ -86,6 +86,28 @@
             margin: 8px 0;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #3f3f5a;
+            vertical-align: top;
+        }
+
+        th {
+            color: #8b9cff;
+            font-size: 0.95em;
+        }
+
+        td {
+            font-size: 0.95em;
+        }
+
         .highlight-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -147,6 +169,19 @@
             h2 {
                 font-size: 1.5em;
             }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            td {
+                padding-top: 4px;
+            }
         }
     </style>
 </head>
@@ -157,7 +192,7 @@
         <header>
             <h1>🔒 Chính Sách Quyền Riêng Tư</h1>
             <p>Vivis - Chỉnh Sửa Video & Slideshow</p>
-            <p class="update-date">Cập nhật lần cuối: 26/07/2026</p>
+            <p class="update-date">Cập nhật lần cuối: 27/07/2026</p>
         </header>
 
         <div class="highlight-box">
@@ -172,9 +207,9 @@
             <h2>1. Thông tin chúng tôi thu thập</h2>
             <div class="info-box">
                 <p style="font-weight: bold;">
-                    Ứng dụng <strong>không yêu cầu tạo tài khoản</strong> và <strong>không thu thập, không truyền bất kỳ
-                    thông tin cá nhân nào lên máy chủ</strong>. Toàn bộ dự án, media và video xuất ra chỉ lưu trên
-                    chính thiết bị của bạn.
+                    Ứng dụng <strong>không yêu cầu tạo tài khoản</strong>. Toàn bộ dự án, media và video xuất ra
+                    <strong>chỉ lưu trên chính thiết bị của bạn</strong> — chúng không bao giờ được tải lên bất kỳ
+                    máy chủ nào, kể cả máy chủ của chúng tôi.
                 </p>
             </div>
 
@@ -186,16 +221,36 @@
             </ul>
             <p style="margin-left: 20px;">
                 Toàn bộ nội dung trên <strong>được xử lý và lưu trữ cục bộ trên thiết bị</strong>, quá trình dựng và
-                xuất video diễn ra hoàn toàn ngay trên máy — <strong>không có nội dung nào được tải lên máy chủ nào</strong>,
-                kể cả máy chủ của chúng tôi.
+                xuất video diễn ra hoàn toàn ngay trên máy — <strong>không có nội dung nào của bạn được tải lên máy
+                chủ nào</strong>.
             </p>
 
-            <h3>1.2 Ứng dụng KHÔNG thu thập</h3>
+            <h3>1.2 Dữ liệu phân tích &amp; chẩn đoán lỗi</h3>
+            <p>
+                Để cải thiện chất lượng ứng dụng và phát hiện, sửa lỗi nhanh hơn, Vivis sử dụng
+                <strong>Firebase Analytics</strong> và <strong>Firebase Crashlytics</strong> (dịch vụ của Google).
+                Hai dịch vụ này có thể thu thập:
+            </p>
             <ul>
-                <li>Không thu thập dữ liệu phân tích (analytics) hay báo cáo lỗi</li>
-                <li>Không dùng bất kỳ dịch vụ theo dõi/quảng cáo của bên thứ ba nào</li>
-                <li>Không có máy chủ backend — ứng dụng hoạt động hoàn toàn offline</li>
+                <li>Thông tin thiết bị và phiên bản hệ điều hành, phiên bản ứng dụng</li>
+                <li>Số liệu sử dụng chung (ví dụ: tính năng nào được mở, tần suất sử dụng)</li>
+                <li>Báo cáo sự cố/crash (log kỹ thuật, ngăn xếp lỗi) khi ứng dụng gặp trục trặc</li>
             </ul>
+            <p style="margin-left: 20px;">
+                Dữ liệu này <strong>không bao gồm nội dung dự án của bạn</strong> (ảnh, video, âm thanh) và không
+                được dùng để xác định danh tính cá nhân của bạn. Xem thêm tại
+                <a href="https://policies.google.com/privacy" target="_blank" style="color: #8b9cff;">Chính sách quyền riêng tư của Google</a>.
+            </p>
+
+            <h3>1.3 Dữ liệu quảng cáo (chỉ khi bạn đồng ý)</h3>
+            <p>
+                Trên iOS, lần đầu mở ứng dụng bạn có thể được hệ thống hỏi quyền
+                <strong>App Tracking Transparency</strong> để cá nhân hoá quảng cáo và đo lường hiệu quả quảng cáo
+                phù hợp hơn. Nếu bạn <strong>chọn "Không cho phép"</strong>, Vivis sẽ không theo dõi bạn qua các ứng
+                dụng/website khác và không sử dụng mã định danh quảng cáo (IDFA) của thiết bị. Bạn có thể đổi lựa
+                chọn này bất cứ lúc nào tại <strong>Cài đặt (Settings) &gt; Quyền riêng tư &amp; Bảo mật &gt; Theo dõi</strong>
+                trên thiết bị của bạn.
+            </p>
         </section>
 
         <section>
@@ -208,58 +263,109 @@
                 thống của máy.
             </p>
 
+            <h3>2.2 Máy ảnh (Camera)</h3>
+            <p>
+                Hệ điều hành có thể hỏi quyền camera khi bạn mở trình chọn media, để bạn có thể chụp ảnh/quay video
+                mới trực tiếp thay vì chỉ chọn từ thư viện có sẵn. Ứng dụng chỉ dùng camera khi bạn chủ động bấm
+                chụp/quay — không tự động chụp hay truy cập camera ở nền.
+            </p>
+
             <div class="warning-box">
                 <p>
-                    Ứng dụng <strong>không truy cập</strong> danh bạ, vị trí, camera, micro hoặc bất kỳ dữ liệu cá
-                    nhân nào khác ngoài mục nêu trên.
+                    Ứng dụng <strong>không truy cập</strong> danh bạ, vị trí hoặc micrô ngoài mục đích ghi âm khi bạn
+                    tự quay video bằng camera nêu trên.
                 </p>
             </div>
         </section>
 
         <section>
-            <h2>3. Mua hàng trong ứng dụng</h2>
+            <h2>3. Mua hàng trong ứng dụng (Vivis Pro)</h2>
             <p>
-                Vivis <strong>hoàn toàn miễn phí và không có bất kỳ khoản mua hàng trong ứng dụng nào</strong> tại
-                thời điểm hiện tại.
+                Vivis dùng miễn phí với đầy đủ bộ lọc, hiệu ứng, template và sticker. Vivis Pro là gói mua tuỳ chọn
+                (thuê bao hàng tháng/hàng năm, hoặc mua trọn đời một lần) để mở khoá xuất video không watermark và độ
+                phân giải cao (bao gồm 4K).
             </p>
+            <ul>
+                <li>Giao dịch mua được xử lý hoàn toàn bởi <strong>Apple App Store</strong> hoặc <strong>Google Play</strong> — Vivis không bao giờ thấy hay lưu trữ số thẻ/thông tin thanh toán của bạn</li>
+                <li>Chúng tôi chỉ lưu cục bộ trên máy một cờ đơn giản "đã mua Pro hay chưa" để mở/khoá tính năng, không gắn với danh tính cá nhân nào</li>
+                <li>Giá, chu kỳ thuê bao, huỷ và hoàn tiền tuân theo chính sách của Apple/Google — xem chi tiết tại <a href="terms.html" style="color: #8b9cff;">Điều khoản sử dụng</a></li>
+            </ul>
         </section>
 
         <section>
             <h2>4. Dịch vụ bên thứ ba</h2>
+            <p>Vivis sử dụng các dịch vụ bên thứ ba sau đây, chỉ cho đúng mục đích được nêu:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dịch vụ</th>
+                        <th>Mục đích</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Firebase Analytics (Google)</td>
+                        <td>Số liệu sử dụng ứng dụng ẩn danh, giúp cải thiện tính năng</td>
+                    </tr>
+                    <tr>
+                        <td>Firebase Crashlytics (Google)</td>
+                        <td>Báo cáo sự cố/crash để phát hiện và sửa lỗi</td>
+                    </tr>
+                    <tr>
+                        <td>Firebase Remote Config (Google)</td>
+                        <td>Bật/tắt một số tính năng từ xa (không liên quan dữ liệu cá nhân)</td>
+                    </tr>
+                    <tr>
+                        <td>Apple App Store / Google Play Billing</td>
+                        <td>Xử lý thanh toán cho gói Vivis Pro</td>
+                    </tr>
+                </tbody>
+            </table>
             <p>
-                Ứng dụng không tích hợp dịch vụ phân tích, quảng cáo hay theo dõi của bên thứ ba nào.
+                Chúng tôi <strong>không bán</strong> dữ liệu người dùng cho bên thứ ba, và không chia sẻ nội dung dự
+                án (ảnh/video/âm thanh của bạn) với bất kỳ ai.
             </p>
         </section>
 
         <section>
-            <h2>5. Quyền của người dùng</h2>
-            <p>Vì mọi dữ liệu chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:</p>
+            <h2>5. Quyền riêng tư trẻ em</h2>
+            <p>
+                Vivis không hướng đến trẻ em dưới 13 tuổi và không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu bạn
+                cho rằng con em mình đã cung cấp thông tin cá nhân cho chúng tôi, vui lòng liên hệ để được xử lý/xoá.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Quyền của người dùng</h2>
+            <p>Vì nội dung dự án chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:</p>
             <ul>
                 <li>Xem, sửa hoặc xóa từng dự án ngay trong ứng dụng</li>
                 <li>Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                <li>Bật/tắt quyền theo dõi quảng cáo bất cứ lúc nào trong Cài đặt hệ thống</li>
+                <li>Yêu cầu chúng tôi hỗ trợ xoá dữ liệu phân tích/chẩn đoán liên quan đến bạn qua email liên hệ bên dưới</li>
             </ul>
 
             <div class="warning-box">
                 <p>
-                    Vì chúng tôi <strong>không lưu trữ dữ liệu trên máy chủ</strong>, chúng tôi không có bản sao dữ
-                    liệu và không thể khôi phục dự án bạn đã xóa hoặc mất khi gỡ ứng dụng.
+                    Vì chúng tôi <strong>không lưu trữ nội dung dự án trên máy chủ</strong>, chúng tôi không có bản
+                    sao dữ liệu và không thể khôi phục dự án bạn đã xóa hoặc mất khi gỡ ứng dụng.
                 </p>
             </div>
         </section>
 
         <section>
-            <h2>6. Thay đổi chính sách</h2>
+            <h2>7. Thay đổi chính sách</h2>
             <p>
                 Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.
             </p>
         </section>
 
         <section>
-            <h2>7. Liên hệ</h2>
+            <h2>8. Liên hệ</h2>
             <p>Nếu bạn có câu hỏi, vui lòng liên hệ:</p>
 
             <div class="contact-info">
-                <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
                 <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">https://imsuunc.github.io/vivis/</a></p>
                 <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/vivis/support.html</a></p>
             </div>
@@ -274,8 +380,8 @@
         </section>
 
         <footer>
-            <p>&copy; 2026 IMSUUNC Developer. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 26/07/2026</em></p>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 27/07/2026</em></p>
         </footer>
     </div>
 </body>
