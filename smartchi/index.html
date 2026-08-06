@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartChi - Quản Lý Chi Tiêu Bằng AI | IMSUUNC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #ff8a3d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 1.1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #c24d02 0%, #ff8a26 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 138, 38, 0.4);
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            color: #ff8a3d;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ff8a3d;
+            padding-bottom: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff8a3d;
+        }
+
+        .feature-card h3 {
+            color: #ff8a3d;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #ff8a3d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            margin: 20px 0;
+            background: #2a2a3e;
+            border: 1px dashed #ff8a3d;
+            color: #a1a1aa;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+        }
+
+        .privacy-badge {
+            display: inline-block;
+            margin: 8px 6px 0 0;
+            background: rgba(63, 122, 75, 0.25);
+            color: #7fd996;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" style="color: #ff8a3d; text-decoration: none; font-weight: 500;">← Tất cả ứng dụng của IMSUUNC</a>
+
+        <header style="margin-top: 20px;">
+            <h1>💰 SmartChi - Quản Lý Chi Tiêu Bằng AI</h1>
+            <p class="subtitle">Ghi chi tiêu chỉ trong vài giây, quét hóa đơn tự động, AI học theo thói quen của bạn — toàn bộ xử lý ngay trên máy, không cần Internet</p>
+        </header>
+
+        <nav>
+            <a href="support.html" class="nav-button">📞 Hỗ Trợ</a>
+            <a href="privacy.html" class="nav-button">🔒 Quyền Riêng Tư</a>
+            <a href="terms.html" class="nav-button">📋 Điều Khoản</a>
+        </nav>
+
+        <section>
+            <h2>Về Ứng Dụng</h2>
+            <p>
+                <strong>SmartChi</strong> là ứng dụng quản lý chi tiêu cá nhân đơn giản, nhanh và thông minh: gõ một
+                dòng "Cà phê 45k" hoặc chụp ảnh hóa đơn là AI tự đọc và phân loại giúp bạn, không cần điền form dài
+                dòng. Toàn bộ AI — từ phân loại danh mục, đọc hóa đơn (OCR), đến dự đoán chi tiêu tháng tới — đều
+                chạy <strong>hoàn toàn trên thiết bị</strong>, không cần tài khoản, không cần mạng, không quảng cáo.
+            </p>
+            <div class="privacy-badge">🔒 100% xử lý trên máy</div>
+            <div class="privacy-badge">🚫 Không quảng cáo</div>
+            <div class="privacy-badge">🚫 Không thu thập dữ liệu</div>
+            <div class="coming-soon" style="display: block; margin-top: 15px;">🚀 Sắp ra mắt trên App Store</div>
+        </section>
+
+        <section>
+            <h2>Tính Năng Nổi Bật</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>⚡ Nhập Nhanh Bằng AI</h3>
+                    <p>Gõ "Cà phê Highlands 45k" là xong — AI tự tách tên cửa hàng, số tiền và gợi ý danh mục ngay lập tức</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📷 Quét Hóa Đơn</h3>
+                    <p>Chụp ảnh hoặc chọn ảnh hóa đơn có sẵn, AI tự đọc số tiền, ngày và tên cửa hàng — không cần nhập tay</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🧠 AI Học Theo Bạn</h3>
+                    <p>Bộ phân loại danh mục học dần từ chính thói quen chi tiêu của bạn, càng dùng càng chính xác</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Ngân Sách &amp; Cảnh Báo</h3>
+                    <p>Đặt hạn mức theo từng danh mục, nhận cảnh báo ngay khi sắp chạm hoặc vượt ngân sách</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔮 Dự Đoán Chi Tiêu</h3>
+                    <p>Ước tính chi tiêu tháng tới và phát hiện chi tiêu bất thường dựa trên lịch sử của bạn</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 Đa Ngôn Ngữ &amp; Tiền Tệ</h3>
+                    <p>8 ngôn ngữ phổ biến nhất thế giới, tự động chọn đúng đơn vị tiền tệ tương ứng</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔐 Khoá Bằng Face ID</h3>
+                    <p>Bảo vệ dữ liệu chi tiêu riêng tư bằng Face ID/Touch ID ngay trên thiết bị</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Widget Màn Hình Chính</h3>
+                    <p>Xem nhanh tổng chi tiêu tháng, streak ghi chép và ngân sách gần chạm mức mà không cần mở app</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Liên Hệ &amp; Hỗ Trợ</h2>
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/smartchi/">imsuunc.github.io/smartchi</a></p>
+                <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tài Liệu Quan Trọng</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">
+                    <a href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">
+                        🔒 Chính Sách Quyền Riêng Tư
+                    </a>
+                </li>
+                <li style="margin: 10px 0;">
+                    <a href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">
+                        📋 Điều Khoản Sử Dụng
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;">Cập nhật lần cuối: 05/08/2026</p>
+        </footer>
+    </div>
+</body>
+</html>

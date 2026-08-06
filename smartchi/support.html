@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ Trợ - SmartChi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ff8a3d;
+        }
+
+        h1 {
+            color: #ff8a3d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #ff8a3d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #ff8a3d;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ff8a3d;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #ffb37a;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #c24d02 0%, #ff8a26 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #ff8a3d;
+        }
+
+        .faq-item h3 {
+            color: #ff8a3d;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .links-section {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .links-section a {
+            color: #ff8a3d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .links-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Quay lại trang SmartChi</a>
+
+        <header>
+            <h1>📞 Hỗ Trợ</h1>
+            <p>SmartChi - Quản Lý Chi Tiêu Bằng AI</p>
+        </header>
+
+        <section>
+            <h2>Liên Hệ Hỗ Trợ</h2>
+            <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
+
+            <div class="contact-box">
+                <h3>📧 Email Hỗ Trợ</h3>
+                <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>
+                <p style="margin-top: 15px; font-size: 0.9em;">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Câu Hỏi Thường Gặp (FAQ)</h2>
+
+            <div class="faq-item">
+                <h3>1. Làm sao để ghi chi tiêu nhanh nhất?</h3>
+                <ul>
+                    <li>Gõ thẳng vào ô "Nhập nhanh" ở đầu màn hình, ví dụ: <em>"Cà phê Highlands 45k"</em> — AI tự tách tên cửa hàng, số tiền và tự gợi ý danh mục, lưu ngay lập tức</li>
+                    <li>Hoặc bấm nút + để mở form nhập đầy đủ, chọn danh mục từ lưới biểu tượng</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>2. Quét hóa đơn hoạt động thế nào?</h3>
+                <ul>
+                    <li>Vào tab Quét hóa đơn, chụp ảnh trực tiếp bằng camera hoặc chọn ảnh có sẵn từ thư viện</li>
+                    <li>AI cục bộ (không cần Internet) tự đọc số tiền, ngày và tên cửa hàng, bạn chỉ cần xác nhận và lưu</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>3. SmartChi có cần kết nối mạng không?</h3>
+                <ul>
+                    <li>Không. Toàn bộ AI (phân loại danh mục, đọc hóa đơn, dự đoán chi tiêu) chạy ngay trên máy, không cần Internet</li>
+                    <li>Dữ liệu chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>4. Làm sao để đặt ngân sách và nhận cảnh báo?</h3>
+                <ul>
+                    <li>Vào tab Thống kê → "Chỉnh sửa ngân sách", đặt hạn mức cho từng danh mục</li>
+                    <li>Ứng dụng sẽ cảnh báo ngay khi bạn sắp chạm hoặc vượt ngân sách, hiển thị trong tab Giao dịch</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>5. Làm sao để đổi ngôn ngữ hoặc đơn vị tiền tệ?</h3>
+                <ul>
+                    <li>Vào Cài đặt (biểu tượng bánh răng) → chọn Ngôn ngữ mong muốn, đơn vị tiền tệ sẽ tự đổi theo</li>
+                    <li>Bạn vẫn có thể chọn lại đơn vị tiền tệ khác độc lập với ngôn ngữ ngay bên dưới</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>6. Widget trên màn hình chính hiển thị gì?</h3>
+                <ul>
+                    <li>Tổng chi tiêu tháng này, số ngày streak ghi chép liên tiếp, và ngân sách gần chạm mức nhất</li>
+                    <li>Thêm widget bằng cách nhấn giữ màn hình chính → dấu + → tìm "SmartChi"</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>7. Làm sao để xóa dữ liệu?</h3>
+                <ul>
+                    <li>Nhấn giữ một giao dịch để Sửa hoặc Xoá ngay trong ứng dụng</li>
+                    <li>Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>8. Ứng dụng có thu thập thông tin cá nhân không?</h3>
+                <ul>
+                    <li>Không. SmartChi không có máy chủ, không tích hợp công cụ phân tích hay quảng cáo nào</li>
+                    <li>Xem chi tiết tại <a href="privacy.html" style="color: #ff8a3d;">Chính Sách Quyền Riêng Tư</a></li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>9. SmartChi có mất phí không?</h3>
+                <ul>
+                    <li>Không, SmartChi hoàn toàn miễn phí và không có mua hàng trong ứng dụng</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Báo Lỗi</h2>
+            <p>Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
+            <ul>
+                <li>Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)</li>
+                <li>Thiết bị và phiên bản hệ điều hành</li>
+                <li>Ảnh chụp màn hình (nếu có)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Góp Ý &amp; Đề Xuất Tính Năng</h2>
+            <p>Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
+            <ul>
+                <li>Danh mục chi tiêu hoặc ngôn ngữ/tiền tệ bạn muốn thêm</li>
+                <li>Cải tiến giao diện hoặc tính năng AI</li>
+                <li>Bất kỳ ý tưởng nào khác</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Thông Tin Thêm</h2>
+            <div class="links-section">
+                <p><strong>📄 Tài liệu quan trọng:</strong></p>
+                <ul style="margin-left: 0; list-style: none;">
+                    <li style="margin: 10px 0;">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
+                    <li style="margin: 10px 0;">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/smartchi/">https://imsuunc.github.io/smartchi/</a></p>
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 05/08/2026</em></p>
+        </footer>
+    </div>
+</body>
+</html>
