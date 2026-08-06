@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hỗ Trợ - SmartChi</title>
+    <title data-i18n="page_title">Hỗ Trợ - SmartChi</title>
     <style>
         * {
             margin: 0;
@@ -52,6 +52,31 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #c24d02 0%, #ff8a26 100%);
+            color: white;
+            border-color: transparent;
         }
 
         h2 {
@@ -157,126 +182,130 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Quay lại trang SmartChi</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang SmartChi</a>
 
         <header>
-            <h1>📞 Hỗ Trợ</h1>
-            <p>SmartChi - Quản Lý Chi Tiêu Bằng AI</p>
+            <h1 data-i18n="hero_title">📞 Hỗ Trợ</h1>
+            <p data-i18n="hero_subtitle">SmartChi - Quản Lý Chi Tiêu Bằng AI</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <section>
-            <h2>Liên Hệ Hỗ Trợ</h2>
-            <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
+            <h2 data-i18n="contact_h2">Liên Hệ Hỗ Trợ</h2>
+            <p data-i18n="contact_intro">Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
 
             <div class="contact-box">
-                <h3>📧 Email Hỗ Trợ</h3>
+                <h3 data-i18n="contact_email_h3">📧 Email Hỗ Trợ</h3>
                 <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>
-                <p style="margin-top: 15px; font-size: 0.9em;">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
+                <p style="margin-top: 15px; font-size: 0.9em;" data-i18n="contact_response_time">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
             </div>
         </section>
 
         <section>
-            <h2>Câu Hỏi Thường Gặp (FAQ)</h2>
+            <h2 data-i18n="faq_h2">Câu Hỏi Thường Gặp (FAQ)</h2>
 
             <div class="faq-item">
-                <h3>1. Làm sao để ghi chi tiêu nhanh nhất?</h3>
+                <h3 data-i18n="faq1_q">1. Làm sao để ghi chi tiêu nhanh nhất?</h3>
                 <ul>
-                    <li>Gõ thẳng vào ô "Nhập nhanh" ở đầu màn hình, ví dụ: <em>"Cà phê Highlands 45k"</em> — AI tự tách tên cửa hàng, số tiền và tự gợi ý danh mục, lưu ngay lập tức</li>
-                    <li>Hoặc bấm nút + để mở form nhập đầy đủ, chọn danh mục từ lưới biểu tượng</li>
+                    <li data-i18n-html="faq1_a1">Gõ thẳng vào ô "Nhập nhanh" ở đầu màn hình, ví dụ: <em>"Cà phê Highlands 45k"</em> — AI tự tách tên cửa hàng, số tiền và tự gợi ý danh mục, lưu ngay lập tức</li>
+                    <li data-i18n="faq1_a2">Hoặc bấm nút + để mở form nhập đầy đủ, chọn danh mục từ lưới biểu tượng</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>2. Quét hóa đơn hoạt động thế nào?</h3>
+                <h3 data-i18n="faq2_q">2. Quét hóa đơn hoạt động thế nào?</h3>
                 <ul>
-                    <li>Vào tab Quét hóa đơn, chụp ảnh trực tiếp bằng camera hoặc chọn ảnh có sẵn từ thư viện</li>
-                    <li>AI cục bộ (không cần Internet) tự đọc số tiền, ngày và tên cửa hàng, bạn chỉ cần xác nhận và lưu</li>
+                    <li data-i18n="faq2_a1">Vào tab Quét hóa đơn, chụp ảnh trực tiếp bằng camera hoặc chọn ảnh có sẵn từ thư viện</li>
+                    <li data-i18n="faq2_a2">AI cục bộ (không cần Internet) tự đọc số tiền, ngày và tên cửa hàng, bạn chỉ cần xác nhận và lưu</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>3. SmartChi có cần kết nối mạng không?</h3>
+                <h3 data-i18n="faq3_q">3. SmartChi có cần kết nối mạng không?</h3>
                 <ul>
-                    <li>Không. Toàn bộ AI (phân loại danh mục, đọc hóa đơn, dự đoán chi tiêu) chạy ngay trên máy, không cần Internet</li>
-                    <li>Dữ liệu chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud</li>
+                    <li data-i18n="faq3_a1">Không. Toàn bộ AI (phân loại danh mục, đọc hóa đơn, dự đoán chi tiêu) chạy ngay trên máy, không cần Internet</li>
+                    <li data-i18n="faq3_a2">Dữ liệu chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>4. Làm sao để đặt ngân sách và nhận cảnh báo?</h3>
+                <h3 data-i18n="faq4_q">4. Làm sao để đặt ngân sách và nhận cảnh báo?</h3>
                 <ul>
-                    <li>Vào tab Thống kê → "Chỉnh sửa ngân sách", đặt hạn mức cho từng danh mục</li>
-                    <li>Ứng dụng sẽ cảnh báo ngay khi bạn sắp chạm hoặc vượt ngân sách, hiển thị trong tab Giao dịch</li>
+                    <li data-i18n="faq4_a1">Vào tab Thống kê → "Chỉnh sửa ngân sách", đặt hạn mức cho từng danh mục</li>
+                    <li data-i18n="faq4_a2">Ứng dụng sẽ cảnh báo ngay khi bạn sắp chạm hoặc vượt ngân sách, hiển thị trong tab Giao dịch</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>5. Làm sao để đổi ngôn ngữ hoặc đơn vị tiền tệ?</h3>
+                <h3 data-i18n="faq5_q">5. Làm sao để đổi ngôn ngữ hoặc đơn vị tiền tệ?</h3>
                 <ul>
-                    <li>Vào Cài đặt (biểu tượng bánh răng) → chọn Ngôn ngữ mong muốn, đơn vị tiền tệ sẽ tự đổi theo</li>
-                    <li>Bạn vẫn có thể chọn lại đơn vị tiền tệ khác độc lập với ngôn ngữ ngay bên dưới</li>
+                    <li data-i18n="faq5_a1">Vào Cài đặt (biểu tượng bánh răng) → chọn Ngôn ngữ mong muốn, đơn vị tiền tệ sẽ tự đổi theo</li>
+                    <li data-i18n="faq5_a2">Bạn vẫn có thể chọn lại đơn vị tiền tệ khác độc lập với ngôn ngữ ngay bên dưới</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>6. Widget trên màn hình chính hiển thị gì?</h3>
+                <h3 data-i18n="faq6_q">6. Widget trên màn hình chính hiển thị gì?</h3>
                 <ul>
-                    <li>Tổng chi tiêu tháng này, số ngày streak ghi chép liên tiếp, và ngân sách gần chạm mức nhất</li>
-                    <li>Thêm widget bằng cách nhấn giữ màn hình chính → dấu + → tìm "SmartChi"</li>
+                    <li data-i18n="faq6_a1">Tổng chi tiêu tháng này, số ngày streak ghi chép liên tiếp, và ngân sách gần chạm mức nhất</li>
+                    <li data-i18n="faq6_a2">Thêm widget bằng cách nhấn giữ màn hình chính → dấu + → tìm "SmartChi"</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>7. Làm sao để xóa dữ liệu?</h3>
+                <h3 data-i18n="faq7_q">7. Làm sao để xóa dữ liệu?</h3>
                 <ul>
-                    <li>Nhấn giữ một giao dịch để Sửa hoặc Xoá ngay trong ứng dụng</li>
-                    <li>Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                    <li data-i18n="faq7_a1">Nhấn giữ một giao dịch để Sửa hoặc Xoá ngay trong ứng dụng</li>
+                    <li data-i18n="faq7_a2">Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>8. Ứng dụng có thu thập thông tin cá nhân không?</h3>
+                <h3 data-i18n="faq8_q">8. Ứng dụng có thu thập thông tin cá nhân không?</h3>
                 <ul>
-                    <li>Không. SmartChi không có máy chủ, không tích hợp công cụ phân tích hay quảng cáo nào</li>
-                    <li>Xem chi tiết tại <a href="privacy.html" style="color: #ff8a3d;">Chính Sách Quyền Riêng Tư</a></li>
+                    <li data-i18n="faq8_a1">Không. SmartChi không có máy chủ, không tích hợp công cụ phân tích hay quảng cáo nào</li>
+                    <li data-i18n-html="faq8_a2">Xem chi tiết tại <a href="privacy.html" style="color: #ff8a3d;">Chính Sách Quyền Riêng Tư</a></li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>9. SmartChi có mất phí không?</h3>
+                <h3 data-i18n="faq9_q">9. SmartChi có mất phí không?</h3>
                 <ul>
-                    <li>Không, SmartChi hoàn toàn miễn phí và không có mua hàng trong ứng dụng</li>
+                    <li data-i18n="faq9_a1">Không, SmartChi hoàn toàn miễn phí và không có mua hàng trong ứng dụng</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>Báo Lỗi</h2>
-            <p>Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
+            <h2 data-i18n="report_h2">Báo Lỗi</h2>
+            <p data-i18n="report_intro">Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
             <ul>
-                <li>Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)</li>
-                <li>Thiết bị và phiên bản hệ điều hành</li>
-                <li>Ảnh chụp màn hình (nếu có)</li>
+                <li data-i18n="report_item1">Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)</li>
+                <li data-i18n="report_item2">Thiết bị và phiên bản hệ điều hành</li>
+                <li data-i18n="report_item3">Ảnh chụp màn hình (nếu có)</li>
             </ul>
         </section>
 
         <section>
-            <h2>Góp Ý &amp; Đề Xuất Tính Năng</h2>
-            <p>Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
+            <h2 data-i18n="feedback_h2">Góp Ý &amp; Đề Xuất Tính Năng</h2>
+            <p data-i18n="feedback_intro">Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
             <ul>
-                <li>Danh mục chi tiêu hoặc ngôn ngữ/tiền tệ bạn muốn thêm</li>
-                <li>Cải tiến giao diện hoặc tính năng AI</li>
-                <li>Bất kỳ ý tưởng nào khác</li>
+                <li data-i18n="feedback_item1">Danh mục chi tiêu hoặc ngôn ngữ/tiền tệ bạn muốn thêm</li>
+                <li data-i18n="feedback_item2">Cải tiến giao diện hoặc tính năng AI</li>
+                <li data-i18n="feedback_item3">Bất kỳ ý tưởng nào khác</li>
             </ul>
         </section>
 
         <section>
-            <h2>Thông Tin Thêm</h2>
+            <h2 data-i18n="more_h2">Thông Tin Thêm</h2>
             <div class="links-section">
-                <p><strong>📄 Tài liệu quan trọng:</strong></p>
+                <p data-i18n="more_docs_label"><strong>📄 Tài liệu quan trọng:</strong></p>
                 <ul style="margin-left: 0; list-style: none;">
-                    <li style="margin: 10px 0;">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
-                    <li style="margin: 10px 0;">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                    <li style="margin: 10px 0;" data-i18n-html="more_link_privacy">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
+                    <li style="margin: 10px 0;" data-i18n-html="more_link_terms">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
                 </ul>
                 <p style="margin-top: 20px;"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/smartchi/">https://imsuunc.github.io/smartchi/</a></p>
                 <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
@@ -285,8 +314,100 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 05/08/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 05/08/2026</em></p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Hỗ Trợ - SmartChi", en: "Support - SmartChi" },
+
+            back_link: { vi: "← Quay lại trang SmartChi", en: "← Back to SmartChi" },
+
+            hero_title: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            hero_subtitle: { vi: "SmartChi - Quản Lý Chi Tiêu Bằng AI", en: "SmartChi - AI Expense Tracker" },
+
+            contact_h2: { vi: "Liên Hệ Hỗ Trợ", en: "Contact Support" },
+            contact_intro: { vi: "Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:", en: "We're always ready to help! If you have questions, run into issues, or need assistance, please reach out to us through the following channel:" },
+            contact_email_h3: { vi: "📧 Email Hỗ Trợ", en: "📧 Support Email" },
+            contact_response_time: { vi: "Thời gian phản hồi: Trong vòng 24-48 giờ làm việc", en: "Response time: Within 24-48 business hours" },
+
+            faq_h2: { vi: "Câu Hỏi Thường Gặp (FAQ)", en: "Frequently Asked Questions (FAQ)" },
+
+            faq1_q: { vi: "1. Làm sao để ghi chi tiêu nhanh nhất?", en: "1. What's the fastest way to log an expense?" },
+            faq1_a1: { vi: "Gõ thẳng vào ô \"Nhập nhanh\" ở đầu màn hình, ví dụ: <em>\"Cà phê Highlands 45k\"</em> — AI tự tách tên cửa hàng, số tiền và tự gợi ý danh mục, lưu ngay lập tức", en: "Type directly into the \"Quick Add\" field at the top of the screen, for example: <em>\"Coffee at Highlands $2\"</em> — AI automatically splits out the merchant name, amount, and suggests a category, then saves it instantly" },
+            faq1_a2: { vi: "Hoặc bấm nút + để mở form nhập đầy đủ, chọn danh mục từ lưới biểu tượng", en: "Or tap the + button to open the full entry form and choose a category from the icon grid" },
+
+            faq2_q: { vi: "2. Quét hóa đơn hoạt động thế nào?", en: "2. How does receipt scanning work?" },
+            faq2_a1: { vi: "Vào tab Quét hóa đơn, chụp ảnh trực tiếp bằng camera hoặc chọn ảnh có sẵn từ thư viện", en: "Go to the Scan Receipt tab, take a photo directly with the camera, or choose an existing photo from your library" },
+            faq2_a2: { vi: "AI cục bộ (không cần Internet) tự đọc số tiền, ngày và tên cửa hàng, bạn chỉ cần xác nhận và lưu", en: "The on-device AI (no internet required) automatically reads the amount, date, and merchant name — you just need to confirm and save" },
+
+            faq3_q: { vi: "3. SmartChi có cần kết nối mạng không?", en: "3. Does SmartChi need an internet connection?" },
+            faq3_a1: { vi: "Không. Toàn bộ AI (phân loại danh mục, đọc hóa đơn, dự đoán chi tiêu) chạy ngay trên máy, không cần Internet", en: "No. All AI features (category classification, receipt reading, spending forecasts) run right on your device, no internet required" },
+            faq3_a2: { vi: "Dữ liệu chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud", en: "Your data is stored only on your device and is never synced to the cloud" },
+
+            faq4_q: { vi: "4. Làm sao để đặt ngân sách và nhận cảnh báo?", en: "4. How do I set a budget and receive alerts?" },
+            faq4_a1: { vi: "Vào tab Thống kê → \"Chỉnh sửa ngân sách\", đặt hạn mức cho từng danh mục", en: "Go to the Statistics tab → \"Edit Budget\", and set a spending limit for each category" },
+            faq4_a2: { vi: "Ứng dụng sẽ cảnh báo ngay khi bạn sắp chạm hoặc vượt ngân sách, hiển thị trong tab Giao dịch", en: "The app will alert you as soon as you're about to reach or exceed your budget, shown in the Transactions tab" },
+
+            faq5_q: { vi: "5. Làm sao để đổi ngôn ngữ hoặc đơn vị tiền tệ?", en: "5. How do I change the language or currency?" },
+            faq5_a1: { vi: "Vào Cài đặt (biểu tượng bánh răng) → chọn Ngôn ngữ mong muốn, đơn vị tiền tệ sẽ tự đổi theo", en: "Go to Settings (gear icon) → select your desired language, and the currency will update automatically" },
+            faq5_a2: { vi: "Bạn vẫn có thể chọn lại đơn vị tiền tệ khác độc lập với ngôn ngữ ngay bên dưới", en: "You can still choose a different currency independently of the language right below" },
+
+            faq6_q: { vi: "6. Widget trên màn hình chính hiển thị gì?", en: "6. What does the Home Screen widget show?" },
+            faq6_a1: { vi: "Tổng chi tiêu tháng này, số ngày streak ghi chép liên tiếp, và ngân sách gần chạm mức nhất", en: "Your total spending this month, your consecutive logging streak, and the budget closest to its limit" },
+            faq6_a2: { vi: "Thêm widget bằng cách nhấn giữ màn hình chính → dấu + → tìm \"SmartChi\"", en: "Add the widget by long-pressing the Home Screen → tapping + → searching for \"SmartChi\"" },
+
+            faq7_q: { vi: "7. Làm sao để xóa dữ liệu?", en: "7. How do I delete data?" },
+            faq7_a1: { vi: "Nhấn giữ một giao dịch để Sửa hoặc Xoá ngay trong ứng dụng", en: "Long-press a transaction to Edit or Delete it right within the app" },
+            faq7_a2: { vi: "Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng", en: "Delete all data by uninstalling the app" },
+
+            faq8_q: { vi: "8. Ứng dụng có thu thập thông tin cá nhân không?", en: "8. Does the app collect personal information?" },
+            faq8_a1: { vi: "Không. SmartChi không có máy chủ, không tích hợp công cụ phân tích hay quảng cáo nào", en: "No. SmartChi has no server and does not integrate any analytics or advertising tools" },
+            faq8_a2: { vi: "Xem chi tiết tại <a href=\"privacy.html\" style=\"color: #ff8a3d;\">Chính Sách Quyền Riêng Tư</a>", en: "See details in the <a href=\"privacy.html\" style=\"color: #ff8a3d;\">Privacy Policy</a>" },
+
+            faq9_q: { vi: "9. SmartChi có mất phí không?", en: "9. Does SmartChi cost money?" },
+            faq9_a1: { vi: "Không, SmartChi hoàn toàn miễn phí và không có mua hàng trong ứng dụng", en: "No, SmartChi is completely free with no in-app purchases" },
+
+            report_h2: { vi: "Báo Lỗi", en: "Report a Bug" },
+            report_intro: { vi: "Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:", en: "If you encounter a bug while using the app, please email us with the following:" },
+            report_item1: { vi: "Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)", en: "A detailed description of the bug (what you were doing when it occurred)" },
+            report_item2: { vi: "Thiết bị và phiên bản hệ điều hành", en: "Your device model and OS version" },
+            report_item3: { vi: "Ảnh chụp màn hình (nếu có)", en: "A screenshot (if available)" },
+
+            feedback_h2: { vi: "Góp Ý & Đề Xuất Tính Năng", en: "Feedback & Feature Requests" },
+            feedback_intro: { vi: "Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:", en: "We'd love to hear your feedback! Please email us with:" },
+            feedback_item1: { vi: "Danh mục chi tiêu hoặc ngôn ngữ/tiền tệ bạn muốn thêm", en: "Expense categories or a language/currency you'd like added" },
+            feedback_item2: { vi: "Cải tiến giao diện hoặc tính năng AI", en: "Interface improvements or AI feature suggestions" },
+            feedback_item3: { vi: "Bất kỳ ý tưởng nào khác", en: "Any other ideas" },
+
+            more_h2: { vi: "Thông Tin Thêm", en: "More Information" },
+            more_docs_label: { vi: "<strong>📄 Tài liệu quan trọng:</strong>", en: "<strong>📄 Important documents:</strong>" },
+            more_link_privacy: { vi: "→ <a href=\"privacy.html\">Chính Sách Quyền Riêng Tư</a>", en: "→ <a href=\"privacy.html\">Privacy Policy</a>" },
+            more_link_terms: { vi: "→ <a href=\"terms.html\">Điều Khoản Sử Dụng</a>", en: "→ <a href=\"terms.html\">Terms of Use</a>" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 05/08/2026", en: "Last updated: Aug 5, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

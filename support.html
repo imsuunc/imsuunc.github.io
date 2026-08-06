@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hỗ Trợ - Lịch Vạn Niên – Lịch Âm Tử Vi</title>
+    <title data-i18n="page_title">Hỗ Trợ - Lịch Vạn Niên – Lịch Âm Tử Vi</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -19,7 +19,7 @@
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -28,20 +28,20 @@
             padding: 40px;
             box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
         }
-        
+
         header {
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 20px;
             border-bottom: 2px solid #8b9cff;
         }
-        
+
         h1 {
             color: #8b9cff;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
-        
+
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
@@ -49,11 +49,36 @@
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         .back-link:hover {
             text-decoration: underline;
         }
-        
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
         h2 {
             color: #8b9cff;
             margin: 30px 0 15px 0;
@@ -61,13 +86,13 @@
             border-bottom: 2px solid #8b9cff;
             padding-bottom: 10px;
         }
-        
+
         h3 {
             color: #a78bfa;
             margin: 20px 0 10px 0;
             font-size: 1.3em;
         }
-        
+
         .contact-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -76,23 +101,23 @@
             margin: 20px 0;
             text-align: center;
         }
-        
+
         .contact-box h3 {
             color: white;
             margin-bottom: 15px;
         }
-        
+
         .contact-box a {
             color: white;
             font-weight: bold;
             font-size: 1.2em;
             text-decoration: none;
         }
-        
+
         .contact-box a:hover {
             text-decoration: underline;
         }
-        
+
         .faq-item {
             background: #2a2a3e;
             padding: 20px;
@@ -100,21 +125,21 @@
             margin: 15px 0;
             border-left: 4px solid #8b9cff;
         }
-        
+
         .faq-item h3 {
             color: #8b9cff;
             margin-bottom: 10px;
         }
-        
+
         ul {
             margin-left: 20px;
             margin-top: 10px;
         }
-        
+
         li {
             margin: 8px 0;
         }
-        
+
         .info-box {
             background: #4a3f00;
             border-left: 4px solid #ffc107;
@@ -122,24 +147,24 @@
             border-radius: 5px;
             margin: 20px 0;
         }
-        
+
         .links-section {
             background: #2a2a3e;
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
         }
-        
+
         .links-section a {
             color: #8b9cff;
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         .links-section a:hover {
             text-decoration: underline;
         }
-        
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -147,16 +172,16 @@
             border-top: 1px solid #3f3f5a;
             color: #a1a1aa;
         }
-        
+
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
             }
-            
+
             h1 {
                 font-size: 2em;
             }
-            
+
             h2 {
                 font-size: 1.5em;
             }
@@ -165,108 +190,191 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Quay lại trang chủ</a>
-        
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang chủ</a>
+
         <header>
-            <h1>📞 Hỗ Trợ</h1>
-            <p>Lịch Vạn Niên – Lịch Âm Tử Vi</p>
+            <h1 data-i18n="hero_title">📞 Hỗ Trợ</h1>
+            <p data-i18n="header_subtitle">Lịch Vạn Niên – Lịch Âm Tử Vi</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
-        
+
         <section>
-            <h2>Liên Hệ Hỗ Trợ</h2>
-            <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
-            
+            <h2 data-i18n="contact_h2">Liên Hệ Hỗ Trợ</h2>
+            <p data-i18n="contact_intro">Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
+
             <div class="contact-box">
-                <h3>📧 Email Hỗ Trợ</h3>
+                <h3 data-i18n="support_email_title">📧 Email Hỗ Trợ</h3>
                 <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a>
-                <p style="margin-top: 15px; font-size: 0.9em;">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
+                <p style="margin-top: 15px; font-size: 0.9em;" data-i18n="response_time">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
             </div>
         </section>
-        
+
         <section>
-            <h2>Câu Hỏi Thường Gặp (FAQ)</h2>
-            
+            <h2 data-i18n="faq_h2">Câu Hỏi Thường Gặp (FAQ)</h2>
+
             <div class="faq-item">
-                <h3>1. Làm sao để thêm sự kiện nhắc nhở?</h3>
+                <h3 data-i18n="faq1_q">1. Làm sao để thêm sự kiện nhắc nhở?</h3>
                 <ul>
-                    <li>Mở ứng dụng, chọn ngày bạn muốn thêm sự kiện</li>
-                    <li>Nhấn vào nút "+" hoặc "Thêm sự kiện"</li>
-                    <li>Nhập thông tin và lưu lại</li>
+                    <li data-i18n="faq1_a1">Mở ứng dụng, chọn ngày bạn muốn thêm sự kiện</li>
+                    <li data-i18n="faq1_a2">Nhấn vào nút "+" hoặc "Thêm sự kiện"</li>
+                    <li data-i18n="faq1_a3">Nhập thông tin và lưu lại</li>
                 </ul>
             </div>
-            
+
             <div class="faq-item">
-                <h3>2. Dữ liệu của tôi có được đồng bộ không?</h3>
+                <h3 data-i18n="faq2_q">2. Dữ liệu của tôi có được đồng bộ không?</h3>
                 <ul>
-                    <li>Hiện tại ứng dụng lưu trữ dữ liệu cục bộ trên thiết bị của bạn</li>
-                    <li>Dữ liệu không được đồng bộ lên Cloud</li>
+                    <li data-i18n="faq2_a1">Hiện tại ứng dụng lưu trữ dữ liệu cục bộ trên thiết bị của bạn</li>
+                    <li data-i18n="faq2_a2">Dữ liệu không được đồng bộ lên Cloud</li>
                 </ul>
             </div>
-            
+
             <div class="faq-item">
-                <h3>3. Làm sao để xóa dữ liệu?</h3>
+                <h3 data-i18n="faq3_q">3. Làm sao để xóa dữ liệu?</h3>
                 <ul>
-                    <li>Bạn có thể xóa từng sự kiện trong ứng dụng</li>
-                    <li>Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                    <li data-i18n="faq3_a1">Bạn có thể xóa từng sự kiện trong ứng dụng</li>
+                    <li data-i18n="faq3_a2">Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
                 </ul>
             </div>
-            
+
             <div class="faq-item">
-                <h3>4. Ứng dụng có thu thập thông tin cá nhân không?</h3>
+                <h3 data-i18n="faq4_q">4. Ứng dụng có thu thập thông tin cá nhân không?</h3>
                 <ul>
-                    <li>Không, ứng dụng không thu thập thông tin cá nhân</li>
-                    <li>Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a></li>
+                    <li data-i18n="faq4_a1">Không, ứng dụng không thu thập thông tin cá nhân</li>
+                    <li data-i18n-html="faq4_a2">Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a></li>
                 </ul>
             </div>
-            
+
             <div class="faq-item">
-                <h3>5. Làm sao để hủy đăng ký Premium?</h3>
+                <h3 data-i18n="faq5_q">5. Làm sao để hủy đăng ký Premium?</h3>
                 <ul>
-                    <li>Mở <strong>Cài đặt</strong> trên iPhone/iPad</li>
-                    <li>Chọn tên của bạn > <strong>Đăng ký</strong></li>
-                    <li>Tìm "Lịch Vạn Niên – Lịch Âm Tử Vi" và chọn <strong>Hủy đăng ký</strong></li>
+                    <li data-i18n-html="faq5_a1">Mở <strong>Cài đặt</strong> trên iPhone/iPad</li>
+                    <li data-i18n-html="faq5_a2">Chọn tên của bạn &gt; <strong>Đăng ký</strong></li>
+                    <li data-i18n-html="faq5_a3">Tìm "Lịch Vạn Niên – Lịch Âm Tử Vi" và chọn <strong>Hủy đăng ký</strong></li>
                 </ul>
             </div>
         </section>
-        
+
         <section>
-            <h2>Báo Lỗi</h2>
-            <p>Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
+            <h2 data-i18n="report_bug_h2">Báo Lỗi</h2>
+            <p data-i18n="report_bug_intro">Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
             <ul>
-                <li>Mô tả chi tiết lỗi</li>
-                <li>Phiên bản ứng dụng (xem trong Cài đặt > Thông tin)</li>
-                <li>Phiên bản iOS</li>
-                <li>Ảnh chụp màn hình (nếu có)</li>
+                <li data-i18n="report_bug_1">Mô tả chi tiết lỗi</li>
+                <li data-i18n="report_bug_2">Phiên bản ứng dụng (xem trong Cài đặt > Thông tin)</li>
+                <li data-i18n="report_bug_3">Phiên bản iOS</li>
+                <li data-i18n="report_bug_4">Ảnh chụp màn hình (nếu có)</li>
             </ul>
         </section>
-        
+
         <section>
-            <h2>Góp Ý & Đề Xuất Tính Năng</h2>
-            <p>Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
+            <h2 data-i18n="feedback_h2">Góp Ý & Đề Xuất Tính Năng</h2>
+            <p data-i18n="feedback_intro">Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
             <ul>
-                <li>Tính năng bạn muốn thêm vào</li>
-                <li>Cải tiến giao diện</li>
-                <li>Bất kỳ ý tưởng nào khác</li>
+                <li data-i18n="feedback_1">Tính năng bạn muốn thêm vào</li>
+                <li data-i18n="feedback_2">Cải tiến giao diện</li>
+                <li data-i18n="feedback_3">Bất kỳ ý tưởng nào khác</li>
             </ul>
         </section>
-        
+
         <section>
-            <h2>Thông Tin Thêm</h2>
+            <h2 data-i18n="more_info_h2">Thông Tin Thêm</h2>
             <div class="links-section">
-                <p><strong>📄 Tài liệu quan trọng:</strong></p>
+                <p><strong data-i18n="important_docs_label">📄 Tài liệu quan trọng:</strong></p>
                 <ul style="margin-left: 0; list-style: none;">
-                    <li style="margin: 10px 0;">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
-                    <li style="margin: 10px 0;">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                    <li style="margin: 10px 0;">→ <a href="privacy.html" data-i18n="doc_privacy">Chính Sách Quyền Riêng Tư</a></li>
+                    <li style="margin: 10px 0;">→ <a href="terms.html" data-i18n="doc_terms">Điều Khoản Sử Dụng</a></li>
                 </ul>
-                <p style="margin-top: 20px;"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io">https://imsuunc.github.io</a></p>
+                <p style="margin-top: 20px;"><strong data-i18n="website_label">🌐 Website:</strong> <a href="https://imsuunc.github.io">https://imsuunc.github.io</a></p>
                 <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
             </div>
         </section>
-        
+
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 16/01/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 16/01/2026</em></p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Hỗ Trợ - Lịch Vạn Niên – Lịch Âm Tử Vi", en: "Support - Lich Van Nien – Lunar Calendar & Horoscope" },
+            back_link: { vi: "← Quay lại trang chủ", en: "← Back to home" },
+            hero_title: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            header_subtitle: { vi: "Lịch Vạn Niên – Lịch Âm Tử Vi", en: "Lich Van Nien – Lunar Calendar & Horoscope" },
+
+            contact_h2: { vi: "Liên Hệ Hỗ Trợ", en: "Contact Support" },
+            contact_intro: { vi: "Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:", en: "We're always ready to help! If you have questions, run into problems, or need assistance, please reach out to us through the following channels:" },
+            support_email_title: { vi: "📧 Email Hỗ Trợ", en: "📧 Support Email" },
+            response_time: { vi: "Thời gian phản hồi: Trong vòng 24-48 giờ làm việc", en: "Response time: Within 24-48 business hours" },
+
+            faq_h2: { vi: "Câu Hỏi Thường Gặp (FAQ)", en: "Frequently Asked Questions (FAQ)" },
+
+            faq1_q: { vi: "1. Làm sao để thêm sự kiện nhắc nhở?", en: "1. How do I add a reminder event?" },
+            faq1_a1: { vi: "Mở ứng dụng, chọn ngày bạn muốn thêm sự kiện", en: "Open the app and select the date you want to add an event to" },
+            faq1_a2: { vi: 'Nhấn vào nút "+" hoặc "Thêm sự kiện"', en: 'Tap the "+" button or "Add Event"' },
+            faq1_a3: { vi: "Nhập thông tin và lưu lại", en: "Enter the details and save" },
+
+            faq2_q: { vi: "2. Dữ liệu của tôi có được đồng bộ không?", en: "2. Is my data synced?" },
+            faq2_a1: { vi: "Hiện tại ứng dụng lưu trữ dữ liệu cục bộ trên thiết bị của bạn", en: "Currently the app stores data locally on your device" },
+            faq2_a2: { vi: "Dữ liệu không được đồng bộ lên Cloud", en: "Data is not synced to the Cloud" },
+
+            faq3_q: { vi: "3. Làm sao để xóa dữ liệu?", en: "3. How do I delete my data?" },
+            faq3_a1: { vi: "Bạn có thể xóa từng sự kiện trong ứng dụng", en: "You can delete individual events within the app" },
+            faq3_a2: { vi: "Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng", en: "Or delete all data by uninstalling the app" },
+
+            faq4_q: { vi: "4. Ứng dụng có thu thập thông tin cá nhân không?", en: "4. Does the app collect personal information?" },
+            faq4_a1: { vi: "Không, ứng dụng không thu thập thông tin cá nhân", en: "No, the app does not collect personal information" },
+            faq4_a2: { vi: 'Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a>', en: 'See details in the <a href="privacy.html" style="color: #667eea;">Privacy Policy</a>' },
+
+            faq5_q: { vi: "5. Làm sao để hủy đăng ký Premium?", en: "5. How do I cancel my Premium subscription?" },
+            faq5_a1: { vi: "Mở <strong>Cài đặt</strong> trên iPhone/iPad", en: "Open <strong>Settings</strong> on your iPhone/iPad" },
+            faq5_a2: { vi: "Chọn tên của bạn &gt; <strong>Đăng ký</strong>", en: "Tap your name &gt; <strong>Subscriptions</strong>" },
+            faq5_a3: { vi: 'Tìm "Lịch Vạn Niên – Lịch Âm Tử Vi" và chọn <strong>Hủy đăng ký</strong>', en: 'Find "Lich Van Nien – Lunar Calendar & Horoscope" and tap <strong>Cancel Subscription</strong>' },
+
+            report_bug_h2: { vi: "Báo Lỗi", en: "Report a Bug" },
+            report_bug_intro: { vi: "Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:", en: "If you encounter an error while using the app, please email us with the following:" },
+            report_bug_1: { vi: "Mô tả chi tiết lỗi", en: "A detailed description of the bug" },
+            report_bug_2: { vi: "Phiên bản ứng dụng (xem trong Cài đặt > Thông tin)", en: "App version (see Settings > About)" },
+            report_bug_3: { vi: "Phiên bản iOS", en: "iOS version" },
+            report_bug_4: { vi: "Ảnh chụp màn hình (nếu có)", en: "Screenshots (if available)" },
+
+            feedback_h2: { vi: "Góp Ý & Đề Xuất Tính Năng", en: "Feedback & Feature Requests" },
+            feedback_intro: { vi: "Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:", en: "We'd love to hear your feedback! Please email us with:" },
+            feedback_1: { vi: "Tính năng bạn muốn thêm vào", en: "Features you'd like to see added" },
+            feedback_2: { vi: "Cải tiến giao diện", en: "Interface improvements" },
+            feedback_3: { vi: "Bất kỳ ý tưởng nào khác", en: "Any other ideas" },
+
+            more_info_h2: { vi: "Thông Tin Thêm", en: "Additional Information" },
+            important_docs_label: { vi: "📄 Tài liệu quan trọng:", en: "📄 Important documents:" },
+            doc_privacy: { vi: "Chính Sách Quyền Riêng Tư", en: "Privacy Policy" },
+            doc_terms: { vi: "Điều Khoản Sử Dụng", en: "Terms of Use" },
+            website_label: { vi: "🌐 Website:", en: "🌐 Website:" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 16/01/2026", en: "Last updated: Jan 16, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Điều Khoản Sử Dụng - Phong Thủy - La Bàn, Xem Tuổi</title>
+    <title data-i18n="page_title">Điều Khoản Sử Dụng - Phong Thủy - La Bàn, Xem Tuổi</title>
     <style>
         * {
             margin: 0;
@@ -52,6 +52,31 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
         }
 
         .update-date {
@@ -162,17 +187,21 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Quay lại trang Phong Thủy - La Bàn, Xem Tuổi</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Phong Thủy - La Bàn, Xem Tuổi</a>
 
         <header>
-            <h1>📋 Điều Khoản Sử Dụng</h1>
-            <p>Phong Thủy - La Bàn, Xem Tuổi</p>
-            <p class="update-date">Cập nhật lần cuối: 24/07/2026</p>
+            <h1 data-i18n="header_title">📋 Điều Khoản Sử Dụng</h1>
+            <p data-i18n="header_subtitle">Phong Thủy - La Bàn, Xem Tuổi</p>
+            <p class="update-date" data-i18n="header_updated">Cập nhật lần cuối: 24/07/2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <section>
-            <h2>1. Chấp Nhận Điều Khoản</h2>
-            <p>
+            <h2 data-i18n="s1_h2">1. Chấp Nhận Điều Khoản</h2>
+            <p data-i18n-html="s1_p">
                 Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>Phong Thủy - La Bàn, Xem Tuổi</strong> ("Ứng dụng"),
                 bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này.
                 Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.
@@ -180,72 +209,72 @@
         </section>
 
         <section>
-            <h2>2. Giấy Phép Sử Dụng</h2>
-            <p>Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:</p>
+            <h2 data-i18n="s2_h2">2. Giấy Phép Sử Dụng</h2>
+            <p data-i18n="s2_p">Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:</p>
             <ul>
-                <li>Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng</li>
-                <li>Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn</li>
-                <li>Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp</li>
+                <li data-i18n="s2_li1">Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng</li>
+                <li data-i18n="s2_li2">Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn</li>
+                <li data-i18n="s2_li3">Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp</li>
             </ul>
         </section>
 
         <section>
-            <h2>3. Phong Thủy Premium (Mua Một Lần)</h2>
-            <p>
+            <h2 data-i18n="s3_h2">3. Phong Thủy Premium (Mua Một Lần)</h2>
+            <p data-i18n-html="s3_p">
                 Ứng dụng cung cấp gói nâng cấp <strong>Phong Thủy Premium</strong> để mở khóa các tính năng cao cấp.
             </p>
 
             <div class="highlight-box">
-                <h3>3.1 Thông Tin Gói Nâng Cấp</h3>
-                <strong>📦 Tên gói:</strong> Phong Thủy Premium<br>
-                <strong>⏰ Hình thức:</strong> Mua một lần, dùng trọn đời (non-consumable)<br>
-                <strong>💰 Giá:</strong> Hiển thị trong ứng dụng tại thời điểm mua<br>
-                <strong>🔄 Gia hạn tự động:</strong> Không — đây không phải gói đăng ký (subscription)
+                <h3 data-i18n="s3_1_h3">3.1 Thông Tin Gói Nâng Cấp</h3>
+                <strong data-i18n="s3_1_name">📦 Tên gói: Phong Thủy Premium</strong>
+                <strong data-i18n="s3_1_type">⏰ Hình thức: Mua một lần, dùng trọn đời (non-consumable)</strong>
+                <strong data-i18n="s3_1_price">💰 Giá: Hiển thị trong ứng dụng tại thời điểm mua</strong>
+                <strong data-i18n="s3_1_renew">🔄 Gia hạn tự động: Không — đây không phải gói đăng ký (subscription)</strong>
             </div>
 
             <div class="info-section">
-                <h3>3.2 Thanh Toán</h3>
+                <h3 data-i18n="s3_2_h3">3.2 Thanh Toán</h3>
                 <ul>
-                    <li>Thanh toán được thực hiện qua tài khoản Apple ID của bạn</li>
-                    <li>Sau khi mua, quyền Premium tồn tại trọn đời, không cần thanh toán lại và không tự động bị trừ phí định kỳ</li>
-                    <li>Bạn có thể khôi phục giao dịch đã mua ngay trong ứng dụng nếu đổi thiết bị hoặc cài lại</li>
+                    <li data-i18n="s3_2_li1">Thanh toán được thực hiện qua tài khoản Apple ID của bạn</li>
+                    <li data-i18n="s3_2_li2">Sau khi mua, quyền Premium tồn tại trọn đời, không cần thanh toán lại và không tự động bị trừ phí định kỳ</li>
+                    <li data-i18n="s3_2_li3">Bạn có thể khôi phục giao dịch đã mua ngay trong ứng dụng nếu đổi thiết bị hoặc cài lại</li>
                 </ul>
             </div>
 
             <div class="warning-box">
-                <h3>3.3 Hoàn Tiền</h3>
+                <h3 data-i18n="s3_3_h3">3.3 Hoàn Tiền</h3>
                 <ul>
-                    <li>Chính sách hoàn tiền tuân theo quy định của Apple App Store</li>
-                    <li>Liên hệ Apple Support nếu bạn muốn yêu cầu hoàn tiền</li>
-                    <li>Chúng tôi không quản lý trực tiếp việc thanh toán và hoàn tiền</li>
+                    <li data-i18n="s3_3_li1">Chính sách hoàn tiền tuân theo quy định của Apple App Store</li>
+                    <li data-i18n="s3_3_li2">Liên hệ Apple Support nếu bạn muốn yêu cầu hoàn tiền</li>
+                    <li data-i18n="s3_3_li3">Chúng tôi không quản lý trực tiếp việc thanh toán và hoàn tiền</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>4. Nội Dung & Dữ Liệu</h2>
+            <h2 data-i18n="s4_h2">4. Nội Dung & Dữ Liệu</h2>
 
-            <h3>4.1 Quyền Sở Hữu Trí Tuệ</h3>
+            <h3 data-i18n="s4_1_h3">4.1 Quyền Sở Hữu Trí Tuệ</h3>
             <ul>
-                <li>Tất cả nội dung, thiết kế, mã nguồn đều thuộc sở hữu của chúng tôi</li>
-                <li>Người dùng không được sao chép hoặc phân phối lại nội dung</li>
+                <li data-i18n="s4_1_li1">Tất cả nội dung, thiết kế, mã nguồn đều thuộc sở hữu của chúng tôi</li>
+                <li data-i18n="s4_1_li2">Người dùng không được sao chép hoặc phân phối lại nội dung</li>
             </ul>
 
-            <h3>4.2 Dữ Liệu Người Dùng</h3>
+            <h3 data-i18n="s4_2_h3">4.2 Dữ Liệu Người Dùng</h3>
             <ul>
-                <li>Dữ liệu bạn tạo (hồ sơ, ngày sinh, ảnh đại diện...) thuộc về bạn</li>
-                <li>Dữ liệu được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào</li>
-                <li>Chúng tôi không chịu trách nhiệm về việc mất mát dữ liệu khi bạn xóa hoặc gỡ ứng dụng</li>
+                <li data-i18n="s4_2_li1">Dữ liệu bạn tạo (hồ sơ, ngày sinh, ảnh đại diện...) thuộc về bạn</li>
+                <li data-i18n="s4_2_li2">Dữ liệu được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào</li>
+                <li data-i18n="s4_2_li3">Chúng tôi không chịu trách nhiệm về việc mất mát dữ liệu khi bạn xóa hoặc gỡ ứng dụng</li>
             </ul>
         </section>
 
         <section>
-            <h2>5. Nội Dung Phong Thủy Chỉ Mang Tính Tham Khảo</h2>
-            <p>
+            <h2 data-i18n="s5_h2">5. Nội Dung Phong Thủy Chỉ Mang Tính Tham Khảo</h2>
+            <p data-i18n="s5_p1">
                 Toàn bộ nội dung trong ứng dụng (cung mệnh, hướng nhà, ngày tốt, tuổi hợp, màu sắc...) dựa trên tri
                 thức phong thủy dân gian truyền thống và chỉ mang tính chất tham khảo, chiêm nghiệm văn hóa.
             </p>
-            <p style="margin-top: 10px;">
+            <p style="margin-top: 10px;" data-i18n-html="s5_p2">
                 Ứng dụng <strong>không đưa ra lời khuyên y tế, tài chính hay pháp lý</strong>. Với các quyết định
                 quan trọng (xây nhà, cưới hỏi, kinh doanh...), bạn nên cân nhắc điều kiện thực tế và tham khảo thêm
                 ý kiến chuyên gia.
@@ -253,73 +282,199 @@
         </section>
 
         <section>
-            <h2>6. Từ Chối Bảo Hành</h2>
-            <p>Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:</p>
+            <h2 data-i18n="s6_h2">6. Từ Chối Bảo Hành</h2>
+            <p data-i18n="s6_p">Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:</p>
             <ul>
-                <li>Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi</li>
-                <li>Kết quả tra cứu phong thủy hoàn toàn khớp với mọi trường phái/tài liệu</li>
-                <li>Tính tương thích với mọi thiết bị hoặc phiên bản iOS</li>
+                <li data-i18n="s6_li1">Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi</li>
+                <li data-i18n="s6_li2">Kết quả tra cứu phong thủy hoàn toàn khớp với mọi trường phái/tài liệu</li>
+                <li data-i18n="s6_li3">Tính tương thích với mọi thiết bị hoặc phiên bản iOS</li>
             </ul>
         </section>
 
         <section>
-            <h2>7. Giới Hạn Trách Nhiệm</h2>
-            <p>Chúng tôi không chịu trách nhiệm về:</p>
+            <h2 data-i18n="s7_h2">7. Giới Hạn Trách Nhiệm</h2>
+            <p data-i18n="s7_p">Chúng tôi không chịu trách nhiệm về:</p>
             <ul>
-                <li>Mất mát dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng</li>
-                <li>Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng</li>
-                <li>Quyết định cá nhân dựa trên thông tin phong thủy trong ứng dụng</li>
+                <li data-i18n="s7_li1">Mất mát dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng</li>
+                <li data-i18n="s7_li2">Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng</li>
+                <li data-i18n="s7_li3">Quyết định cá nhân dựa trên thông tin phong thủy trong ứng dụng</li>
             </ul>
         </section>
 
         <section>
-            <h2>8. Thay Đổi Điều Khoản</h2>
-            <p>
+            <h2 data-i18n="s8_h2">8. Thay Đổi Điều Khoản</h2>
+            <p data-i18n="s8_p">
                 Chúng tôi có quyền cập nhật Điều khoản này. Thay đổi sẽ có hiệu lực ngay khi được công bố.
                 Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.
             </p>
         </section>
 
         <section>
-            <h2>9. Chấm Dứt Sử Dụng</h2>
-            <p>Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.</p>
+            <h2 data-i18n="s9_h2">9. Chấm Dứt Sử Dụng</h2>
+            <p data-i18n="s9_p">Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.</p>
         </section>
 
         <section>
-            <h2>10. Luật Áp Dụng</h2>
-            <p>Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.</p>
+            <h2 data-i18n="s10_h2">10. Luật Áp Dụng</h2>
+            <p data-i18n="s10_p">Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.</p>
         </section>
 
         <section>
-            <h2>11. Liên Hệ</h2>
-            <p>Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:</p>
+            <h2 data-i18n="s11_h2">11. Liên Hệ</h2>
+            <p data-i18n="s11_p">Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:</p>
 
             <div class="contact-info">
-                <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
-                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/phong-thuy/">https://imsuunc.github.io/phong-thuy/</a></p>
-                <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/phong-thuy/support.html</a></p>
+                <p data-i18n-html="s11_email"><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
+                <p data-i18n-html="s11_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/phong-thuy/">https://imsuunc.github.io/phong-thuy/</a></p>
+                <p data-i18n-html="s11_support"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/phong-thuy/support.html</a></p>
             </div>
         </section>
 
         <section>
-            <h2>Tài Liệu Tham Khảo</h2>
+            <h2 data-i18n="refs_h2">Tài Liệu Tham Khảo</h2>
             <ul>
-                <li><a href="privacy.html" style="color: #667eea; font-weight: 500;">Chính Sách Quyền Riêng Tư</a></li>
-                <li><a href="support.html" style="color: #667eea; font-weight: 500;">Trang Hỗ Trợ</a></li>
-                <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #667eea; font-weight: 500;">Apple Standard EULA</a></li>
+                <li data-i18n-html="refs_privacy"><a href="privacy.html" style="color: #667eea; font-weight: 500;">Chính Sách Quyền Riêng Tư</a></li>
+                <li data-i18n-html="refs_support"><a href="support.html" style="color: #667eea; font-weight: 500;">Trang Hỗ Trợ</a></li>
+                <li data-i18n-html="refs_eula"><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #667eea; font-weight: 500;">Apple Standard EULA</a></li>
             </ul>
         </section>
 
         <div class="warning-box" style="margin-top: 30px; text-align: center;">
-            <p style="font-weight: bold;">
+            <p style="font-weight: bold;" data-i18n="closing_note">
                 Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.
             </p>
         </div>
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 24/07/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 24/07/2026</em></p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Điều Khoản Sử Dụng - Phong Thủy - La Bàn, Xem Tuổi", en: "Terms of Use - Phong Thuy - Compass & Zodiac Lookup" },
+
+            back_link: { vi: "← Quay lại trang Phong Thủy - La Bàn, Xem Tuổi", en: "← Back to Phong Thuy - Compass & Zodiac Lookup" },
+
+            header_title: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+            header_subtitle: { vi: "Phong Thủy - La Bàn, Xem Tuổi", en: "Phong Thuy - Compass & Zodiac Lookup" },
+            header_updated: { vi: "Cập nhật lần cuối: 24/07/2026", en: "Last updated: Jul 24, 2026" },
+
+            s1_h2: { vi: "1. Chấp Nhận Điều Khoản", en: "1. Acceptance of Terms" },
+            s1_p: {
+                vi: "Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>Phong Thủy - La Bàn, Xem Tuổi</strong> (\"Ứng dụng\"), bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này. Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.",
+                en: "By downloading, installing, and using the <strong>Phong Thuy - Compass & Zodiac Lookup</strong> app (\"the App\"), you agree to comply with the terms and conditions set out in this document. If you do not agree, please do not use the App."
+            },
+
+            s2_h2: { vi: "2. Giấy Phép Sử Dụng", en: "2. License to Use" },
+            s2_p: { vi: "Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:", en: "We grant you the right to use the App for personal, non-commercial purposes, subject to the following terms:" },
+            s2_li1: { vi: "Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng", en: "You may not copy, modify, distribute, or resell the App" },
+            s2_li2: { vi: "Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn", en: "You may not reverse engineer or extract the App's source code" },
+            s2_li3: { vi: "Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp", en: "You may not use the App for any unlawful purpose" },
+
+            s3_h2: { vi: "3. Phong Thủy Premium (Mua Một Lần)", en: "3. Phong Thuy Premium (One-Time Purchase)" },
+            s3_p: {
+                vi: "Ứng dụng cung cấp gói nâng cấp <strong>Phong Thủy Premium</strong> để mở khóa các tính năng cao cấp.",
+                en: "The App offers a <strong>Phong Thuy Premium</strong> upgrade package to unlock premium features."
+            },
+
+            s3_1_h3: { vi: "3.1 Thông Tin Gói Nâng Cấp", en: "3.1 Upgrade Package Details" },
+            s3_1_name: { vi: "📦 Tên gói: Phong Thủy Premium", en: "📦 Package name: Phong Thuy Premium" },
+            s3_1_type: { vi: "⏰ Hình thức: Mua một lần, dùng trọn đời (non-consumable)", en: "⏰ Type: One-time purchase, lifetime access (non-consumable)" },
+            s3_1_price: { vi: "💰 Giá: Hiển thị trong ứng dụng tại thời điểm mua", en: "💰 Price: Displayed in the App at the time of purchase" },
+            s3_1_renew: { vi: "🔄 Gia hạn tự động: Không — đây không phải gói đăng ký (subscription)", en: "🔄 Auto-renewal: None — this is not a subscription" },
+
+            s3_2_h3: { vi: "3.2 Thanh Toán", en: "3.2 Payment" },
+            s3_2_li1: { vi: "Thanh toán được thực hiện qua tài khoản Apple ID của bạn", en: "Payment is processed through your Apple ID account" },
+            s3_2_li2: { vi: "Sau khi mua, quyền Premium tồn tại trọn đời, không cần thanh toán lại và không tự động bị trừ phí định kỳ", en: "Once purchased, Premium access is lifetime — no repeat payment and no recurring charges" },
+            s3_2_li3: { vi: "Bạn có thể khôi phục giao dịch đã mua ngay trong ứng dụng nếu đổi thiết bị hoặc cài lại", en: "You can restore your purchase right in the App if you switch devices or reinstall" },
+
+            s3_3_h3: { vi: "3.3 Hoàn Tiền", en: "3.3 Refunds" },
+            s3_3_li1: { vi: "Chính sách hoàn tiền tuân theo quy định của Apple App Store", en: "Refunds are governed by the Apple App Store's refund policy" },
+            s3_3_li2: { vi: "Liên hệ Apple Support nếu bạn muốn yêu cầu hoàn tiền", en: "Contact Apple Support if you wish to request a refund" },
+            s3_3_li3: { vi: "Chúng tôi không quản lý trực tiếp việc thanh toán và hoàn tiền", en: "We do not directly manage payments or refunds" },
+
+            s4_h2: { vi: "4. Nội Dung & Dữ Liệu", en: "4. Content & Data" },
+
+            s4_1_h3: { vi: "4.1 Quyền Sở Hữu Trí Tuệ", en: "4.1 Intellectual Property Rights" },
+            s4_1_li1: { vi: "Tất cả nội dung, thiết kế, mã nguồn đều thuộc sở hữu của chúng tôi", en: "All content, design, and source code are owned by us" },
+            s4_1_li2: { vi: "Người dùng không được sao chép hoặc phân phối lại nội dung", en: "Users may not copy or redistribute the content" },
+
+            s4_2_h3: { vi: "4.2 Dữ Liệu Người Dùng", en: "4.2 User Data" },
+            s4_2_li1: { vi: "Dữ liệu bạn tạo (hồ sơ, ngày sinh, ảnh đại diện...) thuộc về bạn", en: "Data you create (profiles, birth dates, avatars, etc.) belongs to you" },
+            s4_2_li2: { vi: "Dữ liệu được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào", en: "Data is stored locally on your device and is not sent to any server" },
+            s4_2_li3: { vi: "Chúng tôi không chịu trách nhiệm về việc mất mát dữ liệu khi bạn xóa hoặc gỡ ứng dụng", en: "We are not responsible for data loss resulting from you deleting or uninstalling the App" },
+
+            s5_h2: { vi: "5. Nội Dung Phong Thủy Chỉ Mang Tính Tham Khảo", en: "5. Feng Shui Content Is for Reference Only" },
+            s5_p1: {
+                vi: "Toàn bộ nội dung trong ứng dụng (cung mệnh, hướng nhà, ngày tốt, tuổi hợp, màu sắc...) dựa trên tri thức phong thủy dân gian truyền thống và chỉ mang tính chất tham khảo, chiêm nghiệm văn hóa.",
+                en: "All content in the App (destiny palace, house direction, auspicious days, zodiac compatibility, colors, etc.) is based on traditional folk feng shui knowledge and is intended for reference and cultural interest only."
+            },
+            s5_p2: {
+                vi: "Ứng dụng <strong>không đưa ra lời khuyên y tế, tài chính hay pháp lý</strong>. Với các quyết định quan trọng (xây nhà, cưới hỏi, kinh doanh...), bạn nên cân nhắc điều kiện thực tế và tham khảo thêm ý kiến chuyên gia.",
+                en: "The App <strong>does not provide medical, financial, or legal advice</strong>. For important decisions (building a house, marriage, business, etc.), you should weigh your actual circumstances and seek additional expert advice."
+            },
+
+            s6_h2: { vi: "6. Từ Chối Bảo Hành", en: "6. Disclaimer of Warranty" },
+            s6_p: { vi: "Ứng dụng được cung cấp \"nguyên trạng\" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:", en: "The App is provided \"AS IS\" without any warranty. We do not guarantee:" },
+            s6_li1: { vi: "Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi", en: "That the App will operate uninterrupted or error-free" },
+            s6_li2: { vi: "Kết quả tra cứu phong thủy hoàn toàn khớp với mọi trường phái/tài liệu", en: "That feng shui lookup results will fully match every school of thought or reference source" },
+            s6_li3: { vi: "Tính tương thích với mọi thiết bị hoặc phiên bản iOS", en: "Compatibility with every device or iOS version" },
+
+            s7_h2: { vi: "7. Giới Hạn Trách Nhiệm", en: "7. Limitation of Liability" },
+            s7_p: { vi: "Chúng tôi không chịu trách nhiệm về:", en: "We are not liable for:" },
+            s7_li1: { vi: "Mất mát dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng", en: "Data loss resulting from the user deleting or uninstalling the App" },
+            s7_li2: { vi: "Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng", en: "Indirect damages arising from use of the App" },
+            s7_li3: { vi: "Quyết định cá nhân dựa trên thông tin phong thủy trong ứng dụng", en: "Personal decisions made based on feng shui information in the App" },
+
+            s8_h2: { vi: "8. Thay Đổi Điều Khoản", en: "8. Changes to These Terms" },
+            s8_p: {
+                vi: "Chúng tôi có quyền cập nhật Điều khoản này. Thay đổi sẽ có hiệu lực ngay khi được công bố. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.",
+                en: "We reserve the right to update these Terms. Changes take effect immediately upon publication. You should check back periodically for the latest information."
+            },
+
+            s9_h2: { vi: "9. Chấm Dứt Sử Dụng", en: "9. Termination" },
+            s9_p: { vi: "Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.", en: "We reserve the right to terminate or suspend your access if you violate these terms." },
+
+            s10_h2: { vi: "10. Luật Áp Dụng", en: "10. Governing Law" },
+            s10_p: { vi: "Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.", en: "These terms are governed by the laws of Vietnam." },
+
+            s11_h2: { vi: "11. Liên Hệ", en: "11. Contact" },
+            s11_p: { vi: "Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:", en: "If you have questions about these Terms of Use, please contact us:" },
+            s11_email: { vi: "<strong>📧 Email:</strong> <a href=\"mailto:iamsuunc@gmail.com\">iamsuunc@gmail.com</a>", en: "<strong>📧 Email:</strong> <a href=\"mailto:iamsuunc@gmail.com\">iamsuunc@gmail.com</a>" },
+            s11_website: { vi: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/phong-thuy/\">https://imsuunc.github.io/phong-thuy/</a>", en: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/phong-thuy/\">https://imsuunc.github.io/phong-thuy/</a>" },
+            s11_support: { vi: "<strong>📞 Trang hỗ trợ:</strong> <a href=\"support.html\">https://imsuunc.github.io/phong-thuy/support.html</a>", en: "<strong>📞 Support page:</strong> <a href=\"support.html\">https://imsuunc.github.io/phong-thuy/support.html</a>" },
+
+            refs_h2: { vi: "Tài Liệu Tham Khảo", en: "Related Documents" },
+            refs_privacy: { vi: "<a href=\"privacy.html\" style=\"color: #667eea; font-weight: 500;\">Chính Sách Quyền Riêng Tư</a>", en: "<a href=\"privacy.html\" style=\"color: #667eea; font-weight: 500;\">Privacy Policy</a>" },
+            refs_support: { vi: "<a href=\"support.html\" style=\"color: #667eea; font-weight: 500;\">Trang Hỗ Trợ</a>", en: "<a href=\"support.html\" style=\"color: #667eea; font-weight: 500;\">Support Page</a>" },
+            refs_eula: { vi: "<a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" style=\"color: #667eea; font-weight: 500;\">Apple Standard EULA</a>", en: "<a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" style=\"color: #667eea; font-weight: 500;\">Apple Standard EULA</a>" },
+
+            closing_note: { vi: "Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.", en: "By using the App, you acknowledge that you have read, understood, and agreed to the terms above." },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 24/07/2026", en: "Last updated: Jul 24, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

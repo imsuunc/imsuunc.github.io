@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hỗ Trợ - Vivis</title>
+    <title data-i18n="page_title">Hỗ Trợ - Vivis</title>
     <style>
         * {
             margin: 0;
@@ -52,6 +52,31 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
         }
 
         h2 {
@@ -157,113 +182,198 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Quay lại trang Vivis</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Vivis</a>
 
         <header>
-            <h1>📞 Hỗ Trợ</h1>
-            <p>Vivis - Chỉnh Sửa Video & Slideshow</p>
+            <h1 data-i18n="page_h1">📞 Hỗ Trợ</h1>
+            <p data-i18n="page_subtitle">Vivis - Chỉnh Sửa Video & Slideshow</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <section>
-            <h2>Liên Hệ Hỗ Trợ</h2>
-            <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
+            <h2 data-i18n="contact_h2">Liên Hệ Hỗ Trợ</h2>
+            <p data-i18n="contact_p">Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
 
             <div class="contact-box">
-                <h3>📧 Email Hỗ Trợ</h3>
+                <h3 data-i18n="contact_box_h3">📧 Email Hỗ Trợ</h3>
                 <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a>
-                <p style="margin-top: 15px; font-size: 0.9em;">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
+                <p style="margin-top: 15px; font-size: 0.9em;" data-i18n="contact_response_time">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
             </div>
         </section>
 
         <section>
-            <h2>Câu Hỏi Thường Gặp (FAQ)</h2>
+            <h2 data-i18n="faq_h2">Câu Hỏi Thường Gặp (FAQ)</h2>
 
             <div class="faq-item">
-                <h3>1. Làm sao để bắt đầu dựng video?</h3>
+                <h3 data-i18n="faq1_q">1. Làm sao để bắt đầu dựng video?</h3>
                 <ul>
-                    <li>Tạo dự án mới, chọn tỉ lệ khung hình mong muốn</li>
-                    <li>Thêm ảnh/video/nhạc từ Thư viện ảnh, sắp xếp trên dòng thời gian</li>
-                    <li>Thêm hiệu ứng chuyển cảnh, sticker, chữ... rồi xuất video</li>
+                    <li data-i18n="faq1_a1">Tạo dự án mới, chọn tỉ lệ khung hình mong muốn</li>
+                    <li data-i18n="faq1_a2">Thêm ảnh/video/nhạc từ Thư viện ảnh, sắp xếp trên dòng thời gian</li>
+                    <li data-i18n="faq1_a3">Thêm hiệu ứng chuyển cảnh, sticker, chữ... rồi xuất video</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>2. Vivis có cần kết nối mạng không?</h3>
+                <h3 data-i18n="faq2_q">2. Vivis có cần kết nối mạng không?</h3>
                 <ul>
-                    <li>Không. Toàn bộ quá trình dựng và xuất video diễn ra ngay trên máy, không cần Internet</li>
-                    <li>Dự án và media chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud</li>
+                    <li data-i18n="faq2_a1">Không. Toàn bộ quá trình dựng và xuất video diễn ra ngay trên máy, không cần Internet</li>
+                    <li data-i18n="faq2_a2">Dự án và media chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>3. Video xuất ra được lưu ở đâu?</h3>
+                <h3 data-i18n="faq3_q">3. Video xuất ra được lưu ở đâu?</h3>
                 <ul>
-                    <li>Sau khi xuất, bạn có thể xem lại ngay trong ứng dụng rồi lưu vào Thư viện ảnh của máy</li>
-                    <li>File tạm trong lúc xuất sẽ tự động dọn dẹp sau khi bạn lưu hoặc đóng màn hình xuất</li>
+                    <li data-i18n="faq3_a1">Sau khi xuất, bạn có thể xem lại ngay trong ứng dụng rồi lưu vào Thư viện ảnh của máy</li>
+                    <li data-i18n="faq3_a2">File tạm trong lúc xuất sẽ tự động dọn dẹp sau khi bạn lưu hoặc đóng màn hình xuất</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>4. Làm sao để xóa dự án hoặc dữ liệu?</h3>
+                <h3 data-i18n="faq4_q">4. Làm sao để xóa dự án hoặc dữ liệu?</h3>
                 <ul>
-                    <li>Bạn có thể xóa từng dự án ngay trong màn hình chính của ứng dụng</li>
-                    <li>Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                    <li data-i18n="faq4_a1">Bạn có thể xóa từng dự án ngay trong màn hình chính của ứng dụng</li>
+                    <li data-i18n="faq4_a2">Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>5. Ứng dụng có thu thập thông tin cá nhân không?</h3>
+                <h3 data-i18n="faq5_q">5. Ứng dụng có thu thập thông tin cá nhân không?</h3>
                 <ul>
-                    <li>Không, ứng dụng không thu thập hay truyền bất kỳ thông tin cá nhân nào lên máy chủ</li>
-                    <li>Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a></li>
+                    <li data-i18n="faq5_a1">Không, ứng dụng không thu thập hay truyền bất kỳ thông tin cá nhân nào lên máy chủ</li>
+                    <li data-i18n-html="faq5_a2">Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a></li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3>6. Vivis có mất phí không?</h3>
+                <h3 data-i18n="faq6_q">6. Vivis có mất phí không?</h3>
                 <ul>
-                    <li>Không, Vivis hoàn toàn miễn phí và không có mua hàng trong ứng dụng</li>
+                    <li data-i18n="faq6_a1">Không, Vivis hoàn toàn miễn phí và không có mua hàng trong ứng dụng</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>Báo Lỗi</h2>
-            <p>Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
+            <h2 data-i18n="bugreport_h2">Báo Lỗi</h2>
+            <p data-i18n="bugreport_p">Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
             <ul>
-                <li>Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)</li>
-                <li>Thiết bị và phiên bản hệ điều hành</li>
-                <li>Ảnh chụp màn hình (nếu có)</li>
+                <li data-i18n="bugreport_li1">Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)</li>
+                <li data-i18n="bugreport_li2">Thiết bị và phiên bản hệ điều hành</li>
+                <li data-i18n="bugreport_li3">Ảnh chụp màn hình (nếu có)</li>
             </ul>
         </section>
 
         <section>
-            <h2>Góp Ý & Đề Xuất Tính Năng</h2>
-            <p>Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
+            <h2 data-i18n="feedback_h2">Góp Ý & Đề Xuất Tính Năng</h2>
+            <p data-i18n="feedback_p">Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
             <ul>
-                <li>Hiệu ứng, sticker hoặc mẫu dựng bạn muốn thêm vào</li>
-                <li>Cải tiến giao diện</li>
-                <li>Bất kỳ ý tưởng nào khác</li>
+                <li data-i18n="feedback_li1">Hiệu ứng, sticker hoặc mẫu dựng bạn muốn thêm vào</li>
+                <li data-i18n="feedback_li2">Cải tiến giao diện</li>
+                <li data-i18n="feedback_li3">Bất kỳ ý tưởng nào khác</li>
             </ul>
         </section>
 
         <section>
-            <h2>Thông Tin Thêm</h2>
+            <h2 data-i18n="moreinfo_h2">Thông Tin Thêm</h2>
             <div class="links-section">
-                <p><strong>📄 Tài liệu quan trọng:</strong></p>
+                <p data-i18n="moreinfo_docs_label"><strong>📄 Tài liệu quan trọng:</strong></p>
                 <ul style="margin-left: 0; list-style: none;">
-                    <li style="margin: 10px 0;">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
-                    <li style="margin: 10px 0;">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                    <li style="margin: 10px 0;" data-i18n-html="moreinfo_privacy_link">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
+                    <li style="margin: 10px 0;" data-i18n-html="moreinfo_terms_link">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
                 </ul>
-                <p style="margin-top: 20px;"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">https://imsuunc.github.io/vivis/</a></p>
-                <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
+                <p style="margin-top: 20px;"><strong data-i18n="moreinfo_website_label">🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">https://imsuunc.github.io/vivis/</a></p>
+                <p><strong data-i18n="moreinfo_email_label">📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
             </div>
         </section>
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 26/07/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 26/07/2026</em></p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Hỗ Trợ - Vivis", en: "Support - Vivis" },
+            back_link: { vi: "← Quay lại trang Vivis", en: "← Back to Vivis" },
+            page_h1: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            page_subtitle: { vi: "Vivis - Chỉnh Sửa Video & Slideshow", en: "Vivis - Video & Slideshow Editor" },
+
+            contact_h2: { vi: "Liên Hệ Hỗ Trợ", en: "Contact Support" },
+            contact_p: { vi: "Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:", en: "We're always here to help! If you have questions, run into issues, or need assistance, please reach out to us through the following channels:" },
+            contact_box_h3: { vi: "📧 Email Hỗ Trợ", en: "📧 Support Email" },
+            contact_response_time: { vi: "Thời gian phản hồi: Trong vòng 24-48 giờ làm việc", en: "Response time: Within 24-48 business hours" },
+
+            faq_h2: { vi: "Câu Hỏi Thường Gặp (FAQ)", en: "Frequently Asked Questions (FAQ)" },
+
+            faq1_q: { vi: "1. Làm sao để bắt đầu dựng video?", en: "1. How do I start editing a video?" },
+            faq1_a1: { vi: "Tạo dự án mới, chọn tỉ lệ khung hình mong muốn", en: "Create a new project and choose your desired aspect ratio" },
+            faq1_a2: { vi: "Thêm ảnh/video/nhạc từ Thư viện ảnh, sắp xếp trên dòng thời gian", en: "Add photos/videos/music from your Photos library and arrange them on the timeline" },
+            faq1_a3: { vi: "Thêm hiệu ứng chuyển cảnh, sticker, chữ... rồi xuất video", en: "Add transition effects, stickers, text, and more, then export your video" },
+
+            faq2_q: { vi: "2. Vivis có cần kết nối mạng không?", en: "2. Does Vivis require an internet connection?" },
+            faq2_a1: { vi: "Không. Toàn bộ quá trình dựng và xuất video diễn ra ngay trên máy, không cần Internet", en: "No. The entire editing and export process happens right on your device, no internet required" },
+            faq2_a2: { vi: "Dự án và media chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud", en: "Projects and media are stored only on your device, with no cloud syncing" },
+
+            faq3_q: { vi: "3. Video xuất ra được lưu ở đâu?", en: "3. Where is the exported video saved?" },
+            faq3_a1: { vi: "Sau khi xuất, bạn có thể xem lại ngay trong ứng dụng rồi lưu vào Thư viện ảnh của máy", en: "After exporting, you can preview it right in the app and then save it to your device's Photos library" },
+            faq3_a2: { vi: "File tạm trong lúc xuất sẽ tự động dọn dẹp sau khi bạn lưu hoặc đóng màn hình xuất", en: "Temporary files created during export are automatically cleaned up after you save or close the export screen" },
+
+            faq4_q: { vi: "4. Làm sao để xóa dự án hoặc dữ liệu?", en: "4. How do I delete a project or my data?" },
+            faq4_a1: { vi: "Bạn có thể xóa từng dự án ngay trong màn hình chính của ứng dụng", en: "You can delete individual projects right from the app's home screen" },
+            faq4_a2: { vi: "Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng", en: "Or remove all data by uninstalling the app" },
+
+            faq5_q: { vi: "5. Ứng dụng có thu thập thông tin cá nhân không?", en: "5. Does the app collect personal information?" },
+            faq5_a1: { vi: "Không, ứng dụng không thu thập hay truyền bất kỳ thông tin cá nhân nào lên máy chủ", en: "No, the app does not collect or transmit any personal information to a server" },
+            faq5_a2: { vi: 'Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a>', en: 'See details in our <a href="privacy.html" style="color: #667eea;">Privacy Policy</a>' },
+
+            faq6_q: { vi: "6. Vivis có mất phí không?", en: "6. Is Vivis paid?" },
+            faq6_a1: { vi: "Không, Vivis hoàn toàn miễn phí và không có mua hàng trong ứng dụng", en: "No, Vivis is completely free with no in-app purchases" },
+
+            bugreport_h2: { vi: "Báo Lỗi", en: "Report a Bug" },
+            bugreport_p: { vi: "Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:", en: "If you encounter a bug while using the app, please email us with the following:" },
+            bugreport_li1: { vi: "Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)", en: "A detailed description of the issue (what you were doing when it occurred)" },
+            bugreport_li2: { vi: "Thiết bị và phiên bản hệ điều hành", en: "Your device and operating system version" },
+            bugreport_li3: { vi: "Ảnh chụp màn hình (nếu có)", en: "Screenshots (if available)" },
+
+            feedback_h2: { vi: "Góp Ý & Đề Xuất Tính Năng", en: "Feedback & Feature Requests" },
+            feedback_p: { vi: "Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:", en: "We'd love to hear your feedback! Please email us with:" },
+            feedback_li1: { vi: "Hiệu ứng, sticker hoặc mẫu dựng bạn muốn thêm vào", en: "Effects, stickers, or templates you'd like to see added" },
+            feedback_li2: { vi: "Cải tiến giao diện", en: "Interface improvements" },
+            feedback_li3: { vi: "Bất kỳ ý tưởng nào khác", en: "Any other ideas" },
+
+            moreinfo_h2: { vi: "Thông Tin Thêm", en: "More Information" },
+            moreinfo_docs_label: { vi: "<strong>📄 Tài liệu quan trọng:</strong>", en: "<strong>📄 Important documents:</strong>" },
+            moreinfo_privacy_link: { vi: '→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a>', en: '→ <a href="privacy.html">Privacy Policy</a>' },
+            moreinfo_terms_link: { vi: '→ <a href="terms.html">Điều Khoản Sử Dụng</a>', en: '→ <a href="terms.html">Terms of Use</a>' },
+            moreinfo_website_label: { vi: "🌐 Website:", en: "🌐 Website:" },
+            moreinfo_email_label: { vi: "📧 Email:", en: "📧 Email:" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 26/07/2026", en: "Last updated: Jul 26, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

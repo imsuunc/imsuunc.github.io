@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chính Sách Quyền Riêng Tư - Phong Thủy - La Bàn, Xem Tuổi</title>
+    <title data-i18n="page_title">Chính Sách Quyền Riêng Tư - Phong Thủy - La Bàn, Xem Tuổi</title>
     <style>
         * {
             margin: 0;
@@ -52,6 +52,31 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
         }
 
         .update-date {
@@ -152,16 +177,20 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Quay lại trang Phong Thủy - La Bàn, Xem Tuổi</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Phong Thủy - La Bàn, Xem Tuổi</a>
 
         <header>
-            <h1>🔒 Chính Sách Quyền Riêng Tư</h1>
-            <p>Phong Thủy - La Bàn, Xem Tuổi</p>
-            <p class="update-date">Cập nhật lần cuối: 24/07/2026</p>
+            <h1 data-i18n="header_title">🔒 Chính Sách Quyền Riêng Tư</h1>
+            <p data-i18n="header_subtitle">Phong Thủy - La Bàn, Xem Tuổi</p>
+            <p class="update-date" data-i18n="header_updated">Cập nhật lần cuối: 24/07/2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <div class="highlight-box">
-            <p style="text-align: center; font-size: 1.1em;">
+            <p style="text-align: center; font-size: 1.1em;" data-i18n-html="intro_p">
                 Ứng dụng <strong>Phong Thủy - La Bàn, Xem Tuổi</strong> ("Ứng dụng", "chúng tôi") cam kết bảo vệ quyền riêng tư
                 và dữ liệu cá nhân của người dùng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ
                 thông tin khi bạn sử dụng ứng dụng.
@@ -169,50 +198,50 @@
         </div>
 
         <section>
-            <h2>1. Thông tin chúng tôi thu thập</h2>
+            <h2 data-i18n="s1_h2">1. Thông tin chúng tôi thu thập</h2>
             <div class="info-box">
-                <p style="font-weight: bold;">
+                <p style="font-weight: bold;" data-i18n-html="s1_info">
                     Ứng dụng <strong>không yêu cầu tạo tài khoản</strong> và <strong>không thu thập, không truyền bất kỳ
                     thông tin cá nhân nào lên máy chủ</strong>. Toàn bộ dữ liệu chỉ lưu trên chính thiết bị của bạn.
                 </p>
             </div>
 
-            <h3>1.1 Hồ sơ mệnh chủ (do bạn tự nhập)</h3>
+            <h3 data-i18n="s1_1_h3">1.1 Hồ sơ mệnh chủ (do bạn tự nhập)</h3>
             <ul>
-                <li>Tên, ngày sinh, giới tính</li>
-                <li>Ảnh đại diện (tùy chọn)</li>
+                <li data-i18n="s1_1_li1">Tên, ngày sinh, giới tính</li>
+                <li data-i18n="s1_1_li2">Ảnh đại diện (tùy chọn)</li>
             </ul>
-            <p style="margin-left: 20px;">
+            <p style="margin-left: 20px;" data-i18n-html="s1_1_p">
                 Dữ liệu này <strong>được lưu trữ cục bộ trên thiết bị</strong> (cơ sở dữ liệu nội bộ của ứng dụng) và
                 <strong>không được gửi về máy chủ nào</strong>, kể cả máy chủ của chúng tôi.
             </p>
 
-            <h3>1.2 Ứng dụng KHÔNG thu thập</h3>
+            <h3 data-i18n="s1_2_h3">1.2 Ứng dụng KHÔNG thu thập</h3>
             <ul>
-                <li>Không thu thập dữ liệu phân tích (analytics) hay báo cáo lỗi</li>
-                <li>Không dùng bất kỳ dịch vụ theo dõi/quảng cáo của bên thứ ba nào</li>
-                <li>Không có máy chủ backend — ứng dụng hoạt động hoàn toàn offline</li>
+                <li data-i18n="s1_2_li1">Không thu thập dữ liệu phân tích (analytics) hay báo cáo lỗi</li>
+                <li data-i18n="s1_2_li2">Không dùng bất kỳ dịch vụ theo dõi/quảng cáo của bên thứ ba nào</li>
+                <li data-i18n="s1_2_li3">Không có máy chủ backend — ứng dụng hoạt động hoàn toàn offline</li>
             </ul>
         </section>
 
         <section>
-            <h2>2. Quyền truy cập ứng dụng yêu cầu</h2>
+            <h2 data-i18n="s2_h2">2. Quyền truy cập ứng dụng yêu cầu</h2>
 
-            <h3>2.1 Vị trí (chỉ khi đang dùng ứng dụng)</h3>
-            <p>
+            <h3 data-i18n="s2_1_h3">2.1 Vị trí (chỉ khi đang dùng ứng dụng)</h3>
+            <p data-i18n-html="s2_1_p">
                 Dùng cho tính năng <strong>La Bàn Phong Thủy</strong>, để đọc cảm biến la bàn (hướng) của thiết bị.
                 Ứng dụng <strong>không lưu trữ, không ghi lại và không gửi đi</strong> bất kỳ dữ liệu vị trí/hướng nào —
                 chỉ đọc trực tiếp và hiển thị theo thời gian thực.
             </p>
 
-            <h3>2.2 Thư viện ảnh</h3>
-            <p>
+            <h3 data-i18n="s2_2_h3">2.2 Thư viện ảnh</h3>
+            <p data-i18n-html="s2_2_p">
                 Dùng để bạn chọn ảnh đại diện cho hồ sơ. Ứng dụng chỉ truy cập đúng ảnh bạn chọn (qua trình chọn ảnh
                 hệ thống của iOS) và <strong>không có quyền duyệt toàn bộ thư viện ảnh</strong> của bạn.
             </p>
 
             <div class="warning-box">
-                <p>
+                <p data-i18n-html="s2_warning">
                     Ứng dụng <strong>không truy cập</strong> danh bạ, camera, micro hoặc bất kỳ dữ liệu cá nhân nào khác
                     ngoài những mục nêu trên.
                 </p>
@@ -220,8 +249,8 @@
         </section>
 
         <section>
-            <h2>3. Mua hàng trong ứng dụng</h2>
-            <p>
+            <h2 data-i18n="s3_h2">3. Mua hàng trong ứng dụng</h2>
+            <p data-i18n-html="s3_p">
                 Ứng dụng có gói <strong>Phong Thủy Premium</strong> (mua một lần, không tự động gia hạn). Giao dịch
                 mua được xử lý hoàn toàn qua Apple/App Store — chúng tôi <strong>không thu thập hay lưu trữ</strong>
                 thông tin thẻ thanh toán của bạn.
@@ -229,8 +258,8 @@
         </section>
 
         <section>
-            <h2>4. Dịch vụ bên thứ ba</h2>
-            <p>
+            <h2 data-i18n="s4_h2">4. Dịch vụ bên thứ ba</h2>
+            <p data-i18n-html="s4_p">
                 Ứng dụng không tích hợp dịch vụ phân tích, quảng cáo hay theo dõi của bên thứ ba nào. Giao dịch mua
                 hàng trong ứng dụng do Apple xử lý theo
                 <a href="https://www.apple.com/legal/privacy/" target="_blank" style="color: #667eea;">
@@ -240,15 +269,15 @@
         </section>
 
         <section>
-            <h2>5. Quyền của người dùng</h2>
-            <p>Vì mọi dữ liệu chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:</p>
+            <h2 data-i18n="s5_h2">5. Quyền của người dùng</h2>
+            <p data-i18n="s5_p">Vì mọi dữ liệu chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:</p>
             <ul>
-                <li>Xem, sửa hoặc xóa từng hồ sơ ngay trong ứng dụng</li>
-                <li>Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                <li data-i18n="s5_li1">Xem, sửa hoặc xóa từng hồ sơ ngay trong ứng dụng</li>
+                <li data-i18n="s5_li2">Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
             </ul>
 
             <div class="warning-box">
-                <p>
+                <p data-i18n-html="s5_warning">
                     Vì chúng tôi <strong>không lưu trữ dữ liệu trên máy chủ</strong>, chúng tôi không có bản sao dữ
                     liệu và không thể khôi phục dữ liệu bạn đã xóa hoặc mất khi gỡ ứng dụng.
                 </p>
@@ -256,23 +285,23 @@
         </section>
 
         <section>
-            <h2>6. Thay đổi chính sách</h2>
-            <p>
+            <h2 data-i18n="s6_h2">6. Thay đổi chính sách</h2>
+            <p data-i18n="s6_p">
                 Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.
             </p>
         </section>
 
         <section>
-            <h2>7. Liên hệ</h2>
-            <p>Nếu bạn có câu hỏi, vui lòng liên hệ:</p>
+            <h2 data-i18n="s7_h2">7. Liên hệ</h2>
+            <p data-i18n="s7_p">Nếu bạn có câu hỏi, vui lòng liên hệ:</p>
 
             <div class="contact-info">
-                <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
-                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/phong-thuy/">https://imsuunc.github.io/phong-thuy/</a></p>
-                <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/phong-thuy/support.html</a></p>
+                <p data-i18n-html="s7_email"><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
+                <p data-i18n-html="s7_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/phong-thuy/">https://imsuunc.github.io/phong-thuy/</a></p>
+                <p data-i18n-html="s7_support"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/phong-thuy/support.html</a></p>
             </div>
 
-            <p style="margin-top: 20px;">
+            <p style="margin-top: 20px;" data-i18n-html="s7_eula">
                 <strong>Điều khoản sử dụng (EULA):</strong>
                 <a href="terms.html" style="color: #667eea; font-weight: 500;">Xem tại đây</a> hoặc
                 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #667eea; font-weight: 500;">
@@ -283,8 +312,119 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 24/07/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 24/07/2026</em></p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Chính Sách Quyền Riêng Tư - Phong Thủy - La Bàn, Xem Tuổi", en: "Privacy Policy - Phong Thuy - Compass & Zodiac Lookup" },
+
+            back_link: { vi: "← Quay lại trang Phong Thủy - La Bàn, Xem Tuổi", en: "← Back to Phong Thuy - Compass & Zodiac Lookup" },
+
+            header_title: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            header_subtitle: { vi: "Phong Thủy - La Bàn, Xem Tuổi", en: "Phong Thuy - Compass & Zodiac Lookup" },
+            header_updated: { vi: "Cập nhật lần cuối: 24/07/2026", en: "Last updated: Jul 24, 2026" },
+
+            intro_p: {
+                vi: "Ứng dụng <strong>Phong Thủy - La Bàn, Xem Tuổi</strong> (\"Ứng dụng\", \"chúng tôi\") cam kết bảo vệ quyền riêng tư và dữ liệu cá nhân của người dùng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin khi bạn sử dụng ứng dụng.",
+                en: "The <strong>Phong Thuy - Compass & Zodiac Lookup</strong> app (\"the App\", \"we\", \"us\") is committed to protecting users' privacy and personal data. This policy explains how we collect, use, and protect information when you use the App."
+            },
+
+            s1_h2: { vi: "1. Thông tin chúng tôi thu thập", en: "1. Information We Collect" },
+            s1_info: {
+                vi: "Ứng dụng <strong>không yêu cầu tạo tài khoản</strong> và <strong>không thu thập, không truyền bất kỳ thông tin cá nhân nào lên máy chủ</strong>. Toàn bộ dữ liệu chỉ lưu trên chính thiết bị của bạn.",
+                en: "The App <strong>does not require account creation</strong> and <strong>does not collect or transmit any personal information to a server</strong>. All data is stored solely on your own device."
+            },
+
+            s1_1_h3: { vi: "1.1 Hồ sơ mệnh chủ (do bạn tự nhập)", en: "1.1 Profile Information (entered by you)" },
+            s1_1_li1: { vi: "Tên, ngày sinh, giới tính", en: "Name, date of birth, gender" },
+            s1_1_li2: { vi: "Ảnh đại diện (tùy chọn)", en: "Avatar photo (optional)" },
+            s1_1_p: {
+                vi: "Dữ liệu này <strong>được lưu trữ cục bộ trên thiết bị</strong> (cơ sở dữ liệu nội bộ của ứng dụng) và <strong>không được gửi về máy chủ nào</strong>, kể cả máy chủ của chúng tôi.",
+                en: "This data is <strong>stored locally on your device</strong> (in the App's internal database) and is <strong>never sent to any server</strong>, including our own."
+            },
+
+            s1_2_h3: { vi: "1.2 Ứng dụng KHÔNG thu thập", en: "1.2 What the App Does NOT Collect" },
+            s1_2_li1: { vi: "Không thu thập dữ liệu phân tích (analytics) hay báo cáo lỗi", en: "No analytics or crash-report data is collected" },
+            s1_2_li2: { vi: "Không dùng bất kỳ dịch vụ theo dõi/quảng cáo của bên thứ ba nào", en: "No third-party tracking or advertising services are used" },
+            s1_2_li3: { vi: "Không có máy chủ backend — ứng dụng hoạt động hoàn toàn offline", en: "There is no backend server — the App operates entirely offline" },
+
+            s2_h2: { vi: "2. Quyền truy cập ứng dụng yêu cầu", en: "2. Permissions the App Requests" },
+
+            s2_1_h3: { vi: "2.1 Vị trí (chỉ khi đang dùng ứng dụng)", en: "2.1 Location (only while using the app)" },
+            s2_1_p: {
+                vi: "Dùng cho tính năng <strong>La Bàn Phong Thủy</strong>, để đọc cảm biến la bàn (hướng) của thiết bị. Ứng dụng <strong>không lưu trữ, không ghi lại và không gửi đi</strong> bất kỳ dữ liệu vị trí/hướng nào — chỉ đọc trực tiếp và hiển thị theo thời gian thực.",
+                en: "Used by the <strong>Feng Shui Compass</strong> feature to read your device's compass (heading) sensor. The App <strong>does not store, log, or transmit</strong> any location/heading data — it only reads and displays it live in real time."
+            },
+
+            s2_2_h3: { vi: "2.2 Thư viện ảnh", en: "2.2 Photo Library" },
+            s2_2_p: {
+                vi: "Dùng để bạn chọn ảnh đại diện cho hồ sơ. Ứng dụng chỉ truy cập đúng ảnh bạn chọn (qua trình chọn ảnh hệ thống của iOS) và <strong>không có quyền duyệt toàn bộ thư viện ảnh</strong> của bạn.",
+                en: "Used so you can choose an avatar photo for your profile. The App only accesses the specific photo you select (via iOS's system photo picker) and <strong>has no permission to browse your entire photo library</strong>."
+            },
+
+            s2_warning: {
+                vi: "Ứng dụng <strong>không truy cập</strong> danh bạ, camera, micro hoặc bất kỳ dữ liệu cá nhân nào khác ngoài những mục nêu trên.",
+                en: "The App <strong>does not access</strong> your contacts, camera, microphone, or any other personal data beyond what is listed above."
+            },
+
+            s3_h2: { vi: "3. Mua hàng trong ứng dụng", en: "3. In-App Purchases" },
+            s3_p: {
+                vi: "Ứng dụng có gói <strong>Phong Thủy Premium</strong> (mua một lần, không tự động gia hạn). Giao dịch mua được xử lý hoàn toàn qua Apple/App Store — chúng tôi <strong>không thu thập hay lưu trữ</strong> thông tin thẻ thanh toán của bạn.",
+                en: "The App offers a <strong>Phong Thuy Premium</strong> package (one-time purchase, no auto-renewal). Purchases are processed entirely through Apple/the App Store — we <strong>do not collect or store</strong> your payment card information."
+            },
+
+            s4_h2: { vi: "4. Dịch vụ bên thứ ba", en: "4. Third-Party Services" },
+            s4_p: {
+                vi: "Ứng dụng không tích hợp dịch vụ phân tích, quảng cáo hay theo dõi của bên thứ ba nào. Giao dịch mua hàng trong ứng dụng do Apple xử lý theo <a href=\"https://www.apple.com/legal/privacy/\" target=\"_blank\" style=\"color: #667eea;\">Chính sách quyền riêng tư của Apple</a>.",
+                en: "The App does not integrate any third-party analytics, advertising, or tracking services. In-app purchases are processed by Apple under <a href=\"https://www.apple.com/legal/privacy/\" target=\"_blank\" style=\"color: #667eea;\">Apple's Privacy Policy</a>."
+            },
+
+            s5_h2: { vi: "5. Quyền của người dùng", en: "5. User Rights" },
+            s5_p: { vi: "Vì mọi dữ liệu chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:", en: "Since all data resides only on your device, you have full control to:" },
+            s5_li1: { vi: "Xem, sửa hoặc xóa từng hồ sơ ngay trong ứng dụng", en: "View, edit, or delete individual profiles right in the App" },
+            s5_li2: { vi: "Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng", en: "Delete all data by uninstalling the App" },
+            s5_warning: {
+                vi: "Vì chúng tôi <strong>không lưu trữ dữ liệu trên máy chủ</strong>, chúng tôi không có bản sao dữ liệu và không thể khôi phục dữ liệu bạn đã xóa hoặc mất khi gỡ ứng dụng.",
+                en: "Because we <strong>do not store data on any server</strong>, we have no copy of your data and cannot recover data you have deleted or lost by uninstalling the App."
+            },
+
+            s6_h2: { vi: "6. Thay đổi chính sách", en: "6. Changes to This Policy" },
+            s6_p: { vi: "Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.", en: "This policy may be updated from time to time; the most recent version will always be posted on this page." },
+
+            s7_h2: { vi: "7. Liên hệ", en: "7. Contact" },
+            s7_p: { vi: "Nếu bạn có câu hỏi, vui lòng liên hệ:", en: "If you have any questions, please contact us:" },
+            s7_email: { vi: "<strong>📧 Email:</strong> <a href=\"mailto:iamsuunc@gmail.com\">iamsuunc@gmail.com</a>", en: "<strong>📧 Email:</strong> <a href=\"mailto:iamsuunc@gmail.com\">iamsuunc@gmail.com</a>" },
+            s7_website: { vi: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/phong-thuy/\">https://imsuunc.github.io/phong-thuy/</a>", en: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/phong-thuy/\">https://imsuunc.github.io/phong-thuy/</a>" },
+            s7_support: { vi: "<strong>📞 Trang hỗ trợ:</strong> <a href=\"support.html\">https://imsuunc.github.io/phong-thuy/support.html</a>", en: "<strong>📞 Support page:</strong> <a href=\"support.html\">https://imsuunc.github.io/phong-thuy/support.html</a>" },
+            s7_eula: {
+                vi: "<strong>Điều khoản sử dụng (EULA):</strong> <a href=\"terms.html\" style=\"color: #667eea; font-weight: 500;\">Xem tại đây</a> hoặc <a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" style=\"color: #667eea; font-weight: 500;\">Apple Standard EULA</a>",
+                en: "<strong>Terms of Use (EULA):</strong> <a href=\"terms.html\" style=\"color: #667eea; font-weight: 500;\">View here</a> or the <a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" style=\"color: #667eea; font-weight: 500;\">Apple Standard EULA</a>"
+            },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 24/07/2026", en: "Last updated: Jul 24, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

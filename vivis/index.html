@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivis - Chỉnh Sửa Video & Slideshow | IMSUUNC</title>
+    <title data-i18n="page_title">Vivis - Chỉnh Sửa Video & Slideshow | IMSUUNC</title>
     <style>
         * {
             margin: 0;
@@ -43,6 +43,31 @@
         .subtitle {
             color: #a1a1aa;
             font-size: 1.1em;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
         }
 
         nav {
@@ -128,6 +153,15 @@
             font-size: 0.95em;
         }
 
+        .app-store-badge {
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .app-store-badge img {
+            height: 50px;
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -158,88 +192,96 @@
 </head>
 <body>
     <div class="container">
-        <a href="../index.html" style="color: #8b9cff; text-decoration: none; font-weight: 500;">← Tất cả ứng dụng của IMSUUNC</a>
+        <a href="../index.html" style="color: #8b9cff; text-decoration: none; font-weight: 500;" data-i18n="back_link">← Tất cả ứng dụng của IMSUUNC</a>
 
         <header style="margin-top: 20px;">
-            <h1>🎬 Vivis - Chỉnh Sửa Video & Slideshow</h1>
-            <p class="subtitle">Dựng video, ghép ảnh thành slideshow ngay trên điện thoại — cắt ghép, hiệu ứng, sticker, chữ đẹp, xuất video chất lượng cao</p>
+            <h1 data-i18n="hero_title">🎬 Vivis - Chỉnh Sửa Video & Slideshow</h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Dựng video, ghép ảnh thành slideshow ngay trên điện thoại — cắt ghép, hiệu ứng, sticker, chữ đẹp, xuất video chất lượng cao</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <nav>
-            <a href="support.html" class="nav-button">📞 Hỗ Trợ</a>
-            <a href="privacy.html" class="nav-button">🔒 Quyền Riêng Tư</a>
-            <a href="terms.html" class="nav-button">📋 Điều Khoản</a>
+            <a href="support.html" class="nav-button" data-i18n="nav_support">📞 Hỗ Trợ</a>
+            <a href="privacy.html" class="nav-button" data-i18n="nav_privacy">🔒 Quyền Riêng Tư</a>
+            <a href="terms.html" class="nav-button" data-i18n="nav_terms">📋 Điều Khoản</a>
         </nav>
 
         <section>
-            <h2>Về Ứng Dụng</h2>
-            <p>
+            <h2 data-i18n="about_h2">Về Ứng Dụng</h2>
+            <p data-i18n-html="about_p">
                 <strong>Vivis</strong> là ứng dụng dựng video và slideshow đơn giản ngay trên điện thoại: ghép nhiều
                 ảnh/video/nhạc thành 1 video hoàn chỉnh, thêm hiệu ứng chuyển cảnh, sticker động, chữ và hình vẽ,
                 rồi xuất ra video chất lượng cao để lưu hoặc chia sẻ. Toàn bộ quá trình chỉnh sửa và xuất video diễn
                 ra ngay trên máy — không cần tài khoản, không cần kết nối mạng.
             </p>
 
-            <div class="coming-soon">🚀 Sắp ra mắt trên App Store &amp; Google Play</div>
+            <div class="app-store-badge">
+                <a href="https://apps.apple.com/vn/app/vivis-video-slideshow/id6787610960" target="_blank">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+            </div>
         </section>
 
         <section>
-            <h2>Tính Năng Nổi Bật</h2>
+            <h2 data-i18n="features_h2">Tính Năng Nổi Bật</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h3>✂️ Dựng Video Theo Timeline</h3>
-                    <p>Kéo-thả, sắp xếp, cắt ghép nhiều clip ảnh/video/nhạc trên dòng thời gian trực quan</p>
+                    <h3 data-i18n="feature1_title">✂️ Dựng Video Theo Timeline</h3>
+                    <p data-i18n="feature1_desc">Kéo-thả, sắp xếp, cắt ghép nhiều clip ảnh/video/nhạc trên dòng thời gian trực quan</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🎞️ Hiệu Ứng Chuyển Cảnh</h3>
-                    <p>Fade, trượt, zoom, bật nảy, xoay, lật 3D, khối lập phương 3D và nhiều kiểu chuyển cảnh khác</p>
+                    <h3 data-i18n="feature2_title">🎞️ Hiệu Ứng Chuyển Cảnh</h3>
+                    <p data-i18n="feature2_desc">Fade, trượt, zoom, bật nảy, xoay, lật 3D, khối lập phương 3D và nhiều kiểu chuyển cảnh khác</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🖼️ Ken Burns Cho Ảnh</h3>
-                    <p>Ảnh tĩnh tự động lia/phóng to nhẹ nhàng, biến slideshow ảnh trở nên sống động</p>
+                    <h3 data-i18n="feature3_title">🖼️ Ken Burns Cho Ảnh</h3>
+                    <p data-i18n="feature3_desc">Ảnh tĩnh tự động lia/phóng to nhẹ nhàng, biến slideshow ảnh trở nên sống động</p>
                 </div>
                 <div class="feature-card">
-                    <h3>✨ Sticker, Emoji & Chữ</h3>
-                    <p>Hơn 800 sticker động (GIF) và sticker tĩnh theo chủ đề, emoji, chữ nhiều font với viền/bóng/gradient</p>
+                    <h3 data-i18n="feature4_title">✨ Sticker, Emoji & Chữ</h3>
+                    <p data-i18n="feature4_desc">Hơn 800 sticker động (GIF) và sticker tĩnh theo chủ đề, emoji, chữ nhiều font với viền/bóng/gradient</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🎨 Bộ Lọc & Hiệu Ứng</h3>
-                    <p>Bộ lọc màu và hiệu ứng động (rung, hạt phim, VHS...) phong cách CapCut</p>
+                    <h3 data-i18n="feature5_title">🎨 Bộ Lọc & Hiệu Ứng</h3>
+                    <p data-i18n="feature5_desc">Bộ lọc màu và hiệu ứng động (rung, hạt phim, VHS...) phong cách CapCut</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🧩 Mẫu Dựng Sẵn</h3>
-                    <p>Chọn mẫu có sẵn, thay ảnh/video của bạn vào là có ngay video hoàn chỉnh</p>
+                    <h3 data-i18n="feature6_title">🧩 Mẫu Dựng Sẵn</h3>
+                    <p data-i18n="feature6_desc">Chọn mẫu có sẵn, thay ảnh/video của bạn vào là có ngay video hoàn chỉnh</p>
                 </div>
                 <div class="feature-card">
-                    <h3>✂️ Cắt Video/Audio Trực Tiếp</h3>
-                    <p>Cắt đầu-cuối clip ngay trong ứng dụng, xem trước kết quả trước khi lưu</p>
+                    <h3 data-i18n="feature7_title">✂️ Cắt Video/Audio Trực Tiếp</h3>
+                    <p data-i18n="feature7_desc">Cắt đầu-cuối clip ngay trong ứng dụng, xem trước kết quả trước khi lưu</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📤 Xuất Video Chất Lượng Cao</h3>
-                    <p>Xuất file MP4 và lưu thẳng vào Thư viện ảnh của máy, xem lại ngay trong ứng dụng</p>
+                    <h3 data-i18n="feature8_title">📤 Xuất Video Chất Lượng Cao</h3>
+                    <p data-i18n="feature8_desc">Xuất file MP4 và lưu thẳng vào Thư viện ảnh của máy, xem lại ngay trong ứng dụng</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Liên Hệ & Hỗ Trợ</h2>
+            <h2 data-i18n="contact_h2">Liên Hệ & Hỗ Trợ</h2>
             <div class="contact-info">
-                <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
-                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">imsuunc.github.io/vivis</a></p>
-                <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a></p>
+                <p data-i18n-html="contact_email"><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
+                <p data-i18n-html="contact_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">imsuunc.github.io/vivis</a></p>
+                <p data-i18n-html="contact_support_link"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a></p>
             </div>
         </section>
 
         <section>
-            <h2>Tài Liệu Quan Trọng</h2>
+            <h2 data-i18n="docs_h2">Tài Liệu Quan Trọng</h2>
             <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                    <a href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">
+                    <a href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="doc_privacy">
                         🔒 Chính Sách Quyền Riêng Tư
                     </a>
                 </li>
                 <li style="margin: 10px 0;">
-                    <a href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">
+                    <a href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="doc_terms">
                         📋 Điều Khoản Sử Dụng
                     </a>
                 </li>
@@ -248,8 +290,85 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;">Cập nhật lần cuối: 26/07/2026</p>
+            <p style="margin-top: 10px;" data-i18n="footer_updated">Cập nhật lần cuối: 26/07/2026</p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Vivis - Chỉnh Sửa Video & Slideshow | IMSUUNC", en: "Vivis - Video & Slideshow Editor | IMSUUNC" },
+            back_link: { vi: "← Tất cả ứng dụng của IMSUUNC", en: "← All apps by IMSUUNC" },
+
+            hero_title: { vi: "🎬 Vivis - Chỉnh Sửa Video & Slideshow", en: "🎬 Vivis - Video & Slideshow Editor" },
+            hero_subtitle: { vi: "Dựng video, ghép ảnh thành slideshow ngay trên điện thoại — cắt ghép, hiệu ứng, sticker, chữ đẹp, xuất video chất lượng cao", en: "Edit videos and turn photos into slideshows right on your phone — trimming, effects, stickers, stylish text, high-quality video export" },
+
+            nav_support: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            nav_privacy: { vi: "🔒 Quyền Riêng Tư", en: "🔒 Privacy" },
+            nav_terms: { vi: "📋 Điều Khoản", en: "📋 Terms" },
+
+            about_h2: { vi: "Về Ứng Dụng", en: "About the App" },
+            about_p: {
+                vi: "<strong>Vivis</strong> là ứng dụng dựng video và slideshow đơn giản ngay trên điện thoại: ghép nhiều ảnh/video/nhạc thành 1 video hoàn chỉnh, thêm hiệu ứng chuyển cảnh, sticker động, chữ và hình vẽ, rồi xuất ra video chất lượng cao để lưu hoặc chia sẻ. Toàn bộ quá trình chỉnh sửa và xuất video diễn ra ngay trên máy — không cần tài khoản, không cần kết nối mạng.",
+                en: "<strong>Vivis</strong> is a simple video and slideshow editor right on your phone: combine multiple photos/videos/music into a single finished video, add transition effects, animated stickers, text, and drawings, then export a high-quality video to save or share. The entire editing and export process happens right on your device — no account needed, no internet connection required."
+            },
+
+            features_h2: { vi: "Tính Năng Nổi Bật", en: "Key Features" },
+
+            feature1_title: { vi: "✂️ Dựng Video Theo Timeline", en: "✂️ Timeline-Based Editing" },
+            feature1_desc: { vi: "Kéo-thả, sắp xếp, cắt ghép nhiều clip ảnh/video/nhạc trên dòng thời gian trực quan", en: "Drag and drop, arrange, and trim multiple photo/video/music clips on an intuitive timeline" },
+
+            feature2_title: { vi: "🎞️ Hiệu Ứng Chuyển Cảnh", en: "🎞️ Transition Effects" },
+            feature2_desc: { vi: "Fade, trượt, zoom, bật nảy, xoay, lật 3D, khối lập phương 3D và nhiều kiểu chuyển cảnh khác", en: "Fade, slide, zoom, bounce, rotate, 3D flip, 3D cube, and many more transition styles" },
+
+            feature3_title: { vi: "🖼️ Ken Burns Cho Ảnh", en: "🖼️ Ken Burns for Photos" },
+            feature3_desc: { vi: "Ảnh tĩnh tự động lia/phóng to nhẹ nhàng, biến slideshow ảnh trở nên sống động", en: "Still photos automatically pan and zoom gently, bringing your photo slideshow to life" },
+
+            feature4_title: { vi: "✨ Sticker, Emoji & Chữ", en: "✨ Stickers, Emoji & Text" },
+            feature4_desc: { vi: "Hơn 800 sticker động (GIF) và sticker tĩnh theo chủ đề, emoji, chữ nhiều font với viền/bóng/gradient", en: "Over 800 animated (GIF) and static themed stickers, emoji, and text in many fonts with outlines/shadows/gradients" },
+
+            feature5_title: { vi: "🎨 Bộ Lọc & Hiệu Ứng", en: "🎨 Filters & Effects" },
+            feature5_desc: { vi: "Bộ lọc màu và hiệu ứng động (rung, hạt phim, VHS...) phong cách CapCut", en: "Color filters and animated effects (shake, film grain, VHS...) in CapCut style" },
+
+            feature6_title: { vi: "🧩 Mẫu Dựng Sẵn", en: "🧩 Ready-Made Templates" },
+            feature6_desc: { vi: "Chọn mẫu có sẵn, thay ảnh/video của bạn vào là có ngay video hoàn chỉnh", en: "Pick a ready-made template, swap in your own photos/videos, and get a finished video instantly" },
+
+            feature7_title: { vi: "✂️ Cắt Video/Audio Trực Tiếp", en: "✂️ Direct Video/Audio Trimming" },
+            feature7_desc: { vi: "Cắt đầu-cuối clip ngay trong ứng dụng, xem trước kết quả trước khi lưu", en: "Trim the start and end of clips right in the app, with a preview before saving" },
+
+            feature8_title: { vi: "📤 Xuất Video Chất Lượng Cao", en: "📤 High-Quality Video Export" },
+            feature8_desc: { vi: "Xuất file MP4 và lưu thẳng vào Thư viện ảnh của máy, xem lại ngay trong ứng dụng", en: "Export MP4 files and save them directly to your Photos library, with instant playback in the app" },
+
+            contact_h2: { vi: "Liên Hệ & Hỗ Trợ", en: "Contact & Support" },
+            contact_email: { vi: '<strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a>', en: '<strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a>' },
+            contact_website: { vi: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">imsuunc.github.io/vivis</a>', en: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/vivis/">imsuunc.github.io/vivis</a>' },
+            contact_support_link: { vi: '<strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a>', en: '<strong>📞 Support page:</strong> <a href="support.html">View support page</a>' },
+
+            docs_h2: { vi: "Tài Liệu Quan Trọng", en: "Important Documents" },
+            doc_privacy: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            doc_terms: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 26/07/2026", en: "Last updated: Jul 26, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

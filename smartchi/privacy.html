@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chính Sách Quyền Riêng Tư - SmartChi</title>
+    <title data-i18n="page_title">Chính Sách Quyền Riêng Tư - SmartChi</title>
     <style>
         * {
             margin: 0;
@@ -52,6 +52,31 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #c24d02 0%, #ff8a26 100%);
+            color: white;
+            border-color: transparent;
         }
 
         .update-date {
@@ -187,16 +212,20 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Quay lại trang SmartChi</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang SmartChi</a>
 
         <header>
-            <h1>🔒 Chính Sách Quyền Riêng Tư</h1>
-            <p>SmartChi - Quản Lý Chi Tiêu Bằng AI</p>
-            <p class="update-date">Cập nhật lần cuối: 05/08/2026</p>
+            <h1 data-i18n="hero_title">🔒 Chính Sách Quyền Riêng Tư</h1>
+            <p data-i18n="hero_subtitle">SmartChi - Quản Lý Chi Tiêu Bằng AI</p>
+            <p class="update-date" data-i18n="update_date">Cập nhật lần cuối: 05/08/2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <div class="highlight-box">
-            <p style="text-align: center; font-size: 1.1em;">
+            <p style="text-align: center; font-size: 1.1em;" data-i18n-html="highlight_p">
                 Ứng dụng <strong>SmartChi</strong> ("Ứng dụng", "chúng tôi") được xây dựng theo nguyên tắc
                 <strong>riêng tư tuyệt đối</strong>: toàn bộ AI phân loại chi tiêu, đọc hóa đơn và phân tích số liệu
                 đều chạy <strong>ngay trên thiết bị của bạn</strong>. Chúng tôi không có máy chủ để gửi dữ liệu tài
@@ -205,9 +234,9 @@
         </div>
 
         <section>
-            <h2>1. Thông tin chúng tôi thu thập</h2>
+            <h2 data-i18n="s1_h2">1. Thông tin chúng tôi thu thập</h2>
             <div class="info-box">
-                <p style="font-weight: bold;">
+                <p style="font-weight: bold;" data-i18n-html="s1_info">
                     SmartChi <strong>không yêu cầu tạo tài khoản, không có máy chủ backend, và không tích hợp bất kỳ
                     công cụ phân tích/quảng cáo/theo dõi nào của bên thứ ba</strong> (không Firebase, không Google
                     Analytics, không quảng cáo). Toàn bộ dữ liệu chi tiêu, ngân sách và thiết lập của bạn
@@ -215,59 +244,59 @@
                 </p>
             </div>
 
-            <h3>1.1 Dữ liệu bạn nhập vào ứng dụng</h3>
+            <h3 data-i18n="s1_1_h3">1.1 Dữ liệu bạn nhập vào ứng dụng</h3>
             <ul>
-                <li>Giao dịch chi tiêu: tên cửa hàng, số tiền, ngày, danh mục, ghi chú</li>
-                <li>Ảnh hóa đơn bạn chụp hoặc chọn để quét (chỉ xử lý tạm thời để đọc số liệu, không được ứng dụng lưu trữ lâu dài sau khi quét xong)</li>
-                <li>Ngân sách theo danh mục bạn tự đặt</li>
-                <li>Thiết lập cá nhân: ngôn ngữ, đơn vị tiền tệ, giao diện sáng/tối, có bật khoá Face ID hay nhắc nhở hằng ngày hay không</li>
+                <li data-i18n="s1_1_li1">Giao dịch chi tiêu: tên cửa hàng, số tiền, ngày, danh mục, ghi chú</li>
+                <li data-i18n="s1_1_li2">Ảnh hóa đơn bạn chụp hoặc chọn để quét (chỉ xử lý tạm thời để đọc số liệu, không được ứng dụng lưu trữ lâu dài sau khi quét xong)</li>
+                <li data-i18n="s1_1_li3">Ngân sách theo danh mục bạn tự đặt</li>
+                <li data-i18n="s1_1_li4">Thiết lập cá nhân: ngôn ngữ, đơn vị tiền tệ, giao diện sáng/tối, có bật khoá Face ID hay nhắc nhở hằng ngày hay không</li>
             </ul>
-            <p style="margin-left: 20px;">
+            <p style="margin-left: 20px;" data-i18n-html="s1_1_note">
                 Tất cả dữ liệu trên được lưu bằng <strong>SwiftData</strong> (cơ sở dữ liệu cục bộ của Apple) ngay
                 trên thiết bị. Không có bản sao nào được gửi ra ngoài dưới bất kỳ hình thức nào.
             </p>
 
-            <h3>1.2 AI xử lý trên thiết bị (on-device AI)</h3>
-            <p>SmartChi dùng 3 mô hình AI nhỏ, chạy hoàn toàn cục bộ, không cần Internet:</p>
+            <h3 data-i18n="s1_2_h3">1.2 AI xử lý trên thiết bị (on-device AI)</h3>
+            <p data-i18n="s1_2_intro">SmartChi dùng 3 mô hình AI nhỏ, chạy hoàn toàn cục bộ, không cần Internet:</p>
             <ul>
-                <li><strong>Phân loại danh mục:</strong> một bộ phân loại thống kê đơn giản (Naive Bayes) học dần theo thói quen chi tiêu của riêng bạn — dữ liệu học được lưu trong bộ nhớ ứng dụng trên máy, không gửi đi đâu</li>
-                <li><strong>Đọc hóa đơn (OCR):</strong> dùng framework Vision có sẵn của Apple để đọc chữ trong ảnh hóa đơn ngay trên máy — ảnh không được tải lên máy chủ nào để xử lý</li>
-                <li><strong>Dự đoán chi tiêu &amp; phát hiện bất thường:</strong> tính toán thống kê đơn giản (trung bình có trọng số) trên dữ liệu đã có sẵn trên máy</li>
+                <li data-i18n-html="s1_2_li1"><strong>Phân loại danh mục:</strong> một bộ phân loại thống kê đơn giản (Naive Bayes) học dần theo thói quen chi tiêu của riêng bạn — dữ liệu học được lưu trong bộ nhớ ứng dụng trên máy, không gửi đi đâu</li>
+                <li data-i18n-html="s1_2_li2"><strong>Đọc hóa đơn (OCR):</strong> dùng framework Vision có sẵn của Apple để đọc chữ trong ảnh hóa đơn ngay trên máy — ảnh không được tải lên máy chủ nào để xử lý</li>
+                <li data-i18n-html="s1_2_li3"><strong>Dự đoán chi tiêu &amp; phát hiện bất thường:</strong> tính toán thống kê đơn giản (trung bình có trọng số) trên dữ liệu đã có sẵn trên máy</li>
             </ul>
         </section>
 
         <section>
-            <h2>2. Quyền truy cập ứng dụng yêu cầu</h2>
+            <h2 data-i18n="s2_h2">2. Quyền truy cập ứng dụng yêu cầu</h2>
 
-            <h3>2.1 Camera</h3>
-            <p>
+            <h3 data-i18n="s2_1_h3">2.1 Camera</h3>
+            <p data-i18n="s2_1_p">
                 Dùng để bạn chụp ảnh hóa đơn ngay trong ứng dụng để AI đọc số tiền/ngày/cửa hàng tự động. Chỉ kích
                 hoạt khi bạn chủ động bấm nút chụp — ảnh chụp không được tự động lưu vào Thư viện ảnh hay gửi ra
                 ngoài thiết bị.
             </p>
 
-            <h3>2.2 Thư viện ảnh</h3>
-            <p>
+            <h3 data-i18n="s2_2_h3">2.2 Thư viện ảnh</h3>
+            <p data-i18n="s2_2_p">
                 Dùng để bạn chọn sẵn một ảnh hóa đơn có sẵn thay vì chụp mới, thông qua trình chọn ảnh hệ thống của
                 Apple (PhotosPicker) — ứng dụng chỉ nhận đúng ảnh bạn chọn, không có quyền duyệt toàn bộ thư viện.
             </p>
 
-            <h3>2.3 Face ID / Touch ID</h3>
-            <p>
+            <h3 data-i18n="s2_3_h3">2.3 Face ID / Touch ID</h3>
+            <p data-i18n-html="s2_3_p">
                 Nếu bạn bật tùy chọn "Khoá bằng Face ID" trong Cài đặt, ứng dụng dùng khung xác thực sinh trắc học
                 của Apple để mở khoá app mỗi khi mở lại. SmartChi <strong>không bao giờ nhìn thấy hay lưu trữ</strong>
                 dữ liệu khuôn mặt/vân tay của bạn — quá trình xác thực hoàn toàn do hệ điều hành iOS xử lý.
             </p>
 
-            <h3>2.4 Thông báo</h3>
-            <p>
+            <h3 data-i18n="s2_4_h3">2.4 Thông báo</h3>
+            <p data-i18n-html="s2_4_p">
                 Nếu bạn bật "Nhắc ghi chi tiêu hằng ngày", ứng dụng gửi một <strong>thông báo cục bộ</strong> (local
                 notification) vào 20:00 mỗi ngày, được lên lịch và xử lý hoàn toàn trên máy — không qua máy chủ đẩy
                 thông báo (push notification server) nào.
             </p>
 
             <div class="warning-box">
-                <p>
+                <p data-i18n-html="s2_warning">
                     Ứng dụng <strong>không truy cập</strong> danh bạ, vị trí, micrô, hay bất kỳ dữ liệu nào khác
                     ngoài các quyền được liệt kê ở trên.
                 </p>
@@ -275,8 +304,8 @@
         </section>
 
         <section>
-            <h2>3. Home Screen &amp; Lock Screen Widget</h2>
-            <p>
+            <h2 data-i18n="s3_h2">3. Home Screen &amp; Lock Screen Widget</h2>
+            <p data-i18n-html="s3_p">
                 Widget hiển thị tổng chi tiêu tháng này, streak ghi chép và ngân sách gần chạm mức. Để widget (chạy
                 trong tiến trình riêng của iOS) đọc được số liệu, ứng dụng ghi một bản tóm tắt nhỏ (tổng tiền, tên
                 danh mục, số ngày streak) vào <strong>App Group</strong> — một vùng lưu trữ cục bộ dùng chung giữa
@@ -285,9 +314,9 @@
         </section>
 
         <section>
-            <h2>4. Dịch vụ bên thứ ba</h2>
+            <h2 data-i18n="s4_h2">4. Dịch vụ bên thứ ba</h2>
             <div class="info-box">
-                <p style="font-weight: bold;">
+                <p style="font-weight: bold;" data-i18n-html="s4_info">
                     SmartChi <strong>không sử dụng bất kỳ dịch vụ bên thứ ba nào</strong> — không SDK quảng cáo,
                     không công cụ phân tích, không dịch vụ đám mây, không thư viện gửi dữ liệu ra khỏi thiết bị của
                     bạn. Mọi tính năng AI đều dùng framework có sẵn của Apple (Vision, Natural Language) chạy cục bộ.
@@ -296,25 +325,25 @@
         </section>
 
         <section>
-            <h2>5. Quyền riêng tư trẻ em</h2>
-            <p>
+            <h2 data-i18n="s5_h2">5. Quyền riêng tư trẻ em</h2>
+            <p data-i18n="s5_p">
                 SmartChi không hướng đến trẻ em dưới 13 tuổi và không thu thập thông tin cá nhân từ bất kỳ ai, kể cả
                 trẻ em, vì ứng dụng hoàn toàn không có cơ chế thu thập hay truyền dữ liệu ra ngoài thiết bị.
             </p>
         </section>
 
         <section>
-            <h2>6. Quyền của người dùng</h2>
-            <p>Vì toàn bộ dữ liệu chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:</p>
+            <h2 data-i18n="s6_h2">6. Quyền của người dùng</h2>
+            <p data-i18n="s6_intro">Vì toàn bộ dữ liệu chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:</p>
             <ul>
-                <li>Xem, sửa hoặc xóa từng giao dịch, ngân sách ngay trong ứng dụng</li>
-                <li>Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
-                <li>Bật/tắt Face ID, thông báo nhắc nhở bất cứ lúc nào trong Cài đặt của ứng dụng</li>
-                <li>Đổi ngôn ngữ và đơn vị tiền tệ bất cứ lúc nào, không ảnh hưởng tới dữ liệu đã lưu</li>
+                <li data-i18n="s6_li1">Xem, sửa hoặc xóa từng giao dịch, ngân sách ngay trong ứng dụng</li>
+                <li data-i18n="s6_li2">Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                <li data-i18n="s6_li3">Bật/tắt Face ID, thông báo nhắc nhở bất cứ lúc nào trong Cài đặt của ứng dụng</li>
+                <li data-i18n="s6_li4">Đổi ngôn ngữ và đơn vị tiền tệ bất cứ lúc nào, không ảnh hưởng tới dữ liệu đã lưu</li>
             </ul>
 
             <div class="warning-box">
-                <p>
+                <p data-i18n-html="s6_warning">
                     Vì <strong>không có bản sao dữ liệu trên máy chủ nào</strong>, chúng tôi không thể khôi phục dữ
                     liệu chi tiêu nếu bạn xoá ứng dụng hoặc mất thiết bị mà chưa tự sao lưu (ví dụ qua iCloud/iTunes
                     backup của chính thiết bị).
@@ -323,23 +352,23 @@
         </section>
 
         <section>
-            <h2>7. Thay đổi chính sách</h2>
-            <p>
+            <h2 data-i18n="s7_h2">7. Thay đổi chính sách</h2>
+            <p data-i18n="s7_p">
                 Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.
             </p>
         </section>
 
         <section>
-            <h2>8. Liên hệ</h2>
-            <p>Nếu bạn có câu hỏi, vui lòng liên hệ:</p>
+            <h2 data-i18n="s8_h2">8. Liên hệ</h2>
+            <p data-i18n="s8_intro">Nếu bạn có câu hỏi, vui lòng liên hệ:</p>
 
             <div class="contact-info">
                 <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
                 <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/smartchi/">https://imsuunc.github.io/smartchi/</a></p>
-                <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/smartchi/support.html</a></p>
+                <p data-i18n-html="s8_support_line"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/smartchi/support.html</a></p>
             </div>
 
-            <p style="margin-top: 20px;">
+            <p style="margin-top: 20px;" data-i18n-html="s8_eula">
                 <strong>Điều khoản sử dụng (EULA):</strong>
                 <a href="terms.html" style="color: #ff8a3d; font-weight: 500;">Xem tại đây</a> hoặc
                 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #ff8a3d; font-weight: 500;">
@@ -350,8 +379,148 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 05/08/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 05/08/2026</em></p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Chính Sách Quyền Riêng Tư - SmartChi", en: "Privacy Policy - SmartChi" },
+
+            back_link: { vi: "← Quay lại trang SmartChi", en: "← Back to SmartChi" },
+
+            hero_title: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            hero_subtitle: { vi: "SmartChi - Quản Lý Chi Tiêu Bằng AI", en: "SmartChi - AI Expense Tracker" },
+            update_date: { vi: "Cập nhật lần cuối: 05/08/2026", en: "Last updated: Aug 5, 2026" },
+
+            highlight_p: {
+                vi: "Ứng dụng <strong>SmartChi</strong> (\"Ứng dụng\", \"chúng tôi\") được xây dựng theo nguyên tắc <strong>riêng tư tuyệt đối</strong>: toàn bộ AI phân loại chi tiêu, đọc hóa đơn và phân tích số liệu đều chạy <strong>ngay trên thiết bị của bạn</strong>. Chúng tôi không có máy chủ để gửi dữ liệu tài chính của bạn tới, và cũng không muốn có.",
+                en: "The <strong>SmartChi</strong> app (\"the App\", \"we\") is built on a principle of <strong>absolute privacy</strong>: all AI for expense classification, receipt reading, and data analysis runs <strong>directly on your device</strong>. We have no server to send your financial data to, and we don't want one."
+            },
+
+            s1_h2: { vi: "1. Thông tin chúng tôi thu thập", en: "1. Information We Collect" },
+            s1_info: {
+                vi: "SmartChi <strong>không yêu cầu tạo tài khoản, không có máy chủ backend, và không tích hợp bất kỳ công cụ phân tích/quảng cáo/theo dõi nào của bên thứ ba</strong> (không Firebase, không Google Analytics, không quảng cáo). Toàn bộ dữ liệu chi tiêu, ngân sách và thiết lập của bạn <strong>chỉ lưu trên chính thiết bị</strong>, không đồng bộ lên đâu cả.",
+                en: "SmartChi <strong>requires no account creation, has no backend server, and integrates no third-party analytics, advertising, or tracking tools whatsoever</strong> (no Firebase, no Google Analytics, no ads). All of your expense, budget, and settings data is <strong>stored only on your own device</strong> and is never synced anywhere."
+            },
+
+            s1_1_h3: { vi: "1.1 Dữ liệu bạn nhập vào ứng dụng", en: "1.1 Data You Enter Into the App" },
+            s1_1_li1: { vi: "Giao dịch chi tiêu: tên cửa hàng, số tiền, ngày, danh mục, ghi chú", en: "Expense transactions: merchant name, amount, date, category, notes" },
+            s1_1_li2: { vi: "Ảnh hóa đơn bạn chụp hoặc chọn để quét (chỉ xử lý tạm thời để đọc số liệu, không được ứng dụng lưu trữ lâu dài sau khi quét xong)", en: "Receipt photos you capture or select for scanning (processed only temporarily to read the data; not stored long-term by the app after scanning is complete)" },
+            s1_1_li3: { vi: "Ngân sách theo danh mục bạn tự đặt", en: "Category budgets you set yourself" },
+            s1_1_li4: { vi: "Thiết lập cá nhân: ngôn ngữ, đơn vị tiền tệ, giao diện sáng/tối, có bật khoá Face ID hay nhắc nhở hằng ngày hay không", en: "Personal settings: language, currency, light/dark interface, whether Face ID lock or daily reminders are enabled" },
+            s1_1_note: {
+                vi: "Tất cả dữ liệu trên được lưu bằng <strong>SwiftData</strong> (cơ sở dữ liệu cục bộ của Apple) ngay trên thiết bị. Không có bản sao nào được gửi ra ngoài dưới bất kỳ hình thức nào.",
+                en: "All of the above data is stored using <strong>SwiftData</strong> (Apple's local database) directly on your device. No copy is ever sent out in any form."
+            },
+
+            s1_2_h3: { vi: "1.2 AI xử lý trên thiết bị (on-device AI)", en: "1.2 On-Device AI Processing" },
+            s1_2_intro: { vi: "SmartChi dùng 3 mô hình AI nhỏ, chạy hoàn toàn cục bộ, không cần Internet:", en: "SmartChi uses three small AI models that run entirely locally, with no internet connection required:" },
+            s1_2_li1: {
+                vi: "<strong>Phân loại danh mục:</strong> một bộ phân loại thống kê đơn giản (Naive Bayes) học dần theo thói quen chi tiêu của riêng bạn — dữ liệu học được lưu trong bộ nhớ ứng dụng trên máy, không gửi đi đâu",
+                en: "<strong>Category classification:</strong> a simple statistical classifier (Naive Bayes) that gradually learns from your own spending habits — the learned data is stored in the app's on-device storage and is never sent anywhere"
+            },
+            s1_2_li2: {
+                vi: "<strong>Đọc hóa đơn (OCR):</strong> dùng framework Vision có sẵn của Apple để đọc chữ trong ảnh hóa đơn ngay trên máy — ảnh không được tải lên máy chủ nào để xử lý",
+                en: "<strong>Receipt reading (OCR):</strong> uses Apple's built-in Vision framework to read text in receipt images directly on your device — images are never uploaded to any server for processing"
+            },
+            s1_2_li3: {
+                vi: "<strong>Dự đoán chi tiêu & phát hiện bất thường:</strong> tính toán thống kê đơn giản (trung bình có trọng số) trên dữ liệu đã có sẵn trên máy",
+                en: "<strong>Spending forecasts & anomaly detection:</strong> simple statistical calculations (weighted averages) performed on data already stored on your device"
+            },
+
+            s2_h2: { vi: "2. Quyền truy cập ứng dụng yêu cầu", en: "2. Permissions the App Requests" },
+
+            s2_1_h3: { vi: "2.1 Camera", en: "2.1 Camera" },
+            s2_1_p: {
+                vi: "Dùng để bạn chụp ảnh hóa đơn ngay trong ứng dụng để AI đọc số tiền/ngày/cửa hàng tự động. Chỉ kích hoạt khi bạn chủ động bấm nút chụp — ảnh chụp không được tự động lưu vào Thư viện ảnh hay gửi ra ngoài thiết bị.",
+                en: "Used so you can photograph a receipt directly within the app for AI to automatically read the amount/date/merchant. It is only activated when you actively tap the capture button — photos taken are not automatically saved to your Photo Library or sent off your device."
+            },
+
+            s2_2_h3: { vi: "2.2 Thư viện ảnh", en: "2.2 Photo Library" },
+            s2_2_p: {
+                vi: "Dùng để bạn chọn sẵn một ảnh hóa đơn có sẵn thay vì chụp mới, thông qua trình chọn ảnh hệ thống của Apple (PhotosPicker) — ứng dụng chỉ nhận đúng ảnh bạn chọn, không có quyền duyệt toàn bộ thư viện.",
+                en: "Used so you can select an existing receipt image instead of taking a new photo, via Apple's system photo picker (PhotosPicker) — the app only receives the exact photo you select and does not have permission to browse your entire library."
+            },
+
+            s2_3_h3: { vi: "2.3 Face ID / Touch ID", en: "2.3 Face ID / Touch ID" },
+            s2_3_p: {
+                vi: "Nếu bạn bật tùy chọn \"Khoá bằng Face ID\" trong Cài đặt, ứng dụng dùng khung xác thực sinh trắc học của Apple để mở khoá app mỗi khi mở lại. SmartChi <strong>không bao giờ nhìn thấy hay lưu trữ</strong> dữ liệu khuôn mặt/vân tay của bạn — quá trình xác thực hoàn toàn do hệ điều hành iOS xử lý.",
+                en: "If you enable the \"Lock with Face ID\" option in Settings, the app uses Apple's biometric authentication framework to unlock the app each time you reopen it. SmartChi <strong>never sees or stores</strong> your facial/fingerprint data — the authentication process is handled entirely by iOS."
+            },
+
+            s2_4_h3: { vi: "2.4 Thông báo", en: "2.4 Notifications" },
+            s2_4_p: {
+                vi: "Nếu bạn bật \"Nhắc ghi chi tiêu hằng ngày\", ứng dụng gửi một <strong>thông báo cục bộ</strong> (local notification) vào 20:00 mỗi ngày, được lên lịch và xử lý hoàn toàn trên máy — không qua máy chủ đẩy thông báo (push notification server) nào.",
+                en: "If you enable \"Daily expense reminder\", the app sends a <strong>local notification</strong> at 8:00 PM every day, scheduled and processed entirely on your device — with no push notification server involved."
+            },
+            s2_warning: {
+                vi: "Ứng dụng <strong>không truy cập</strong> danh bạ, vị trí, micrô, hay bất kỳ dữ liệu nào khác ngoài các quyền được liệt kê ở trên.",
+                en: "The app <strong>does not access</strong> your contacts, location, microphone, or any data other than the permissions listed above."
+            },
+
+            s3_h2: { vi: "3. Home Screen & Lock Screen Widget", en: "3. Home Screen & Lock Screen Widget" },
+            s3_p: {
+                vi: "Widget hiển thị tổng chi tiêu tháng này, streak ghi chép và ngân sách gần chạm mức. Để widget (chạy trong tiến trình riêng của iOS) đọc được số liệu, ứng dụng ghi một bản tóm tắt nhỏ (tổng tiền, tên danh mục, số ngày streak) vào <strong>App Group</strong> — một vùng lưu trữ cục bộ dùng chung giữa app chính và widget trên cùng thiết bị của bạn, <strong>không phải máy chủ hay dịch vụ đám mây</strong>.",
+                en: "The widget displays your total spending this month, your logging streak, and the budget closest to its limit. For the widget (which runs in its own separate iOS process) to read this data, the app writes a small summary (total amount, category name, streak count) into an <strong>App Group</strong> — a local storage area shared between the main app and the widget on your own device, <strong>not a server or cloud service</strong>."
+            },
+
+            s4_h2: { vi: "4. Dịch vụ bên thứ ba", en: "4. Third-Party Services" },
+            s4_info: {
+                vi: "SmartChi <strong>không sử dụng bất kỳ dịch vụ bên thứ ba nào</strong> — không SDK quảng cáo, không công cụ phân tích, không dịch vụ đám mây, không thư viện gửi dữ liệu ra khỏi thiết bị của bạn. Mọi tính năng AI đều dùng framework có sẵn của Apple (Vision, Natural Language) chạy cục bộ.",
+                en: "SmartChi <strong>does not use any third-party services</strong> — no advertising SDKs, no analytics tools, no cloud services, no libraries that send data off your device. All AI features use Apple's built-in frameworks (Vision, Natural Language) running locally."
+            },
+
+            s5_h2: { vi: "5. Quyền riêng tư trẻ em", en: "5. Children's Privacy" },
+            s5_p: {
+                vi: "SmartChi không hướng đến trẻ em dưới 13 tuổi và không thu thập thông tin cá nhân từ bất kỳ ai, kể cả trẻ em, vì ứng dụng hoàn toàn không có cơ chế thu thập hay truyền dữ liệu ra ngoài thiết bị.",
+                en: "SmartChi is not directed at children under 13 and does not collect personal information from anyone, including children, because the app has no mechanism whatsoever for collecting or transmitting data off the device."
+            },
+
+            s6_h2: { vi: "6. Quyền của người dùng", en: "6. Your Rights as a User" },
+            s6_intro: { vi: "Vì toàn bộ dữ liệu chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:", en: "Because all of your data resides solely on your device, you have full control:" },
+            s6_li1: { vi: "Xem, sửa hoặc xóa từng giao dịch, ngân sách ngay trong ứng dụng", en: "View, edit, or delete any transaction or budget directly within the app" },
+            s6_li2: { vi: "Xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng", en: "Delete all data by uninstalling the app" },
+            s6_li3: { vi: "Bật/tắt Face ID, thông báo nhắc nhở bất cứ lúc nào trong Cài đặt của ứng dụng", en: "Turn Face ID and reminder notifications on or off at any time in the app's Settings" },
+            s6_li4: { vi: "Đổi ngôn ngữ và đơn vị tiền tệ bất cứ lúc nào, không ảnh hưởng tới dữ liệu đã lưu", en: "Change your language and currency at any time, without affecting data already saved" },
+            s6_warning: {
+                vi: "Vì <strong>không có bản sao dữ liệu trên máy chủ nào</strong>, chúng tôi không thể khôi phục dữ liệu chi tiêu nếu bạn xoá ứng dụng hoặc mất thiết bị mà chưa tự sao lưu (ví dụ qua iCloud/iTunes backup của chính thiết bị).",
+                en: "Because <strong>there is no copy of your data on any server</strong>, we cannot restore your expense data if you delete the app or lose your device without having backed it up yourself (for example, via your device's own iCloud/iTunes backup)."
+            },
+
+            s7_h2: { vi: "7. Thay đổi chính sách", en: "7. Changes to This Policy" },
+            s7_p: { vi: "Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.", en: "This policy may be updated from time to time; the latest version will always be posted on this page." },
+
+            s8_h2: { vi: "8. Liên hệ", en: "8. Contact" },
+            s8_intro: { vi: "Nếu bạn có câu hỏi, vui lòng liên hệ:", en: "If you have any questions, please contact us:" },
+            s8_support_line: { vi: "<strong>📞 Trang hỗ trợ:</strong> <a href=\"support.html\">https://imsuunc.github.io/smartchi/support.html</a>", en: "<strong>📞 Support page:</strong> <a href=\"support.html\">https://imsuunc.github.io/smartchi/support.html</a>" },
+            s8_eula: {
+                vi: "<strong>Điều khoản sử dụng (EULA):</strong> <a href=\"terms.html\" style=\"color: #ff8a3d; font-weight: 500;\">Xem tại đây</a> hoặc <a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" style=\"color: #ff8a3d; font-weight: 500;\">Apple Standard EULA</a> (nếu tải qua App Store)",
+                en: "<strong>Terms of Use (EULA):</strong> <a href=\"terms.html\" style=\"color: #ff8a3d; font-weight: 500;\">View here</a> or the <a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" style=\"color: #ff8a3d; font-weight: 500;\">Apple Standard EULA</a> (if downloaded via the App Store)"
+            },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 05/08/2026", en: "Last updated: Aug 5, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

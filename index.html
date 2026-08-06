@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMSUUNC DEVELOPER — Ứng Dụng Của Tôi</title>
+    <title data-i18n="page_title">IMSUUNC DEVELOPER — Ứng Dụng Của Tôi</title>
     <style>
         * {
             margin: 0;
@@ -45,6 +45,31 @@
             font-size: 1.1em;
         }
 
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
         section {
             margin: 30px 0;
         }
@@ -77,6 +102,18 @@
             color: #8b9cff;
             font-size: 1.3em;
             margin-bottom: 8px;
+        }
+
+        .store-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .store-badges img {
+            height: 40px;
+            display: block;
         }
 
         .app-card .app-desc {
@@ -140,6 +177,91 @@
             text-decoration: underline;
         }
 
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .project-item {
+            background: #2a2a3e;
+            padding: 18px 22px;
+            border-radius: 12px;
+            border-left: 4px solid #8b9cff;
+        }
+
+        .project-item .project-title {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .project-item h3 {
+            color: #e4e4e7;
+            font-size: 1.1em;
+        }
+
+        .project-item .domain-badge {
+            font-size: 0.8em;
+            color: #a1a1aa;
+            background: rgba(139, 156, 255, 0.15);
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .project-item p {
+            color: #cfcfd6;
+            margin-bottom: 10px;
+        }
+
+        .tech-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tech-tags span {
+            font-size: 0.8em;
+            color: #7fd996;
+            background: rgba(63, 122, 75, 0.15);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .web-project {
+            background: #2a2a3e;
+            padding: 24px;
+            border-radius: 14px;
+            border-left: 4px solid #8b9cff;
+        }
+
+        .web-project h3 {
+            color: #8b9cff;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .web-project p {
+            color: #cfcfd6;
+            margin-bottom: 14px;
+        }
+
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+
+        .screenshot-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #3f3f5a;
+            display: block;
+        }
+
         .contact-info {
             background: #2a2a3e;
             padding: 20px;
@@ -180,69 +302,244 @@
     <div class="container">
         <header>
             <h1>👨‍💻 IMSUUNC DEVELOPER</h1>
-            <p class="subtitle">Ứng dụng tiện ích – đơn giản – hiệu quả cho người dùng Việt Nam</p>
+            <p class="subtitle" data-i18n="subtitle">Ứng dụng tiện ích – đơn giản – hiệu quả cho người dùng Việt Nam</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <section>
-            <h2>Ứng Dụng Của Tôi</h2>
+            <h2 data-i18n="about_h2">Về Tôi</h2>
+            <p style="color: #cfcfd6;" data-i18n="about_p">
+                Lập trình viên Mobile với 7 năm kinh nghiệm phát triển ứng dụng iOS, Android và đa nền tảng,
+                chuyên sâu về gọi thoại/video, livestream và các sản phẩm giải trí, tiện ích thời gian thực.
+                Thành thạo Swift, Objective-C, Kotlin, Java; có kinh nghiệm xây dựng kiến trúc, SDK và
+                thư viện native dùng chung cho nhiều ứng dụng. Từng đảm nhận vai trò Technical Leader,
+                trực tiếp thiết kế giải pháp, tối ưu hiệu năng và dẫn dắt đội ngũ phát triển.
+                Ngoài mobile, còn tự học và làm chủ mảng backend: xây dựng API bằng Go, thiết kế và quản trị
+                cơ sở dữ liệu PostgreSQL, MySQL/MariaDB, đóng gói và triển khai dịch vụ bằng Docker,
+                Docker Compose, triển khai và vận hành server trên AWS và DigitalOcean — từng tự dựng
+                server luận giải tử vi phục vụ cho ứng dụng của riêng mình.
+            </p>
+            <div class="tech-tags" style="margin-top: 14px;">
+                <span>Swift</span><span>Objective-C</span><span>Kotlin</span><span>Java</span><span>Flutter</span>
+                <span>Go</span><span>PostgreSQL</span><span>MySQL/MariaDB</span><span>Docker</span><span>Docker Compose</span>
+                <span>AWS</span><span>DigitalOcean</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="apps_h2">Ứng Dụng Của Tôi</h2>
             <div class="app-grid">
                 <div class="app-card">
-                    <h3>💰 SmartChi - Quản Lý Chi Tiêu Bằng AI</h3>
-                    <p class="app-desc">Ghi chi tiêu chỉ trong vài giây, quét hóa đơn tự động bằng AI, ngân sách thông minh — toàn bộ xử lý ngay trên máy, không cần Internet.</p>
-                    <span class="status-badge soon">🚀 Sắp ra mắt trên App Store</span>
-                    <a href="smartchi/index.html" class="app-main-link">Xem chi tiết →</a>
+                    <h3 data-i18n="app4_title">🎬 Vivis - Chỉnh Sửa Video & Slideshow</h3>
+                    <p class="app-desc" data-i18n="app4_desc">Dựng video, ghép ảnh thành slideshow ngay trên điện thoại: cắt ghép, hiệu ứng chuyển cảnh, sticker động, chữ đẹp, xuất video chất lượng cao.</p>
+                    <div class="store-badges">
+                        <a href="https://apps.apple.com/vn/app/vivis-video-slideshow/id6787610960" target="_blank" rel="noopener">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                    <a href="vivis/index.html" class="app-main-link" data-i18n="link_details">Xem chi tiết →</a>
                     <div class="doc-links">
-                        <a href="smartchi/support.html">Hỗ trợ</a>
-                        <a href="smartchi/privacy.html">Quyền riêng tư</a>
-                        <a href="smartchi/terms.html">Điều khoản</a>
+                        <a href="vivis/support.html" data-i18n="link_support">Hỗ trợ</a>
+                        <a href="vivis/privacy.html" data-i18n="link_privacy">Quyền riêng tư</a>
+                        <a href="vivis/terms.html" data-i18n="link_terms">Điều khoản</a>
                     </div>
                 </div>
 
                 <div class="app-card">
-                    <h3>🌙 Lịch Vạn Niên – Lịch Âm Tử Vi</h3>
-                    <p class="app-desc">Xem lịch âm dương chuẩn Việt, ngày tốt – xấu, giờ hoàng đạo, văn khấn truyền thống.</p>
-                    <span class="status-badge live">✅ Đang có trên App Store</span>
-                    <a href="lich-van-nien/index.html" class="app-main-link">Xem chi tiết →</a>
+                    <h3 data-i18n="app2_title">🌙 Lịch Vạn Niên – Lịch Âm Tử Vi</h3>
+                    <p class="app-desc" data-i18n="app2_desc">Xem lịch âm dương chuẩn Việt, ngày tốt – xấu, giờ hoàng đạo, văn khấn truyền thống.</p>
+                    <div class="store-badges">
+                        <a href="https://apps.apple.com/vn/app/id6755689329" target="_blank" rel="noopener">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                    <a href="lich-van-nien/index.html" class="app-main-link" data-i18n="link_details">Xem chi tiết →</a>
                     <div class="doc-links">
-                        <a href="support.html">Hỗ trợ</a>
-                        <a href="privacy.html">Quyền riêng tư</a>
-                        <a href="terms.html">Điều khoản</a>
+                        <a href="support.html" data-i18n="link_support">Hỗ trợ</a>
+                        <a href="privacy.html" data-i18n="link_privacy">Quyền riêng tư</a>
+                        <a href="terms.html" data-i18n="link_terms">Điều khoản</a>
                     </div>
                 </div>
 
                 <div class="app-card">
-                    <h3>🧭 Phong Thủy - La Bàn, Xem Tuổi</h3>
-                    <p class="app-desc">Tra cứu phong thủy cá nhân theo ngày sinh: cung mệnh, hướng nhà, ngày tốt, tuổi hợp, la bàn phong thủy.</p>
-                    <span class="status-badge soon">🚀 Sắp ra mắt trên App Store</span>
-                    <a href="phong-thuy/index.html" class="app-main-link">Xem chi tiết →</a>
+                    <h3 data-i18n="app1_title">💰 SmartChi - Quản Lý Chi Tiêu Bằng AI</h3>
+                    <p class="app-desc" data-i18n="app1_desc">Ghi chi tiêu chỉ trong vài giây, quét hóa đơn tự động bằng AI, ngân sách thông minh — toàn bộ xử lý ngay trên máy, không cần Internet.</p>
+                    <span class="status-badge soon" data-i18n="status_soon">🚀 Sắp ra mắt trên App Store</span>
+                    <a href="smartchi/index.html" class="app-main-link" data-i18n="link_details">Xem chi tiết →</a>
                     <div class="doc-links">
-                        <a href="phong-thuy/support.html">Hỗ trợ</a>
-                        <a href="phong-thuy/privacy.html">Quyền riêng tư</a>
-                        <a href="phong-thuy/terms.html">Điều khoản</a>
+                        <a href="smartchi/support.html" data-i18n="link_support">Hỗ trợ</a>
+                        <a href="smartchi/privacy.html" data-i18n="link_privacy">Quyền riêng tư</a>
+                        <a href="smartchi/terms.html" data-i18n="link_terms">Điều khoản</a>
                     </div>
                 </div>
 
                 <div class="app-card">
-                    <h3>🎬 Vivis - Chỉnh Sửa Video & Slideshow</h3>
-                    <p class="app-desc">Dựng video, ghép ảnh thành slideshow ngay trên điện thoại: cắt ghép, hiệu ứng chuyển cảnh, sticker động, chữ đẹp, xuất video chất lượng cao.</p>
-                    <span class="status-badge soon">🚀 Sắp ra mắt trên App Store &amp; Google Play</span>
-                    <a href="vivis/index.html" class="app-main-link">Xem chi tiết →</a>
+                    <h3 data-i18n="app3_title">🧭 Phong Thủy - La Bàn, Xem Tuổi</h3>
+                    <p class="app-desc" data-i18n="app3_desc">Tra cứu phong thủy cá nhân theo ngày sinh: cung mệnh, hướng nhà, ngày tốt, tuổi hợp, la bàn phong thủy.</p>
+                    <span class="status-badge soon" data-i18n="status_soon">🚀 Sắp ra mắt trên App Store</span>
+                    <a href="phong-thuy/index.html" class="app-main-link" data-i18n="link_details">Xem chi tiết →</a>
                     <div class="doc-links">
-                        <a href="vivis/support.html">Hỗ trợ</a>
-                        <a href="vivis/privacy.html">Quyền riêng tư</a>
-                        <a href="vivis/terms.html">Điều khoản</a>
+                        <a href="phong-thuy/support.html" data-i18n="link_support">Hỗ trợ</a>
+                        <a href="phong-thuy/privacy.html" data-i18n="link_privacy">Quyền riêng tư</a>
+                        <a href="phong-thuy/terms.html" data-i18n="link_terms">Điều khoản</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Liên Hệ</h2>
+            <h2 data-i18n="projects_h2">Dự Án Đã Thực Hiện</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj1_title">Ứng dụng ngân hàng (iOS)</h3>
+                        <span class="domain-badge" data-i18n="proj1_domain">Tài chính</span>
+                    </div>
+                    <p data-i18n="proj1_desc">Làm việc trực tiếp với Product Owner để phân tích yêu cầu, thiết kế kiến trúc, phát triển và tối ưu tính năng giao dịch/tài khoản, viết và debug code đảm bảo hiệu năng và độ ổn định, quản lý mã nguồn theo chuẩn version control, phát hành và bảo trì ứng dụng trên App Store. Quy mô nhóm 15 người.</p>
+                    <div class="tech-tags"><span>Swift</span><span>UIKit</span><span>SnapKit</span><span>MVVM</span><span>Git</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj2_title">Ứng dụng chứng khoán (Android &amp; iOS)</h3>
+                        <span class="domain-badge">Ecommerce</span>
+                    </div>
+                    <p data-i18n="proj2_desc">Xây dựng ứng dụng theo dõi và giao dịch chứng khoán đa nền tảng bằng Flutter, phát triển tính năng, quản lý trạng thái ứng dụng, tối ưu hiệu năng, kiểm thử tích hợp và phát hành đồng thời trên Android và iOS. Quy mô nhóm 5 người.</p>
+                    <div class="tech-tags"><span>Dart</span><span>Flutter</span><span>Bloc (State Management)</span><span>SharedPreferences (Local Storage)</span><span>Git</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj3_title">Ứng dụng E-Learning (Android &amp; iOS)</h3>
+                        <span class="domain-badge">Productivity</span>
+                    </div>
+                    <p data-i18n="proj3_desc">Phát triển tính năng học tập đa nền tảng bằng công nghệ native cho từng hệ điều hành, quản lý mã nguồn, kiểm thử tích hợp và phát hành cho cả Android và iOS. Quy mô nhóm 5 người.</p>
+                    <div class="tech-tags"><span>Swift/Objective-C</span><span>Kotlin/Java</span><span>UserDefaults</span><span>SharedPreferences</span><span>Git</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj4_title">Ứng dụng định vị (Android &amp; iOS)</h3>
+                        <span class="domain-badge">Utilities</span>
+                    </div>
+                    <p data-i18n="proj4_desc">Đảm nhận vai trò Technical Leader, dựng project nền tảng cho cả hai nền tảng, tích hợp Firebase và Google SDK để mở rộng tính năng, tích hợp Google Maps API cho dịch vụ định vị và trải nghiệm bản đồ. Quy mô nhóm 8 người.</p>
+                    <div class="tech-tags"><span>Swift/Objective-C</span><span>Kotlin/Java</span><span>Realm</span><span>Room</span><span>UserDefaults/SharedPreferences</span><span>Firebase</span><span>Google Maps API</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj5_title">Ứng dụng nghe nhạc (Android &amp; iOS)</h3>
+                        <span class="domain-badge">Entertainment</span>
+                    </div>
+                    <p data-i18n="proj5_desc">Đảm nhận vai trò Technical Leader, nghiên cứu xu hướng công nghệ mới, tích hợp Firebase và Google SDK cho xác thực/phân tích, hỗ trợ tích hợp Player SDK để cải thiện phát nhạc/âm thanh, triển khai mua hàng trong ứng dụng cho tính năng trả phí. Quy mô nhóm 5 người.</p>
+                    <div class="tech-tags"><span>Swift/Objective-C</span><span>Kotlin/Java</span><span>Realm</span><span>Room</span><span>UserDefaults/SharedPreferences</span><span>Firebase</span><span>In-App Purchase</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj6_title">Ứng dụng nhắn tin (Android &amp; iOS)</h3>
+                        <span class="domain-badge">Entertainment &amp; Tools</span>
+                    </div>
+                    <p data-i18n="proj6_desc">Đảm nhận vai trò Technical Leader, phát triển tính năng nhắn tin trên cả hai nền tảng, tích hợp Firebase và Google SDK cho xác thực và phân tích dữ liệu người dùng. Quy mô nhóm 5 người.</p>
+                    <div class="tech-tags"><span>Swift/Objective-C</span><span>Kotlin/Java</span><span>Realm</span><span>Room</span><span>UserDefaults/SharedPreferences</span><span>Firebase</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj7_title">Player SDK &amp; ứng dụng minh hoạ (Android &amp; iOS)</h3>
+                        <span class="domain-badge">Entertainment &amp; Tools</span>
+                    </div>
+                    <p data-i18n="proj7_desc">Nghiên cứu công nghệ mới trong lĩnh vực phát triển ứng dụng, xây dựng SDK phát nhạc/âm thanh dùng chung cho nhiều ứng dụng, tích hợp Firebase, Google SDK và mua hàng trong ứng dụng cho tính năng bản quyền. Quy mô nhóm 6 người.</p>
+                    <div class="tech-tags"><span>Swift/Objective-C</span><span>Kotlin/Java</span><span>Realm</span><span>Room</span><span>UserDefaults/SharedPreferences</span><span>Firebase</span><span>In-App Purchase</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj8_title">VideoCall SDK &amp; plugin (iOS)</h3>
+                        <span class="domain-badge">Communication Services</span>
+                    </div>
+                    <p data-i18n="proj8_desc">Đề xuất giải pháp kỹ thuật, dựng nền tảng project iOS, triển khai tính năng gọi video, tích hợp WebRTC cho giao tiếp video thời gian thực, PushKit và CallKit để quản lý cuộc gọi và thông báo đẩy, WebSocket cho chat trong ứng dụng, đóng gói và phát hành framework để tái sử dụng trên nhiều ứng dụng. Quy mô nhóm 15 người.</p>
+                    <div class="tech-tags"><span>Swift</span><span>Objective-C/C++</span><span>WebRTC</span><span>PushKit</span><span>CallKit</span><span>WebSocket</span><span>UserDefaults</span><span>Shell Scripts</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj9_title">Logging SDK (iOS)</h3>
+                        <span class="domain-badge">Utilities</span>
+                    </div>
+                    <p data-i18n="proj9_desc">Đề xuất giải pháp kỹ thuật cho dự án iOS, dựng nền tảng project, triển khai các chức năng cốt lõi theo yêu cầu, viết và debug code đảm bảo chất lượng, tích hợp biện pháp bảo mật để bảo vệ dữ liệu người dùng và tính toàn vẹn ứng dụng. Quy mô nhóm 5 người.</p>
+                    <div class="tech-tags"><span>Swift</span><span>Objective-C/C++</span><span>UserDefaults</span><span>Shell Scripts</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj10_title">Log SDK (iOS)</h3>
+                        <span class="domain-badge">Utilities</span>
+                    </div>
+                    <p data-i18n="proj10_desc">Đề xuất giải pháp kỹ thuật và thiết kế tài liệu chi tiết cho Log SDK, dựng nền tảng project iOS ổn định, nghiên cứu và tích hợp Sentry SDK để theo dõi lỗi và giám sát hiệu năng theo thời gian thực. Quy mô nhóm 8 người.</p>
+                    <div class="tech-tags"><span>Swift</span><span>Objective-C</span><span>UserDefaults</span><span>Shell Scripts</span><span>Sentry</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj11_title">LiveStream SDK &amp; ứng dụng (iOS)</h3>
+                        <span class="domain-badge">Video LiveStreaming</span>
+                    </div>
+                    <p data-i18n="proj11_desc">Đề xuất giải pháp và thiết kế chi tiết, xây dựng cấu trúc project nền tảng cho tính năng ghi hình/mã hoá/phát sóng (Record, Encode, Publish), tích hợp Countly Logging SDK, xây dựng và tích hợp SDK livestream theo giao thức RTMP/RTMPS, tích hợp Player SDK để phát lại nội dung. Quy mô nhóm 10 người.</p>
+                    <div class="tech-tags"><span>Swift</span><span>Objective-C/C++</span><span>RTMP/RTMPS</span><span>Countly</span><span>UserDefaults</span><span>Shell Scripts</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj12_title">Login SDK &amp; ứng dụng (iOS)</h3>
+                        <span class="domain-badge">Security</span>
+                    </div>
+                    <p data-i18n="proj12_desc">Chuyển đổi project nền tảng từ Objective-C sang Swift, viết và debug code, tích hợp WKWebView cho luồng đăng nhập qua web, tích hợp xác thực OAuth2 để đăng nhập an toàn. Quy mô nhóm 6 người.</p>
+                    <div class="tech-tags"><span>Swift</span><span>Objective-C/C++</span><span>WKWebView</span><span>OAuth2</span><span>UserDefaults</span></div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">
+                        <h3 data-i18n="proj13_title">Server luận giải tử vi (Backend)</h3>
+                        <span class="domain-badge" data-i18n="proj13_domain">Dự án cá nhân</span>
+                    </div>
+                    <p data-i18n="proj13_desc">Tự nghiên cứu và xây dựng backend phục vụ luận giải tử vi cho ứng dụng cá nhân: thiết kế API tính toán lá số, thiết kế cơ sở dữ liệu lưu trữ dữ liệu luận giải, đóng gói dịch vụ bằng Docker và triển khai bằng Docker Compose, vận hành server trên nền tảng cloud để dễ dàng mở rộng.</p>
+                    <div class="tech-tags"><span>Go</span><span>PostgreSQL</span><span>MySQL/MariaDB</span><span>Docker</span><span>Docker Compose</span><span>REST API</span><span>AWS</span><span>DigitalOcean</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="web_h2">Ứng Dụng Web Đã Xây Dựng</h2>
+            <div class="web-project">
+                <h3>🖼️ Screenshot Studio</h3>
+                <p data-i18n="web_desc">
+                    Công cụ tạo ảnh chụp màn hình (screenshot) cho App Store Connect và Google Play Console ngay
+                    trên trình duyệt — không cần server, không cần tài khoản, toàn bộ dữ liệu chỉ lưu trên máy
+                    người dùng. Hỗ trợ dựng bố cục cho nhiều thiết bị (iPhone, iPad, Android Phone/Tablet) cùng
+                    lúc, hơn 100 mẫu thiết kế dựng sẵn theo nhiều thể loại ứng dụng, tuỳ biến khung thiết bị,
+                    nền, chữ tiêu đề, và xuất file hàng loạt đúng kích thước yêu cầu của từng store.
+                </p>
+                <div class="screenshot-gallery">
+                    <img src="assets/screenshot-studio/templates.png" alt="Screenshot Studio templates">
+                    <img src="assets/screenshot-studio/editor.png" alt="Screenshot Studio editor">
+                </div>
+                <div class="tech-tags">
+                    <span>React</span><span>TypeScript</span><span>Vite</span><span>Canvas 2D</span><span>JSZip</span><span data-i18n="tag_no_backend">Không backend</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="contact_h2">Liên Hệ</h2>
             <div class="contact-info">
                 <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
                 <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io">imsuunc.github.io</a></p>
             </div>
-            <p style="margin-top: 15px; color: #a1a1aa;">
+            <p style="margin-top: 15px; color: #a1a1aa;" data-i18n="contact_note">
                 Mỗi ứng dụng có trang hỗ trợ, chính sách quyền riêng tư và điều khoản sử dụng riêng — xem trong
                 từng thẻ ứng dụng ở trên.
             </p>
@@ -250,8 +547,112 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;">Cập nhật lần cuối: 26/07/2026</p>
+            <p style="margin-top: 10px;" data-i18n="footer_updated">Cập nhật lần cuối: 26/07/2026</p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "IMSUUNC DEVELOPER — Ứng Dụng Của Tôi", en: "IMSUUNC DEVELOPER — My Apps" },
+            subtitle: { vi: "Ứng dụng tiện ích – đơn giản – hiệu quả cho người dùng Việt Nam", en: "Simple, effective utility apps for Vietnamese users" },
+
+            about_h2: { vi: "Về Tôi", en: "About Me" },
+            about_p: {
+                vi: "Lập trình viên Mobile với 7 năm kinh nghiệm phát triển ứng dụng iOS, Android và đa nền tảng, chuyên sâu về gọi thoại/video, livestream và các sản phẩm giải trí, tiện ích thời gian thực. Thành thạo Swift, Objective-C, Kotlin, Java; có kinh nghiệm xây dựng kiến trúc, SDK và thư viện native dùng chung cho nhiều ứng dụng. Từng đảm nhận vai trò Technical Leader, trực tiếp thiết kế giải pháp, tối ưu hiệu năng và dẫn dắt đội ngũ phát triển. Ngoài mobile, còn tự học và làm chủ mảng backend: xây dựng API bằng Go, thiết kế và quản trị cơ sở dữ liệu PostgreSQL, MySQL/MariaDB, đóng gói và triển khai dịch vụ bằng Docker, Docker Compose, triển khai và vận hành server trên AWS và DigitalOcean — từng tự dựng server luận giải tử vi phục vụ cho ứng dụng của riêng mình. Tốt nghiệp ngành Kỹ thuật Phần mềm năm 2017.",
+                en: "Mobile developer with 7 years of experience building iOS, Android, and cross-platform apps, specializing in voice/video calling, livestreaming, and real-time entertainment/utility products. Proficient in Swift, Objective-C, Kotlin, and Java; experienced in designing architecture and building SDKs and native libraries shared across multiple apps. Has served as a Technical Leader, directly designing solutions, optimizing performance, and leading development teams. Beyond mobile, self-taught in backend development: building APIs with Go, designing and managing PostgreSQL and MySQL/MariaDB databases, packaging and deploying services with Docker and Docker Compose, and deploying/operating servers on AWS and DigitalOcean — including building a personal horoscope-analysis server from scratch. Graduated in Software Engineering in 2017."
+            },
+
+            apps_h2: { vi: "Ứng Dụng Của Tôi", en: "My Apps" },
+
+            app1_title: { vi: "💰 SmartChi - Quản Lý Chi Tiêu Bằng AI", en: "💰 SmartChi - AI Expense Tracker" },
+            app1_desc: { vi: "Ghi chi tiêu chỉ trong vài giây, quét hóa đơn tự động bằng AI, ngân sách thông minh — toàn bộ xử lý ngay trên máy, không cần Internet.", en: "Log expenses in seconds, automatic AI receipt scanning, smart budgeting — all processed entirely on-device, no internet required." },
+
+            app2_title: { vi: "🌙 Lịch Vạn Niên – Lịch Âm Tử Vi", en: "🌙 Lich Van Nien – Lunar Calendar & Horoscope" },
+            app2_desc: { vi: "Xem lịch âm dương chuẩn Việt, ngày tốt – xấu, giờ hoàng đạo, văn khấn truyền thống.", en: "Vietnamese solar-lunar calendar, good/bad day picker, auspicious hours, and traditional prayer texts." },
+
+            app3_title: { vi: "🧭 Phong Thủy - La Bàn, Xem Tuổi", en: "🧭 Phong Thuy - Compass & Zodiac Lookup" },
+            app3_desc: { vi: "Tra cứu phong thủy cá nhân theo ngày sinh: cung mệnh, hướng nhà, ngày tốt, tuổi hợp, la bàn phong thủy.", en: "Personal feng shui lookup by birth date: destiny palace, house direction, lucky days, zodiac compatibility, feng shui compass." },
+
+            app4_title: { vi: "🎬 Vivis - Chỉnh Sửa Video & Slideshow", en: "🎬 Vivis - Video & Slideshow Editor" },
+            app4_desc: { vi: "Dựng video, ghép ảnh thành slideshow ngay trên điện thoại: cắt ghép, hiệu ứng chuyển cảnh, sticker động, chữ đẹp, xuất video chất lượng cao.", en: "Edit videos and turn photos into slideshows right on your phone: trimming, transition effects, animated stickers, stylish text, high-quality video export." },
+
+            status_soon: { vi: "🚀 Sắp ra mắt trên App Store", en: "🚀 Coming soon on the App Store" },
+
+            link_details: { vi: "Xem chi tiết →", en: "View details →" },
+            link_support: { vi: "Hỗ trợ", en: "Support" },
+            link_privacy: { vi: "Quyền riêng tư", en: "Privacy Policy" },
+            link_terms: { vi: "Điều khoản", en: "Terms" },
+
+            projects_h2: { vi: "Dự Án Đã Thực Hiện", en: "Projects I've Worked On" },
+
+            proj1_title: { vi: "Ứng dụng ngân hàng (iOS)", en: "Banking App (iOS)" },
+            proj1_domain: { vi: "Tài chính", en: "Finance" },
+            proj1_desc: { vi: "Làm việc trực tiếp với Product Owner để phân tích yêu cầu, thiết kế kiến trúc, phát triển và tối ưu tính năng giao dịch/tài khoản, viết và debug code đảm bảo hiệu năng và độ ổn định, quản lý mã nguồn theo chuẩn version control, phát hành và bảo trì ứng dụng trên App Store. Quy mô nhóm 15 người.", en: "Worked directly with the Product Owner to gather requirements, designed the architecture, developed and optimized account/transaction features, wrote and debugged code for performance and stability, managed source code following version-control best practices, and released/maintained the app on the App Store. Team size: 15." },
+
+            proj2_title: { vi: "Ứng dụng chứng khoán (Android & iOS)", en: "Stock Trading App (Android & iOS)" },
+            proj2_desc: { vi: "Xây dựng ứng dụng theo dõi và giao dịch chứng khoán đa nền tảng bằng Flutter, phát triển tính năng, quản lý trạng thái ứng dụng, tối ưu hiệu năng, kiểm thử tích hợp và phát hành đồng thời trên Android và iOS. Quy mô nhóm 5 người.", en: "Built a cross-platform stock tracking and trading app with Flutter, developed features, managed app state, optimized performance, ran integration tests, and released simultaneously on Android and iOS. Team size: 5." },
+
+            proj3_title: { vi: "Ứng dụng E-Learning (Android & iOS)", en: "E-Learning App (Android & iOS)" },
+            proj3_desc: { vi: "Phát triển tính năng học tập đa nền tảng bằng công nghệ native cho từng hệ điều hành, quản lý mã nguồn, kiểm thử tích hợp và phát hành cho cả Android và iOS. Quy mô nhóm 5 người.", en: "Developed cross-platform learning features using native technology for each OS, managed source code, ran integration tests, and released on both Android and iOS. Team size: 5." },
+
+            proj4_title: { vi: "Ứng dụng định vị (Android & iOS)", en: "Location App (Android & iOS)" },
+            proj4_desc: { vi: "Đảm nhận vai trò Technical Leader, dựng project nền tảng cho cả hai nền tảng, tích hợp Firebase và Google SDK để mở rộng tính năng, tích hợp Google Maps API cho dịch vụ định vị và trải nghiệm bản đồ. Quy mô nhóm 8 người.", en: "Served as Technical Leader, set up the base project for both platforms, integrated Firebase and Google SDK to extend functionality, and integrated the Google Maps API for location services and map experience. Team size: 8." },
+
+            proj5_title: { vi: "Ứng dụng nghe nhạc (Android & iOS)", en: "Music Streaming App (Android & iOS)" },
+            proj5_desc: { vi: "Đảm nhận vai trò Technical Leader, nghiên cứu xu hướng công nghệ mới, tích hợp Firebase và Google SDK cho xác thực/phân tích, hỗ trợ tích hợp Player SDK để cải thiện phát nhạc/âm thanh, triển khai mua hàng trong ứng dụng cho tính năng trả phí. Quy mô nhóm 5 người.", en: "Served as Technical Leader, researched emerging technologies, integrated Firebase and Google SDK for authentication/analytics, supported Player SDK integration to improve audio playback, and implemented in-app purchases for premium features. Team size: 5." },
+
+            proj6_title: { vi: "Ứng dụng nhắn tin (Android & iOS)", en: "Messaging App (Android & iOS)" },
+            proj6_desc: { vi: "Đảm nhận vai trò Technical Leader, phát triển tính năng nhắn tin trên cả hai nền tảng, tích hợp Firebase và Google SDK cho xác thực và phân tích dữ liệu người dùng. Quy mô nhóm 5 người.", en: "Served as Technical Leader, developed messaging features on both platforms, and integrated Firebase and Google SDK for authentication and user analytics. Team size: 5." },
+
+            proj7_title: { vi: "Player SDK & ứng dụng minh hoạ (Android & iOS)", en: "Player SDK & Demo App (Android & iOS)" },
+            proj7_desc: { vi: "Nghiên cứu công nghệ mới trong lĩnh vực phát triển ứng dụng, xây dựng SDK phát nhạc/âm thanh dùng chung cho nhiều ứng dụng, tích hợp Firebase, Google SDK và mua hàng trong ứng dụng cho tính năng bản quyền. Quy mô nhóm 6 người.", en: "Researched emerging technologies in app development, built a shared audio/music Player SDK for use across multiple apps, and integrated Firebase, Google SDK, and in-app purchases for licensed content. Team size: 6." },
+
+            proj8_title: { vi: "VideoCall SDK & plugin (iOS)", en: "VideoCall SDK & Plugin (iOS)" },
+            proj8_desc: { vi: "Đề xuất giải pháp kỹ thuật, dựng nền tảng project iOS, triển khai tính năng gọi video, tích hợp WebRTC cho giao tiếp video thời gian thực, PushKit và CallKit để quản lý cuộc gọi và thông báo đẩy, WebSocket cho chat trong ứng dụng, đóng gói và phát hành framework để tái sử dụng trên nhiều ứng dụng. Quy mô nhóm 15 người.", en: "Proposed technical solutions, set up the iOS base project, implemented video calling features, integrated WebRTC for real-time video communication, PushKit and CallKit for call management and push notifications, WebSocket for in-app chat, and packaged/published a reusable framework for multiple apps. Team size: 15." },
+
+            proj9_title: { vi: "Logging SDK (iOS)", en: "Logging SDK (iOS)" },
+            proj9_desc: { vi: "Đề xuất giải pháp kỹ thuật cho dự án iOS, dựng nền tảng project, triển khai các chức năng cốt lõi theo yêu cầu, viết và debug code đảm bảo chất lượng, tích hợp biện pháp bảo mật để bảo vệ dữ liệu người dùng và tính toàn vẹn ứng dụng. Quy mô nhóm 5 người.", en: "Proposed technical solutions for the iOS project, set up the base project, implemented core functionality per requirements, wrote and debugged code for quality assurance, and integrated security measures to protect user data and app integrity. Team size: 5." },
+
+            proj10_title: { vi: "Log SDK (iOS)", en: "Log SDK (iOS)" },
+            proj10_desc: { vi: "Đề xuất giải pháp kỹ thuật và thiết kế tài liệu chi tiết cho Log SDK, dựng nền tảng project iOS ổn định, nghiên cứu và tích hợp Sentry SDK để theo dõi lỗi và giám sát hiệu năng theo thời gian thực. Quy mô nhóm 8 người.", en: "Proposed technical solutions and detailed design documentation for the Log SDK, set up a stable iOS base project, and researched/integrated the Sentry SDK for real-time error tracking and performance monitoring. Team size: 8." },
+
+            proj11_title: { vi: "LiveStream SDK & ứng dụng (iOS)", en: "LiveStream SDK & App (iOS)" },
+            proj11_desc: { vi: "Đề xuất giải pháp và thiết kế chi tiết, xây dựng cấu trúc project nền tảng cho tính năng ghi hình/mã hoá/phát sóng (Record, Encode, Publish), tích hợp Countly Logging SDK, xây dựng và tích hợp SDK livestream theo giao thức RTMP/RTMPS, tích hợp Player SDK để phát lại nội dung. Quy mô nhóm 10 người.", en: "Proposed solutions and detailed design, built the base project structure for record/encode/publish features, integrated the Countly Logging SDK, built and integrated a livestream SDK over RTMP/RTMPS, and integrated a Player SDK for playback. Team size: 10." },
+
+            proj12_title: { vi: "Login SDK & ứng dụng (iOS)", en: "Login SDK & App (iOS)" },
+            proj12_desc: { vi: "Chuyển đổi project nền tảng từ Objective-C sang Swift, viết và debug code, tích hợp WKWebView cho luồng đăng nhập qua web, tích hợp xác thực OAuth2 để đăng nhập an toàn. Quy mô nhóm 6 người.", en: "Migrated the base project from Objective-C to Swift, wrote and debugged code, integrated WKWebView for web-based login flows, and integrated OAuth2 authentication for secure sign-in. Team size: 6." },
+
+            proj13_title: { vi: "Server luận giải tử vi (Backend)", en: "Horoscope Analysis Server (Backend)" },
+            proj13_domain: { vi: "Dự án cá nhân", en: "Personal Project" },
+            proj13_desc: { vi: "Tự nghiên cứu và xây dựng backend phục vụ luận giải tử vi cho ứng dụng cá nhân: thiết kế API tính toán lá số, thiết kế cơ sở dữ liệu lưu trữ dữ liệu luận giải, đóng gói dịch vụ bằng Docker và triển khai bằng Docker Compose, vận hành server trên nền tảng cloud để dễ dàng mở rộng.", en: "Self-researched and built a backend to power horoscope analysis for a personal app: designed the chart-calculation API, designed the database schema for storing analysis data, packaged the service with Docker and deployed it with Docker Compose, and operated the server on cloud platforms for easy scaling." },
+
+            web_h2: { vi: "Ứng Dụng Web Đã Xây Dựng", en: "Web Apps I've Built" },
+            web_desc: { vi: "Công cụ tạo ảnh chụp màn hình (screenshot) cho App Store Connect và Google Play Console ngay trên trình duyệt — không cần server, không cần tài khoản, toàn bộ dữ liệu chỉ lưu trên máy người dùng. Hỗ trợ dựng bố cục cho nhiều thiết bị (iPhone, iPad, Android Phone/Tablet) cùng lúc, hơn 100 mẫu thiết kế dựng sẵn theo nhiều thể loại ứng dụng, tuỳ biến khung thiết bị, nền, chữ tiêu đề, và xuất file hàng loạt đúng kích thước yêu cầu của từng store.", en: "A browser-based tool for generating App Store Connect and Google Play Console screenshots — no server, no account required, all data stored locally on your device. Supports laying out multiple devices (iPhone, iPad, Android Phone/Tablet) at once, over 100 ready-made templates across app categories, customizable device frames, backgrounds, captions, and batch export at the exact sizes each store requires." },
+            tag_no_backend: { vi: "Không backend", en: "No backend" },
+
+            contact_h2: { vi: "Liên Hệ", en: "Contact" },
+            contact_note: { vi: "Mỗi ứng dụng có trang hỗ trợ, chính sách quyền riêng tư và điều khoản sử dụng riêng — xem trong từng thẻ ứng dụng ở trên.", en: "Each app has its own support page, privacy policy, and terms of use — see the links in each app card above." },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 26/07/2026", en: "Last updated: Jul 26, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) {
+                    el.textContent = entry[lang];
+                }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

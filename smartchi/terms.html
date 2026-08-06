@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Điều Khoản Sử Dụng - SmartChi</title>
+    <title data-i18n="page_title">Điều Khoản Sử Dụng - SmartChi</title>
     <style>
         * {
             margin: 0;
@@ -52,6 +52,31 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #c24d02 0%, #ff8a26 100%);
+            color: white;
+            border-color: transparent;
         }
 
         .update-date {
@@ -144,17 +169,21 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Quay lại trang SmartChi</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang SmartChi</a>
 
         <header>
-            <h1>📋 Điều Khoản Sử Dụng</h1>
-            <p>SmartChi - Quản Lý Chi Tiêu Bằng AI</p>
-            <p class="update-date">Cập nhật lần cuối: 05/08/2026</p>
+            <h1 data-i18n="hero_title">📋 Điều Khoản Sử Dụng</h1>
+            <p data-i18n="hero_subtitle">SmartChi - Quản Lý Chi Tiêu Bằng AI</p>
+            <p class="update-date" data-i18n="update_date">Cập nhật lần cuối: 05/08/2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <section>
-            <h2>1. Chấp Nhận Điều Khoản</h2>
-            <p>
+            <h2 data-i18n="s1_h2">1. Chấp Nhận Điều Khoản</h2>
+            <p data-i18n-html="s1_p">
                 Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>SmartChi</strong> ("Ứng dụng"),
                 bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này.
                 Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.
@@ -162,19 +191,19 @@
         </section>
 
         <section>
-            <h2>2. Giấy Phép Sử Dụng</h2>
-            <p>Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:</p>
+            <h2 data-i18n="s2_h2">2. Giấy Phép Sử Dụng</h2>
+            <p data-i18n="s2_intro">Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:</p>
             <ul>
-                <li>Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng</li>
-                <li>Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn</li>
-                <li>Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp</li>
+                <li data-i18n="s2_li1">Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng</li>
+                <li data-i18n="s2_li2">Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn</li>
+                <li data-i18n="s2_li3">Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp</li>
             </ul>
         </section>
 
         <section>
-            <h2>3. Bản Chất Ứng Dụng &amp; Miễn Trừ Trách Nhiệm Tài Chính</h2>
+            <h2 data-i18n="s3_h2">3. Bản Chất Ứng Dụng &amp; Miễn Trừ Trách Nhiệm Tài Chính</h2>
             <div class="warning-box">
-                <p style="font-weight: bold;">
+                <p style="font-weight: bold;" data-i18n-html="s3_warning">
                     SmartChi là công cụ <strong>ghi chép và ước tính chi tiêu cá nhân</strong>, không phải dịch vụ
                     tài chính, ngân hàng, kế toán hay tư vấn đầu tư. Mọi số liệu dự đoán, cảnh báo ngân sách và gợi
                     ý danh mục do AI cục bộ tạo ra chỉ mang tính <strong>tham khảo</strong>, dựa trên dữ liệu bạn tự
@@ -182,30 +211,30 @@
                     hoặc lời khuyên tài chính chuyên nghiệp.
                 </p>
             </div>
-            <p>
+            <p data-i18n-html="s3_p">
                 Ứng dụng hiện <strong>miễn phí, không có mua hàng trong ứng dụng, không quảng cáo</strong>. Nếu điều
                 này thay đổi trong tương lai, Điều khoản này sẽ được cập nhật tương ứng trước khi áp dụng.
             </p>
         </section>
 
         <section>
-            <h2>4. Nội Dung &amp; Dữ Liệu</h2>
+            <h2 data-i18n="s4_h2">4. Nội Dung &amp; Dữ Liệu</h2>
 
-            <h3>4.1 Quyền Sở Hữu Trí Tuệ</h3>
+            <h3 data-i18n="s4_1_h3">4.1 Quyền Sở Hữu Trí Tuệ</h3>
             <ul>
-                <li>Tất cả thiết kế, mã nguồn và tài nguyên của Ứng dụng đều thuộc sở hữu của chúng tôi</li>
-                <li>Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng</li>
+                <li data-i18n="s4_1_li1">Tất cả thiết kế, mã nguồn và tài nguyên của Ứng dụng đều thuộc sở hữu của chúng tôi</li>
+                <li data-i18n="s4_1_li2">Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng</li>
             </ul>
 
-            <h3>4.2 Dữ Liệu Của Bạn</h3>
+            <h3 data-i18n="s4_2_h3">4.2 Dữ Liệu Của Bạn</h3>
             <ul>
-                <li>Giao dịch, ngân sách, ảnh hóa đơn và mọi dữ liệu bạn nhập hoàn toàn thuộc về bạn</li>
-                <li>Dữ liệu được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào (xem chi tiết tại <a href="privacy.html" style="color: #ff8a3d;">Chính Sách Quyền Riêng Tư</a>)</li>
-                <li>Chúng tôi không chịu trách nhiệm về việc mất dữ liệu khi bạn xóa ứng dụng, mất thiết bị, hoặc không tự sao lưu</li>
+                <li data-i18n="s4_2_li1">Giao dịch, ngân sách, ảnh hóa đơn và mọi dữ liệu bạn nhập hoàn toàn thuộc về bạn</li>
+                <li data-i18n-html="s4_2_li2">Dữ liệu được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào (xem chi tiết tại <a href="privacy.html" style="color: #ff8a3d;">Chính Sách Quyền Riêng Tư</a>)</li>
+                <li data-i18n="s4_2_li3">Chúng tôi không chịu trách nhiệm về việc mất dữ liệu khi bạn xóa ứng dụng, mất thiết bị, hoặc không tự sao lưu</li>
             </ul>
 
             <div class="info-section">
-                <p>
+                <p data-i18n="s4_2_note">
                     Bạn chịu trách nhiệm đảm bảo tính chính xác của số liệu mình nhập và tự sao lưu dữ liệu quan
                     trọng (ví dụ qua backup iCloud/iTunes của thiết bị) nếu cần.
                 </p>
@@ -213,73 +242,178 @@
         </section>
 
         <section>
-            <h2>5. Từ Chối Bảo Hành</h2>
-            <p>Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:</p>
+            <h2 data-i18n="s5_h2">5. Từ Chối Bảo Hành</h2>
+            <p data-i18n="s5_intro">Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:</p>
             <ul>
-                <li>Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi</li>
-                <li>Kết quả đọc hóa đơn (OCR) hoặc gợi ý phân loại của AI luôn chính xác 100%</li>
-                <li>Tính tương thích với mọi phiên bản hệ điều hành hoặc thiết bị</li>
+                <li data-i18n="s5_li1">Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi</li>
+                <li data-i18n="s5_li2">Kết quả đọc hóa đơn (OCR) hoặc gợi ý phân loại của AI luôn chính xác 100%</li>
+                <li data-i18n="s5_li3">Tính tương thích với mọi phiên bản hệ điều hành hoặc thiết bị</li>
             </ul>
         </section>
 
         <section>
-            <h2>6. Giới Hạn Trách Nhiệm</h2>
-            <p>Chúng tôi không chịu trách nhiệm về:</p>
+            <h2 data-i18n="s6_h2">6. Giới Hạn Trách Nhiệm</h2>
+            <p data-i18n="s6_intro">Chúng tôi không chịu trách nhiệm về:</p>
             <ul>
-                <li>Quyết định tài chính bạn đưa ra dựa trên số liệu, dự đoán hoặc cảnh báo của Ứng dụng</li>
-                <li>Mất mát dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng</li>
-                <li>Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng</li>
+                <li data-i18n="s6_li1">Quyết định tài chính bạn đưa ra dựa trên số liệu, dự đoán hoặc cảnh báo của Ứng dụng</li>
+                <li data-i18n="s6_li2">Mất mát dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng</li>
+                <li data-i18n="s6_li3">Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng</li>
             </ul>
         </section>
 
         <section>
-            <h2>7. Thay Đổi Điều Khoản</h2>
-            <p>
+            <h2 data-i18n="s7_h2">7. Thay Đổi Điều Khoản</h2>
+            <p data-i18n="s7_p">
                 Chúng tôi có quyền cập nhật Điều khoản này theo thời gian. Thay đổi sẽ có hiệu lực ngay khi được công
                 bố tại trang này. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.
             </p>
         </section>
 
         <section>
-            <h2>8. Chấm Dứt Sử Dụng</h2>
-            <p>Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.</p>
+            <h2 data-i18n="s8_h2">8. Chấm Dứt Sử Dụng</h2>
+            <p data-i18n="s8_p">Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.</p>
         </section>
 
         <section>
-            <h2>9. Luật Áp Dụng</h2>
-            <p>Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.</p>
+            <h2 data-i18n="s9_h2">9. Luật Áp Dụng</h2>
+            <p data-i18n="s9_p">Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.</p>
         </section>
 
         <section>
-            <h2>10. Liên Hệ</h2>
-            <p>Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:</p>
+            <h2 data-i18n="s10_h2">10. Liên Hệ</h2>
+            <p data-i18n="s10_intro">Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:</p>
 
             <div class="contact-info">
                 <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
                 <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/smartchi/">https://imsuunc.github.io/smartchi/</a></p>
-                <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/smartchi/support.html</a></p>
+                <p data-i18n-html="s10_support_line"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/smartchi/support.html</a></p>
             </div>
         </section>
 
         <section>
-            <h2>Tài Liệu Tham Khảo</h2>
+            <h2 data-i18n="refs_h2">Tài Liệu Tham Khảo</h2>
             <ul>
-                <li><a href="privacy.html" style="color: #ff8a3d; font-weight: 500;">Chính Sách Quyền Riêng Tư</a></li>
-                <li><a href="support.html" style="color: #ff8a3d; font-weight: 500;">Trang Hỗ Trợ</a></li>
+                <li><a href="privacy.html" style="color: #ff8a3d; font-weight: 500;" data-i18n="ref_privacy">Chính Sách Quyền Riêng Tư</a></li>
+                <li><a href="support.html" style="color: #ff8a3d; font-weight: 500;" data-i18n="ref_support">Trang Hỗ Trợ</a></li>
                 <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #ff8a3d; font-weight: 500;">Apple Standard EULA</a></li>
             </ul>
         </section>
 
         <div class="warning-box" style="margin-top: 30px; text-align: center;">
-            <p style="font-weight: bold;">
+            <p style="font-weight: bold;" data-i18n="agreement_notice">
                 Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.
             </p>
         </div>
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em>Cập nhật lần cuối: 05/08/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 05/08/2026</em></p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Điều Khoản Sử Dụng - SmartChi", en: "Terms of Use - SmartChi" },
+
+            back_link: { vi: "← Quay lại trang SmartChi", en: "← Back to SmartChi" },
+
+            hero_title: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+            hero_subtitle: { vi: "SmartChi - Quản Lý Chi Tiêu Bằng AI", en: "SmartChi - AI Expense Tracker" },
+            update_date: { vi: "Cập nhật lần cuối: 05/08/2026", en: "Last updated: Aug 5, 2026" },
+
+            s1_h2: { vi: "1. Chấp Nhận Điều Khoản", en: "1. Acceptance of Terms" },
+            s1_p: {
+                vi: "Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>SmartChi</strong> (\"Ứng dụng\"), bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này. Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.",
+                en: "By downloading, installing, and using the <strong>SmartChi</strong> app (\"the App\"), you agree to comply with the terms and conditions set out in this document. If you do not agree, please do not use the App."
+            },
+
+            s2_h2: { vi: "2. Giấy Phép Sử Dụng", en: "2. License to Use" },
+            s2_intro: { vi: "Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:", en: "We grant you the right to use the App for personal, non-commercial purposes, subject to the following terms:" },
+            s2_li1: { vi: "Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng", en: "You may not copy, modify, distribute, or resell the App" },
+            s2_li2: { vi: "Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn", en: "You may not reverse engineer or extract the source code" },
+            s2_li3: { vi: "Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp", en: "You may not use the App for any unlawful purpose" },
+
+            s3_h2: { vi: "3. Bản Chất Ứng Dụng & Miễn Trừ Trách Nhiệm Tài Chính", en: "3. Nature of the App & Financial Disclaimer" },
+            s3_warning: {
+                vi: "SmartChi là công cụ <strong>ghi chép và ước tính chi tiêu cá nhân</strong>, không phải dịch vụ tài chính, ngân hàng, kế toán hay tư vấn đầu tư. Mọi số liệu dự đoán, cảnh báo ngân sách và gợi ý danh mục do AI cục bộ tạo ra chỉ mang tính <strong>tham khảo</strong>, dựa trên dữ liệu bạn tự nhập — không đảm bảo độ chính xác tuyệt đối và không thay thế cho sổ sách kế toán chính thức hoặc lời khuyên tài chính chuyên nghiệp.",
+                en: "SmartChi is a tool for <strong>personal expense logging and estimation</strong>, not a financial, banking, accounting, or investment advisory service. All forecasts, budget alerts, and category suggestions generated by the on-device AI are for <strong>reference purposes only</strong>, based on data you enter yourself — they are not guaranteed to be perfectly accurate and do not replace official accounting records or professional financial advice."
+            },
+            s3_p: {
+                vi: "Ứng dụng hiện <strong>miễn phí, không có mua hàng trong ứng dụng, không quảng cáo</strong>. Nếu điều này thay đổi trong tương lai, Điều khoản này sẽ được cập nhật tương ứng trước khi áp dụng.",
+                en: "The App is currently <strong>free, with no in-app purchases and no advertising</strong>. Should this change in the future, these Terms will be updated accordingly before any such change takes effect."
+            },
+
+            s4_h2: { vi: "4. Nội Dung & Dữ Liệu", en: "4. Content & Data" },
+
+            s4_1_h3: { vi: "4.1 Quyền Sở Hữu Trí Tuệ", en: "4.1 Intellectual Property" },
+            s4_1_li1: { vi: "Tất cả thiết kế, mã nguồn và tài nguyên của Ứng dụng đều thuộc sở hữu của chúng tôi", en: "All design, source code, and assets of the App are owned by us" },
+            s4_1_li2: { vi: "Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng", en: "Users may not copy or redistribute the content of the App" },
+
+            s4_2_h3: { vi: "4.2 Dữ Liệu Của Bạn", en: "4.2 Your Data" },
+            s4_2_li1: { vi: "Giao dịch, ngân sách, ảnh hóa đơn và mọi dữ liệu bạn nhập hoàn toàn thuộc về bạn", en: "Transactions, budgets, receipt images, and all data you enter belong entirely to you" },
+            s4_2_li2: { vi: "Dữ liệu được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào (xem chi tiết tại <a href=\"privacy.html\" style=\"color: #ff8a3d;\">Chính Sách Quyền Riêng Tư</a>)", en: "Data is stored locally on your device and is never sent to any server (see details in the <a href=\"privacy.html\" style=\"color: #ff8a3d;\">Privacy Policy</a>)" },
+            s4_2_li3: { vi: "Chúng tôi không chịu trách nhiệm về việc mất dữ liệu khi bạn xóa ứng dụng, mất thiết bị, hoặc không tự sao lưu", en: "We are not responsible for data loss resulting from deleting the app, losing your device, or failing to back up your data" },
+            s4_2_note: {
+                vi: "Bạn chịu trách nhiệm đảm bảo tính chính xác của số liệu mình nhập và tự sao lưu dữ liệu quan trọng (ví dụ qua backup iCloud/iTunes của thiết bị) nếu cần.",
+                en: "You are responsible for ensuring the accuracy of the data you enter and for backing up important data yourself (for example, via your device's iCloud/iTunes backup) if needed."
+            },
+
+            s5_h2: { vi: "5. Từ Chối Bảo Hành", en: "5. Disclaimer of Warranty" },
+            s5_intro: { vi: "Ứng dụng được cung cấp \"nguyên trạng\" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:", en: "The App is provided \"AS IS\" without any warranty of any kind. We do not guarantee that:" },
+            s5_li1: { vi: "Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi", en: "The App will operate uninterrupted or error-free" },
+            s5_li2: { vi: "Kết quả đọc hóa đơn (OCR) hoặc gợi ý phân loại của AI luôn chính xác 100%", en: "Receipt reading (OCR) results or AI category suggestions will always be 100% accurate" },
+            s5_li3: { vi: "Tính tương thích với mọi phiên bản hệ điều hành hoặc thiết bị", en: "The App will be compatible with every OS version or device" },
+
+            s6_h2: { vi: "6. Giới Hạn Trách Nhiệm", en: "6. Limitation of Liability" },
+            s6_intro: { vi: "Chúng tôi không chịu trách nhiệm về:", en: "We are not liable for:" },
+            s6_li1: { vi: "Quyết định tài chính bạn đưa ra dựa trên số liệu, dự đoán hoặc cảnh báo của Ứng dụng", en: "Financial decisions you make based on the App's data, forecasts, or alerts" },
+            s6_li2: { vi: "Mất mát dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng", en: "Data loss resulting from you deleting your data or uninstalling the App" },
+            s6_li3: { vi: "Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng", en: "Indirect damages arising from your use of the App" },
+
+            s7_h2: { vi: "7. Thay Đổi Điều Khoản", en: "7. Changes to These Terms" },
+            s7_p: {
+                vi: "Chúng tôi có quyền cập nhật Điều khoản này theo thời gian. Thay đổi sẽ có hiệu lực ngay khi được công bố tại trang này. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.",
+                en: "We reserve the right to update these Terms from time to time. Changes take effect as soon as they are posted on this page. You should check back periodically for the latest information."
+            },
+
+            s8_h2: { vi: "8. Chấm Dứt Sử Dụng", en: "8. Termination" },
+            s8_p: { vi: "Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.", en: "We reserve the right to terminate or suspend your access if you violate these terms." },
+
+            s9_h2: { vi: "9. Luật Áp Dụng", en: "9. Governing Law" },
+            s9_p: { vi: "Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.", en: "These terms are governed by the laws of Vietnam." },
+
+            s10_h2: { vi: "10. Liên Hệ", en: "10. Contact" },
+            s10_intro: { vi: "Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:", en: "If you have questions about these Terms of Use, please contact us:" },
+            s10_support_line: { vi: "<strong>📞 Trang hỗ trợ:</strong> <a href=\"support.html\">https://imsuunc.github.io/smartchi/support.html</a>", en: "<strong>📞 Support page:</strong> <a href=\"support.html\">https://imsuunc.github.io/smartchi/support.html</a>" },
+
+            refs_h2: { vi: "Tài Liệu Tham Khảo", en: "Related Documents" },
+            ref_privacy: { vi: "Chính Sách Quyền Riêng Tư", en: "Privacy Policy" },
+            ref_support: { vi: "Trang Hỗ Trợ", en: "Support Page" },
+
+            agreement_notice: { vi: "Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.", en: "By using the App, you acknowledge that you have read, understood, and agreed to the terms above." },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 05/08/2026", en: "Last updated: Aug 5, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phong Thủy - La Bàn, Xem Tuổi | IMSUUNC</title>
+    <title data-i18n="page_title">Phong Thủy - La Bàn, Xem Tuổi | IMSUUNC</title>
     <style>
         * {
             margin: 0;
@@ -43,6 +43,31 @@
         .subtitle {
             color: #a1a1aa;
             font-size: 1.1em;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
         }
 
         nav {
@@ -158,79 +183,83 @@
 </head>
 <body>
     <div class="container">
-        <a href="../index.html" style="color: #8b9cff; text-decoration: none; font-weight: 500;">← Tất cả ứng dụng của IMSUUNC</a>
+        <a href="../index.html" style="color: #8b9cff; text-decoration: none; font-weight: 500;" data-i18n="back_link">← Tất cả ứng dụng của IMSUUNC</a>
 
         <header style="margin-top: 20px;">
-            <h1>🧭 Phong Thủy - La Bàn, Xem Tuổi</h1>
-            <p class="subtitle">Tra cứu phong thủy cá nhân theo ngày sinh — cung mệnh, hướng nhà, ngày tốt, tuổi hợp</p>
+            <h1 data-i18n="hero_title">🧭 Phong Thủy - La Bàn, Xem Tuổi</h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Tra cứu phong thủy cá nhân theo ngày sinh — cung mệnh, hướng nhà, ngày tốt, tuổi hợp</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </header>
 
         <nav>
-            <a href="support.html" class="nav-button">📞 Hỗ Trợ</a>
-            <a href="privacy.html" class="nav-button">🔒 Quyền Riêng Tư</a>
-            <a href="terms.html" class="nav-button">📋 Điều Khoản</a>
+            <a href="support.html" class="nav-button" data-i18n="nav_support">📞 Hỗ Trợ</a>
+            <a href="privacy.html" class="nav-button" data-i18n="nav_privacy">🔒 Quyền Riêng Tư</a>
+            <a href="terms.html" class="nav-button" data-i18n="nav_terms">📋 Điều Khoản</a>
         </nav>
 
         <section>
-            <h2>Về Ứng Dụng</h2>
-            <p>
+            <h2 data-i18n="about_h2">Về Ứng Dụng</h2>
+            <p data-i18n-html="about_p">
                 <strong>Phong Thủy - La Bàn, Xem Tuổi</strong> là ứng dụng tra cứu phong thủy cá nhân dựa trên Cung Mệnh,
                 Bát Trạch, Can Chi và Ngũ Hành Nạp Âm. Chỉ cần nhập ngày sinh, mọi tính năng tự tính riêng cho bạn —
                 dùng được cả khi không có kết nối mạng.
             </p>
 
-            <div class="coming-soon">🚀 Sắp ra mắt trên App Store</div>
+            <div class="coming-soon" data-i18n="status_soon">🚀 Sắp ra mắt trên App Store</div>
         </section>
 
         <section>
-            <h2>Tính Năng Nổi Bật</h2>
+            <h2 data-i18n="features_h2">Tính Năng Nổi Bật</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h3>✨ Cung Mệnh & Ngũ Hành</h3>
-                    <p>Tính cung phi Bát Trạch và ngũ hành nạp âm bản mệnh theo năm sinh</p>
+                    <h3 data-i18n="feature1_title">✨ Cung Mệnh & Ngũ Hành</h3>
+                    <p data-i18n="feature1_desc">Tính cung phi Bát Trạch và ngũ hành nạp âm bản mệnh theo năm sinh</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🧭 Hướng Nhà Hợp Mệnh</h3>
-                    <p>8 hướng cát/hung theo Bát Trạch, gợi ý bố trí cửa chính, phòng ngủ, bếp</p>
+                    <h3 data-i18n="feature2_title">🧭 Hướng Nhà Hợp Mệnh</h3>
+                    <p data-i18n="feature2_desc">8 hướng cát/hung theo Bát Trạch, gợi ý bố trí cửa chính, phòng ngủ, bếp</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📅 Chọn Ngày Tốt</h3>
-                    <p>Chấm điểm từng ngày theo Can Chi và ngũ hành hợp mệnh</p>
+                    <h3 data-i18n="feature3_title">📅 Chọn Ngày Tốt</h3>
+                    <p data-i18n="feature3_desc">Chấm điểm từng ngày theo Can Chi và ngũ hành hợp mệnh</p>
                 </div>
                 <div class="feature-card">
-                    <h3>❤️ Xem Tuổi Hợp</h3>
-                    <p>So tuổi cưới hỏi, hợp tác làm ăn theo Tam Hợp, Lục Hợp, Tứ Hành Xung</p>
+                    <h3 data-i18n="feature4_title">❤️ Xem Tuổi Hợp</h3>
+                    <p data-i18n="feature4_desc">So tuổi cưới hỏi, hợp tác làm ăn theo Tam Hợp, Lục Hợp, Tứ Hành Xung</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🏠 Xem Tuổi Làm Nhà</h3>
-                    <p>Kiểm tra Tam Tai, Kim Lâu, Hoang Ốc theo từng năm</p>
+                    <h3 data-i18n="feature5_title">🏠 Xem Tuổi Làm Nhà</h3>
+                    <p data-i18n="feature5_desc">Kiểm tra Tam Tai, Kim Lâu, Hoang Ốc theo từng năm</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🧭 La Bàn Phong Thủy</h3>
-                    <p>Dùng cảm biến la bàn thật, xoay máy là biết ngay hướng tốt/xấu</p>
+                    <h3 data-i18n="feature6_title">🧭 La Bàn Phong Thủy</h3>
+                    <p data-i18n="feature6_desc">Dùng cảm biến la bàn thật, xoay máy là biết ngay hướng tốt/xấu</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Liên Hệ & Hỗ Trợ</h2>
+            <h2 data-i18n="contact_h2">Liên Hệ & Hỗ Trợ</h2>
             <div class="contact-info">
-                <p><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
-                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/phong-thuy/">imsuunc.github.io/phong-thuy</a></p>
-                <p><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a></p>
+                <p data-i18n-html="contact_email"><strong>📧 Email:</strong> <a href="mailto:iamsuunc@gmail.com">iamsuunc@gmail.com</a></p>
+                <p data-i18n-html="contact_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/phong-thuy/">imsuunc.github.io/phong-thuy</a></p>
+                <p data-i18n-html="contact_support"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a></p>
             </div>
         </section>
 
         <section>
-            <h2>Tài Liệu Quan Trọng</h2>
+            <h2 data-i18n="docs_h2">Tài Liệu Quan Trọng</h2>
             <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                    <a href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">
+                    <a href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="docs_privacy">
                         🔒 Chính Sách Quyền Riêng Tư
                     </a>
                 </li>
                 <li style="margin: 10px 0;">
-                    <a href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">
+                    <a href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="docs_terms">
                         📋 Điều Khoản Sử Dụng
                     </a>
                 </li>
@@ -239,8 +268,82 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;">Cập nhật lần cuối: 24/07/2026</p>
+            <p style="margin-top: 10px;" data-i18n="footer_updated">Cập nhật lần cuối: 24/07/2026</p>
         </footer>
     </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Phong Thủy - La Bàn, Xem Tuổi | IMSUUNC", en: "Phong Thuy - Compass & Zodiac Lookup | IMSUUNC" },
+
+            back_link: { vi: "← Tất cả ứng dụng của IMSUUNC", en: "← All IMSUUNC apps" },
+
+            hero_title: { vi: "🧭 Phong Thủy - La Bàn, Xem Tuổi", en: "🧭 Phong Thuy - Compass & Zodiac Lookup" },
+            hero_subtitle: { vi: "Tra cứu phong thủy cá nhân theo ngày sinh — cung mệnh, hướng nhà, ngày tốt, tuổi hợp", en: "Personal feng shui lookup by birth date — destiny palace, house direction, lucky days, zodiac compatibility" },
+
+            nav_support: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            nav_privacy: { vi: "🔒 Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            nav_terms: { vi: "📋 Điều Khoản", en: "📋 Terms" },
+
+            about_h2: { vi: "Về Ứng Dụng", en: "About the App" },
+            about_p: {
+                vi: "<strong>Phong Thủy - La Bàn, Xem Tuổi</strong> là ứng dụng tra cứu phong thủy cá nhân dựa trên Cung Mệnh, Bát Trạch, Can Chi và Ngũ Hành Nạp Âm. Chỉ cần nhập ngày sinh, mọi tính năng tự tính riêng cho bạn — dùng được cả khi không có kết nối mạng.",
+                en: "<strong>Phong Thuy - Compass & Zodiac Lookup</strong> is a personal feng shui lookup app based on the Destiny Palace (Cung Mệnh), Eight Mansions (Bát Trạch), the Heavenly Stems &amp; Earthly Branches (Can Chi), and the Na Yin Five Elements. Simply enter your birth date and every feature calculates results just for you — works fully offline, no internet connection needed."
+            },
+
+            status_soon: { vi: "🚀 Sắp ra mắt trên App Store", en: "🚀 Coming soon on the App Store" },
+
+            features_h2: { vi: "Tính Năng Nổi Bật", en: "Key Features" },
+
+            feature1_title: { vi: "✨ Cung Mệnh & Ngũ Hành", en: "✨ Destiny Palace & Five Elements" },
+            feature1_desc: { vi: "Tính cung phi Bát Trạch và ngũ hành nạp âm bản mệnh theo năm sinh", en: "Calculates your Eight Mansions destiny palace and Na Yin five-element life destiny based on your birth year" },
+
+            feature2_title: { vi: "🧭 Hướng Nhà Hợp Mệnh", en: "🧭 Auspicious House Direction" },
+            feature2_desc: { vi: "8 hướng cát/hung theo Bát Trạch, gợi ý bố trí cửa chính, phòng ngủ, bếp", en: "The 8 auspicious/inauspicious directions per Eight Mansions theory, with layout suggestions for your front door, bedroom, and kitchen" },
+
+            feature3_title: { vi: "📅 Chọn Ngày Tốt", en: "📅 Auspicious Day Picker" },
+            feature3_desc: { vi: "Chấm điểm từng ngày theo Can Chi và ngũ hành hợp mệnh", en: "Scores each day based on the Heavenly Stems & Earthly Branches and the five elements matching your destiny" },
+
+            feature4_title: { vi: "❤️ Xem Tuổi Hợp", en: "❤️ Zodiac Compatibility" },
+            feature4_desc: { vi: "So tuổi cưới hỏi, hợp tác làm ăn theo Tam Hợp, Lục Hợp, Tứ Hành Xung", en: "Compares zodiac ages for marriage or business partnerships using Three Harmonies, Six Harmonies, and Four Clashes" },
+
+            feature5_title: { vi: "🏠 Xem Tuổi Làm Nhà", en: "🏠 Auspicious Age for Building a House" },
+            feature5_desc: { vi: "Kiểm tra Tam Tai, Kim Lâu, Hoang Ốc theo từng năm", en: "Checks Three Calamities (Tam Tai), Kim Lau, and Hoang Oc ages for each year" },
+
+            feature6_title: { vi: "🧭 La Bàn Phong Thủy", en: "🧭 Feng Shui Compass" },
+            feature6_desc: { vi: "Dùng cảm biến la bàn thật, xoay máy là biết ngay hướng tốt/xấu", en: "Uses your device's real compass sensor — turn your phone to instantly see auspicious/inauspicious directions" },
+
+            contact_h2: { vi: "Liên Hệ & Hỗ Trợ", en: "Contact & Support" },
+            contact_email: { vi: "<strong>📧 Email:</strong> <a href=\"mailto:iamsuunc@gmail.com\">iamsuunc@gmail.com</a>", en: "<strong>📧 Email:</strong> <a href=\"mailto:iamsuunc@gmail.com\">iamsuunc@gmail.com</a>" },
+            contact_website: { vi: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/phong-thuy/\">imsuunc.github.io/phong-thuy</a>", en: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/phong-thuy/\">imsuunc.github.io/phong-thuy</a>" },
+            contact_support: { vi: "<strong>📞 Trang hỗ trợ:</strong> <a href=\"support.html\">Xem trang hỗ trợ</a>", en: "<strong>📞 Support page:</strong> <a href=\"support.html\">View support page</a>" },
+
+            docs_h2: { vi: "Tài Liệu Quan Trọng", en: "Important Documents" },
+            docs_privacy: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            docs_terms: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 24/07/2026", en: "Last updated: Jul 24, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
 </body>
 </html>
