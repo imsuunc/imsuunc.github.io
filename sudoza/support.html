@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Hỗ Trợ - Sudoza</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2dd4bf;
+        }
+
+        h1 {
+            color: #2dd4bf;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        h2 {
+            color: #2dd4bf;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #2dd4bf;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5eead4;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #2dd4bf;
+        }
+
+        .faq-item h3 {
+            color: #2dd4bf;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .links-section {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .links-section a {
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .links-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Sudoza</a>
+
+        <header>
+            <h1 data-i18n="page_h1">📞 Hỗ Trợ</h1>
+            <p data-i18n="page_subtitle">Sudoza - Trò Chơi Sudoku Giải Đố</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <section>
+            <h2 data-i18n="contact_h2">Liên Hệ Hỗ Trợ</h2>
+            <p data-i18n="contact_p">Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
+
+            <div class="contact-box">
+                <h3 data-i18n="contact_box_h3">📧 Email Hỗ Trợ</h3>
+                <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>
+                <p style="margin-top: 15px; font-size: 0.9em;" data-i18n="contact_response_time">Thời gian phản hồi: Trong vòng 24-48 giờ làm việc</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="faq_h2">Câu Hỏi Thường Gặp (FAQ)</h2>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq1_q">1. Làm sao để bắt đầu chơi?</h3>
+                <ul>
+                    <li data-i18n="faq1_a1">Chọn mức độ khó: Dễ, Trung bình, Khó hoặc Chuyên gia</li>
+                    <li data-i18n="faq1_a2">Chạm vào ô trống, sau đó chọn số từ bàn phím bên dưới để điền</li>
+                    <li data-i18n="faq1_a3">Dùng nút Gợi ý khi bí, hoặc Hoàn tác nếu điền nhầm số</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq2_q">2. Sudoza có cần kết nối mạng không?</h3>
+                <ul>
+                    <li data-i18n="faq2_a1">Không. Bạn có thể tạo đề và chơi hoàn toàn ngoại tuyến (offline)</li>
+                    <li data-i18n="faq2_a2">Kết nối mạng chỉ cần thiết để tải quảng cáo hoặc xử lý giao dịch mua trong ứng dụng</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq3_q">3. Gợi ý (Hint) hoạt động như thế nào?</h3>
+                <ul>
+                    <li data-i18n="faq3_a1">Số lượt gợi ý được giới hạn theo từng mức độ khó, hiển thị ngay trên thanh công cụ trong ván chơi</li>
+                    <li data-i18n="faq3_a2">Người dùng đã mua gói mở khoá trọn đời sẽ có gợi ý không giới hạn</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq4_q">4. Làm sao để xoá dữ liệu chơi?</h3>
+                <ul>
+                    <li data-i18n="faq4_a1">Ván chơi hiện tại tự động lưu lại và tiếp tục khi bạn mở lại ứng dụng</li>
+                    <li data-i18n="faq4_a2">Để xoá toàn bộ dữ liệu (tiến trình chơi, kỷ lục thời gian), gỡ cài đặt ứng dụng</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq5_q">5. Ứng dụng có thu thập thông tin cá nhân không?</h3>
+                <ul>
+                    <li data-i18n="faq5_a1">Không, Sudoza không yêu cầu tài khoản và không thu thập dữ liệu cá nhân — tiến trình chơi chỉ lưu trên máy của bạn</li>
+                    <li data-i18n-html="faq5_a2">Xem chi tiết tại <a href="privacy.html" style="color: #2dd4bf;">Chính Sách Quyền Riêng Tư</a></li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq6_q">6. Sudoza có mất phí không?</h3>
+                <ul>
+                    <li data-i18n="faq6_a1">Không, Sudoza chơi hoàn toàn miễn phí với đầy đủ mức độ khó</li>
+                    <li data-i18n="faq6_a2">Ứng dụng có gói mở khoá trọn đời tuỳ chọn để loại bỏ quảng cáo và mở khoá gợi ý không giới hạn</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq7_q">7. Làm sao để tắt/bật thông báo?</h3>
+                <ul>
+                    <li data-i18n="faq7_a1">Vào Cài đặt của thiết bị (iOS/Android) → Ứng dụng Sudoza → Thông báo, rồi bật hoặc tắt theo ý muốn</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="bugreport_h2">Báo Lỗi</h2>
+            <p data-i18n="bugreport_p">Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
+            <ul>
+                <li data-i18n="bugreport_li1">Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi, ví dụ: đang chơi mức nào)</li>
+                <li data-i18n="bugreport_li2">Thiết bị và phiên bản hệ điều hành</li>
+                <li data-i18n="bugreport_li3">Ảnh chụp màn hình (nếu có)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="feedback_h2">Góp Ý &amp; Đề Xuất Tính Năng</h2>
+            <p data-i18n="feedback_p">Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
+            <ul>
+                <li data-i18n="feedback_li1">Mức độ khó, chế độ chơi hoặc tính năng bạn muốn thêm vào</li>
+                <li data-i18n="feedback_li2">Cải tiến giao diện</li>
+                <li data-i18n="feedback_li3">Bất kỳ ý tưởng nào khác</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="moreinfo_h2">Thông Tin Thêm</h2>
+            <div class="links-section">
+                <p data-i18n="moreinfo_docs_label"><strong>📄 Tài liệu quan trọng:</strong></p>
+                <ul style="margin-left: 0; list-style: none;">
+                    <li style="margin: 10px 0;" data-i18n-html="moreinfo_privacy_link">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
+                    <li style="margin: 10px 0;" data-i18n-html="moreinfo_terms_link">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                </ul>
+                <p style="margin-top: 20px;"><strong data-i18n="moreinfo_website_label">🌐 Website:</strong> <a href="https://imsuunc.github.io/sudoza/">https://imsuunc.github.io/sudoza/</a></p>
+                <p><strong data-i18n="moreinfo_email_label">📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 12/08/2026</em></p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Hỗ Trợ - Sudoza", en: "Support - Sudoza" },
+            back_link: { vi: "← Quay lại trang Sudoza", en: "← Back to Sudoza" },
+            page_h1: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            page_subtitle: { vi: "Sudoza - Trò Chơi Sudoku Giải Đố", en: "Sudoza - Sudoku Puzzle Game" },
+
+            contact_h2: { vi: "Liên Hệ Hỗ Trợ", en: "Contact Support" },
+            contact_p: { vi: "Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:", en: "We're always here to help! If you have questions, run into issues, or need assistance, please reach out to us through the following channels:" },
+            contact_box_h3: { vi: "📧 Email Hỗ Trợ", en: "📧 Support Email" },
+            contact_response_time: { vi: "Thời gian phản hồi: Trong vòng 24-48 giờ làm việc", en: "Response time: Within 24-48 business hours" },
+
+            faq_h2: { vi: "Câu Hỏi Thường Gặp (FAQ)", en: "Frequently Asked Questions (FAQ)" },
+
+            faq1_q: { vi: "1. Làm sao để bắt đầu chơi?", en: "1. How do I start playing?" },
+            faq1_a1: { vi: "Chọn mức độ khó: Dễ, Trung bình, Khó hoặc Chuyên gia", en: "Choose a difficulty: Easy, Medium, Hard, or Expert" },
+            faq1_a2: { vi: "Chạm vào ô trống, sau đó chọn số từ bàn phím bên dưới để điền", en: "Tap an empty cell, then pick a number from the keypad below to fill it in" },
+            faq1_a3: { vi: "Dùng nút Gợi ý khi bí, hoặc Hoàn tác nếu điền nhầm số", en: "Use the Hint button when stuck, or Undo if you entered the wrong number" },
+
+            faq2_q: { vi: "2. Sudoza có cần kết nối mạng không?", en: "2. Does Sudoza require an internet connection?" },
+            faq2_a1: { vi: "Không. Bạn có thể tạo đề và chơi hoàn toàn ngoại tuyến (offline)", en: "No. You can generate puzzles and play entirely offline" },
+            faq2_a2: { vi: "Kết nối mạng chỉ cần thiết để tải quảng cáo hoặc xử lý giao dịch mua trong ứng dụng", en: "An internet connection is only needed to load ads or process in-app purchases" },
+
+            faq3_q: { vi: "3. Gợi ý (Hint) hoạt động như thế nào?", en: "3. How do hints work?" },
+            faq3_a1: { vi: "Số lượt gợi ý được giới hạn theo từng mức độ khó, hiển thị ngay trên thanh công cụ trong ván chơi", en: "The number of hints is limited per difficulty level and shown right on the in-game toolbar" },
+            faq3_a2: { vi: "Người dùng đã mua gói mở khoá trọn đời sẽ có gợi ý không giới hạn", en: "Users who have purchased the lifetime unlock get unlimited hints" },
+
+            faq4_q: { vi: "4. Làm sao để xoá dữ liệu chơi?", en: "4. How do I delete my game data?" },
+            faq4_a1: { vi: "Ván chơi hiện tại tự động lưu lại và tiếp tục khi bạn mở lại ứng dụng", en: "Your current game is saved automatically and resumes when you reopen the app" },
+            faq4_a2: { vi: "Để xoá toàn bộ dữ liệu (tiến trình chơi, kỷ lục thời gian), gỡ cài đặt ứng dụng", en: "To delete all data (game progress, best times), uninstall the app" },
+
+            faq5_q: { vi: "5. Ứng dụng có thu thập thông tin cá nhân không?", en: "5. Does the app collect personal information?" },
+            faq5_a1: { vi: "Không, Sudoza không yêu cầu tài khoản và không thu thập dữ liệu cá nhân — tiến trình chơi chỉ lưu trên máy của bạn", en: "No, Sudoza requires no account and collects no personal data — your game progress is stored only on your device" },
+            faq5_a2: { vi: 'Xem chi tiết tại <a href="privacy.html" style="color: #2dd4bf;">Chính Sách Quyền Riêng Tư</a>', en: 'See details in our <a href="privacy.html" style="color: #2dd4bf;">Privacy Policy</a>' },
+
+            faq6_q: { vi: "6. Sudoza có mất phí không?", en: "6. Is Sudoza paid?" },
+            faq6_a1: { vi: "Không, Sudoza chơi hoàn toàn miễn phí với đầy đủ mức độ khó", en: "No, Sudoza is completely free to play with all difficulty levels included" },
+            faq6_a2: { vi: "Ứng dụng có gói mở khoá trọn đời tuỳ chọn để loại bỏ quảng cáo và mở khoá gợi ý không giới hạn", en: "The app offers an optional lifetime unlock to remove ads and unlock unlimited hints" },
+
+            faq7_q: { vi: "7. Làm sao để tắt/bật thông báo?", en: "7. How do I turn notifications on or off?" },
+            faq7_a1: { vi: "Vào Cài đặt của thiết bị (iOS/Android) → Ứng dụng Sudoza → Thông báo, rồi bật hoặc tắt theo ý muốn", en: "Go to your device Settings (iOS/Android) → Sudoza app → Notifications, and toggle as you like" },
+
+            bugreport_h2: { vi: "Báo Lỗi", en: "Report a Bug" },
+            bugreport_p: { vi: "Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:", en: "If you encounter a bug while using the app, please email us with the following:" },
+            bugreport_li1: { vi: "Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi, ví dụ: đang chơi mức nào)", en: "A detailed description of the issue (what you were doing when it occurred, e.g. which difficulty)" },
+            bugreport_li2: { vi: "Thiết bị và phiên bản hệ điều hành", en: "Your device and operating system version" },
+            bugreport_li3: { vi: "Ảnh chụp màn hình (nếu có)", en: "Screenshots (if available)" },
+
+            feedback_h2: { vi: "Góp Ý & Đề Xuất Tính Năng", en: "Feedback & Feature Requests" },
+            feedback_p: { vi: "Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:", en: "We'd love to hear your feedback! Please email us with:" },
+            feedback_li1: { vi: "Mức độ khó, chế độ chơi hoặc tính năng bạn muốn thêm vào", en: "Difficulty levels, game modes, or features you'd like to see added" },
+            feedback_li2: { vi: "Cải tiến giao diện", en: "Interface improvements" },
+            feedback_li3: { vi: "Bất kỳ ý tưởng nào khác", en: "Any other ideas" },
+
+            moreinfo_h2: { vi: "Thông Tin Thêm", en: "More Information" },
+            moreinfo_docs_label: { vi: "<strong>📄 Tài liệu quan trọng:</strong>", en: "<strong>📄 Important documents:</strong>" },
+            moreinfo_privacy_link: { vi: '→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a>', en: '→ <a href="privacy.html">Privacy Policy</a>' },
+            moreinfo_terms_link: { vi: '→ <a href="terms.html">Điều Khoản Sử Dụng</a>', en: '→ <a href="terms.html">Terms of Use</a>' },
+            moreinfo_website_label: { vi: "🌐 Website:", en: "🌐 Website:" },
+            moreinfo_email_label: { vi: "📧 Email:", en: "📧 Email:" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 12/08/2026", en: "Last updated: Aug 12, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>

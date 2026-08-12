@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Sudoza - Trò Chơi Sudoku Giải Đố | IMSUUNC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #2dd4bf;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 1.1em;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(45, 212, 191, 0.4);
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            color: #2dd4bf;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #2dd4bf;
+            padding-bottom: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2dd4bf;
+        }
+
+        .feature-card h3 {
+            color: #2dd4bf;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            margin: 20px 0;
+            background: #2a2a3e;
+            border: 1px dashed #2dd4bf;
+            color: #a1a1aa;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" style="color: #2dd4bf; text-decoration: none; font-weight: 500;" data-i18n="back_link">← Tất cả ứng dụng của IMSUUNC</a>
+
+        <header style="margin-top: 20px;">
+            <h1 data-i18n="hero_title">🧩 Sudoza - Trò Chơi Sudoku Giải Đố</h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Giải đố Sudoku cổ điển với nhiều mức độ khó, gợi ý thông minh, hoàn tác không giới hạn và giao diện sáng/tối</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <nav>
+            <a href="support.html" class="nav-button" data-i18n="nav_support">📞 Hỗ Trợ</a>
+            <a href="privacy.html" class="nav-button" data-i18n="nav_privacy">🔒 Quyền Riêng Tư</a>
+            <a href="terms.html" class="nav-button" data-i18n="nav_terms">📋 Điều Khoản</a>
+        </nav>
+
+        <section>
+            <h2 data-i18n="about_h2">Về Ứng Dụng</h2>
+            <p data-i18n-html="about_p">
+                <strong>Sudoza</strong> là trò chơi Sudoku cổ điển, gọn nhẹ và dễ dùng ngay trên điện thoại: chọn mức
+                độ khó phù hợp, điền số vào bảng 9x9, dùng gợi ý khi bí và hoàn tác khi lỡ tay. Ứng dụng lưu lại thời
+                gian tốt nhất theo từng mức độ để bạn thử thách chính mình mỗi ngày. Toàn bộ dữ liệu chơi được lưu
+                ngay trên máy — không cần tài khoản, không cần kết nối mạng để chơi.
+            </p>
+
+            <div class="coming-soon" data-i18n="coming_soon_badge">🚀 Sắp ra mắt trên App Store &amp; Google Play</div>
+        </section>
+
+        <section>
+            <h2 data-i18n="features_h2">Tính Năng Nổi Bật</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 data-i18n="feature1_title">🎯 4 Mức Độ Khó</h3>
+                    <p data-i18n="feature1_desc">Dễ, Trung bình, Khó và Chuyên gia — phù hợp cho cả người mới lẫn cao thủ Sudoku</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature2_title">💡 Gợi Ý Thông Minh</h3>
+                    <p data-i18n="feature2_desc">Số lượt gợi ý theo từng mức độ, giúp bạn vượt qua ô số khó mà không mất hứng thú</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature3_title">↩️ Hoàn Tác Không Giới Hạn</h3>
+                    <p data-i18n="feature3_desc">Lỡ điền sai số? Hoàn tác ngay lập tức để sửa lại nước đi</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature4_title">⏱️ Đồng Hồ &amp; Thời Gian Tốt Nhất</h3>
+                    <p data-i18n="feature4_desc">Đếm giờ khi chơi và lưu lại kỷ lục thời gian tốt nhất cho từng mức độ khó</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature5_title">🌗 Giao Diện Sáng/Tối</h3>
+                    <p data-i18n="feature5_desc">Chuyển đổi linh hoạt giữa giao diện sáng, tối hoặc theo hệ thống</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature6_title">✨ Không Quảng Cáo (Tùy Chọn)</h3>
+                    <p data-i18n="feature6_desc">Mua gói mở khoá trọn đời một lần để loại bỏ quảng cáo và mở khoá gợi ý không giới hạn</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="contact_h2">Liên Hệ &amp; Hỗ Trợ</h2>
+            <div class="contact-info">
+                <p data-i18n-html="contact_email"><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p data-i18n-html="contact_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/sudoza/">imsuunc.github.io/sudoza</a></p>
+                <p data-i18n-html="contact_support_link"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="docs_h2">Tài Liệu Quan Trọng</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">
+                    <a href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="doc_privacy">
+                        🔒 Chính Sách Quyền Riêng Tư
+                    </a>
+                </li>
+                <li style="margin: 10px 0;">
+                    <a href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="doc_terms">
+                        📋 Điều Khoản Sử Dụng
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;" data-i18n="footer_updated">Cập nhật lần cuối: 12/08/2026</p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Sudoza - Trò Chơi Sudoku Giải Đố | IMSUUNC", en: "Sudoza - Sudoku Puzzle Game | IMSUUNC" },
+            back_link: { vi: "← Tất cả ứng dụng của IMSUUNC", en: "← All apps by IMSUUNC" },
+
+            hero_title: { vi: "🧩 Sudoza - Trò Chơi Sudoku Giải Đố", en: "🧩 Sudoza - Sudoku Puzzle Game" },
+            hero_subtitle: { vi: "Giải đố Sudoku cổ điển với nhiều mức độ khó, gợi ý thông minh, hoàn tác không giới hạn và giao diện sáng/tối", en: "Play classic Sudoku with multiple difficulty levels, smart hints, unlimited undo, and a light/dark interface" },
+
+            nav_support: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            nav_privacy: { vi: "🔒 Quyền Riêng Tư", en: "🔒 Privacy" },
+            nav_terms: { vi: "📋 Điều Khoản", en: "📋 Terms" },
+
+            about_h2: { vi: "Về Ứng Dụng", en: "About the App" },
+            about_p: {
+                vi: "<strong>Sudoza</strong> là trò chơi Sudoku cổ điển, gọn nhẹ và dễ dùng ngay trên điện thoại: chọn mức độ khó phù hợp, điền số vào bảng 9x9, dùng gợi ý khi bí và hoàn tác khi lỡ tay. Ứng dụng lưu lại thời gian tốt nhất theo từng mức độ để bạn thử thách chính mình mỗi ngày. Toàn bộ dữ liệu chơi được lưu ngay trên máy — không cần tài khoản, không cần kết nối mạng để chơi.",
+                en: "<strong>Sudoza</strong> is a lightweight, easy-to-use classic Sudoku game right on your phone: pick the difficulty that suits you, fill in the 9x9 grid, use hints when you're stuck, and undo when you make a mistake. The app tracks your best time for each difficulty so you can challenge yourself every day. All game data is stored right on your device — no account and no internet connection required to play."
+            },
+
+            coming_soon_badge: { vi: "🚀 Sắp ra mắt trên App Store & Google Play", en: "🚀 Coming soon on the App Store & Google Play" },
+
+            features_h2: { vi: "Tính Năng Nổi Bật", en: "Key Features" },
+
+            feature1_title: { vi: "🎯 4 Mức Độ Khó", en: "🎯 4 Difficulty Levels" },
+            feature1_desc: { vi: "Dễ, Trung bình, Khó và Chuyên gia — phù hợp cho cả người mới lẫn cao thủ Sudoku", en: "Easy, Medium, Hard, and Expert — suited for both beginners and Sudoku masters" },
+
+            feature2_title: { vi: "💡 Gợi Ý Thông Minh", en: "💡 Smart Hints" },
+            feature2_desc: { vi: "Số lượt gợi ý theo từng mức độ, giúp bạn vượt qua ô số khó mà không mất hứng thú", en: "A set number of hints per difficulty level, helping you get past tricky cells without losing the fun" },
+
+            feature3_title: { vi: "↩️ Hoàn Tác Không Giới Hạn", en: "↩️ Unlimited Undo" },
+            feature3_desc: { vi: "Lỡ điền sai số? Hoàn tác ngay lập tức để sửa lại nước đi", en: "Entered the wrong number? Undo instantly to fix your move" },
+
+            feature4_title: { vi: "⏱️ Đồng Hồ & Thời Gian Tốt Nhất", en: "⏱️ Timer & Best Times" },
+            feature4_desc: { vi: "Đếm giờ khi chơi và lưu lại kỷ lục thời gian tốt nhất cho từng mức độ khó", en: "Times your play and saves your best-time record for each difficulty level" },
+
+            feature5_title: { vi: "🌗 Giao Diện Sáng/Tối", en: "🌗 Light/Dark Theme" },
+            feature5_desc: { vi: "Chuyển đổi linh hoạt giữa giao diện sáng, tối hoặc theo hệ thống", en: "Freely switch between light, dark, or system-matched appearance" },
+
+            feature6_title: { vi: "✨ Không Quảng Cáo (Tùy Chọn)", en: "✨ Ad-Free (Optional)" },
+            feature6_desc: { vi: "Mua gói mở khoá trọn đời một lần để loại bỏ quảng cáo và mở khoá gợi ý không giới hạn", en: "Buy a one-time lifetime unlock to remove ads and get unlimited hints" },
+
+            contact_h2: { vi: "Liên Hệ & Hỗ Trợ", en: "Contact & Support" },
+            contact_email: { vi: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>', en: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>' },
+            contact_website: { vi: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/sudoza/">imsuunc.github.io/sudoza</a>', en: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/sudoza/">imsuunc.github.io/sudoza</a>' },
+            contact_support_link: { vi: '<strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a>', en: '<strong>📞 Support page:</strong> <a href="support.html">View support page</a>' },
+
+            docs_h2: { vi: "Tài Liệu Quan Trọng", en: "Important Documents" },
+            doc_privacy: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            doc_terms: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 12/08/2026", en: "Last updated: Aug 12, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>

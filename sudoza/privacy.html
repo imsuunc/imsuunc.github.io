@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Chính Sách Quyền Riêng Tư - Sudoza</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2dd4bf;
+        }
+
+        h1 {
+            color: #2dd4bf;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .update-date {
+            color: #a1a1aa;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #2dd4bf;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #2dd4bf;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5eead4;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #3f3f5a;
+            vertical-align: top;
+        }
+
+        th {
+            color: #2dd4bf;
+            font-size: 0.95em;
+        }
+
+        td {
+            font-size: 0.95em;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: #1c3d5a;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #4a3f00;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            td {
+                padding-top: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Sudoza</a>
+
+        <header>
+            <h1 data-i18n="page_h1">🔒 Chính Sách Quyền Riêng Tư</h1>
+            <p data-i18n="page_subtitle">Sudoza - Trò Chơi Sudoku Giải Đố</p>
+            <p class="update-date" data-i18n="update_date">Cập nhật lần cuối: 12/08/2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <div class="highlight-box">
+            <p style="text-align: center; font-size: 1.1em;" data-i18n-html="intro_p">
+                Ứng dụng <strong>Sudoza</strong> ("Ứng dụng", "chúng tôi") cam kết bảo vệ quyền riêng tư và dữ liệu cá
+                nhân của người dùng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin
+                khi bạn sử dụng ứng dụng.
+            </p>
+        </div>
+
+        <section>
+            <h2 data-i18n="s1_h2">1. Thông tin chúng tôi thu thập</h2>
+            <div class="info-box">
+                <p style="font-weight: bold;" data-i18n-html="s1_infobox">
+                    Ứng dụng <strong>không yêu cầu tạo tài khoản</strong>. Toàn bộ tiến trình chơi, kỷ lục thời gian
+                    và thiết lập của bạn <strong>chỉ lưu trên chính thiết bị</strong> — chúng không bao giờ được tải
+                    lên bất kỳ máy chủ nào, kể cả máy chủ của chúng tôi.
+                </p>
+            </div>
+
+            <h3 data-i18n="s1_1_h3">1.1 Dữ liệu bạn tạo ra khi chơi</h3>
+            <ul>
+                <li data-i18n="s1_1_li1">Bảng Sudoku đang chơi dở (để tiếp tục ván chơi khi mở lại ứng dụng)</li>
+                <li data-i18n="s1_1_li2">Thời gian tốt nhất đã đạt được theo từng mức độ khó</li>
+                <li data-i18n="s1_1_li3">Thiết lập cá nhân: ngôn ngữ, giao diện sáng/tối, trạng thái đã mua gói mở khoá trọn đời hay chưa</li>
+            </ul>
+            <p style="margin-left: 20px;" data-i18n-html="s1_1_note">
+                Toàn bộ dữ liệu trên được lưu cục bộ trên thiết bị (SharedPreferences) và
+                <strong>không được gửi ra ngoài dưới bất kỳ hình thức nào</strong>.
+            </p>
+
+            <h3 data-i18n="s1_2_h3">1.2 Dữ liệu phân tích &amp; chẩn đoán lỗi (ẩn danh)</h3>
+            <p data-i18n-html="s1_2_p1">
+                Để cải thiện chất lượng ứng dụng và phát hiện, sửa lỗi nhanh hơn, Sudoza có thể sử dụng
+                <strong>Firebase Analytics</strong> và <strong>Firebase Crashlytics</strong> (dịch vụ của Google).
+                Các dịch vụ này có thể thu thập:
+            </p>
+            <ul>
+                <li data-i18n="s1_2_li1">Thông tin thiết bị, phiên bản hệ điều hành và phiên bản ứng dụng</li>
+                <li data-i18n="s1_2_li2">Số liệu sử dụng chung (ví dụ: mức độ khó nào được chơi nhiều, tần suất mở ứng dụng)</li>
+                <li data-i18n="s1_2_li3">Báo cáo sự cố/crash (log kỹ thuật, ngăn xếp lỗi) khi ứng dụng gặp trục trặc</li>
+            </ul>
+            <p style="margin-left: 20px;" data-i18n-html="s1_2_p2">
+                Dữ liệu này <strong>không bao gồm nội dung bảng Sudoku bạn đang chơi</strong> và không được dùng để
+                xác định danh tính cá nhân của bạn. Xem thêm tại
+                <a href="https://policies.google.com/privacy" target="_blank" style="color: #2dd4bf;">Chính sách quyền riêng tư của Google</a>.
+            </p>
+
+            <h3 data-i18n="s1_3_h3">1.3 Dữ liệu quảng cáo (chỉ khi bạn đồng ý)</h3>
+            <p data-i18n-html="s1_3_p">
+                Ứng dụng hiển thị quảng cáo (banner, toàn màn hình, quảng cáo thưởng) thông qua
+                <strong>Google AdMob</strong>. Trên iOS, lần đầu mở ứng dụng bạn có thể được hệ thống hỏi quyền
+                <strong>App Tracking Transparency</strong> để cá nhân hoá quảng cáo và đo lường hiệu quả quảng cáo
+                phù hợp hơn. Nếu bạn <strong>chọn "Không cho phép"</strong>, Sudoza sẽ không theo dõi bạn qua các
+                ứng dụng/website khác và không sử dụng mã định danh quảng cáo (IDFA) của thiết bị — quảng cáo vẫn
+                hiển thị nhưng không được cá nhân hoá. Bạn có thể đổi lựa chọn này bất cứ lúc nào tại
+                <strong>Cài đặt (Settings) &gt; Quyền riêng tư &amp; Bảo mật &gt; Theo dõi</strong> trên thiết bị của bạn.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s2_h2">2. Quyền truy cập &amp; thông báo</h2>
+
+            <h3 data-i18n="s2_1_h3">2.1 Thông báo (Notifications)</h3>
+            <p data-i18n-html="s2_1_p">
+                Ứng dụng có thể xin quyền gửi thông báo để thông báo về nội dung mới hoặc khuyến mãi (qua
+                <strong>Firebase Cloud Messaging</strong>). Bạn có thể bật/tắt quyền này bất cứ lúc nào trong Cài đặt
+                thiết bị. Chúng tôi <strong>không</strong> dùng thông báo để thu thập thêm dữ liệu cá nhân ngoài mã
+                thiết bị (FCM token) cần thiết để gửi thông báo tới đúng máy của bạn.
+            </p>
+
+            <div class="warning-box">
+                <p data-i18n-html="s2_warning">
+                    Ứng dụng <strong>không truy cập</strong> danh bạ, vị trí, camera, thư viện ảnh hay micrô — Sudoza
+                    không cần các quyền này để hoạt động.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="s3_h2">3. Mua hàng trong ứng dụng</h2>
+            <p data-i18n-html="s3_p">
+                Sudoza chơi được <strong>miễn phí</strong> với đầy đủ các mức độ khó. Ứng dụng có gói
+                <strong>mở khoá trọn đời</strong> (mua một lần, không tự động gia hạn) để loại bỏ quảng cáo banner và
+                mở khoá gợi ý không giới hạn.
+            </p>
+            <ul>
+                <li data-i18n-html="s3_li1">Giao dịch mua được xử lý hoàn toàn bởi <strong>Apple App Store</strong> hoặc <strong>Google Play</strong> — Sudoza không bao giờ thấy hay lưu trữ số thẻ/thông tin thanh toán của bạn</li>
+                <li data-i18n="s3_li2">Chúng tôi chỉ lưu cục bộ trên máy một cờ đơn giản "đã mua gói mở khoá hay chưa" để bật/tắt tính năng, không gắn với danh tính cá nhân nào</li>
+                <li data-i18n-html="s3_li3">Giá cả, huỷ và hoàn tiền tuân theo chính sách của Apple/Google — xem chi tiết tại <a href="terms.html" style="color: #2dd4bf;">Điều khoản sử dụng</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s4_h2">4. Dịch vụ bên thứ ba</h2>
+            <p data-i18n="s4_p">Sudoza sử dụng các dịch vụ bên thứ ba sau đây, chỉ cho đúng mục đích được nêu:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-i18n="s4_th1">Dịch vụ</th>
+                        <th data-i18n="s4_th2">Mục đích</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google AdMob</td>
+                        <td data-i18n="s4_row1_purpose">Hiển thị quảng cáo banner, toàn màn hình và quảng cáo thưởng</td>
+                    </tr>
+                    <tr>
+                        <td>Firebase Analytics (Google)</td>
+                        <td data-i18n="s4_row2_purpose">Số liệu sử dụng ứng dụng ẩn danh, giúp cải thiện tính năng</td>
+                    </tr>
+                    <tr>
+                        <td>Firebase Crashlytics (Google)</td>
+                        <td data-i18n="s4_row3_purpose">Báo cáo sự cố/crash để phát hiện và sửa lỗi</td>
+                    </tr>
+                    <tr>
+                        <td>Firebase Remote Config (Google)</td>
+                        <td data-i18n="s4_row4_purpose">Bật/tắt một số tính năng từ xa (không liên quan dữ liệu cá nhân)</td>
+                    </tr>
+                    <tr>
+                        <td>Firebase Cloud Messaging (Google)</td>
+                        <td data-i18n="s4_row5_purpose">Gửi thông báo đẩy nếu bạn cho phép</td>
+                    </tr>
+                    <tr>
+                        <td>Apple App Store / Google Play Billing</td>
+                        <td data-i18n="s4_row6_purpose">Xử lý thanh toán cho gói mở khoá trọn đời</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p data-i18n-html="s4_p2">
+                Chúng tôi <strong>không bán</strong> dữ liệu người dùng cho bên thứ ba.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s5_h2">5. Quyền riêng tư trẻ em</h2>
+            <p data-i18n="s5_p">
+                Sudoza không hướng đến trẻ em dưới 13 tuổi và không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu
+                bạn cho rằng con em mình đã cung cấp thông tin cá nhân cho chúng tôi, vui lòng liên hệ để được xử
+                lý/xoá.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s6_h2">6. Quyền của người dùng</h2>
+            <p data-i18n="s6_p">Vì dữ liệu chơi chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:</p>
+            <ul>
+                <li data-i18n="s6_li1">Xoá toàn bộ dữ liệu (tiến trình chơi, kỷ lục thời gian) bằng cách gỡ cài đặt ứng dụng</li>
+                <li data-i18n="s6_li2">Bật/tắt thông báo bất cứ lúc nào trong Cài đặt thiết bị</li>
+                <li data-i18n="s6_li3">Bật/tắt quyền theo dõi quảng cáo bất cứ lúc nào trong Cài đặt hệ thống</li>
+                <li data-i18n="s6_li4">Yêu cầu chúng tôi hỗ trợ xoá dữ liệu phân tích/chẩn đoán liên quan đến bạn qua email liên hệ bên dưới</li>
+            </ul>
+
+            <div class="warning-box">
+                <p data-i18n-html="s6_warning">
+                    Vì chúng tôi <strong>không lưu trữ dữ liệu trên máy chủ</strong>, chúng tôi không có bản sao dữ
+                    liệu và không thể khôi phục tiến trình chơi bạn đã mất khi gỡ ứng dụng.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="s7_h2">7. Thay đổi chính sách</h2>
+            <p data-i18n="s7_p">
+                Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s8_h2">8. Liên hệ</h2>
+            <p data-i18n="s8_intro">Nếu bạn có câu hỏi, vui lòng liên hệ:</p>
+
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/sudoza/">https://imsuunc.github.io/sudoza/</a></p>
+                <p data-i18n-html="s8_support_line"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/sudoza/support.html</a></p>
+            </div>
+
+            <p style="margin-top: 20px;" data-i18n-html="s8_eula">
+                <strong>Điều khoản sử dụng (EULA):</strong>
+                <a href="terms.html" style="color: #2dd4bf; font-weight: 500;">Xem tại đây</a> hoặc
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #2dd4bf; font-weight: 500;">
+                    Apple Standard EULA
+                </a> (nếu tải qua App Store)
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 12/08/2026</em></p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Chính Sách Quyền Riêng Tư - Sudoza", en: "Privacy Policy - Sudoza" },
+            back_link: { vi: "← Quay lại trang Sudoza", en: "← Back to Sudoza" },
+
+            page_h1: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            page_subtitle: { vi: "Sudoza - Trò Chơi Sudoku Giải Đố", en: "Sudoza - Sudoku Puzzle Game" },
+            update_date: { vi: "Cập nhật lần cuối: 12/08/2026", en: "Last updated: Aug 12, 2026" },
+
+            intro_p: {
+                vi: 'Ứng dụng <strong>Sudoza</strong> ("Ứng dụng", "chúng tôi") cam kết bảo vệ quyền riêng tư và dữ liệu cá nhân của người dùng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin khi bạn sử dụng ứng dụng.',
+                en: 'The <strong>Sudoza</strong> app ("the App", "we", "us") is committed to protecting the privacy and personal data of our users. This Policy explains how we collect, use, and protect information when you use the App.'
+            },
+
+            s1_h2: { vi: "1. Thông tin chúng tôi thu thập", en: "1. Information We Collect" },
+            s1_infobox: {
+                vi: 'Ứng dụng <strong>không yêu cầu tạo tài khoản</strong>. Toàn bộ tiến trình chơi, kỷ lục thời gian và thiết lập của bạn <strong>chỉ lưu trên chính thiết bị</strong> — chúng không bao giờ được tải lên bất kỳ máy chủ nào, kể cả máy chủ của chúng tôi.',
+                en: 'The App <strong>does not require account creation</strong>. All of your game progress, best times, and settings are <strong>stored only on your own device</strong> — they are never uploaded to any server, including our own.'
+            },
+
+            s1_1_h3: { vi: "1.1 Dữ liệu bạn tạo ra khi chơi", en: "1.1 Data You Generate While Playing" },
+            s1_1_li1: { vi: "Bảng Sudoku đang chơi dở (để tiếp tục ván chơi khi mở lại ứng dụng)", en: "Your in-progress Sudoku board (so you can resume when reopening the app)" },
+            s1_1_li2: { vi: "Thời gian tốt nhất đã đạt được theo từng mức độ khó", en: "Your best completion times for each difficulty level" },
+            s1_1_li3: { vi: "Thiết lập cá nhân: ngôn ngữ, giao diện sáng/tối, trạng thái đã mua gói mở khoá trọn đời hay chưa", en: "Personal settings: language, light/dark theme, and whether you've purchased the lifetime unlock" },
+            s1_1_note: {
+                vi: 'Toàn bộ dữ liệu trên được lưu cục bộ trên thiết bị (SharedPreferences) và <strong>không được gửi ra ngoài dưới bất kỳ hình thức nào</strong>.',
+                en: 'All of the above data is stored locally on your device (SharedPreferences) and is <strong>never sent out in any form</strong>.'
+            },
+
+            s1_2_h3: { vi: "1.2 Dữ liệu phân tích & chẩn đoán lỗi (ẩn danh)", en: "1.2 Analytics & Crash Diagnostics (Anonymous)" },
+            s1_2_p1: {
+                vi: "Để cải thiện chất lượng ứng dụng và phát hiện, sửa lỗi nhanh hơn, Sudoza có thể sử dụng <strong>Firebase Analytics</strong> và <strong>Firebase Crashlytics</strong> (dịch vụ của Google). Các dịch vụ này có thể thu thập:",
+                en: "To improve app quality and detect/fix bugs faster, Sudoza may use <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong> (Google services). These services may collect:"
+            },
+            s1_2_li1: { vi: "Thông tin thiết bị, phiên bản hệ điều hành và phiên bản ứng dụng", en: "Device information, OS version, and app version" },
+            s1_2_li2: { vi: "Số liệu sử dụng chung (ví dụ: mức độ khó nào được chơi nhiều, tần suất mở ứng dụng)", en: "General usage metrics (e.g. which difficulty is played most, how often the app is opened)" },
+            s1_2_li3: { vi: "Báo cáo sự cố/crash (log kỹ thuật, ngăn xếp lỗi) khi ứng dụng gặp trục trặc", en: "Crash reports (technical logs, stack traces) when the app malfunctions" },
+            s1_2_p2: {
+                vi: 'Dữ liệu này <strong>không bao gồm nội dung bảng Sudoku bạn đang chơi</strong> và không được dùng để xác định danh tính cá nhân của bạn. Xem thêm tại <a href="https://policies.google.com/privacy" target="_blank" style="color: #2dd4bf;">Chính sách quyền riêng tư của Google</a>.',
+                en: 'This data <strong>does not include the contents of the Sudoku board you are playing</strong> and is not used to identify you personally. See more at <a href="https://policies.google.com/privacy" target="_blank" style="color: #2dd4bf;">Google\'s Privacy Policy</a>.'
+            },
+
+            s1_3_h3: { vi: "1.3 Dữ liệu quảng cáo (chỉ khi bạn đồng ý)", en: "1.3 Advertising Data (Only With Your Consent)" },
+            s1_3_p: {
+                vi: 'Ứng dụng hiển thị quảng cáo (banner, toàn màn hình, quảng cáo thưởng) thông qua <strong>Google AdMob</strong>. Trên iOS, lần đầu mở ứng dụng bạn có thể được hệ thống hỏi quyền <strong>App Tracking Transparency</strong> để cá nhân hoá quảng cáo và đo lường hiệu quả quảng cáo phù hợp hơn. Nếu bạn <strong>chọn "Không cho phép"</strong>, Sudoza sẽ không theo dõi bạn qua các ứng dụng/website khác và không sử dụng mã định danh quảng cáo (IDFA) của thiết bị — quảng cáo vẫn hiển thị nhưng không được cá nhân hoá. Bạn có thể đổi lựa chọn này bất cứ lúc nào tại <strong>Cài đặt (Settings) &gt; Quyền riêng tư &amp; Bảo mật &gt; Theo dõi</strong> trên thiết bị của bạn.',
+                en: 'The App displays ads (banner, full-screen, and rewarded ads) through <strong>Google AdMob</strong>. On iOS, the first time you open the app, the system may ask for <strong>App Tracking Transparency</strong> permission to personalize ads and better measure ad effectiveness. If you <strong>choose "Ask App Not to Track"</strong>, Sudoza will not track you across other apps/websites and will not use your device\'s advertising identifier (IDFA) — ads will still show but will not be personalized. You can change this choice at any time in <strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong> on your device.'
+            },
+
+            s2_h2: { vi: "2. Quyền truy cập & thông báo", en: "2. Permissions & Notifications" },
+            s2_1_h3: { vi: "2.1 Thông báo (Notifications)", en: "2.1 Notifications" },
+            s2_1_p: {
+                vi: 'Ứng dụng có thể xin quyền gửi thông báo để thông báo về nội dung mới hoặc khuyến mãi (qua <strong>Firebase Cloud Messaging</strong>). Bạn có thể bật/tắt quyền này bất cứ lúc nào trong Cài đặt thiết bị. Chúng tôi <strong>không</strong> dùng thông báo để thu thập thêm dữ liệu cá nhân ngoài mã thiết bị (FCM token) cần thiết để gửi thông báo tới đúng máy của bạn.',
+                en: 'The App may request notification permission to inform you about new content or promotions (via <strong>Firebase Cloud Messaging</strong>). You can turn this permission on or off at any time in your device Settings. We do <strong>not</strong> use notifications to collect additional personal data beyond the device token (FCM token) needed to deliver notifications to your device.'
+            },
+            s2_warning: {
+                vi: 'Ứng dụng <strong>không truy cập</strong> danh bạ, vị trí, camera, thư viện ảnh hay micrô — Sudoza không cần các quyền này để hoạt động.',
+                en: 'The App <strong>does not access</strong> your contacts, location, camera, photo library, or microphone — Sudoza does not need these permissions to function.'
+            },
+
+            s3_h2: { vi: "3. Mua hàng trong ứng dụng", en: "3. In-App Purchases" },
+            s3_p: {
+                vi: 'Sudoza chơi được <strong>miễn phí</strong> với đầy đủ các mức độ khó. Ứng dụng có gói <strong>mở khoá trọn đời</strong> (mua một lần, không tự động gia hạn) để loại bỏ quảng cáo banner và mở khoá gợi ý không giới hạn.',
+                en: 'Sudoza is <strong>free to play</strong> with all difficulty levels included. The App offers a <strong>lifetime unlock</strong> (one-time purchase, no auto-renewal) that removes banner ads and unlocks unlimited hints.'
+            },
+            s3_li1: {
+                vi: 'Giao dịch mua được xử lý hoàn toàn bởi <strong>Apple App Store</strong> hoặc <strong>Google Play</strong> — Sudoza không bao giờ thấy hay lưu trữ số thẻ/thông tin thanh toán của bạn',
+                en: 'Purchases are processed entirely by the <strong>Apple App Store</strong> or <strong>Google Play</strong> — Sudoza never sees or stores your card number or payment details'
+            },
+            s3_li2: { vi: 'Chúng tôi chỉ lưu cục bộ trên máy một cờ đơn giản "đã mua gói mở khoá hay chưa" để bật/tắt tính năng, không gắn với danh tính cá nhân nào', en: 'We only store a simple local "unlock purchased" flag on your device to toggle features, not tied to any personal identity' },
+            s3_li3: {
+                vi: 'Giá cả, huỷ và hoàn tiền tuân theo chính sách của Apple/Google — xem chi tiết tại <a href="terms.html" style="color: #2dd4bf;">Điều khoản sử dụng</a>',
+                en: 'Pricing, cancellation, and refunds follow Apple/Google policy — see details in our <a href="terms.html" style="color: #2dd4bf;">Terms of Use</a>'
+            },
+
+            s4_h2: { vi: "4. Dịch vụ bên thứ ba", en: "4. Third-Party Services" },
+            s4_p: { vi: "Sudoza sử dụng các dịch vụ bên thứ ba sau đây, chỉ cho đúng mục đích được nêu:", en: "Sudoza uses the following third-party services, strictly for the purposes stated:" },
+            s4_th1: { vi: "Dịch vụ", en: "Service" },
+            s4_th2: { vi: "Mục đích", en: "Purpose" },
+            s4_row1_purpose: { vi: "Hiển thị quảng cáo banner, toàn màn hình và quảng cáo thưởng", en: "Displays banner, full-screen, and rewarded ads" },
+            s4_row2_purpose: { vi: "Số liệu sử dụng ứng dụng ẩn danh, giúp cải thiện tính năng", en: "Anonymous app usage metrics, used to improve features" },
+            s4_row3_purpose: { vi: "Báo cáo sự cố/crash để phát hiện và sửa lỗi", en: "Crash reports to detect and fix bugs" },
+            s4_row4_purpose: { vi: "Bật/tắt một số tính năng từ xa (không liên quan dữ liệu cá nhân)", en: "Remotely toggles some features (unrelated to personal data)" },
+            s4_row5_purpose: { vi: "Gửi thông báo đẩy nếu bạn cho phép", en: "Sends push notifications if you allow it" },
+            s4_row6_purpose: { vi: "Xử lý thanh toán cho gói mở khoá trọn đời", en: "Handles payment for the lifetime unlock" },
+            s4_p2: {
+                vi: 'Chúng tôi <strong>không bán</strong> dữ liệu người dùng cho bên thứ ba.',
+                en: 'We do <strong>not sell</strong> user data to third parties.'
+            },
+
+            s5_h2: { vi: "5. Quyền riêng tư trẻ em", en: "5. Children's Privacy" },
+            s5_p: {
+                vi: "Sudoza không hướng đến trẻ em dưới 13 tuổi và không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu bạn cho rằng con em mình đã cung cấp thông tin cá nhân cho chúng tôi, vui lòng liên hệ để được xử lý/xoá.",
+                en: "Sudoza is not directed at children under 13 and does not knowingly collect personal information from children. If you believe your child has provided us with personal information, please contact us so we can address and remove it."
+            },
+
+            s6_h2: { vi: "6. Quyền của người dùng", en: "6. Your Rights" },
+            s6_p: { vi: "Vì dữ liệu chơi chỉ nằm trên thiết bị của bạn, bạn có toàn quyền kiểm soát:", en: "Because your game data resides only on your device, you have full control to:" },
+            s6_li1: { vi: "Xoá toàn bộ dữ liệu (tiến trình chơi, kỷ lục thời gian) bằng cách gỡ cài đặt ứng dụng", en: "Delete all data (game progress, best times) by uninstalling the App" },
+            s6_li2: { vi: "Bật/tắt thông báo bất cứ lúc nào trong Cài đặt thiết bị", en: "Turn notifications on or off at any time in your device Settings" },
+            s6_li3: { vi: "Bật/tắt quyền theo dõi quảng cáo bất cứ lúc nào trong Cài đặt hệ thống", en: "Turn ad-tracking permission on/off at any time in your device's Settings" },
+            s6_li4: { vi: "Yêu cầu chúng tôi hỗ trợ xoá dữ liệu phân tích/chẩn đoán liên quan đến bạn qua email liên hệ bên dưới", en: "Ask us to help delete analytics/diagnostic data related to you via the contact email below" },
+            s6_warning: {
+                vi: 'Vì chúng tôi <strong>không lưu trữ dữ liệu trên máy chủ</strong>, chúng tôi không có bản sao dữ liệu và không thể khôi phục tiến trình chơi bạn đã mất khi gỡ ứng dụng.',
+                en: 'Because we <strong>do not store data on any server</strong>, we have no copy of your data and cannot restore game progress you lose by uninstalling the App.'
+            },
+
+            s7_h2: { vi: "7. Thay đổi chính sách", en: "7. Changes to This Policy" },
+            s7_p: { vi: "Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.", en: "This Policy may be updated from time to time; the latest version will always be posted on this page." },
+
+            s8_h2: { vi: "8. Liên hệ", en: "8. Contact" },
+            s8_intro: { vi: "Nếu bạn có câu hỏi, vui lòng liên hệ:", en: "If you have any questions, please contact us:" },
+            s8_support_line: { vi: '<strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/sudoza/support.html</a>', en: '<strong>📞 Support page:</strong> <a href="support.html">https://imsuunc.github.io/sudoza/support.html</a>' },
+            s8_eula: {
+                vi: '<strong>Điều khoản sử dụng (EULA):</strong> <a href="terms.html" style="color: #2dd4bf; font-weight: 500;">Xem tại đây</a> hoặc <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #2dd4bf; font-weight: 500;">Apple Standard EULA</a> (nếu tải qua App Store)',
+                en: '<strong>Terms of Use (EULA):</strong> <a href="terms.html" style="color: #2dd4bf; font-weight: 500;">View here</a> or the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #2dd4bf; font-weight: 500;">Apple Standard EULA</a> (if downloaded via the App Store)'
+            },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 12/08/2026", en: "Last updated: Aug 12, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>

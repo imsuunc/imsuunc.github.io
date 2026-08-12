@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Điều Khoản Sử Dụng - Sudoza</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2dd4bf;
+        }
+
+        h1 {
+            color: #2dd4bf;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .update-date {
+            color: #a1a1aa;
+            font-style: italic;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        h2 {
+            color: #2dd4bf;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #2dd4bf;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5eead4;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #3f3f5a;
+            vertical-align: top;
+        }
+
+        th {
+            color: #2dd4bf;
+            font-size: 0.95em;
+        }
+
+        td {
+            font-size: 0.95em;
+        }
+
+        .warning-box {
+            background: #4a3f00;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .info-section {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #2dd4bf;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            td {
+                padding-top: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Sudoza</a>
+
+        <header>
+            <h1 data-i18n="page_h1">📋 Điều Khoản Sử Dụng</h1>
+            <p data-i18n="page_subtitle">Sudoza - Trò Chơi Sudoku Giải Đố</p>
+            <p class="update-date" data-i18n="update_date">Cập nhật lần cuối: 12/08/2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <section>
+            <h2 data-i18n="s1_h2">1. Chấp Nhận Điều Khoản</h2>
+            <p data-i18n-html="s1_p">
+                Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>Sudoza</strong> ("Ứng dụng"), bạn đồng ý
+                tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này. Nếu bạn không đồng ý, vui lòng
+                không sử dụng ứng dụng.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s2_h2">2. Giấy Phép Sử Dụng</h2>
+            <p data-i18n="s2_p">Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:</p>
+            <ul>
+                <li data-i18n="s2_li1">Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng</li>
+                <li data-i18n="s2_li2">Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn</li>
+                <li data-i18n="s2_li3">Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s3_h2">3. Mua Hàng Trong Ứng Dụng &amp; Quảng Cáo</h2>
+            <p data-i18n-html="s3_p">
+                Sudoza chơi được <strong>miễn phí</strong> với đầy đủ các mức độ khó. Ứng dụng hiển thị quảng cáo
+                (banner, toàn màn hình, quảng cáo thưởng) thông qua Google AdMob để duy trì dịch vụ miễn phí.
+            </p>
+
+            <h3 data-i18n="s3_1_h3">3.1 Gói mở khoá trọn đời</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-i18n="s3_1_th1">Gói</th>
+                        <th data-i18n="s3_1_th2">Hình thức</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="s3_1_row1_plan">Mở khoá trọn đời</td>
+                        <td data-i18n="s3_1_row1_desc">Mua một lần, sử dụng vĩnh viễn, không gia hạn — loại bỏ quảng cáo banner và mở khoá gợi ý không giới hạn</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 data-i18n="s3_2_h3">3.2 Thanh toán &amp; hoàn tiền</h3>
+            <ul>
+                <li data-i18n="s3_2_li1">Khoản thanh toán được trừ vào tài khoản Apple ID / Google Play của bạn ngay khi xác nhận mua</li>
+                <li data-i18n="s3_2_li2">Đây là giao dịch mua một lần (non-consumable), không tự động gia hạn, không phát sinh phí định kỳ</li>
+                <li data-i18n="s3_2_li3">Mọi giao dịch mua được xử lý bởi Apple App Store hoặc Google Play. Yêu cầu hoàn tiền vui lòng thực hiện trực tiếp qua Apple hoặc Google theo chính sách hoàn tiền của họ — chúng tôi không trực tiếp xử lý hoặc đảm bảo hoàn tiền cho các giao dịch mua</li>
+                <li data-i18n="s3_2_li4">Nếu đổi thiết bị hoặc cài lại ứng dụng, bạn có thể khôi phục giao dịch đã mua bằng chức năng "Khôi phục giao dịch đã mua" trong ứng dụng</li>
+            </ul>
+
+            <div class="info-section">
+                <p data-i18n="s3_info">
+                    Giá hiển thị tại thời điểm mua có thể khác nhau theo khu vực/loại tiền tệ theo quy định của Apple
+                    App Store / Google Play, và có thể thay đổi theo thời gian; giá mới không áp dụng cho giao dịch
+                    đã hoàn tất trước đó.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="s4_h2">4. Nội Dung &amp; Dữ Liệu</h2>
+
+            <h3 data-i18n="s4_1_h3">4.1 Quyền Sở Hữu Trí Tuệ</h3>
+            <ul>
+                <li data-i18n="s4_1_li1">Tất cả thiết kế, mã nguồn và tài nguyên của Ứng dụng đều thuộc sở hữu của chúng tôi</li>
+                <li data-i18n="s4_1_li2">Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng</li>
+            </ul>
+
+            <h3 data-i18n="s4_2_h3">4.2 Dữ Liệu Chơi Của Bạn</h3>
+            <ul>
+                <li data-i18n="s4_2_li1">Tiến trình chơi và kỷ lục thời gian được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào</li>
+                <li data-i18n="s4_2_li2">Chúng tôi không chịu trách nhiệm về việc mất dữ liệu chơi khi bạn gỡ cài đặt ứng dụng hoặc đổi thiết bị mà chưa sao lưu</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s5_h2">5. Từ Chối Bảo Hành</h2>
+            <p data-i18n="s5_p">Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:</p>
+            <ul>
+                <li data-i18n="s5_li1">Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi</li>
+                <li data-i18n="s5_li2">Đề bài Sudoku được tạo ra luôn có đúng một lời giải duy nhất trong mọi trường hợp</li>
+                <li data-i18n="s5_li3">Tính tương thích với mọi phiên bản hệ điều hành hoặc thiết bị</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s6_h2">6. Giới Hạn Trách Nhiệm</h2>
+            <p data-i18n="s6_p">Chúng tôi không chịu trách nhiệm về:</p>
+            <ul>
+                <li data-i18n="s6_li1">Mất mát dữ liệu chơi do người dùng tự xóa hoặc gỡ ứng dụng</li>
+                <li data-i18n="s6_li2">Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng</li>
+                <li data-i18n="s6_li3">Các vấn đề thanh toán hoặc hoàn tiền thuộc phạm vi xử lý của Apple App Store / Google Play</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s7_h2">7. Thay Đổi Điều Khoản</h2>
+            <p data-i18n="s7_p">
+                Chúng tôi có quyền cập nhật Điều khoản này, kể cả cách tính giá gói mở khoá. Thay đổi sẽ có hiệu lực
+                ngay khi được công bố tại trang này. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s8_h2">8. Chấm Dứt Sử Dụng</h2>
+            <p data-i18n="s8_p">Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.</p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s9_h2">9. Luật Áp Dụng</h2>
+            <p data-i18n="s9_p">Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.</p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s10_h2">10. Liên Hệ</h2>
+            <p data-i18n="s10_p">Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:</p>
+
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/sudoza/">https://imsuunc.github.io/sudoza/</a></p>
+                <p data-i18n-html="s10_support"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/sudoza/support.html</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="refs_h2">Tài Liệu Tham Khảo</h2>
+            <ul>
+                <li><a href="privacy.html" style="color: #2dd4bf; font-weight: 500;" data-i18n="refs_privacy">Chính Sách Quyền Riêng Tư</a></li>
+                <li><a href="support.html" style="color: #2dd4bf; font-weight: 500;" data-i18n="refs_support">Trang Hỗ Trợ</a></li>
+                <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #2dd4bf; font-weight: 500;">Apple Standard EULA</a></li>
+                <li><a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" style="color: #2dd4bf; font-weight: 500;">Google Play Terms of Service</a></li>
+            </ul>
+        </section>
+
+        <div class="warning-box" style="margin-top: 30px; text-align: center;">
+            <p style="font-weight: bold;" data-i18n="agree_note">
+                Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 12/08/2026</em></p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: 'Điều Khoản Sử Dụng - Sudoza', en: 'Terms of Use - Sudoza' },
+            back_link: { vi: '← Quay lại trang Sudoza', en: '← Back to Sudoza' },
+            page_h1: { vi: '📋 Điều Khoản Sử Dụng', en: '📋 Terms of Use' },
+            page_subtitle: { vi: 'Sudoza - Trò Chơi Sudoku Giải Đố', en: 'Sudoza - Sudoku Puzzle Game' },
+            update_date: { vi: 'Cập nhật lần cuối: 12/08/2026', en: 'Last updated: Aug 12, 2026' },
+
+            s1_h2: { vi: '1. Chấp Nhận Điều Khoản', en: '1. Acceptance of Terms' },
+            s1_p: { vi: 'Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>Sudoza</strong> ("Ứng dụng"), bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này. Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.', en: 'By downloading, installing, and using the <strong>Sudoza</strong> app (the "App"), you agree to comply with the terms and conditions set out in this document. If you do not agree, please do not use the App.' },
+
+            s2_h2: { vi: '2. Giấy Phép Sử Dụng', en: '2. License to Use' },
+            s2_p: { vi: 'Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:', en: 'We grant you a license to use the App for personal, non-commercial purposes, subject to the following terms:' },
+            s2_li1: { vi: 'Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng', en: 'You may not copy, modify, distribute, or resell the App' },
+            s2_li2: { vi: 'Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn', en: 'You may not reverse engineer or extract the source code' },
+            s2_li3: { vi: 'Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp', en: 'You may not use the App for any unlawful purpose' },
+
+            s3_h2: { vi: '3. Mua Hàng Trong Ứng Dụng & Quảng Cáo', en: '3. In-App Purchases & Advertising' },
+            s3_p: { vi: 'Sudoza chơi được <strong>miễn phí</strong> với đầy đủ các mức độ khó. Ứng dụng hiển thị quảng cáo (banner, toàn màn hình, quảng cáo thưởng) thông qua Google AdMob để duy trì dịch vụ miễn phí.', en: 'Sudoza is <strong>free to play</strong> with all difficulty levels included. The App displays ads (banner, full-screen, and rewarded ads) via Google AdMob to keep the service free.' },
+
+            s3_1_h3: { vi: '3.1 Gói mở khoá trọn đời', en: '3.1 Lifetime Unlock Package' },
+            s3_1_th1: { vi: 'Gói', en: 'Package' },
+            s3_1_th2: { vi: 'Hình thức', en: 'Format' },
+            s3_1_row1_plan: { vi: 'Mở khoá trọn đời', en: 'Lifetime unlock' },
+            s3_1_row1_desc: { vi: 'Mua một lần, sử dụng vĩnh viễn, không gia hạn — loại bỏ quảng cáo banner và mở khoá gợi ý không giới hạn', en: 'One-time purchase, permanent access, no renewal — removes banner ads and unlocks unlimited hints' },
+
+            s3_2_h3: { vi: '3.2 Thanh toán & hoàn tiền', en: '3.2 Payment & Refunds' },
+            s3_2_li1: { vi: 'Khoản thanh toán được trừ vào tài khoản Apple ID / Google Play của bạn ngay khi xác nhận mua', en: 'Payment is charged to your Apple ID / Google Play account immediately upon confirmation of purchase' },
+            s3_2_li2: { vi: 'Đây là giao dịch mua một lần (non-consumable), không tự động gia hạn, không phát sinh phí định kỳ', en: 'This is a one-time (non-consumable) purchase with no auto-renewal and no recurring charges' },
+            s3_2_li3: { vi: 'Mọi giao dịch mua được xử lý bởi Apple App Store hoặc Google Play. Yêu cầu hoàn tiền vui lòng thực hiện trực tiếp qua Apple hoặc Google theo chính sách hoàn tiền của họ — chúng tôi không trực tiếp xử lý hoặc đảm bảo hoàn tiền cho các giao dịch mua', en: 'All purchases are processed by the Apple App Store or Google Play. Refund requests must be made directly through Apple or Google according to their refund policies — we do not directly process or guarantee refunds for purchases' },
+            s3_2_li4: { vi: 'Nếu đổi thiết bị hoặc cài lại ứng dụng, bạn có thể khôi phục giao dịch đã mua bằng chức năng "Khôi phục giao dịch đã mua" trong ứng dụng', en: 'If you switch devices or reinstall the App, you can restore your purchase using the "Restore purchases" function in the App' },
+
+            s3_info: { vi: 'Giá hiển thị tại thời điểm mua có thể khác nhau theo khu vực/loại tiền tệ theo quy định của Apple App Store / Google Play, và có thể thay đổi theo thời gian; giá mới không áp dụng cho giao dịch đã hoàn tất trước đó.', en: 'Prices shown at the time of purchase may vary by region/currency as set by the Apple App Store / Google Play, and may change over time; new prices do not apply to purchases already completed.' },
+
+            s4_h2: { vi: '4. Nội Dung & Dữ Liệu', en: '4. Content & Data' },
+            s4_1_h3: { vi: '4.1 Quyền Sở Hữu Trí Tuệ', en: '4.1 Intellectual Property Rights' },
+            s4_1_li1: { vi: 'Tất cả thiết kế, mã nguồn và tài nguyên của Ứng dụng đều thuộc sở hữu của chúng tôi', en: 'All designs, source code, and assets of the App are owned by us' },
+            s4_1_li2: { vi: 'Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng', en: "Users may not copy or redistribute the App's content" },
+
+            s4_2_h3: { vi: '4.2 Dữ Liệu Chơi Của Bạn', en: '4.2 Your Game Data' },
+            s4_2_li1: { vi: 'Tiến trình chơi và kỷ lục thời gian được lưu cục bộ trên thiết bị, không gửi lên máy chủ nào', en: 'Game progress and best times are stored locally on your device and are not sent to any server' },
+            s4_2_li2: { vi: 'Chúng tôi không chịu trách nhiệm về việc mất dữ liệu chơi khi bạn gỡ cài đặt ứng dụng hoặc đổi thiết bị mà chưa sao lưu', en: 'We are not responsible for loss of game data when you uninstall the App or switch devices without backing up' },
+
+            s5_h2: { vi: '5. Từ Chối Bảo Hành', en: '5. Disclaimer of Warranty' },
+            s5_p: { vi: 'Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:', en: 'The App is provided "AS IS" without any warranty. We do not guarantee:' },
+            s5_li1: { vi: 'Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi', en: 'The App will operate uninterrupted or error-free' },
+            s5_li2: { vi: 'Đề bài Sudoku được tạo ra luôn có đúng một lời giải duy nhất trong mọi trường hợp', en: 'Every generated Sudoku puzzle will always have exactly one unique solution in every case' },
+            s5_li3: { vi: 'Tính tương thích với mọi phiên bản hệ điều hành hoặc thiết bị', en: 'Compatibility with every operating system version or device' },
+
+            s6_h2: { vi: '6. Giới Hạn Trách Nhiệm', en: '6. Limitation of Liability' },
+            s6_p: { vi: 'Chúng tôi không chịu trách nhiệm về:', en: 'We are not responsible for:' },
+            s6_li1: { vi: 'Mất mát dữ liệu chơi do người dùng tự xóa hoặc gỡ ứng dụng', en: 'Loss of game data resulting from the user deleting or uninstalling the App' },
+            s6_li2: { vi: 'Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng', en: 'Indirect damages arising from use of the App' },
+            s6_li3: { vi: 'Các vấn đề thanh toán hoặc hoàn tiền thuộc phạm vi xử lý của Apple App Store / Google Play', en: "Payment or refund issues, which fall under the Apple App Store / Google Play's handling" },
+
+            s7_h2: { vi: '7. Thay Đổi Điều Khoản', en: '7. Changes to These Terms' },
+            s7_p: { vi: 'Chúng tôi có quyền cập nhật Điều khoản này, kể cả cách tính giá gói mở khoá. Thay đổi sẽ có hiệu lực ngay khi được công bố tại trang này. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.', en: 'We reserve the right to update these Terms, including how the unlock package is priced. Changes take effect as soon as they are published on this page. You should check back periodically for the latest information.' },
+
+            s8_h2: { vi: '8. Chấm Dứt Sử Dụng', en: '8. Termination' },
+            s8_p: { vi: 'Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.', en: 'We reserve the right to terminate or suspend your access if you violate these terms.' },
+
+            s9_h2: { vi: '9. Luật Áp Dụng', en: '9. Governing Law' },
+            s9_p: { vi: 'Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.', en: 'These terms are governed by the laws of Vietnam.' },
+
+            s10_h2: { vi: '10. Liên Hệ', en: '10. Contact' },
+            s10_p: { vi: 'Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:', en: 'If you have questions about these Terms of Use, please contact:' },
+            s10_support: { vi: '<strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/sudoza/support.html</a>', en: '<strong>📞 Support page:</strong> <a href="support.html">https://imsuunc.github.io/sudoza/support.html</a>' },
+
+            refs_h2: { vi: 'Tài Liệu Tham Khảo', en: 'References' },
+            refs_privacy: { vi: 'Chính Sách Quyền Riêng Tư', en: 'Privacy Policy' },
+            refs_support: { vi: 'Trang Hỗ Trợ', en: 'Support Page' },
+
+            agree_note: { vi: 'Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.', en: 'By using the App, you confirm that you have read, understood, and agree to the terms above.' },
+
+            footer_updated: { vi: 'Cập nhật lần cuối: 12/08/2026', en: 'Last updated: Aug 12, 2026' }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>
