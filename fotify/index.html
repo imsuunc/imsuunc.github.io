@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Fotify - Chỉnh Sửa Ảnh Bằng AI | IMSUUNC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #8b9cff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 1.1em;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            color: #8b9cff;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #8b9cff;
+            padding-bottom: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #8b9cff;
+        }
+
+        .feature-card h3 {
+            color: #8b9cff;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #8b9cff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .status-badge {
+            display: inline-block;
+            margin: 20px 0;
+            background: rgba(139, 156, 255, 0.15);
+            border: 1px dashed #8b9cff;
+            color: #a1a1aa;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" style="color: #8b9cff; text-decoration: none; font-weight: 500;" data-i18n="back_link">← Tất cả ứng dụng của IMSUUNC</a>
+
+        <header style="margin-top: 20px;">
+            <h1 data-i18n="hero_title">🖼️ Fotify - Chỉnh Sửa Ảnh Bằng AI</h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Chỉnh sửa ảnh với layer, sticker, chữ, bộ lọc và các công cụ AI xoá nền, tăng độ phân giải — xử lý ngay trên điện thoại</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <nav>
+            <a href="support.html" class="nav-button" data-i18n="nav_support">📞 Hỗ Trợ</a>
+            <a href="privacy.html" class="nav-button" data-i18n="nav_privacy">🔒 Quyền Riêng Tư</a>
+            <a href="terms.html" class="nav-button" data-i18n="nav_terms">📋 Điều Khoản</a>
+        </nav>
+
+        <section>
+            <h2 data-i18n="about_h2">Về Ứng Dụng</h2>
+            <p data-i18n-html="about_p">
+                <strong>Fotify</strong> là ứng dụng chỉnh sửa ảnh ngay trên điện thoại: thêm layer vẽ, sticker, chữ
+                và ảnh, áp dụng bộ lọc với cường độ tuỳ chỉnh, và dùng công cụ AI để xoá nền hoặc tăng độ phân giải
+                ảnh lên 2x/4x. Các công cụ AI xử lý ngay trên máy, không cần tài khoản.
+            </p>
+
+            <span class="status-badge" data-i18n="status_soon">🚀 Sắp ra mắt trên App Store</span>
+        </section>
+
+        <section>
+            <h2 data-i18n="features_h2">Tính Năng Nổi Bật</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 data-i18n="feature1_title">🧩 Chỉnh Sửa Theo Layer</h3>
+                    <p data-i18n="feature1_desc">Thêm và sắp xếp nhiều layer vẽ, sticker, chữ và ảnh chồng lên nhau, di chuyển/xoay/đổi kích thước độc lập từng layer</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature2_title">🎨 Bộ Lọc &amp; Cường Độ</h3>
+                    <p data-i18n="feature2_desc">Bộ sưu tập bộ lọc màu dựng sẵn, tuỳ chỉnh cường độ áp dụng theo ý muốn</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature3_title">✂️ Xoá Nền Bằng AI</h3>
+                    <p data-i18n="feature3_desc">Tách chủ thể khỏi nền chỉ trong một chạm, xử lý bằng mô hình AI ngay trên thiết bị</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature4_title">🔍 Tăng Độ Phân Giải AI</h3>
+                    <p data-i18n="feature4_desc">Nâng cấp ảnh lên độ phân giải 2x hoặc 4x bằng mô hình AI xử lý ngay trên máy</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature5_title">✨ Sticker &amp; Chữ</h3>
+                    <p data-i18n="feature5_desc">Thêm sticker, chữ với nhiều font và hiệu ứng để làm nổi bật bức ảnh của bạn</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature6_title">✍️ Vẽ Tự Do</h3>
+                    <p data-i18n="feature6_desc">Vẽ trực tiếp lên ảnh với công cụ bút vẽ linh hoạt, kết hợp cùng các layer khác</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature7_title">💎 Fotify Premium</h3>
+                    <p data-i18n="feature7_desc">Nâng cấp Premium (gói tháng/năm) để tắt toàn bộ quảng cáo, mọi tính năng chỉnh sửa vẫn dùng miễn phí</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature8_title">📤 Lưu Ảnh Chất Lượng Cao</h3>
+                    <p data-i18n="feature8_desc">Lưu ảnh đã chỉnh sửa trực tiếp vào Thư viện ảnh của máy</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="contact_h2">Liên Hệ &amp; Hỗ Trợ</h2>
+            <div class="contact-info">
+                <p data-i18n-html="contact_email"><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p data-i18n-html="contact_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/fotify/">imsuunc.github.io/fotify</a></p>
+                <p data-i18n-html="contact_support_link"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="docs_h2">Tài Liệu Quan Trọng</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">
+                    <a href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="doc_privacy">
+                        🔒 Chính Sách Quyền Riêng Tư
+                    </a>
+                </li>
+                <li style="margin: 10px 0;">
+                    <a href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;" data-i18n="doc_terms">
+                        📋 Điều Khoản Sử Dụng
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;" data-i18n="footer_updated">Cập nhật lần cuối: 01/09/2026</p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Fotify - Chỉnh Sửa Ảnh Bằng AI | IMSUUNC", en: "Fotify - AI Photo Editor | IMSUUNC" },
+            back_link: { vi: "← Tất cả ứng dụng của IMSUUNC", en: "← All apps by IMSUUNC" },
+
+            hero_title: { vi: "🖼️ Fotify - Chỉnh Sửa Ảnh Bằng AI", en: "🖼️ Fotify - AI Photo Editor" },
+            hero_subtitle: { vi: "Chỉnh sửa ảnh với layer, sticker, chữ, bộ lọc và các công cụ AI xoá nền, tăng độ phân giải — xử lý ngay trên điện thoại", en: "Edit photos with layers, stickers, text, filters, and AI tools for background removal and upscaling — all processed right on your phone" },
+
+            nav_support: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            nav_privacy: { vi: "🔒 Quyền Riêng Tư", en: "🔒 Privacy" },
+            nav_terms: { vi: "📋 Điều Khoản", en: "📋 Terms" },
+
+            about_h2: { vi: "Về Ứng Dụng", en: "About the App" },
+            about_p: {
+                vi: "<strong>Fotify</strong> là ứng dụng chỉnh sửa ảnh ngay trên điện thoại: thêm layer vẽ, sticker, chữ và ảnh, áp dụng bộ lọc với cường độ tuỳ chỉnh, và dùng công cụ AI để xoá nền hoặc tăng độ phân giải ảnh lên 2x/4x. Các công cụ AI xử lý ngay trên máy, không cần tài khoản.",
+                en: "<strong>Fotify</strong> is a photo editor right on your phone: add drawing, sticker, text, and image layers, apply filters with adjustable intensity, and use AI tools to remove backgrounds or upscale photos 2x/4x. AI tools are processed on-device, no account required."
+            },
+
+            status_soon: { vi: "🚀 Sắp ra mắt trên App Store", en: "🚀 Coming soon on the App Store" },
+
+            features_h2: { vi: "Tính Năng Nổi Bật", en: "Key Features" },
+
+            feature1_title: { vi: "🧩 Chỉnh Sửa Theo Layer", en: "🧩 Layer-Based Editing" },
+            feature1_desc: { vi: "Thêm và sắp xếp nhiều layer vẽ, sticker, chữ và ảnh chồng lên nhau, di chuyển/xoay/đổi kích thước độc lập từng layer", en: "Add and arrange multiple drawing, sticker, text, and image layers, moving/rotating/resizing each layer independently" },
+
+            feature2_title: { vi: "🎨 Bộ Lọc & Cường Độ", en: "🎨 Filters & Intensity" },
+            feature2_desc: { vi: "Bộ sưu tập bộ lọc màu dựng sẵn, tuỳ chỉnh cường độ áp dụng theo ý muốn", en: "A collection of ready-made color filters with adjustable intensity" },
+
+            feature3_title: { vi: "✂️ Xoá Nền Bằng AI", en: "✂️ AI Background Removal" },
+            feature3_desc: { vi: "Tách chủ thể khỏi nền chỉ trong một chạm, xử lý bằng mô hình AI ngay trên thiết bị", en: "Separate the subject from the background in one tap, processed by an AI model right on your device" },
+
+            feature4_title: { vi: "🔍 Tăng Độ Phân Giải AI", en: "🔍 AI Upscaling" },
+            feature4_desc: { vi: "Nâng cấp ảnh lên độ phân giải 2x hoặc 4x bằng mô hình AI xử lý ngay trên máy", en: "Upscale photos to 2x or 4x resolution using an on-device AI model" },
+
+            feature5_title: { vi: "✨ Sticker & Chữ", en: "✨ Stickers & Text" },
+            feature5_desc: { vi: "Thêm sticker, chữ với nhiều font và hiệu ứng để làm nổi bật bức ảnh của bạn", en: "Add stickers and text in various fonts and effects to make your photo stand out" },
+
+            feature6_title: { vi: "✍️ Vẽ Tự Do", en: "✍️ Freehand Drawing" },
+            feature6_desc: { vi: "Vẽ trực tiếp lên ảnh với công cụ bút vẽ linh hoạt, kết hợp cùng các layer khác", en: "Draw directly on your photo with a flexible brush tool, combined with your other layers" },
+
+            feature7_title: { vi: "💎 Fotify Premium", en: "💎 Fotify Premium" },
+            feature7_desc: { vi: "Nâng cấp Premium (gói tháng/năm) để tắt toàn bộ quảng cáo, mọi tính năng chỉnh sửa vẫn dùng miễn phí", en: "Upgrade to Premium (monthly/yearly) to remove all ads — every editing feature remains free to use" },
+
+            feature8_title: { vi: "📤 Lưu Ảnh Chất Lượng Cao", en: "📤 High-Quality Photo Export" },
+            feature8_desc: { vi: "Lưu ảnh đã chỉnh sửa trực tiếp vào Thư viện ảnh của máy", en: "Save your edited photo directly to your device's Photos library" },
+
+            contact_h2: { vi: "Liên Hệ & Hỗ Trợ", en: "Contact & Support" },
+            contact_email: { vi: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>', en: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>' },
+            contact_website: { vi: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/fotify/">imsuunc.github.io/fotify</a>', en: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/fotify/">imsuunc.github.io/fotify</a>' },
+            contact_support_link: { vi: '<strong>📞 Trang hỗ trợ:</strong> <a href="support.html">Xem trang hỗ trợ</a>', en: '<strong>📞 Support page:</strong> <a href="support.html">View support page</a>' },
+
+            docs_h2: { vi: "Tài Liệu Quan Trọng", en: "Important Documents" },
+            doc_privacy: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            doc_terms: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+
+            footer_updated: { vi: "Cập nhật lần cuối: 01/09/2026", en: "Last updated: Sep 1, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Điều Khoản Sử Dụng - Fotify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9cff;
+        }
+
+        h1 {
+            color: #8b9cff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9cff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .update-date {
+            color: #a1a1aa;
+            font-style: italic;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        h2 {
+            color: #8b9cff;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #8b9cff;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #a78bfa;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #3f3f5a;
+            vertical-align: top;
+        }
+
+        th {
+            color: #8b9cff;
+            font-size: 0.95em;
+        }
+
+        td {
+            font-size: 0.95em;
+        }
+
+        .warning-box {
+            background: #4a3f00;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .info-section {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #8b9cff;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #8b9cff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            td {
+                padding-top: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Fotify</a>
+
+        <header>
+            <h1 data-i18n="page_h1">📋 Điều Khoản Sử Dụng</h1>
+            <p data-i18n="page_subtitle">Fotify - Chỉnh Sửa Ảnh Bằng AI</p>
+            <p class="update-date" data-i18n="update_date">Cập nhật lần cuối: 01/09/2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <section>
+            <h2 data-i18n="s1_h2">1. Chấp Nhận Điều Khoản</h2>
+            <p data-i18n-html="s1_p">
+                Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>Fotify</strong> ("Ứng dụng"),
+                bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này.
+                Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s2_h2">2. Giấy Phép Sử Dụng</h2>
+            <p data-i18n="s2_p">Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:</p>
+            <ul>
+                <li data-i18n="s2_li1">Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng</li>
+                <li data-i18n="s2_li2">Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn</li>
+                <li data-i18n="s2_li3">Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s3_h2">3. Fotify Premium — Mua Hàng Trong Ứng Dụng</h2>
+            <p data-i18n-html="s3_p">
+                Fotify dùng <strong>miễn phí</strong> với đầy đủ tính năng chỉnh sửa layer, bộ lọc và công cụ AI
+                (Xoá nền, Tăng độ phân giải), có hiển thị quảng cáo. Gói nâng cấp tùy chọn <strong>Fotify
+                Premium</strong> tắt toàn bộ quảng cáo trong ứng dụng.
+            </p>
+
+            <h3 data-i18n="s3_1_h3">3.1 Các gói Fotify Premium</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-i18n="s3_1_th1">Gói</th>
+                        <th data-i18n="s3_1_th2">Hình thức</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="s3_1_row1_plan">Gói tháng (premium_monthly)</td>
+                        <td data-i18n="s3_1_row1_desc">Thuê bao tự động gia hạn hàng tháng</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="s3_1_row2_plan">Gói năm (premium_yearly)</td>
+                        <td data-i18n="s3_1_row2_desc">Thuê bao tự động gia hạn hàng năm</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 data-i18n="s3_2_h3">3.2 Thanh toán &amp; tự động gia hạn</h3>
+            <ul>
+                <li data-i18n="s3_2_li1">Khoản thanh toán được trừ vào tài khoản Apple ID của bạn ngay khi xác nhận mua, được xử lý qua StoreKit 2</li>
+                <li data-i18n="s3_2_li2">Gói thuê bao tự động gia hạn trừ khi bạn tắt tự động gia hạn ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại</li>
+                <li data-i18n="s3_2_li3">Khoản phí gia hạn được trừ trong vòng 24 giờ trước khi kết thúc chu kỳ hiện tại, với cùng mức giá trừ khi có thông báo thay đổi giá trước đó</li>
+                <li data-i18n-html="s3_2_li4">Bạn có thể quản lý hoặc huỷ thuê bao bất cứ lúc nào trong phần Cài đặt tài khoản của App Store (iOS) — <strong>không thể huỷ trực tiếp trong Ứng dụng</strong></li>
+                <li data-i18n="s3_2_li5">Huỷ gia hạn không hoàn lại phần thời gian đã sử dụng trong chu kỳ hiện tại; bạn vẫn dùng được Premium tới hết chu kỳ đã thanh toán</li>
+            </ul>
+
+            <h3 data-i18n="s3_3_h3">3.3 Hoàn tiền</h3>
+            <p data-i18n="s3_3_p">
+                Mọi giao dịch mua được xử lý bởi Apple App Store thông qua StoreKit 2. Yêu cầu hoàn tiền vui lòng
+                thực hiện trực tiếp qua Apple theo chính sách hoàn tiền của họ — chúng tôi không trực tiếp xử lý
+                hoặc đảm bảo hoàn tiền cho các giao dịch mua.
+            </p>
+
+            <div class="info-section">
+                <p data-i18n="s3_info">
+                    Giá hiển thị tại thời điểm mua có thể khác nhau theo khu vực/loại tiền tệ theo quy định của Apple
+                    App Store, và có thể thay đổi theo thời gian; giá mới không áp dụng cho chu kỳ đã thanh toán.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="s4_h2">4. Nội Dung &amp; Kết Quả AI</h2>
+
+            <h3 data-i18n="s4_1_h3">4.1 Quyền Sở Hữu Trí Tuệ</h3>
+            <ul>
+                <li data-i18n="s4_1_li1">Tất cả thiết kế, mã nguồn và tài nguyên của Ứng dụng đều thuộc sở hữu của chúng tôi</li>
+                <li data-i18n="s4_1_li2">Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng</li>
+            </ul>
+
+            <h3 data-i18n="s4_2_h3">4.2 Nội Dung Của Bạn</h3>
+            <ul>
+                <li data-i18n="s4_2_li1">Ảnh bạn chỉnh sửa và xuất ra bằng Ứng dụng hoàn toàn thuộc về bạn</li>
+                <li data-i18n="s4_2_li2">Dự án chỉnh sửa được lưu cục bộ trên thiết bị của bạn</li>
+                <li data-i18n="s4_2_li3">Chúng tôi không chịu trách nhiệm về việc mất mát dữ liệu khi bạn xóa dự án hoặc gỡ ứng dụng</li>
+            </ul>
+
+            <h3 data-i18n="s4_3_h3">4.3 Kết Quả Xử Lý AI</h3>
+            <p data-i18n="s4_3_p">
+                Các tính năng Xoá nền và Tăng độ phân giải sử dụng mô hình AI và có thể cho ra kết quả không hoàn hảo
+                tuỳ theo nội dung ảnh gốc. Chúng tôi không đảm bảo kết quả xử lý AI luôn chính xác tuyệt đối hoặc phù
+                hợp với mọi mục đích sử dụng.
+            </p>
+
+            <div class="info-section">
+                <p data-i18n="s4_info">
+                    Bạn chịu trách nhiệm đảm bảo mình có đầy đủ quyền đối với ảnh hoặc bất kỳ tài liệu nào của bên
+                    thứ ba mà bạn đưa vào chỉnh sửa, đặc biệt khi chia sẻ hoặc xuất bản ảnh đã chỉnh sửa ra bên ngoài.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="s5_h2">5. Từ Chối Bảo Hành</h2>
+            <p data-i18n="s5_p">Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:</p>
+            <ul>
+                <li data-i18n="s5_li1">Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi</li>
+                <li data-i18n="s5_li2">Kết quả xử lý AI (xoá nền, tăng độ phân giải) luôn đạt chất lượng như mong đợi</li>
+                <li data-i18n="s5_li3">Tính tương thích với mọi phiên bản hệ điều hành hoặc mọi thiết bị</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s6_h2">6. Giới Hạn Trách Nhiệm</h2>
+            <p data-i18n="s6_p">Chúng tôi không chịu trách nhiệm về:</p>
+            <ul>
+                <li data-i18n="s6_li1">Mất mát dự án hoặc dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng</li>
+                <li data-i18n="s6_li2">Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng hoặc kết quả xử lý AI</li>
+                <li data-i18n="s6_li3">Nội dung do người dùng tạo ra hoặc chia sẻ bằng Ứng dụng</li>
+                <li data-i18n="s6_li4">Các vấn đề thanh toán, gia hạn hoặc hoàn tiền thuộc phạm vi xử lý của Apple App Store</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="s7_h2">7. Thay Đổi Điều Khoản</h2>
+            <p data-i18n="s7_p">
+                Chúng tôi có quyền cập nhật Điều khoản này, kể cả cách tính giá hoặc gói Fotify Premium. Thay đổi sẽ
+                có hiệu lực ngay khi được công bố tại trang này. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới
+                nhất.
+            </p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s8_h2">8. Chấm Dứt Sử Dụng</h2>
+            <p data-i18n="s8_p">Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.</p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s9_h2">9. Luật Áp Dụng</h2>
+            <p data-i18n="s9_p">Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.</p>
+        </section>
+
+        <section>
+            <h2 data-i18n="s10_h2">10. Liên Hệ</h2>
+            <p data-i18n="s10_p">Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:</p>
+
+            <div class="contact-info">
+                <p data-i18n-html="s10_email"><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p data-i18n-html="s10_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/fotify/">https://imsuunc.github.io/fotify/</a></p>
+                <p data-i18n-html="s10_support"><strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/fotify/support.html</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="refs_h2">Tài Liệu Tham Khảo</h2>
+            <ul>
+                <li><a href="privacy.html" style="color: #667eea; font-weight: 500;" data-i18n="refs_privacy">Chính Sách Quyền Riêng Tư</a></li>
+                <li><a href="support.html" style="color: #667eea; font-weight: 500;" data-i18n="refs_support">Trang Hỗ Trợ</a></li>
+                <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: #667eea; font-weight: 500;">Apple Standard EULA</a></li>
+            </ul>
+        </section>
+
+        <div class="warning-box" style="margin-top: 30px; text-align: center;">
+            <p style="font-weight: bold;" data-i18n="agree_note">
+                Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 01/09/2026</em></p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: 'Điều Khoản Sử Dụng - Fotify', en: 'Terms of Use - Fotify' },
+            back_link: { vi: '← Quay lại trang Fotify', en: '← Back to Fotify' },
+            page_h1: { vi: '📋 Điều Khoản Sử Dụng', en: '📋 Terms of Use' },
+            page_subtitle: { vi: 'Fotify - Chỉnh Sửa Ảnh Bằng AI', en: 'Fotify - AI Photo Editor' },
+            update_date: { vi: 'Cập nhật lần cuối: 01/09/2026', en: 'Last updated: Sep 1, 2026' },
+
+            s1_h2: { vi: '1. Chấp Nhận Điều Khoản', en: '1. Acceptance of Terms' },
+            s1_p: { vi: 'Bằng việc tải xuống, cài đặt và sử dụng ứng dụng <strong>Fotify</strong> ("Ứng dụng"), bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu trong tài liệu này. Nếu bạn không đồng ý, vui lòng không sử dụng ứng dụng.', en: 'By downloading, installing, and using the <strong>Fotify</strong> app (the "App"), you agree to comply with the terms and conditions set out in this document. If you do not agree, please do not use the App.' },
+
+            s2_h2: { vi: '2. Giấy Phép Sử Dụng', en: '2. License to Use' },
+            s2_p: { vi: 'Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại, theo các điều khoản sau:', en: 'We grant you a license to use the App for personal, non-commercial purposes, subject to the following terms:' },
+            s2_li1: { vi: 'Bạn không được sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng', en: 'You may not copy, modify, distribute, or resell the App' },
+            s2_li2: { vi: 'Bạn không được dịch ngược (reverse engineer) hoặc trích xuất mã nguồn', en: 'You may not reverse engineer or extract the source code' },
+            s2_li3: { vi: 'Bạn không được sử dụng Ứng dụng cho mục đích bất hợp pháp', en: 'You may not use the App for any unlawful purpose' },
+
+            s3_h2: { vi: '3. Fotify Premium — Mua Hàng Trong Ứng Dụng', en: '3. Fotify Premium — In-App Purchases' },
+            s3_p: { vi: 'Fotify dùng <strong>miễn phí</strong> với đầy đủ tính năng chỉnh sửa layer, bộ lọc và công cụ AI (Xoá nền, Tăng độ phân giải), có hiển thị quảng cáo. Gói nâng cấp tùy chọn <strong>Fotify Premium</strong> tắt toàn bộ quảng cáo trong ứng dụng.', en: 'Fotify is <strong>free</strong> to use with full access to layer editing, filters, and AI tools (Remove Background, Upscale), and displays ads. The optional <strong>Fotify Premium</strong> upgrade removes all ads from the App.' },
+
+            s3_1_h3: { vi: '3.1 Các gói Fotify Premium', en: '3.1 Fotify Premium Plans' },
+            s3_1_th1: { vi: 'Gói', en: 'Plan' },
+            s3_1_th2: { vi: 'Hình thức', en: 'Format' },
+            s3_1_row1_plan: { vi: 'Gói tháng (premium_monthly)', en: 'Monthly plan (premium_monthly)' },
+            s3_1_row1_desc: { vi: 'Thuê bao tự động gia hạn hàng tháng', en: 'Auto-renewing monthly subscription' },
+            s3_1_row2_plan: { vi: 'Gói năm (premium_yearly)', en: 'Yearly plan (premium_yearly)' },
+            s3_1_row2_desc: { vi: 'Thuê bao tự động gia hạn hàng năm', en: 'Auto-renewing yearly subscription' },
+
+            s3_2_h3: { vi: '3.2 Thanh toán & tự động gia hạn', en: '3.2 Payment & Auto-Renewal' },
+            s3_2_li1: { vi: 'Khoản thanh toán được trừ vào tài khoản Apple ID của bạn ngay khi xác nhận mua, được xử lý qua StoreKit 2', en: 'Payment is charged to your Apple ID account immediately upon confirmation of purchase, processed via StoreKit 2' },
+            s3_2_li2: { vi: 'Gói thuê bao tự động gia hạn trừ khi bạn tắt tự động gia hạn ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại', en: 'The subscription automatically renews unless you turn off auto-renewal at least 24 hours before the end of the current period' },
+            s3_2_li3: { vi: 'Khoản phí gia hạn được trừ trong vòng 24 giờ trước khi kết thúc chu kỳ hiện tại, với cùng mức giá trừ khi có thông báo thay đổi giá trước đó', en: 'The renewal fee is charged within 24 hours before the end of the current period, at the same price unless a price change has been announced in advance' },
+            s3_2_li4: { vi: 'Bạn có thể quản lý hoặc huỷ thuê bao bất cứ lúc nào trong phần Cài đặt tài khoản của App Store (iOS) — <strong>không thể huỷ trực tiếp trong Ứng dụng</strong>', en: 'You can manage or cancel your subscription at any time in your App Store (iOS) account settings — <strong>cancellation is not available directly within the App</strong>' },
+            s3_2_li5: { vi: 'Huỷ gia hạn không hoàn lại phần thời gian đã sử dụng trong chu kỳ hiện tại; bạn vẫn dùng được Premium tới hết chu kỳ đã thanh toán', en: 'Canceling a renewal does not refund the unused portion of the current period; you will keep Premium access until the end of the period already paid for' },
+
+            s3_3_h3: { vi: '3.3 Hoàn tiền', en: '3.3 Refunds' },
+            s3_3_p: { vi: 'Mọi giao dịch mua được xử lý bởi Apple App Store thông qua StoreKit 2. Yêu cầu hoàn tiền vui lòng thực hiện trực tiếp qua Apple theo chính sách hoàn tiền của họ — chúng tôi không trực tiếp xử lý hoặc đảm bảo hoàn tiền cho các giao dịch mua.', en: 'All purchases are processed by the Apple App Store via StoreKit 2. Refund requests must be made directly through Apple according to their refund policy — we do not directly process or guarantee refunds for purchases.' },
+
+            s3_info: { vi: 'Giá hiển thị tại thời điểm mua có thể khác nhau theo khu vực/loại tiền tệ theo quy định của Apple App Store, và có thể thay đổi theo thời gian; giá mới không áp dụng cho chu kỳ đã thanh toán.', en: 'Prices shown at the time of purchase may vary by region/currency as set by the Apple App Store, and may change over time; new prices do not apply to periods already paid for.' },
+
+            s4_h2: { vi: '4. Nội Dung & Kết Quả AI', en: '4. Content & AI Results' },
+            s4_1_h3: { vi: '4.1 Quyền Sở Hữu Trí Tuệ', en: '4.1 Intellectual Property Rights' },
+            s4_1_li1: { vi: 'Tất cả thiết kế, mã nguồn và tài nguyên của Ứng dụng đều thuộc sở hữu của chúng tôi', en: "All designs, source code, and assets of the App are owned by us" },
+            s4_1_li2: { vi: 'Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng', en: "Users may not copy or redistribute the App's content" },
+
+            s4_2_h3: { vi: '4.2 Nội Dung Của Bạn', en: '4.2 Your Content' },
+            s4_2_li1: { vi: 'Ảnh bạn chỉnh sửa và xuất ra bằng Ứng dụng hoàn toàn thuộc về bạn', en: 'Photos you edit and export with the App belong entirely to you' },
+            s4_2_li2: { vi: 'Dự án chỉnh sửa được lưu cục bộ trên thiết bị của bạn', en: 'Editing projects are stored locally on your device' },
+            s4_2_li3: { vi: 'Chúng tôi không chịu trách nhiệm về việc mất mát dữ liệu khi bạn xóa dự án hoặc gỡ ứng dụng', en: 'We are not responsible for data loss when you delete a project or uninstall the App' },
+
+            s4_3_h3: { vi: '4.3 Kết Quả Xử Lý AI', en: '4.3 AI Processing Results' },
+            s4_3_p: { vi: 'Các tính năng Xoá nền và Tăng độ phân giải sử dụng mô hình AI và có thể cho ra kết quả không hoàn hảo tuỳ theo nội dung ảnh gốc. Chúng tôi không đảm bảo kết quả xử lý AI luôn chính xác tuyệt đối hoặc phù hợp với mọi mục đích sử dụng.', en: 'The Remove Background and Upscale features use AI models and may produce imperfect results depending on the original photo. We do not guarantee that AI processing results will always be perfectly accurate or suitable for every purpose.' },
+
+            s4_info: { vi: 'Bạn chịu trách nhiệm đảm bảo mình có đầy đủ quyền đối với ảnh hoặc bất kỳ tài liệu nào của bên thứ ba mà bạn đưa vào chỉnh sửa, đặc biệt khi chia sẻ hoặc xuất bản ảnh đã chỉnh sửa ra bên ngoài.', en: 'You are responsible for ensuring you have full rights to any photo or other third-party material you use in editing, especially when sharing or publishing the edited photo externally.' },
+
+            s5_h2: { vi: '5. Từ Chối Bảo Hành', en: '5. Disclaimer of Warranty' },
+            s5_p: { vi: 'Ứng dụng được cung cấp "nguyên trạng" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:', en: 'The App is provided "AS IS" without any warranty. We do not guarantee:' },
+            s5_li1: { vi: 'Ứng dụng sẽ hoạt động không gián đoạn hoặc không có lỗi', en: 'The App will operate uninterrupted or error-free' },
+            s5_li2: { vi: 'Kết quả xử lý AI (xoá nền, tăng độ phân giải) luôn đạt chất lượng như mong đợi', en: 'AI processing results (background removal, upscaling) will always meet expected quality' },
+            s5_li3: { vi: 'Tính tương thích với mọi phiên bản hệ điều hành hoặc mọi thiết bị', en: 'Compatibility with every operating system version or every device' },
+
+            s6_h2: { vi: '6. Giới Hạn Trách Nhiệm', en: '6. Limitation of Liability' },
+            s6_p: { vi: 'Chúng tôi không chịu trách nhiệm về:', en: 'We are not responsible for:' },
+            s6_li1: { vi: 'Mất mát dự án hoặc dữ liệu do người dùng tự xóa hoặc gỡ ứng dụng', en: 'Loss of projects or data resulting from the user deleting or uninstalling the App' },
+            s6_li2: { vi: 'Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng hoặc kết quả xử lý AI', en: 'Indirect damages arising from use of the App or AI processing results' },
+            s6_li3: { vi: 'Nội dung do người dùng tạo ra hoặc chia sẻ bằng Ứng dụng', en: 'Content created or shared by users using the App' },
+            s6_li4: { vi: 'Các vấn đề thanh toán, gia hạn hoặc hoàn tiền thuộc phạm vi xử lý của Apple App Store', en: "Payment, renewal, or refund issues, which fall under the Apple App Store's handling" },
+
+            s7_h2: { vi: '7. Thay Đổi Điều Khoản', en: '7. Changes to These Terms' },
+            s7_p: { vi: 'Chúng tôi có quyền cập nhật Điều khoản này, kể cả cách tính giá hoặc gói Fotify Premium. Thay đổi sẽ có hiệu lực ngay khi được công bố tại trang này. Bạn nên kiểm tra định kỳ để cập nhật thông tin mới nhất.', en: 'We reserve the right to update these Terms, including how pricing or Fotify Premium plans are structured. Changes take effect as soon as they are published on this page. You should check back periodically for the latest information.' },
+
+            s8_h2: { vi: '8. Chấm Dứt Sử Dụng', en: '8. Termination' },
+            s8_p: { vi: 'Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.', en: 'We reserve the right to terminate or suspend your access if you violate these terms.' },
+
+            s9_h2: { vi: '9. Luật Áp Dụng', en: '9. Governing Law' },
+            s9_p: { vi: 'Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.', en: 'These terms are governed by the laws of Vietnam.' },
+
+            s10_h2: { vi: '10. Liên Hệ', en: '10. Contact' },
+            s10_p: { vi: 'Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:', en: 'If you have questions about these Terms of Use, please contact:' },
+            s10_email: { vi: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>', en: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>' },
+            s10_website: { vi: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/fotify/">https://imsuunc.github.io/fotify/</a>', en: '<strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/fotify/">https://imsuunc.github.io/fotify/</a>' },
+            s10_support: { vi: '<strong>📞 Trang hỗ trợ:</strong> <a href="support.html">https://imsuunc.github.io/fotify/support.html</a>', en: '<strong>📞 Support page:</strong> <a href="support.html">https://imsuunc.github.io/fotify/support.html</a>' },
+
+            refs_h2: { vi: 'Tài Liệu Tham Khảo', en: 'References' },
+            refs_privacy: { vi: 'Chính Sách Quyền Riêng Tư', en: 'Privacy Policy' },
+            refs_support: { vi: 'Trang Hỗ Trợ', en: 'Support Page' },
+
+            agree_note: { vi: 'Bằng việc sử dụng ứng dụng, bạn đã đọc, hiểu và đồng ý với các điều khoản trên.', en: 'By using the App, you confirm that you have read, understood, and agree to the terms above.' },
+
+            footer_updated: { vi: 'Cập nhật lần cuối: 01/09/2026', en: 'Last updated: Sep 1, 2026' }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+
+        var savedLang = 'vi';
+        try { savedLang = localStorage.getItem('lang') || 'vi'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>
