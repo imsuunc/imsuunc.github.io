@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Wacky Hill Dash - Hill-Climb Driving Game | IMSUUNC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #f59e0b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 1.1em;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            color: #f59e0b;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #f59e0b;
+            padding-bottom: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .feature-card h3 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            margin: 20px 0;
+            background: #2a2a3e;
+            border: 1px dashed #f59e0b;
+            color: #a1a1aa;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a data-i18n="back_link" href="../index.html" style="color: #f59e0b; text-decoration: none; font-weight: 500;">← All apps by IMSUUNC</a>
+        <header style="margin-top: 20px;">
+            <h1 data-i18n="hero_title">🚙 Wacky Hill Dash - Hill-Climb Driving</h1>
+            <p data-i18n="hero_subtitle" class="subtitle">Drive over wild, hazard-filled hills, collect coins and gems, upgrade your car and unlock new paints</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <nav>
+            <a href="support.html" class="nav-button" data-i18n="nav_support">📞 Support</a>
+            <a href="privacy.html" class="nav-button" data-i18n="nav_privacy">🔒 Privacy</a>
+            <a href="terms.html" class="nav-button" data-i18n="nav_terms">📋 Terms</a>
+        </nav>
+        <section>
+            <h2 data-i18n="about_h2">About the Game</h2>
+            <p data-i18n-html="about_p"><strong>Wacky Hill Dash</strong> is a fun hill-climb driving game: use gas and brake to keep your balance over bumpy slopes, grab coins and gems, and dodge springs, rolling rocks, birds, sinkholes, lightning and falling power lines. When the fuel runs out the run is over — go as far as you can, then spend your coins on engine, fuel tank, tires, brakes, suspension, magnet and bounty upgrades. Progress is saved right on your device — no account needed.</p>
+            <div data-i18n="coming_soon_badge" class="coming-soon">🚀 Coming soon on the App Store &amp; Google Play</div>
+        </section>
+        <section>
+            <h2 data-i18n="features_h2">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 data-i18n="feature1_title">🚙 3 Vehicles</h3>
+                    <p data-i18n="feature1_desc">Jeep, Truck and Buggy — each with its own speed, grip and bounce</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature2_title">🏔️ 2 Areas</h3>
+                    <p data-i18n="feature2_desc">Grassy hills and rugged rock mountains with different challenges</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature3_title">⚡ Wacky Hazards</h3>
+                    <p data-i18n="feature3_desc">Springs, rocks, birds, sinkholes, lightning and falling power lines with lively sound effects</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature4_title">🔧 Upgrade Your Car</h3>
+                    <p data-i18n="feature4_desc">Engine, fuel tank, tires, brakes, suspension, magnet and bounty</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature5_title">🎨 Paints &amp; Gems</h3>
+                    <p data-i18n="feature5_desc">Spend gems to unlock premium paint colours for your car</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature6_title">🎁 Daily Rewards</h3>
+                    <p data-i18n="feature6_desc">Come back every day for coins — a 7-day streak earns bonus gems</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature7_title">📴 Play Offline</h3>
+                    <p data-i18n="feature7_desc">No account or internet needed to play; data stays on your device</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature8_title">✨ Optional Ad-Free</h3>
+                    <p data-i18n="feature8_desc">Buy Remove Ads or the Starter Pack to remove interstitials and banners</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="contact_h2">Contact &amp; Support</h2>
+            <div class="contact-info">
+                <p data-i18n-html="contact_email"><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p data-i18n-html="contact_website"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/wacky-hill-dash/">imsuunc.github.io/wacky-hill-dash</a></p>
+                <p data-i18n-html="contact_support_link"><strong>📞 Support page:</strong> <a href="support.html">View support page</a></p>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="docs_h2">Important Documents</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">
+                    <a data-i18n="doc_privacy" href="privacy.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">🔒 Privacy Policy</a>
+                </li>
+                <li style="margin: 10px 0;">
+                    <a data-i18n="doc_terms" href="terms.html" class="nav-button" style="display: inline-block; padding: 10px 20px;">📋 Terms of Use</a>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p data-i18n="footer_updated" style="margin-top: 10px;">Last updated: Oct 3, 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Wacky Hill Dash - Trò Chơi Lái Xe Vượt Đồi | IMSUUNC", en: "Wacky Hill Dash - Hill-Climb Driving Game | IMSUUNC" },
+            back_link: { vi: "← Tất cả ứng dụng của IMSUUNC", en: "← All apps by IMSUUNC" },
+            hero_title: { vi: "🚙 Wacky Hill Dash - Lái Xe Vượt Đồi", en: "🚙 Wacky Hill Dash - Hill-Climb Driving" },
+            hero_subtitle: { vi: "Lái xe vượt đồi dốc đầy nguy hiểm, thu thập xu và đá quý, nâng cấp xe và sưu tầm màu sơn", en: "Drive over wild, hazard-filled hills, collect coins and gems, upgrade your car and unlock new paints" },
+            nav_support: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            nav_privacy: { vi: "🔒 Quyền Riêng Tư", en: "🔒 Privacy" },
+            nav_terms: { vi: "📋 Điều Khoản", en: "📋 Terms" },
+            about_p: { vi: "<strong>Wacky Hill Dash</strong> là trò chơi lái xe vượt đồi dốc vui nhộn: giữ ga và phanh để giữ thăng bằng trên những con dốc gập ghềnh, nhặt xu và đá quý, tránh bẫy lò xo, đá lăn, chim, hố sụt, sét và dây điện rơi. Hết nhiên liệu là kết thúc chuyến đi — hãy đi xa nhất có thể, rồi dùng xu để nâng cấp động cơ, bình xăng, lốp, phanh, giảm xóc, nam châm và tiền thưởng. Tiến trình được lưu ngay trên máy — không cần tài khoản.", en: "<strong>Wacky Hill Dash</strong> is a fun hill-climb driving game: use gas and brake to keep your balance over bumpy slopes, grab coins and gems, and dodge springs, rolling rocks, birds, sinkholes, lightning and falling power lines. When the fuel runs out the run is over — go as far as you can, then spend your coins on engine, fuel tank, tires, brakes, suspension, magnet and bounty upgrades. Progress is saved right on your device — no account needed." },
+            coming_soon_badge: { vi: "🚀 Sắp ra mắt trên App Store & Google Play", en: "🚀 Coming soon on the App Store & Google Play" },
+            about_h2: { vi: "Về Trò Chơi", en: "About the Game" },
+            feature1_title: { vi: "🚙 3 Loại Xe", en: "🚙 3 Vehicles" },
+            feature1_desc: { vi: "Jeep, Truck và Buggy — mỗi xe có tốc độ, độ bám và độ nảy riêng", en: "Jeep, Truck and Buggy — each with its own speed, grip and bounce" },
+            feature2_title: { vi: "🏔️ 2 Địa Hình", en: "🏔️ 2 Areas" },
+            feature2_desc: { vi: "Đồi cỏ xanh và núi đá hiểm trở với độ khó khác nhau", en: "Grassy hills and rugged rock mountains with different challenges" },
+            feature3_title: { vi: "⚡ Nhiều Chướng Ngại", en: "⚡ Wacky Hazards" },
+            feature3_desc: { vi: "Lò xo, đá, chim, hố sụt, sét đánh và dây điện rơi cùng hiệu ứng âm thanh sống động", en: "Springs, rocks, birds, sinkholes, lightning and falling power lines with lively sound effects" },
+            feature4_title: { vi: "🔧 Nâng Cấp Xe", en: "🔧 Upgrade Your Car" },
+            feature4_desc: { vi: "Động cơ, bình xăng, lốp, phanh, giảm xóc, nam châm và tiền thưởng", en: "Engine, fuel tank, tires, brakes, suspension, magnet and bounty" },
+            feature5_title: { vi: "🎨 Màu Sơn & Đá Quý", en: "🎨 Paints & Gems" },
+            feature5_desc: { vi: "Dùng đá quý mở khoá màu sơn cao cấp cho xe của bạn", en: "Spend gems to unlock premium paint colours for your car" },
+            feature6_title: { vi: "🎁 Thưởng Hằng Ngày", en: "🎁 Daily Rewards" },
+            feature6_desc: { vi: "Đăng nhập mỗi ngày để nhận xu, chuỗi 7 ngày nhận thêm đá quý", en: "Come back every day for coins — a 7-day streak earns bonus gems" },
+            feature7_title: { vi: "📴 Chơi Ngoại Tuyến", en: "📴 Play Offline" },
+            feature7_desc: { vi: "Không cần tài khoản hay mạng để chơi; dữ liệu lưu trên máy", en: "No account or internet needed to play; data stays on your device" },
+            feature8_title: { vi: "✨ Tuỳ Chọn Không Quảng Cáo", en: "✨ Optional Ad-Free" },
+            feature8_desc: { vi: "Mua gói Xoá quảng cáo hoặc Starter Pack để bỏ quảng cáo toàn màn hình và banner", en: "Buy Remove Ads or the Starter Pack to remove interstitials and banners" },
+            features_h2: { vi: "Tính Năng Nổi Bật", en: "Key Features" },
+            contact_email: { vi: "<strong>📧 Email:</strong> <a href=\"mailto:imsuunc@gmail.com\">imsuunc@gmail.com</a>", en: "<strong>📧 Email:</strong> <a href=\"mailto:imsuunc@gmail.com\">imsuunc@gmail.com</a>" },
+            contact_website: { vi: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/wacky-hill-dash/\">imsuunc.github.io/wacky-hill-dash</a>", en: "<strong>🌐 Website:</strong> <a href=\"https://imsuunc.github.io/wacky-hill-dash/\">imsuunc.github.io/wacky-hill-dash</a>" },
+            contact_support_link: { vi: "<strong>📞 Trang hỗ trợ:</strong> <a href=\"support.html\">Xem trang hỗ trợ</a>", en: "<strong>📞 Support page:</strong> <a href=\"support.html\">View support page</a>" },
+            contact_h2: { vi: "Liên Hệ & Hỗ Trợ", en: "Contact & Support" },
+            doc_privacy: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            doc_terms: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+            docs_h2: { vi: "Tài Liệu Quan Trọng", en: "Important Documents" },
+            footer_updated: { vi: "Cập nhật lần cuối: 03/10/2026", en: "Last updated: Oct 3, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'en';
+        try { savedLang = localStorage.getItem('lang') || 'en'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>

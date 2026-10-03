@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Privacy Policy - Wacky Hill Dash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f59e0b;
+        }
+
+        h1 {
+            color: #f59e0b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .update-date {
+            color: #a1a1aa;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #f59e0b;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #f59e0b;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5eead4;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #3f3f5a;
+            vertical-align: top;
+        }
+
+        th {
+            color: #f59e0b;
+            font-size: 0.95em;
+        }
+
+        td {
+            font-size: 0.95em;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: #1c3d5a;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #4a3f00;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            td {
+                padding-top: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a data-i18n="back_link" href="index.html" class="back-link">← Back to Wacky Hill Dash</a>
+
+        <header>
+            <h1 data-i18n="page_h1">🔒 Privacy Policy</h1>
+            <p data-i18n="page_subtitle">Wacky Hill Dash - Hill-Climb Driving Game</p>
+            <p data-i18n="update_date" class="update-date">Last updated: Oct 3, 2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <div class="highlight-box">
+            <p data-i18n-html="intro_p" style="text-align: center; font-size: 1.1em;"><strong>Wacky Hill Dash</strong> (the "App", "we") is committed to protecting your privacy. This policy explains what information is collected, how it is used, and how you stay in control.</p>
+        </div>
+
+        <section>
+            <h2 data-i18n="s1_h2">1. Information we collect</h2>
+            <div class="info-box">
+                <p data-i18n-html="s1_infobox" style="font-weight: bold;">The App <strong>does not require an account</strong>. Your progress (coins, gems, upgrades, vehicles, paints, distance records, daily-reward streak) is <strong>stored only on your device</strong> and is never uploaded to our servers.</p>
+            </div>
+
+            <h3 data-i18n="s1_1_h3">1.1 Data you create while playing</h3>
+            <ul>
+                <li data-i18n="s1_1_li1">Coin and gem balances, vehicle upgrade levels</li>
+                <li data-i18n="s1_1_li2">Unlocked vehicles and paints, and the selected area</li>
+                <li data-i18n="s1_1_li3">Distance records, daily-reward streak, and whether Remove Ads / Starter Pack has been purchased</li>
+            </ul>
+            <p data-i18n-html="s1_1_note" style="margin-left: 20px;">This data is stored locally (SharedPreferences) and is <strong>not sent anywhere</strong>.</p>
+
+            <h3 data-i18n="s1_2_h3">1.2 Advertising (Google AdMob)</h3>
+            <p data-i18n-html="s1_2_p">The App shows banner ads, interstitial ads (after a few runs) and rewarded ads (watch to revive, double coins or earn free coins) through <strong>Google AdMob</strong>. AdMob may collect and use your device advertising identifier, IP address, device information and ad-interaction data to serve and measure ads and prevent fraud. Where required (for example the EEA and the UK), the App shows Google's consent form (UMP) before loading ads; on iOS you may also be asked for <strong>App Tracking Transparency</strong> permission. If you decline, ads are still shown but are not personalised. You can change your choice in your device settings. See <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: #f59e0b;">how Google uses data in advertising</a>.</p>
+
+        </section>
+        <section>
+            <h2 data-i18n="s2_h2">2. Device permissions</h2>
+            <div class="warning-box">
+                <p data-i18n-html="s2_warning">The App <strong>does not access</strong> your contacts, location, camera, photo library or microphone, and does not request notification permission.</p>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="s3_h2">3. In-app purchases</h2>
+            <p data-i18n-html="s3_p">Wacky Hill Dash is <strong>free to play</strong>. The App offers optional purchases:</p>
+            <ul>
+                <li data-i18n-html="s3_li1"><strong>Remove Ads</strong> and <strong>Starter Pack</strong> (one-time, non-renewing)</li>
+                <li data-i18n-html="s3_li2">Coin packs and gem packs (consumable in-game items with no real-world cash value)</li>
+                <li data-i18n-html="s3_li3">Payments are processed entirely by the <strong>Apple App Store</strong> or <strong>Google Play</strong>; we never see or store your card or payment details</li>
+                <li data-i18n-html="s3_li4">Pricing, cancellations and refunds follow Apple/Google policies — see the <a href="terms.html" style="color: #f59e0b;">Terms of Use</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-i18n="s4_h2">4. Third-party services</h2>
+            <p data-i18n="s4_p">Wacky Hill Dash uses only the following third-party services, strictly for the purposes below:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-i18n="s4_th1">Service</th>
+                        <th data-i18n="s4_th2">Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google AdMob / Google UMP</td>
+                        <td data-i18n="s4_row1">Serving ads and the privacy consent form</td>
+                    </tr>
+                    <tr>
+                        <td>Apple App Store / Google Play Billing</td>
+                        <td data-i18n="s4_row2">Processing in-app purchase payments</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p data-i18n-html="s4_p2">We <strong>do not sell</strong> user data to third parties.</p>
+        </section>
+        <section>
+            <h2 data-i18n="s5_h2">5. Children's privacy</h2>
+            <p data-i18n="s5_p">Wacky Hill Dash is not directed to children under 13 and we do not knowingly collect personal information from children. If you believe a child has provided information to us, please contact us so we can address it.</p>
+        </section>
+        <section>
+            <h2 data-i18n="s6_h2">6. Your rights</h2>
+            <p data-i18n="s6_p">Because your game data lives only on your device, you stay in control:</p>
+            <ul>
+                <li data-i18n="s6_li1">Delete all game data by uninstalling the App</li>
+                <li data-i18n="s6_li2">Change your ad/tracking choices anytime in your device settings (for example Privacy &amp; Security &gt; Tracking on iOS, or Google ad settings on Android)</li>
+                <li data-i18n="s6_li3">Contact us at the email below with any privacy question</li>
+            </ul>
+            <div class="warning-box">
+                <p data-i18n-html="s6_warning">Because we <strong>do not store data on a server</strong>, we cannot restore progress lost when you uninstall the App or change devices. Purchases can be restored through your Apple/Google account.</p>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="s7_h2">7. Changes to this policy</h2>
+            <p data-i18n="s7_p">This policy may be updated from time to time; the latest version is always posted on this page.</p>
+        </section>
+        <section>
+            <h2 data-i18n="s8_h2">8. Contact</h2>
+            <p data-i18n="s8_intro">If you have any questions, please contact us:</p>
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/wacky-hill-dash/">https://imsuunc.github.io/wacky-hill-dash/</a></p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Chính Sách Quyền Riêng Tư - Wacky Hill Dash", en: "Privacy Policy - Wacky Hill Dash" },
+            back_link: { vi: "← Quay lại trang Wacky Hill Dash", en: "← Back to Wacky Hill Dash" },
+            page_h1: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
+            page_subtitle: { vi: "Wacky Hill Dash - Trò Chơi Lái Xe Vượt Đồi Vui Nhộn", en: "Wacky Hill Dash - Hill-Climb Driving Game" },
+            update_date: { vi: "Cập nhật lần cuối: 03/10/2026", en: "Last updated: Oct 3, 2026" },
+            intro_p: { vi: "Ứng dụng <strong>Wacky Hill Dash</strong> (\"Ứng dụng\", \"chúng tôi\") cam kết bảo vệ quyền riêng tư của người dùng. Chính sách này giải thích thông tin nào được thu thập, được dùng ra sao và bạn kiểm soát nó như thế nào.", en: "<strong>Wacky Hill Dash</strong> (the \"App\", \"we\") is committed to protecting your privacy. This policy explains what information is collected, how it is used, and how you stay in control." },
+            s1_infobox: { vi: "Ứng dụng <strong>không yêu cầu tạo tài khoản</strong>. Tiến trình chơi (xu, đá quý, nâng cấp, xe, màu sơn, kỷ lục quãng đường, chuỗi thưởng hằng ngày) <strong>chỉ lưu trên chính thiết bị</strong> và không được tải lên máy chủ của chúng tôi.", en: "The App <strong>does not require an account</strong>. Your progress (coins, gems, upgrades, vehicles, paints, distance records, daily-reward streak) is <strong>stored only on your device</strong> and is never uploaded to our servers." },
+            s1_1_h3: { vi: "1.1 Dữ liệu bạn tạo ra khi chơi", en: "1.1 Data you create while playing" },
+            s1_1_li1: { vi: "Số xu và đá quý, cấp nâng cấp của xe", en: "Coin and gem balances, vehicle upgrade levels" },
+            s1_1_li2: { vi: "Xe, màu sơn đã mở khoá và khu vực đã chọn", en: "Unlocked vehicles and paints, and the selected area" },
+            s1_1_li3: { vi: "Kỷ lục quãng đường, chuỗi nhận thưởng hằng ngày, trạng thái đã mua Xoá quảng cáo / Starter Pack", en: "Distance records, daily-reward streak, and whether Remove Ads / Starter Pack has been purchased" },
+            s1_1_note: { vi: "Dữ liệu này được lưu cục bộ (SharedPreferences) và <strong>không được gửi ra ngoài</strong>.", en: "This data is stored locally (SharedPreferences) and is <strong>not sent anywhere</strong>." },
+            s1_2_h3: { vi: "1.2 Quảng cáo (Google AdMob)", en: "1.2 Advertising (Google AdMob)" },
+            s1_2_p: { vi: "Ứng dụng hiển thị quảng cáo banner, quảng cáo toàn màn hình (sau một số lượt chơi) và quảng cáo thưởng (xem để hồi sinh, nhân đôi xu hoặc nhận xu miễn phí) thông qua <strong>Google AdMob</strong>. AdMob có thể thu thập và sử dụng mã định danh quảng cáo của thiết bị, địa chỉ IP, thông tin thiết bị và dữ liệu tương tác với quảng cáo để phân phát và đo lường quảng cáo, chống gian lận. Tại những khu vực yêu cầu (ví dụ EEA, Vương quốc Anh), ứng dụng hiển thị biểu mẫu đồng ý của Google (UMP) trước khi tải quảng cáo; trên iOS bạn cũng có thể được hỏi quyền <strong>App Tracking Transparency</strong>. Nếu từ chối, quảng cáo vẫn hiển thị nhưng không được cá nhân hoá. Bạn có thể đổi lựa chọn trong Cài đặt thiết bị. Xem thêm <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" style=\"color: #f59e0b;\">cách Google sử dụng dữ liệu trong quảng cáo</a>.", en: "The App shows banner ads, interstitial ads (after a few runs) and rewarded ads (watch to revive, double coins or earn free coins) through <strong>Google AdMob</strong>. AdMob may collect and use your device advertising identifier, IP address, device information and ad-interaction data to serve and measure ads and prevent fraud. Where required (for example the EEA and the UK), the App shows Google's consent form (UMP) before loading ads; on iOS you may also be asked for <strong>App Tracking Transparency</strong> permission. If you decline, ads are still shown but are not personalised. You can change your choice in your device settings. See <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" style=\"color: #f59e0b;\">how Google uses data in advertising</a>." },
+            s1_h2: { vi: "1. Thông tin chúng tôi thu thập", en: "1. Information we collect" },
+            s2_warning: { vi: "Ứng dụng <strong>không truy cập</strong> danh bạ, vị trí, camera, thư viện ảnh hay micrô, và không yêu cầu quyền gửi thông báo.", en: "The App <strong>does not access</strong> your contacts, location, camera, photo library or microphone, and does not request notification permission." },
+            s2_h2: { vi: "2. Quyền truy cập thiết bị", en: "2. Device permissions" },
+            s3_p: { vi: "Wacky Hill Dash chơi được <strong>miễn phí</strong>. Ứng dụng có các gói mua tuỳ chọn:", en: "Wacky Hill Dash is <strong>free to play</strong>. The App offers optional purchases:" },
+            s3_li1: { vi: "<strong>Xoá quảng cáo</strong> và <strong>Starter Pack</strong> (mua một lần, không tự động gia hạn)", en: "<strong>Remove Ads</strong> and <strong>Starter Pack</strong> (one-time, non-renewing)" },
+            s3_li2: { vi: "Gói xu và gói đá quý (vật phẩm tiêu hao dùng trong game, không có giá trị quy đổi ra tiền thật)", en: "Coin packs and gem packs (consumable in-game items with no real-world cash value)" },
+            s3_li3: { vi: "Giao dịch được xử lý hoàn toàn bởi <strong>Apple App Store</strong> hoặc <strong>Google Play</strong>; chúng tôi không bao giờ thấy hay lưu số thẻ/thông tin thanh toán của bạn", en: "Payments are processed entirely by the <strong>Apple App Store</strong> or <strong>Google Play</strong>; we never see or store your card or payment details" },
+            s3_li4: { vi: "Giá, huỷ và hoàn tiền tuân theo chính sách của Apple/Google — xem <a href=\"terms.html\" style=\"color: #f59e0b;\">Điều khoản sử dụng</a>", en: "Pricing, cancellations and refunds follow Apple/Google policies — see the <a href=\"terms.html\" style=\"color: #f59e0b;\">Terms of Use</a>" },
+            s3_h2: { vi: "3. Mua hàng trong ứng dụng", en: "3. In-app purchases" },
+            s4_p: { vi: "Wacky Hill Dash chỉ sử dụng các dịch vụ bên thứ ba sau, đúng mục đích nêu dưới đây:", en: "Wacky Hill Dash uses only the following third-party services, strictly for the purposes below:" },
+            s4_th1: { vi: "Dịch vụ", en: "Service" },
+            s4_th2: { vi: "Mục đích", en: "Purpose" },
+            s4_row1: { vi: "Hiển thị quảng cáo và biểu mẫu đồng ý quyền riêng tư", en: "Serving ads and the privacy consent form" },
+            s4_row2: { vi: "Xử lý thanh toán mua hàng trong ứng dụng", en: "Processing in-app purchase payments" },
+            s4_p2: { vi: "Chúng tôi <strong>không bán</strong> dữ liệu người dùng cho bên thứ ba.", en: "We <strong>do not sell</strong> user data to third parties." },
+            s4_h2: { vi: "4. Dịch vụ bên thứ ba", en: "4. Third-party services" },
+            s5_p: { vi: "Wacky Hill Dash không hướng đến trẻ em dưới 13 tuổi và không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu bạn cho rằng trẻ đã cung cấp thông tin cho chúng tôi, vui lòng liên hệ để được xử lý/xoá.", en: "Wacky Hill Dash is not directed to children under 13 and we do not knowingly collect personal information from children. If you believe a child has provided information to us, please contact us so we can address it." },
+            s5_h2: { vi: "5. Quyền riêng tư trẻ em", en: "5. Children's privacy" },
+            s6_p: { vi: "Vì dữ liệu chơi chỉ nằm trên thiết bị của bạn, bạn toàn quyền kiểm soát:", en: "Because your game data lives only on your device, you stay in control:" },
+            s6_li1: { vi: "Xoá toàn bộ dữ liệu chơi bằng cách gỡ cài đặt ứng dụng", en: "Delete all game data by uninstalling the App" },
+            s6_li2: { vi: "Thay đổi lựa chọn quảng cáo/theo dõi bất cứ lúc nào trong Cài đặt thiết bị (ví dụ Quyền riêng tư & Bảo mật > Theo dõi trên iOS, hoặc cài đặt quảng cáo của Google trên Android)", en: "Change your ad/tracking choices anytime in your device settings (for example Privacy & Security > Tracking on iOS, or Google ad settings on Android)" },
+            s6_li3: { vi: "Liên hệ chúng tôi qua email bên dưới nếu có câu hỏi về quyền riêng tư", en: "Contact us at the email below with any privacy question" },
+            s6_warning: { vi: "Vì chúng tôi <strong>không lưu dữ liệu trên máy chủ</strong>, chúng tôi không thể khôi phục tiến trình đã mất khi bạn gỡ ứng dụng hoặc đổi thiết bị. Các gói đã mua có thể được khôi phục qua tài khoản Apple/Google của bạn.", en: "Because we <strong>do not store data on a server</strong>, we cannot restore progress lost when you uninstall the App or change devices. Purchases can be restored through your Apple/Google account." },
+            s6_h2: { vi: "6. Quyền của người dùng", en: "6. Your rights" },
+            s7_p: { vi: "Chính sách có thể được cập nhật theo thời gian; phiên bản mới nhất luôn được đăng tại trang này.", en: "This policy may be updated from time to time; the latest version is always posted on this page." },
+            s7_h2: { vi: "7. Thay đổi chính sách", en: "7. Changes to this policy" },
+            s8_intro: { vi: "Nếu bạn có câu hỏi, vui lòng liên hệ:", en: "If you have any questions, please contact us:" },
+            s8_h2: { vi: "8. Liên hệ", en: "8. Contact" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'en';
+        try { savedLang = localStorage.getItem('lang') || 'en'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>

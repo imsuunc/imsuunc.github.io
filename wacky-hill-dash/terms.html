@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Terms of Use - Wacky Hill Dash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f59e0b;
+        }
+
+        h1 {
+            color: #f59e0b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .update-date {
+            color: #a1a1aa;
+            font-style: italic;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        h2 {
+            color: #f59e0b;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #f59e0b;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5eead4;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #3f3f5a;
+            vertical-align: top;
+        }
+
+        th {
+            color: #f59e0b;
+            font-size: 0.95em;
+        }
+
+        td {
+            font-size: 0.95em;
+        }
+
+        .warning-box {
+            background: #4a3f00;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .info-section {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .contact-info {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            td {
+                padding-top: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a data-i18n="back_link" href="index.html" class="back-link">← Back to Wacky Hill Dash</a>
+
+        <header>
+            <h1 data-i18n="page_h1">📋 Terms of Use</h1>
+            <p data-i18n="page_subtitle">Wacky Hill Dash - Hill-Climb Driving Game</p>
+            <p data-i18n="update_date" class="update-date">Last updated: Oct 3, 2026</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <section>
+            <h2 data-i18n="s1_h2">1. Acceptance of Terms</h2>
+            <p data-i18n-html="s1_p">By downloading, installing and using <strong>Wacky Hill Dash</strong> (the "App"), you agree to these terms. If you do not agree, please do not use the App.</p>
+        </section>
+        <section>
+            <h2 data-i18n="s2_h2">2. License</h2>
+            <p data-i18n="s2_p">We grant you a personal, non-commercial right to use the App, on these terms:</p>
+            <ul>
+                <li data-i18n="s2_li1">Do not copy, modify, distribute or resell the App</li>
+                <li data-i18n="s2_li2">Do not reverse engineer or extract source code</li>
+                <li data-i18n="s2_li3">Do not use the App for unlawful purposes, cheating, or to interfere with ads (for example clicking ads yourself)</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-i18n="s3_h2">3. In-App Purchases &amp; Ads</h2>
+            <p data-i18n-html="s3_p">Wacky Hill Dash is <strong>free to play</strong>. The App shows ads through Google AdMob to keep it free, including rewarded ads you choose to watch in exchange for in-game rewards.</p>
+            <h3 data-i18n="s3_1_h3">3.1 In-app purchases</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-i18n="s3_1_th1">Item</th>
+                        <th data-i18n="s3_1_th2">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Remove Ads</td>
+                        <td data-i18n="s3_1_row1">One-time, permanent, non-renewing — removes interstitial and banner ads (rewarded ads remain optional)</td>
+                    </tr>
+                    <tr>
+                        <td>Starter Pack</td>
+                        <td data-i18n="s3_1_row2">One-time: coins, gems, premium paints and ad removal</td>
+                    </tr>
+                    <tr>
+                        <td>Coin / Gem packs</td>
+                        <td data-i18n="s3_1_row3">Consumable: adds coins or gems to your in-game balance and can be bought repeatedly</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 data-i18n="s3_2_h3">3.2 Payment &amp; refunds</h3>
+            <ul>
+                <li data-i18n="s3_2_li1">Payment is charged to your Apple ID / Google Play account when you confirm the purchase</li>
+                <li data-i18n="s3_2_li2">There are no subscriptions and no recurring charges</li>
+                <li data-i18n="s3_2_li3">Coins and gems are for in-game use only, have no cash value and cannot be transferred</li>
+                <li data-i18n="s3_2_li4">Refunds are handled by Apple or Google under their policies; we do not process refunds directly</li>
+                <li data-i18n="s3_2_li5">When you change devices you can restore non-consumable items (Remove Ads, Starter Pack) through your Apple/Google account. Coins and gems already spent or stored on a device cannot be restored</li>
+            </ul>
+            <div class="info-section">
+                <p data-i18n="s3_info">Prices may vary by region/currency as set by Apple/Google and may change over time; new prices do not apply to completed purchases.</p>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="s4_h2">4. Content &amp; Data</h2>
+            <h3 data-i18n="s4_1_h3">4.1 Intellectual Property</h3>
+            <ul>
+                <li data-i18n="s4_1_li1">All design, code, artwork and audio of the App belong to us or our licensors</li>
+                <li data-i18n="s4_1_li2">Users may not copy or redistribute the App content</li>
+            </ul>
+
+            <h3 data-i18n="s4_2_h3">4.2 Your Game Data</h3>
+            <ul>
+                <li data-i18n="s4_2_li1">Game progress is stored locally on your device and not sent to a server</li>
+                <li data-i18n="s4_2_li2">We are not responsible for loss of coins, gems or progress if you uninstall the App, clear its data or change devices</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-i18n="s5_h2">5. Disclaimer of Warranties</h2>
+            <p data-i18n="s5_p">The App is provided "AS IS" without warranties of any kind. We do not guarantee:</p>
+            <ul>
+                <li data-i18n="s5_li1">The App will run uninterrupted or error-free</li>
+                <li data-i18n="s5_li2">Rewarded ads will always be available</li>
+                <li data-i18n="s5_li3">Compatibility with every OS version or device</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-i18n="s6_h2">6. Limitation of Liability</h2>
+            <p data-i18n="s6_p">We are not liable for:</p>
+            <ul>
+                <li data-i18n="s6_li1">Loss of game data caused by you deleting or uninstalling the App</li>
+                <li data-i18n="s6_li2">Indirect damages arising from use of the App</li>
+                <li data-i18n="s6_li3">Payment or refund issues handled by the Apple App Store / Google Play</li>
+                <li data-i18n="s6_li4">The content of ads supplied by third parties</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-i18n="s7_h2">7. Changes to These Terms</h2>
+            <p data-i18n="s7_p">We may update these Terms, including prices and the contents of purchasable items. Changes take effect once posted on this page.</p>
+        </section>
+        <section>
+            <h2 data-i18n="s8_h2">8. Termination</h2>
+            <p data-i18n="s8_p">We may terminate or suspend your access if you violate these terms.</p>
+        </section>
+        <section>
+            <h2 data-i18n="s9_h2">9. Governing Law</h2>
+            <p data-i18n="s9_p">These terms are governed by the laws of Vietnam.</p>
+        </section>
+        <section>
+            <h2 data-i18n="s10_h2">10. Contact</h2>
+            <p data-i18n="s10_p">If you have questions about these Terms of Use, please contact us:</p>
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+                <p><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/wacky-hill-dash/">https://imsuunc.github.io/wacky-hill-dash/</a></p>
+                <p data-i18n-html="s10_support"><strong>📞 Support page:</strong> <a href="support.html">https://imsuunc.github.io/wacky-hill-dash/support.html</a></p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Điều Khoản Sử Dụng - Wacky Hill Dash", en: "Terms of Use - Wacky Hill Dash" },
+            back_link: { vi: "← Quay lại trang Wacky Hill Dash", en: "← Back to Wacky Hill Dash" },
+            page_h1: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
+            page_subtitle: { vi: "Wacky Hill Dash - Trò Chơi Lái Xe Vượt Đồi Vui Nhộn", en: "Wacky Hill Dash - Hill-Climb Driving Game" },
+            update_date: { vi: "Cập nhật lần cuối: 03/10/2026", en: "Last updated: Oct 3, 2026" },
+            s1_p: { vi: "Bằng việc tải xuống, cài đặt và sử dụng <strong>Wacky Hill Dash</strong> (\"Ứng dụng\"), bạn đồng ý với các điều khoản này. Nếu không đồng ý, vui lòng không sử dụng Ứng dụng.", en: "By downloading, installing and using <strong>Wacky Hill Dash</strong> (the \"App\"), you agree to these terms. If you do not agree, please do not use the App." },
+            s1_h2: { vi: "1. Chấp Nhận Điều Khoản", en: "1. Acceptance of Terms" },
+            s2_p: { vi: "Chúng tôi cấp cho bạn quyền sử dụng Ứng dụng cho mục đích cá nhân, phi thương mại:", en: "We grant you a personal, non-commercial right to use the App, on these terms:" },
+            s2_li1: { vi: "Không sao chép, sửa đổi, phân phối hoặc bán lại Ứng dụng", en: "Do not copy, modify, distribute or resell the App" },
+            s2_li2: { vi: "Không dịch ngược hoặc trích xuất mã nguồn", en: "Do not reverse engineer or extract source code" },
+            s2_li3: { vi: "Không dùng Ứng dụng cho mục đích bất hợp pháp, không gian lận hoặc can thiệp vào quảng cáo (ví dụ tự bấm quảng cáo)", en: "Do not use the App for unlawful purposes, cheating, or to interfere with ads (for example clicking ads yourself)" },
+            s2_h2: { vi: "2. Giấy Phép Sử Dụng", en: "2. License" },
+            s3_p: { vi: "Wacky Hill Dash chơi được <strong>miễn phí</strong>. Ứng dụng hiển thị quảng cáo thông qua Google AdMob để duy trì dịch vụ miễn phí, bao gồm quảng cáo thưởng mà bạn chủ động chọn xem để nhận phần thưởng trong game.", en: "Wacky Hill Dash is <strong>free to play</strong>. The App shows ads through Google AdMob to keep it free, including rewarded ads you choose to watch in exchange for in-game rewards." },
+            s3_1_h3: { vi: "3.1 Các gói mua trong ứng dụng", en: "3.1 In-app purchases" },
+            s3_1_th1: { vi: "Gói", en: "Item" },
+            s3_1_th2: { vi: "Hình thức", en: "Type" },
+            s3_1_row1: { vi: "Mua một lần, vĩnh viễn, không gia hạn — bỏ quảng cáo toàn màn hình và banner (quảng cáo thưởng vẫn tuỳ chọn)", en: "One-time, permanent, non-renewing — removes interstitial and banner ads (rewarded ads remain optional)" },
+            s3_1_row2: { vi: "Mua một lần: xu, đá quý, màu sơn cao cấp và bỏ quảng cáo", en: "One-time: coins, gems, premium paints and ad removal" },
+            s3_1_row3: { vi: "Vật phẩm tiêu hao: cộng xu hoặc đá quý vào tài khoản trong game, có thể mua nhiều lần", en: "Consumable: adds coins or gems to your in-game balance and can be bought repeatedly" },
+            s3_2_h3: { vi: "3.2 Thanh toán & hoàn tiền", en: "3.2 Payment & refunds" },
+            s3_2_li1: { vi: "Khoản thanh toán được trừ vào tài khoản Apple ID / Google Play của bạn khi xác nhận mua", en: "Payment is charged to your Apple ID / Google Play account when you confirm the purchase" },
+            s3_2_li2: { vi: "Không có gói đăng ký; không phát sinh phí định kỳ", en: "There are no subscriptions and no recurring charges" },
+            s3_2_li3: { vi: "Xu và đá quý chỉ dùng trong game, không có giá trị quy đổi ra tiền và không thể chuyển nhượng", en: "Coins and gems are for in-game use only, have no cash value and cannot be transferred" },
+            s3_2_li4: { vi: "Hoàn tiền do Apple hoặc Google xử lý theo chính sách của họ; chúng tôi không trực tiếp xử lý hoàn tiền", en: "Refunds are handled by Apple or Google under their policies; we do not process refunds directly" },
+            s3_2_li5: { vi: "Khi đổi thiết bị, bạn có thể khôi phục các gói không tiêu hao (Remove Ads, Starter Pack) qua tài khoản Apple/Google. Xu và đá quý đã dùng hoặc đang lưu trên máy không thể khôi phục", en: "When you change devices you can restore non-consumable items (Remove Ads, Starter Pack) through your Apple/Google account. Coins and gems already spent or stored on a device cannot be restored" },
+            s3_info: { vi: "Giá hiển thị có thể khác nhau theo khu vực/loại tiền tệ theo quy định của Apple/Google và có thể thay đổi; giá mới không áp dụng cho giao dịch đã hoàn tất.", en: "Prices may vary by region/currency as set by Apple/Google and may change over time; new prices do not apply to completed purchases." },
+            s3_h2: { vi: "3. Mua Hàng Trong Ứng Dụng & Quảng Cáo", en: "3. In-App Purchases & Ads" },
+            s4_1_h3: { vi: "4.1 Quyền Sở Hữu Trí Tuệ", en: "4.1 Intellectual Property" },
+            s4_1_li1: { vi: "Toàn bộ thiết kế, mã nguồn, hình ảnh và âm thanh của Ứng dụng thuộc sở hữu của chúng tôi hoặc bên cấp phép", en: "All design, code, artwork and audio of the App belong to us or our licensors" },
+            s4_1_li2: { vi: "Người dùng không được sao chép hoặc phân phối lại nội dung của Ứng dụng", en: "Users may not copy or redistribute the App content" },
+            s4_2_h3: { vi: "4.2 Dữ Liệu Chơi Của Bạn", en: "4.2 Your Game Data" },
+            s4_2_li1: { vi: "Tiến trình chơi được lưu cục bộ trên thiết bị, không gửi lên máy chủ", en: "Game progress is stored locally on your device and not sent to a server" },
+            s4_2_li2: { vi: "Chúng tôi không chịu trách nhiệm về việc mất xu, đá quý hay tiến trình khi bạn gỡ ứng dụng, xoá dữ liệu hoặc đổi thiết bị", en: "We are not responsible for loss of coins, gems or progress if you uninstall the App, clear its data or change devices" },
+            s4_h2: { vi: "4. Nội Dung & Dữ Liệu", en: "4. Content & Data" },
+            s5_p: { vi: "Ứng dụng được cung cấp \"nguyên trạng\" (AS IS) mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo:", en: "The App is provided \"AS IS\" without warranties of any kind. We do not guarantee:" },
+            s5_li1: { vi: "Ứng dụng hoạt động không gián đoạn hoặc không có lỗi", en: "The App will run uninterrupted or error-free" },
+            s5_li2: { vi: "Quảng cáo luôn sẵn sàng để nhận phần thưởng", en: "Rewarded ads will always be available" },
+            s5_li3: { vi: "Tương thích với mọi phiên bản hệ điều hành hoặc thiết bị", en: "Compatibility with every OS version or device" },
+            s5_h2: { vi: "5. Từ Chối Bảo Hành", en: "5. Disclaimer of Warranties" },
+            s6_p: { vi: "Chúng tôi không chịu trách nhiệm về:", en: "We are not liable for:" },
+            s6_li1: { vi: "Mất dữ liệu chơi do người dùng tự xoá hoặc gỡ ứng dụng", en: "Loss of game data caused by you deleting or uninstalling the App" },
+            s6_li2: { vi: "Thiệt hại gián tiếp phát sinh từ việc sử dụng Ứng dụng", en: "Indirect damages arising from use of the App" },
+            s6_li3: { vi: "Vấn đề thanh toán hoặc hoàn tiền thuộc phạm vi Apple App Store / Google Play", en: "Payment or refund issues handled by the Apple App Store / Google Play" },
+            s6_li4: { vi: "Nội dung của quảng cáo do bên thứ ba cung cấp", en: "The content of ads supplied by third parties" },
+            s6_h2: { vi: "6. Giới Hạn Trách Nhiệm", en: "6. Limitation of Liability" },
+            s7_p: { vi: "Chúng tôi có quyền cập nhật Điều khoản này, kể cả giá và nội dung các gói. Thay đổi có hiệu lực ngay khi được đăng tại trang này.", en: "We may update these Terms, including prices and the contents of purchasable items. Changes take effect once posted on this page." },
+            s7_h2: { vi: "7. Thay Đổi Điều Khoản", en: "7. Changes to These Terms" },
+            s8_p: { vi: "Chúng tôi có quyền chấm dứt hoặc tạm ngưng quyền truy cập của bạn nếu vi phạm các điều khoản.", en: "We may terminate or suspend your access if you violate these terms." },
+            s8_h2: { vi: "8. Chấm Dứt Sử Dụng", en: "8. Termination" },
+            s9_p: { vi: "Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam.", en: "These terms are governed by the laws of Vietnam." },
+            s9_h2: { vi: "9. Luật Áp Dụng", en: "9. Governing Law" },
+            s10_p: { vi: "Nếu có câu hỏi về Điều Khoản Sử Dụng, vui lòng liên hệ:", en: "If you have questions about these Terms of Use, please contact us:" },
+            s10_support: { vi: "<strong>📞 Trang hỗ trợ:</strong> <a href=\"support.html\">https://imsuunc.github.io/wacky-hill-dash/support.html</a>", en: "<strong>📞 Support page:</strong> <a href=\"support.html\">https://imsuunc.github.io/wacky-hill-dash/support.html</a>" },
+            s10_h2: { vi: "10. Liên Hệ", en: "10. Contact" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'en';
+        try { savedLang = localStorage.getItem('lang') || 'en'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>

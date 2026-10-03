@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Support - Wacky Hill Dash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e4e4e7;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1f1f2e;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f59e0b;
+        }
+
+        h1 {
+            color: #f59e0b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lang-toggle button {
+            background: #2a2a3e;
+            color: #a1a1aa;
+            border: 1px solid #3f3f5a;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        h2 {
+            color: #f59e0b;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #f59e0b;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5eead4;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .faq-item h3 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .links-section {
+            background: #2a2a3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .links-section a {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .links-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3f3f5a;
+            color: #a1a1aa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a data-i18n="back_link" href="index.html" class="back-link">← Back to Wacky Hill Dash</a>
+
+        <header>
+            <h1 data-i18n="page_h1">📞 Support</h1>
+            <p data-i18n="page_subtitle">Wacky Hill Dash - Hill-Climb Driving Game</p>
+            <div class="lang-toggle">
+                <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
+                <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
+
+        <section>
+            <h2 data-i18n="contact_h2">Contact Support</h2>
+            <p data-i18n="contact_p">We're always here to help! If you have a question or run into a problem, reach out by email:</p>
+            <div class="contact-box">
+                <h3 data-i18n="contact_box_h3">📧 Support Email</h3>
+                <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>
+                <p data-i18n="contact_response_time" style="margin-top: 15px; font-size: 0.9em;">Response time: Within 24-48 business hours</p>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="faq_h2">Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-item">
+                <h3 data-i18n="faq1_q">1. How do I play?</h3>
+                <ul>
+                    <li data-i18n="faq1_a1">Hold GAS to accelerate and BRAKE to slow down or reverse, and balance the car on slopes</li>
+                    <li data-i18n="faq1_a2">Collect coins, gems and fuel cans; the run ends when you run out of fuel</li>
+                    <li data-i18n="faq1_a3">Spend coins in TUNE to upgrade your car, and use GARAGE to change vehicle, paint and area</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq2_q">2. Does the game need an internet connection?</h3>
+                <ul>
+                    <li data-i18n="faq2_a1">No, you can play fully offline</li>
+                    <li data-i18n="faq2_a2">A connection is only needed to load ads or process purchases</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq3_q">3. How do rewarded ads work?</h3>
+                <ul>
+                    <li data-i18n="faq3_a1">You can choose to watch an ad to revive, double your coins after a run, or earn free coins in the SHOP</li>
+                    <li data-i18n="faq3_a2">If no ad is ready, please try again in a few minutes</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq4_q">4. How do I remove ads / restore purchases?</h3>
+                <ul>
+                    <li data-i18n="faq4_a1">Buy Remove Ads or the Starter Pack in the SHOP</li>
+                    <li data-i18n="faq4_a2">After changing devices or reinstalling, use the restore-purchases button in the SHOP with the same Apple/Google account</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq5_q">5. I lost my coins/gems after reinstalling?</h3>
+                <ul>
+                    <li data-i18n="faq5_a1">Game data is stored only on your device, so uninstalling erases progress and it cannot be restored</li>
+                    <li data-i18n="faq5_a2">Non-consumable purchases can be restored; coins and gems cannot</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3 data-i18n="faq6_q">6. Does the game collect personal information?</h3>
+                <ul>
+                    <li data-i18n="faq6_a1">No account is required and progress stays on your device; ads served by Google AdMob may use an advertising identifier according to your consent choice</li>
+                    <li data-i18n-html="faq6_a2">See the <a href="privacy.html" style="color: #f59e0b;">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="bugreport_h2">Report a Bug</h2>
+            <p data-i18n="bugreport_p">If you hit a bug, please email us with:</p>
+            <ul>
+                <li data-i18n="bugreport_li1">A description of the bug (which vehicle/area, what you were doing)</li>
+                <li data-i18n="bugreport_li2">Device model and OS version</li>
+                <li data-i18n="bugreport_li3">A screenshot (if any)</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-i18n="feedback_h2">Feedback &amp; Feature Requests</h2>
+            <p data-i18n="feedback_p">We would love to hear your ideas for new vehicles, areas, hazards or difficulty balance!</p>
+        </section>
+        <section>
+            <h2 data-i18n="moreinfo_h2">More Information</h2>
+            <div class="links-section">
+                <p data-i18n-html="moreinfo_docs_label"><strong>📄 Important documents:</strong></p>
+                <ul style="margin-left: 0; list-style: none;">
+                    <li data-i18n-html="moreinfo_privacy_link" style="margin: 10px 0;">→ <a href="privacy.html">Privacy Policy</a></li>
+                    <li data-i18n-html="moreinfo_terms_link" style="margin: 10px 0;">→ <a href="terms.html">Terms of Use</a></li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>🌐 Website:</strong> <a href="https://imsuunc.github.io/wacky-hill-dash/">https://imsuunc.github.io/wacky-hill-dash/</a></p>
+                <p><strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a></p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
+            <p data-i18n="footer_updated" style="margin-top: 10px;">Last updated: Oct 3, 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        var translations = {
+            page_title: { vi: "Hỗ Trợ - Wacky Hill Dash", en: "Support - Wacky Hill Dash" },
+            back_link: { vi: "← Quay lại trang Wacky Hill Dash", en: "← Back to Wacky Hill Dash" },
+            page_h1: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
+            page_subtitle: { vi: "Wacky Hill Dash - Trò Chơi Lái Xe Vượt Đồi Vui Nhộn", en: "Wacky Hill Dash - Hill-Climb Driving Game" },
+            contact_p: { vi: "Chúng tôi luôn sẵn sàng hỗ trợ! Nếu bạn có câu hỏi hoặc gặp vấn đề, hãy liên hệ qua email:", en: "We're always here to help! If you have a question or run into a problem, reach out by email:" },
+            contact_box_h3: { vi: "📧 Email Hỗ Trợ", en: "📧 Support Email" },
+            contact_response_time: { vi: "Thời gian phản hồi: Trong vòng 24-48 giờ làm việc", en: "Response time: Within 24-48 business hours" },
+            contact_h2: { vi: "Liên Hệ Hỗ Trợ", en: "Contact Support" },
+            faq1_q: { vi: "1. Làm sao để chơi?", en: "1. How do I play?" },
+            faq1_a1: { vi: "Giữ nút GAS để tăng tốc và BRAKE để phanh/lùi, điều chỉnh để giữ xe thăng bằng trên dốc", en: "Hold GAS to accelerate and BRAKE to slow down or reverse, and balance the car on slopes" },
+            faq1_a2: { vi: "Nhặt xu, đá quý và bình xăng; hết xăng là kết thúc chuyến đi", en: "Collect coins, gems and fuel cans; the run ends when you run out of fuel" },
+            faq1_a3: { vi: "Dùng xu ở mục TUNE để nâng cấp xe, và GARAGE để đổi xe, màu sơn, khu vực", en: "Spend coins in TUNE to upgrade your car, and use GARAGE to change vehicle, paint and area" },
+            faq2_q: { vi: "2. Trò chơi có cần kết nối mạng không?", en: "2. Does the game need an internet connection?" },
+            faq2_a1: { vi: "Không, bạn có thể chơi hoàn toàn ngoại tuyến", en: "No, you can play fully offline" },
+            faq2_a2: { vi: "Mạng chỉ cần để tải quảng cáo hoặc xử lý giao dịch mua", en: "A connection is only needed to load ads or process purchases" },
+            faq3_q: { vi: "3. Quảng cáo thưởng hoạt động thế nào?", en: "3. How do rewarded ads work?" },
+            faq3_a1: { vi: "Bạn có thể chọn xem quảng cáo để hồi sinh, nhân đôi xu sau chuyến đi hoặc nhận xu miễn phí trong SHOP", en: "You can choose to watch an ad to revive, double your coins after a run, or earn free coins in the SHOP" },
+            faq3_a2: { vi: "Nếu quảng cáo chưa sẵn sàng, hãy thử lại sau ít phút", en: "If no ad is ready, please try again in a few minutes" },
+            faq4_q: { vi: "4. Làm sao để bỏ quảng cáo / khôi phục giao dịch?", en: "4. How do I remove ads / restore purchases?" },
+            faq4_a1: { vi: "Mua Remove Ads hoặc Starter Pack trong SHOP", en: "Buy Remove Ads or the Starter Pack in the SHOP" },
+            faq4_a2: { vi: "Khi đổi máy hoặc cài lại, dùng nút khôi phục giao dịch trong SHOP với cùng tài khoản Apple/Google", en: "After changing devices or reinstalling, use the restore-purchases button in the SHOP with the same Apple/Google account" },
+            faq5_q: { vi: "5. Tôi mất xu/đá quý sau khi cài lại app?", en: "5. I lost my coins/gems after reinstalling?" },
+            faq5_a1: { vi: "Dữ liệu chơi chỉ lưu trên máy nên gỡ cài đặt sẽ xoá tiến trình và không thể khôi phục", en: "Game data is stored only on your device, so uninstalling erases progress and it cannot be restored" },
+            faq5_a2: { vi: "Các gói không tiêu hao có thể khôi phục; xu và đá quý thì không", en: "Non-consumable purchases can be restored; coins and gems cannot" },
+            faq6_q: { vi: "6. Trò chơi có thu thập thông tin cá nhân không?", en: "6. Does the game collect personal information?" },
+            faq6_a1: { vi: "Không cần tài khoản và tiến trình chơi chỉ lưu trên máy bạn; quảng cáo do Google AdMob cung cấp có thể dùng mã định danh quảng cáo theo lựa chọn đồng ý của bạn", en: "No account is required and progress stays on your device; ads served by Google AdMob may use an advertising identifier according to your consent choice" },
+            faq6_a2: { vi: "Xem <a href=\"privacy.html\" style=\"color: #f59e0b;\">Chính Sách Quyền Riêng Tư</a>", en: "See the <a href=\"privacy.html\" style=\"color: #f59e0b;\">Privacy Policy</a>" },
+            faq_h2: { vi: "Câu Hỏi Thường Gặp (FAQ)", en: "Frequently Asked Questions (FAQ)" },
+            bugreport_p: { vi: "Nếu gặp lỗi, vui lòng gửi email kèm theo:", en: "If you hit a bug, please email us with:" },
+            bugreport_li1: { vi: "Mô tả lỗi (đang chơi ở xe/khu vực nào, thao tác gì)", en: "A description of the bug (which vehicle/area, what you were doing)" },
+            bugreport_li2: { vi: "Thiết bị và phiên bản hệ điều hành", en: "Device model and OS version" },
+            bugreport_li3: { vi: "Ảnh chụp màn hình (nếu có)", en: "A screenshot (if any)" },
+            bugreport_h2: { vi: "Báo Lỗi", en: "Report a Bug" },
+            feedback_p: { vi: "Chúng tôi rất mong nhận ý kiến của bạn về xe mới, khu vực mới, chướng ngại hay cân bằng độ khó!", en: "We would love to hear your ideas for new vehicles, areas, hazards or difficulty balance!" },
+            feedback_h2: { vi: "Góp Ý & Đề Xuất Tính Năng", en: "Feedback & Feature Requests" },
+            moreinfo_docs_label: { vi: "<strong>📄 Tài liệu quan trọng:</strong>", en: "<strong>📄 Important documents:</strong>" },
+            moreinfo_privacy_link: { vi: "→ <a href=\"privacy.html\">Chính Sách Quyền Riêng Tư</a>", en: "→ <a href=\"privacy.html\">Privacy Policy</a>" },
+            moreinfo_terms_link: { vi: "→ <a href=\"terms.html\">Điều Khoản Sử Dụng</a>", en: "→ <a href=\"terms.html\">Terms of Use</a>" },
+            moreinfo_h2: { vi: "Thông Tin Thêm", en: "More Information" },
+            footer_updated: { vi: "Cập nhật lần cuối: 03/10/2026", en: "Last updated: Oct 3, 2026" }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.textContent = entry[lang]; }
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n-html');
+                var entry = translations[key];
+                if (entry && entry[lang] !== undefined) { el.innerHTML = entry[lang]; }
+            });
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+        var savedLang = 'en';
+        try { savedLang = localStorage.getItem('lang') || 'en'; } catch (e) {}
+        setLang(savedLang);
+    </script>
+</body>
+</html>
