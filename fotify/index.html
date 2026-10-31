@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">Fotify - Chỉnh Sửa Ảnh Bằng AI | IMSUUNC</title>
+    <title data-i18n="page_title">Fotolayra - Sửa Ảnh Theo Lớp | IMSUUNC</title>
     <style>
         * {
             margin: 0;
@@ -186,8 +186,8 @@
         <a href="../index.html" style="color: #8b9cff; text-decoration: none; font-weight: 500;" data-i18n="back_link">← Tất cả ứng dụng của IMSUUNC</a>
 
         <header style="margin-top: 20px;">
-            <h1 data-i18n="hero_title">🖼️ Fotify - Chỉnh Sửa Ảnh Bằng AI</h1>
-            <p class="subtitle" data-i18n="hero_subtitle">Chỉnh sửa ảnh với layer, sticker, chữ, bộ lọc và các công cụ AI xoá nền, tăng độ phân giải — xử lý ngay trên điện thoại</p>
+            <h1 data-i18n="hero_title">🖼️ Fotolayra - Sửa Ảnh Theo Lớp</h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Biến mọi ảnh thành các lớp: tách người, vật, chữ và nền để sửa riêng, đặt ảnh vào mockup và lưu thành PSD — ngay trên iPhone và iPad</p>
             <div class="lang-toggle">
                 <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
                 <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
@@ -203,9 +203,11 @@
         <section>
             <h2 data-i18n="about_h2">Về Ứng Dụng</h2>
             <p data-i18n-html="about_p">
-                <strong>Fotify</strong> là ứng dụng chỉnh sửa ảnh ngay trên điện thoại: thêm layer vẽ, sticker, chữ
-                và ảnh, áp dụng bộ lọc với cường độ tuỳ chỉnh, và dùng công cụ AI để xoá nền hoặc tăng độ phân giải
-                ảnh lên 2x/4x. Các công cụ AI xử lý ngay trên máy, không cần tài khoản.
+                <strong>Fotolayra</strong> (trước đây là Fotify) là trình sửa ảnh theo lớp cho iPhone và iPad. Một chạm
+                tách từng người, từng vật thành lớp riêng, biến chữ trong ảnh thành lớp chữ gõ lại được và dựng lại
+                phần nền phía sau, tất cả xử lý ngay trên máy. Mỗi ảnh là một tài liệu nhiều lớp (ảnh, chữ, hình, lớp
+                tô màu và lớp điều chỉnh) mà bạn sắp xếp, tạo mặt nạ và sửa lại bất cứ lúc nào, rồi mang sang máy tính
+                dưới dạng file PSD hoặc ORA giữ nguyên lớp. Không quảng cáo, không cần tài khoản.
             </p>
 
             <span class="status-badge" data-i18n="status_soon">🚀 Sắp ra mắt trên App Store</span>
@@ -215,36 +217,40 @@
             <h2 data-i18n="features_h2">Tính Năng Nổi Bật</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h3 data-i18n="feature1_title">🧩 Chỉnh Sửa Theo Layer</h3>
-                    <p data-i18n="feature1_desc">Thêm và sắp xếp nhiều layer vẽ, sticker, chữ và ảnh chồng lên nhau, di chuyển/xoay/đổi kích thước độc lập từng layer</p>
+                    <h3 data-i18n="feature1_title">🪄 Tách Lớp Ảnh</h3>
+                    <p data-i18n="feature1_desc">Một chạm tách mỗi người, thú cưng hay đồ vật thành lớp riêng; chữ trong ảnh thành lớp chữ gõ lại được; phần nền phía sau được dựng lại</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="feature2_title">🎨 Bộ Lọc &amp; Cường Độ</h3>
-                    <p data-i18n="feature2_desc">Bộ sưu tập bộ lọc màu dựng sẵn, tuỳ chỉnh cường độ áp dụng theo ý muốn</p>
+                    <h3 data-i18n="feature2_title">📂 PSD &amp; ORA Hai Chiều</h3>
+                    <p data-i18n="feature2_desc">Mở file PSD, ORA giữ nguyên nhóm, mặt nạ và tên lớp, sửa trên điện thoại rồi lưu lại đúng định dạng</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="feature3_title">✂️ Xoá Nền Bằng AI</h3>
-                    <p data-i18n="feature3_desc">Tách chủ thể khỏi nền chỉ trong một chạm, xử lý bằng mô hình AI ngay trên thiết bị</p>
+                    <h3 data-i18n="feature3_title">🖼️ Mockup</h3>
+                    <p data-i18n="feature3_desc">Đặt ảnh vào màn hình, tranh in hay mẫu có sẵn theo đúng phối cảnh; làm cả bộ ảnh, mỗi ảnh một mockup</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="feature4_title">🔍 Tăng Độ Phân Giải AI</h3>
-                    <p data-i18n="feature4_desc">Nâng cấp ảnh lên độ phân giải 2x hoặc 4x bằng mô hình AI xử lý ngay trên máy</p>
+                    <h3 data-i18n="feature4_title">🧩 Lớp &amp; Mặt Nạ</h3>
+                    <p data-i18n="feature4_desc">Lớp ảnh, chữ, hình, vector, lớp điều chỉnh; nhóm lồng nhau, clipping mask, 16 chế độ hoà trộn và hiệu ứng lớp</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="feature5_title">✨ Sticker &amp; Chữ</h3>
-                    <p data-i18n="feature5_desc">Thêm sticker, chữ với nhiều font và hiệu ứng để làm nổi bật bức ảnh của bạn</p>
+                    <h3 data-i18n="feature5_title">✂️ Vùng Chọn</h3>
+                    <p data-i18n="feature5_desc">Chọn khung, lasso, đũa thần, chọn nhanh và chọn chủ thể ngay trên máy; tinh chỉnh cạnh và lấp từ vùng xung quanh</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="feature6_title">✍️ Vẽ Tự Do</h3>
-                    <p data-i18n="feature6_desc">Vẽ trực tiếp lên ảnh với công cụ bút vẽ linh hoạt, kết hợp cùng các layer khác</p>
+                    <h3 data-i18n="feature6_title">🩹 Retouch &amp; Vẽ</h3>
+                    <p data-i18n="feature6_desc">Hàn điểm, con dấu sao chép, hoá lỏng, làm sáng/tối, cọ vẽ, gradient; hỗ trợ lực nhấn Apple Pencil trên iPad</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="feature7_title">💎 Fotify Premium</h3>
-                    <p data-i18n="feature7_desc">Nâng cấp Premium (gói tháng/năm) để tắt toàn bộ quảng cáo, mọi tính năng chỉnh sửa vẫn dùng miễn phí</p>
+                    <h3 data-i18n="feature7_title">🎨 Bộ Lọc Trực Tiếp</h3>
+                    <p data-i18n="feature7_desc">77 điều chỉnh và bộ lọc như Levels, Curves, Gradient Map, LUT 3D — luôn sửa, ẩn hoặc xoá lại được</p>
                 </div>
                 <div class="feature-card">
-                    <h3 data-i18n="feature8_title">📤 Lưu Ảnh Chất Lượng Cao</h3>
-                    <p data-i18n="feature8_desc">Lưu ảnh đã chỉnh sửa trực tiếp vào Thư viện ảnh của máy</p>
+                    <h3 data-i18n="feature8_title">⚡ Chỉnh Hàng Loạt &amp; Mẫu</h3>
+                    <p data-i18n="feature8_desc">Lưu một phong cách thành công thức để áp cho cả bộ ảnh; mẫu nhiều lớp cho cưới, chân dung và sản phẩm</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature9_title">💎 Fotolayra Pro</h3>
+                    <p data-i18n="feature9_desc">Gói tháng/năm tuỳ chọn: tách nền không giới hạn, xuất PSD/ORA giữ lớp và bỏ hình mờ khi xuất. Các công cụ chỉnh sửa còn lại đều miễn phí</p>
                 </div>
             </div>
         </section>
@@ -276,17 +282,17 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;" data-i18n="footer_updated">Cập nhật lần cuối: 01/09/2026</p>
+            <p style="margin-top: 10px;" data-i18n="footer_updated">Cập nhật lần cuối: 31/10/2026</p>
         </footer>
     </div>
 
     <script>
         var translations = {
-            page_title: { vi: "Fotify - Chỉnh Sửa Ảnh Bằng AI | IMSUUNC", en: "Fotify - AI Photo Editor | IMSUUNC" },
+            page_title: { vi: "Fotolayra - Sửa Ảnh Theo Lớp | IMSUUNC", en: "Fotolayra - Layer Photo Editor | IMSUUNC" },
             back_link: { vi: "← Tất cả ứng dụng của IMSUUNC", en: "← All apps by IMSUUNC" },
 
-            hero_title: { vi: "🖼️ Fotify - Chỉnh Sửa Ảnh Bằng AI", en: "🖼️ Fotify - AI Photo Editor" },
-            hero_subtitle: { vi: "Chỉnh sửa ảnh với layer, sticker, chữ, bộ lọc và các công cụ AI xoá nền, tăng độ phân giải — xử lý ngay trên điện thoại", en: "Edit photos with layers, stickers, text, filters, and AI tools for background removal and upscaling — all processed right on your phone" },
+            hero_title: { vi: "🖼️ Fotolayra - Sửa Ảnh Theo Lớp", en: "🖼️ Fotolayra - Layer Photo Editor" },
+            hero_subtitle: { vi: "Biến mọi ảnh thành các lớp: tách người, vật, chữ và nền để sửa riêng, đặt ảnh vào mockup và lưu thành PSD — ngay trên iPhone và iPad", en: "Turn any photo into layers: split out people, objects, text and background to edit on their own, drop photos into mockups and save as PSD — right on iPhone and iPad" },
 
             nav_support: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
             nav_privacy: { vi: "🔒 Quyền Riêng Tư", en: "🔒 Privacy" },
@@ -294,37 +300,40 @@
 
             about_h2: { vi: "Về Ứng Dụng", en: "About the App" },
             about_p: {
-                vi: "<strong>Fotify</strong> là ứng dụng chỉnh sửa ảnh ngay trên điện thoại: thêm layer vẽ, sticker, chữ và ảnh, áp dụng bộ lọc với cường độ tuỳ chỉnh, và dùng công cụ AI để xoá nền hoặc tăng độ phân giải ảnh lên 2x/4x. Các công cụ AI xử lý ngay trên máy, không cần tài khoản.",
-                en: "<strong>Fotify</strong> is a photo editor right on your phone: add drawing, sticker, text, and image layers, apply filters with adjustable intensity, and use AI tools to remove backgrounds or upscale photos 2x/4x. AI tools are processed on-device, no account required."
+                vi: "<strong>Fotolayra</strong> (trước đây là Fotify) là trình sửa ảnh theo lớp cho iPhone và iPad. Một chạm tách từng người, từng vật thành lớp riêng, biến chữ trong ảnh thành lớp chữ gõ lại được và dựng lại phần nền phía sau, tất cả xử lý ngay trên máy. Mỗi ảnh là một tài liệu nhiều lớp (ảnh, chữ, hình, lớp tô màu và lớp điều chỉnh) mà bạn sắp xếp, tạo mặt nạ và sửa lại bất cứ lúc nào, rồi mang sang máy tính dưới dạng file PSD hoặc ORA giữ nguyên lớp. Không quảng cáo, không cần tài khoản.",
+                en: "<strong>Fotolayra</strong> (formerly Fotify) is a layer photo editor for iPhone and iPad. One tap gives every person and object its own layer, turns the text in the photo into live text you can retype, and rebuilds the background behind them, all on your device. Every photo becomes a layered document (image, text, shape, fill and adjustment layers) that you can arrange, mask and re-edit at any time, then take to your computer as a layered PSD or ORA file. No ads, no account."
             },
 
             status_soon: { vi: "🚀 Sắp ra mắt trên App Store", en: "🚀 Coming soon on the App Store" },
 
             features_h2: { vi: "Tính Năng Nổi Bật", en: "Key Features" },
 
-            feature1_title: { vi: "🧩 Chỉnh Sửa Theo Layer", en: "🧩 Layer-Based Editing" },
-            feature1_desc: { vi: "Thêm và sắp xếp nhiều layer vẽ, sticker, chữ và ảnh chồng lên nhau, di chuyển/xoay/đổi kích thước độc lập từng layer", en: "Add and arrange multiple drawing, sticker, text, and image layers, moving/rotating/resizing each layer independently" },
+            feature1_title: { vi: "🪄 Tách Lớp Ảnh", en: "🪄 Photo to Layers" },
+            feature1_desc: { vi: "Một chạm tách mỗi người, thú cưng hay đồ vật thành lớp riêng; chữ trong ảnh thành lớp chữ gõ lại được; phần nền phía sau được dựng lại", en: "One tap gives each person, pet or object its own layer; text in the photo becomes live, retypable text; the background behind them is rebuilt" },
 
-            feature2_title: { vi: "🎨 Bộ Lọc & Cường Độ", en: "🎨 Filters & Intensity" },
-            feature2_desc: { vi: "Bộ sưu tập bộ lọc màu dựng sẵn, tuỳ chỉnh cường độ áp dụng theo ý muốn", en: "A collection of ready-made color filters with adjustable intensity" },
+            feature2_title: { vi: "📂 PSD & ORA Hai Chiều", en: "📂 PSD & ORA Both Ways" },
+            feature2_desc: { vi: "Mở file PSD, ORA giữ nguyên nhóm, mặt nạ và tên lớp, sửa trên điện thoại rồi lưu lại đúng định dạng", en: "Open PSD and ORA files with groups, masks and layer names intact, edit on your phone and save them back in the same format" },
 
-            feature3_title: { vi: "✂️ Xoá Nền Bằng AI", en: "✂️ AI Background Removal" },
-            feature3_desc: { vi: "Tách chủ thể khỏi nền chỉ trong một chạm, xử lý bằng mô hình AI ngay trên thiết bị", en: "Separate the subject from the background in one tap, processed by an AI model right on your device" },
+            feature3_title: { vi: "🖼️ Mockup", en: "🖼️ Mockups" },
+            feature3_desc: { vi: "Đặt ảnh vào màn hình, tranh in hay mẫu có sẵn theo đúng phối cảnh; làm cả bộ ảnh, mỗi ảnh một mockup", en: "Place photos onto screens, prints or templates in perspective; run a whole set, one mockup per photo" },
 
-            feature4_title: { vi: "🔍 Tăng Độ Phân Giải AI", en: "🔍 AI Upscaling" },
-            feature4_desc: { vi: "Nâng cấp ảnh lên độ phân giải 2x hoặc 4x bằng mô hình AI xử lý ngay trên máy", en: "Upscale photos to 2x or 4x resolution using an on-device AI model" },
+            feature4_title: { vi: "🧩 Lớp & Mặt Nạ", en: "🧩 Layers & Masks" },
+            feature4_desc: { vi: "Lớp ảnh, chữ, hình, vector, lớp điều chỉnh; nhóm lồng nhau, clipping mask, 16 chế độ hoà trộn và hiệu ứng lớp", en: "Image, text, shape, vector and adjustment layers; nested groups, clipping masks, 16 blend modes and layer styles" },
 
-            feature5_title: { vi: "✨ Sticker & Chữ", en: "✨ Stickers & Text" },
-            feature5_desc: { vi: "Thêm sticker, chữ với nhiều font và hiệu ứng để làm nổi bật bức ảnh của bạn", en: "Add stickers and text in various fonts and effects to make your photo stand out" },
+            feature5_title: { vi: "✂️ Vùng Chọn", en: "✂️ Selections" },
+            feature5_desc: { vi: "Chọn khung, lasso, đũa thần, chọn nhanh và chọn chủ thể ngay trên máy; tinh chỉnh cạnh và lấp từ vùng xung quanh", en: "Marquees, lasso, magic wand, quick selection and on-device Select Subject; refine edge and Surround Fill" },
 
-            feature6_title: { vi: "✍️ Vẽ Tự Do", en: "✍️ Freehand Drawing" },
-            feature6_desc: { vi: "Vẽ trực tiếp lên ảnh với công cụ bút vẽ linh hoạt, kết hợp cùng các layer khác", en: "Draw directly on your photo with a flexible brush tool, combined with your other layers" },
+            feature6_title: { vi: "🩹 Retouch & Vẽ", en: "🩹 Retouch & Paint" },
+            feature6_desc: { vi: "Hàn điểm, con dấu sao chép, hoá lỏng, làm sáng/tối, cọ vẽ, gradient; hỗ trợ lực nhấn Apple Pencil trên iPad", en: "Spot healing, clone stamp, liquify, dodge/burn, brushes and gradients; Apple Pencil pressure on iPad" },
 
-            feature7_title: { vi: "💎 Fotify Premium", en: "💎 Fotify Premium" },
-            feature7_desc: { vi: "Nâng cấp Premium (gói tháng/năm) để tắt toàn bộ quảng cáo, mọi tính năng chỉnh sửa vẫn dùng miễn phí", en: "Upgrade to Premium (monthly/yearly) to remove all ads — every editing feature remains free to use" },
+            feature7_title: { vi: "🎨 Bộ Lọc Trực Tiếp", en: "🎨 Live Filters" },
+            feature7_desc: { vi: "77 điều chỉnh và bộ lọc như Levels, Curves, Gradient Map, LUT 3D — luôn sửa, ẩn hoặc xoá lại được", en: "77 adjustments and filters such as Levels, Curves, Gradient Map and 3D LUT — always editable, hideable or removable" },
 
-            feature8_title: { vi: "📤 Lưu Ảnh Chất Lượng Cao", en: "📤 High-Quality Photo Export" },
-            feature8_desc: { vi: "Lưu ảnh đã chỉnh sửa trực tiếp vào Thư viện ảnh của máy", en: "Save your edited photo directly to your device's Photos library" },
+            feature8_title: { vi: "⚡ Chỉnh Hàng Loạt & Mẫu", en: "⚡ Batch Edit & Templates" },
+            feature8_desc: { vi: "Lưu một phong cách thành công thức để áp cho cả bộ ảnh; mẫu nhiều lớp cho cưới, chân dung và sản phẩm", en: "Save a look as a recipe and apply it to a whole shoot; layered templates for weddings, portraits and products" },
+
+            feature9_title: { vi: "💎 Fotolayra Pro", en: "💎 Fotolayra Pro" },
+            feature9_desc: { vi: "Gói tháng/năm tuỳ chọn: tách nền không giới hạn, xuất PSD/ORA giữ lớp và bỏ hình mờ khi xuất. Các công cụ chỉnh sửa còn lại đều miễn phí", en: "Optional monthly/yearly plan: unlimited Cutout, layered PSD/ORA export and no export watermark. All other editing tools are free" },
 
             contact_h2: { vi: "Liên Hệ & Hỗ Trợ", en: "Contact & Support" },
             contact_email: { vi: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>', en: '<strong>📧 Email:</strong> <a href="mailto:imsuunc@gmail.com">imsuunc@gmail.com</a>' },
@@ -335,7 +344,7 @@
             doc_privacy: { vi: "🔒 Chính Sách Quyền Riêng Tư", en: "🔒 Privacy Policy" },
             doc_terms: { vi: "📋 Điều Khoản Sử Dụng", en: "📋 Terms of Use" },
 
-            footer_updated: { vi: "Cập nhật lần cuối: 01/09/2026", en: "Last updated: Sep 1, 2026" }
+            footer_updated: { vi: "Cập nhật lần cuối: 31/10/2026", en: "Last updated: Oct 31, 2026" }
         };
 
         function setLang(lang) {

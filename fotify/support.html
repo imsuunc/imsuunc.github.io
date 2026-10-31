@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">Hỗ Trợ - Fotify</title>
+    <title data-i18n="page_title">Hỗ Trợ - Fotolayra</title>
     <style>
         * {
             margin: 0;
@@ -182,11 +182,11 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Fotify</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Quay lại trang Fotolayra</a>
 
         <header>
             <h1 data-i18n="page_h1">📞 Hỗ Trợ</h1>
-            <p data-i18n="page_subtitle">Fotify - Chỉnh Sửa Ảnh Bằng AI</p>
+            <p data-i18n="page_subtitle">Fotolayra - Sửa Ảnh Theo Lớp</p>
             <div class="lang-toggle">
                 <button type="button" id="btn-vi" onclick="setLang('vi')">VI</button>
                 <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
@@ -208,59 +208,64 @@
             <h2 data-i18n="faq_h2">Câu Hỏi Thường Gặp (FAQ)</h2>
 
             <div class="faq-item">
-                <h3 data-i18n="faq1_q">1. Làm sao để bắt đầu chỉnh sửa ảnh?</h3>
+                <h3 data-i18n="faq1_q">1. Làm sao để bắt đầu?</h3>
                 <ul>
-                    <li data-i18n="faq1_a1">Chọn ảnh từ Thư viện ảnh của bạn để bắt đầu dự án chỉnh sửa mới</li>
-                    <li data-i18n="faq1_a2">Thêm layer vẽ, sticker, chữ hoặc ảnh, áp dụng bộ lọc và tinh chỉnh cường độ</li>
-                    <li data-i18n="faq1_a3">Dùng công cụ AI Xoá nền hoặc Tăng độ phân giải nếu cần, rồi lưu ảnh vào Thư viện ảnh</li>
+                    <li data-i18n="faq1_a1">Ở màn hình chính, mở một ảnh, file PSD/ORA, chọn dự án mẫu hoặc tạo tài liệu mới</li>
+                    <li data-i18n="faq1_a2">Thêm lớp, mặt nạ, vùng chọn, chữ hay bộ lọc; mọi thay đổi được tự động lưu</li>
+                    <li data-i18n="faq1_a3">Xong việc, xuất ra JPEG, PNG, HEIC, PDF… hoặc PSD/ORA giữ nguyên lớp</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3 data-i18n="faq2_q">2. Layer trong Fotify hoạt động như thế nào?</h3>
+                <h3 data-i18n="faq2_q">2. Tách lớp ảnh hoạt động như thế nào?</h3>
                 <ul>
-                    <li data-i18n="faq2_a1">Mỗi hình vẽ, sticker, dòng chữ hoặc ảnh chèn vào đều là một layer riêng biệt</li>
-                    <li data-i18n="faq2_a2">Bạn có thể di chuyển, xoay, đổi kích thước, sắp xếp thứ tự hoặc xoá từng layer độc lập</li>
+                    <li data-i18n="faq2_a1">Một chạm tách mỗi người, thú cưng hay đồ vật thành lớp riêng, chữ trong ảnh thành lớp chữ gõ lại được, và dựng lại phần nền phía sau</li>
+                    <li data-i18n="faq2_a2">Mọi xử lý chạy ngay trên máy, không cần Internet và ảnh không được gửi đi đâu</li>
+                    <li data-i18n="faq2_a3">Kết quả phụ thuộc vào ảnh gốc; bạn có thể sửa lại mặt nạ của từng lớp nếu cạnh chưa đẹp</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3 data-i18n="faq3_q">3. Tính năng Xoá nền và Tăng độ phân giải AI hoạt động ra sao?</h3>
+                <h3 data-i18n="faq3_q">3. Làm sao để mở và lưu file PSD?</h3>
                 <ul>
-                    <li data-i18n="faq3_a1">Cả hai tính năng chạy bằng mô hình AI ngay trên máy của bạn, không cần Internet trong hầu hết trường hợp</li>
-                    <li data-i18n="faq3_a2">Với ảnh có độ phân giải rất lớn vượt khả năng xử lý trên máy, ứng dụng có thể cần gửi ảnh đó tới máy chủ để xử lý — xem chi tiết tại Chính Sách Quyền Riêng Tư</li>
+                    <li data-i18n="faq3_a1">Mở file PSD hoặc ORA từ Tệp, AirDrop hay bảng chia sẻ; nhóm, mặt nạ và tên lớp được giữ nguyên</li>
+                    <li data-i18n="faq3_a2">Tài liệu mở từ PSD/ORA được lưu lại đúng định dạng đó; xuất PSD/ORA giữ lớp cần Fotolayra Pro</li>
+                    <li data-i18n="faq3_a3">Một số thành phần nâng cao từ phần mềm khác có thể hiển thị khác đi — hãy giữ bản gốc của file quan trọng</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3 data-i18n="faq4_q">4. Fotify có cần kết nối mạng không?</h3>
+                <h3 data-i18n="faq4_q">4. Làm mockup thế nào?</h3>
                 <ul>
-                    <li data-i18n="faq4_a1">Không bắt buộc. Chỉnh sửa layer, bộ lọc và các công cụ AI đều xử lý ngay trên máy</li>
-                    <li data-i18n="faq4_a2">Dự án chỉnh sửa chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud</li>
+                    <li data-i18n="faq4_a1">Chọn lớp giữ chỗ (màn hình, tranh in, ảnh trong mẫu) rồi dùng Thay nội dung — ảnh của bạn được kéo khớp bốn góc, giữ nguyên mặt nạ, hiệu ứng và bộ lọc</li>
+                    <li data-i18n="faq4_a2">Dùng "Mỗi ảnh một mockup" để đưa cả bộ ảnh vào cùng một mockup và lưu vào Ảnh</li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3 data-i18n="faq5_q">5. Fotify Premium khác gì bản miễn phí?</h3>
+                <h3 data-i18n="faq5_q">5. Fotolayra Pro khác gì bản miễn phí?</h3>
                 <ul>
-                    <li data-i18n="faq5_a1">Fotify Premium (gói tháng hoặc năm) tắt toàn bộ quảng cáo hiển thị trong ứng dụng</li>
-                    <li data-i18n="faq5_a2">Tất cả tính năng chỉnh sửa, layer, bộ lọc và công cụ AI đều dùng được ở cả hai phiên bản</li>
+                    <li data-i18n="faq5_a1">Bản miễn phí không có quảng cáo: lớp, mặt nạ, vùng chọn, retouch, bộ lọc và xuất ảnh thường đều dùng được</li>
+                    <li data-i18n="faq5_a2">Fotolayra Pro (gói tháng hoặc năm) thêm tách nền không giới hạn, xuất PSD/ORA giữ lớp và bỏ hình mờ khi xuất</li>
+                    <li data-i18n="faq5_a3">Đã mua trên máy khác? Gói Pro tự động khôi phục khi bạn đăng nhập cùng Apple ID</li>
+                    <li data-i18n="faq5_a4">Quản lý hoặc huỷ gói tại Cài đặt &gt; [tên bạn] &gt; Đăng ký trên iPhone/iPad</li>
                 </ul>
             </div>
 
             <div class="faq-item">
                 <h3 data-i18n="faq6_q">6. Ứng dụng có thu thập thông tin cá nhân không?</h3>
                 <ul>
-                    <li data-i18n="faq6_a1">Không, Fotify không yêu cầu tài khoản và không thu thập thông tin cá nhân của bạn</li>
-                    <li data-i18n-html="faq6_a2">Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a></li>
+                    <li data-i18n="faq6_a1">Không cần tài khoản, không quảng cáo, không theo dõi. Ảnh và tài liệu chỉ lưu trên máy bạn</li>
+                    <li data-i18n="faq6_a2">Ứng dụng chỉ dùng số liệu sử dụng ẩn danh và thông báo (nếu bạn cho phép)</li>
+                    <li data-i18n-html="faq6_a3">Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a></li>
                 </ul>
             </div>
 
             <div class="faq-item">
-                <h3 data-i18n="faq7_q">7. Làm sao để xóa dự án hoặc dữ liệu?</h3>
+                <h3 data-i18n="faq7_q">7. Làm sao để xoá tài liệu hoặc sao lưu?</h3>
                 <ul>
-                    <li data-i18n="faq7_a1">Bạn có thể xóa từng dự án ngay trong màn hình chính của ứng dụng</li>
-                    <li data-i18n="faq7_a2">Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng</li>
+                    <li data-i18n="faq7_a1">Xoá từng tài liệu ngay trong màn hình chính, hoặc xoá toàn bộ bằng cách gỡ cài đặt ứng dụng</li>
+                    <li data-i18n="faq7_a2">Tài liệu không được đồng bộ lên máy chủ — hãy xuất PSD/ORA để giữ bản sao những tài liệu quan trọng</li>
                 </ul>
             </div>
         </section>
@@ -270,8 +275,8 @@
             <p data-i18n="bugreport_p">Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:</p>
             <ul>
                 <li data-i18n="bugreport_li1">Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)</li>
-                <li data-i18n="bugreport_li2">Thiết bị và phiên bản hệ điều hành</li>
-                <li data-i18n="bugreport_li3">Ảnh chụp màn hình (nếu có)</li>
+                <li data-i18n="bugreport_li2">Thiết bị, phiên bản hệ điều hành và phiên bản ứng dụng</li>
+                <li data-i18n="bugreport_li3">Ảnh chụp màn hình, hoặc file PSD/ORA gây lỗi (nếu bạn đồng ý chia sẻ)</li>
             </ul>
         </section>
 
@@ -279,8 +284,8 @@
             <h2 data-i18n="feedback_h2">Góp Ý & Đề Xuất Tính Năng</h2>
             <p data-i18n="feedback_p">Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:</p>
             <ul>
-                <li data-i18n="feedback_li1">Bộ lọc, sticker hoặc công cụ chỉnh sửa bạn muốn thêm vào</li>
-                <li data-i18n="feedback_li2">Cải tiến giao diện</li>
+                <li data-i18n="feedback_li1">Công cụ, bộ lọc, mẫu hoặc mockup bạn muốn thêm vào</li>
+                <li data-i18n="feedback_li2">Cải tiến giao diện trên iPhone hoặc iPad</li>
                 <li data-i18n="feedback_li3">Bất kỳ ý tưởng nào khác</li>
             </ul>
         </section>
@@ -288,7 +293,7 @@
         <section>
             <h2 data-i18n="moreinfo_h2">Thông Tin Thêm</h2>
             <div class="links-section">
-                <p data-i18n="moreinfo_docs_label"><strong>📄 Tài liệu quan trọng:</strong></p>
+                <p data-i18n-html="moreinfo_docs_label"><strong>📄 Tài liệu quan trọng:</strong></p>
                 <ul style="margin-left: 0; list-style: none;">
                     <li style="margin: 10px 0;" data-i18n-html="moreinfo_privacy_link">→ <a href="privacy.html">Chính Sách Quyền Riêng Tư</a></li>
                     <li style="margin: 10px 0;" data-i18n-html="moreinfo_terms_link">→ <a href="terms.html">Điều Khoản Sử Dụng</a></li>
@@ -300,16 +305,16 @@
 
         <footer>
             <p>&copy; 2026 IMSUUNC DEVELOPER. All rights reserved.</p>
-            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 01/09/2026</em></p>
+            <p style="margin-top: 10px;"><em data-i18n="footer_updated">Cập nhật lần cuối: 31/10/2026</em></p>
         </footer>
     </div>
 
     <script>
         var translations = {
-            page_title: { vi: "Hỗ Trợ - Fotify", en: "Support - Fotify" },
-            back_link: { vi: "← Quay lại trang Fotify", en: "← Back to Fotify" },
+            page_title: { vi: "Hỗ Trợ - Fotolayra", en: "Support - Fotolayra" },
+            back_link: { vi: "← Quay lại trang Fotolayra", en: "← Back to Fotolayra" },
             page_h1: { vi: "📞 Hỗ Trợ", en: "📞 Support" },
-            page_subtitle: { vi: "Fotify - Chỉnh Sửa Ảnh Bằng AI", en: "Fotify - AI Photo Editor" },
+            page_subtitle: { vi: "Fotolayra - Sửa Ảnh Theo Lớp", en: "Fotolayra - Layer Photo Editor" },
 
             contact_h2: { vi: "Liên Hệ Hỗ Trợ", en: "Contact Support" },
             contact_p: { vi: "Chúng tôi luôn sẵn sàng hỗ trợ bạn! Nếu bạn có câu hỏi, gặp vấn đề hoặc cần trợ giúp, vui lòng liên hệ với chúng tôi qua các kênh sau:", en: "We're always here to help! If you have questions, run into issues, or need assistance, please reach out to us through the following channels:" },
@@ -318,45 +323,50 @@
 
             faq_h2: { vi: "Câu Hỏi Thường Gặp (FAQ)", en: "Frequently Asked Questions (FAQ)" },
 
-            faq1_q: { vi: "1. Làm sao để bắt đầu chỉnh sửa ảnh?", en: "1. How do I start editing a photo?" },
-            faq1_a1: { vi: "Chọn ảnh từ Thư viện ảnh của bạn để bắt đầu dự án chỉnh sửa mới", en: "Select a photo from your Photos library to start a new editing project" },
-            faq1_a2: { vi: "Thêm layer vẽ, sticker, chữ hoặc ảnh, áp dụng bộ lọc và tinh chỉnh cường độ", en: "Add drawing, sticker, text, or image layers, apply filters, and fine-tune intensity" },
-            faq1_a3: { vi: "Dùng công cụ AI Xoá nền hoặc Tăng độ phân giải nếu cần, rồi lưu ảnh vào Thư viện ảnh", en: "Use the AI Remove Background or Upscale tools if needed, then save the photo to your Photos library" },
+            faq1_q: { vi: "1. Làm sao để bắt đầu?", en: "1. How do I get started?" },
+            faq1_a1: { vi: "Ở màn hình chính, mở một ảnh, file PSD/ORA, chọn dự án mẫu hoặc tạo tài liệu mới", en: "From Home, open a photo or a PSD/ORA file, pick a sample project, or create a new document" },
+            faq1_a2: { vi: "Thêm lớp, mặt nạ, vùng chọn, chữ hay bộ lọc; mọi thay đổi được tự động lưu", en: "Add layers, masks, selections, text or filters; every change is saved automatically" },
+            faq1_a3: { vi: "Xong việc, xuất ra JPEG, PNG, HEIC, PDF… hoặc PSD/ORA giữ nguyên lớp", en: "When you're done, export to JPEG, PNG, HEIC, PDF… or a layered PSD/ORA" },
 
-            faq2_q: { vi: "2. Layer trong Fotify hoạt động như thế nào?", en: "2. How do layers work in Fotify?" },
-            faq2_a1: { vi: "Mỗi hình vẽ, sticker, dòng chữ hoặc ảnh chèn vào đều là một layer riêng biệt", en: "Every drawing, sticker, text line, or inserted image is its own separate layer" },
-            faq2_a2: { vi: "Bạn có thể di chuyển, xoay, đổi kích thước, sắp xếp thứ tự hoặc xoá từng layer độc lập", en: "You can move, rotate, resize, reorder, or delete each layer independently" },
+            faq2_q: { vi: "2. Tách lớp ảnh hoạt động như thế nào?", en: "2. How does Photo to Layers work?" },
+            faq2_a1: { vi: "Một chạm tách mỗi người, thú cưng hay đồ vật thành lớp riêng, chữ trong ảnh thành lớp chữ gõ lại được, và dựng lại phần nền phía sau", en: "One tap gives each person, pet or object its own layer, turns text in the photo into live text you can retype, and rebuilds the background behind them" },
+            faq2_a2: { vi: "Mọi xử lý chạy ngay trên máy, không cần Internet và ảnh không được gửi đi đâu", en: "Everything runs on your device — no internet needed, and your photo is never sent anywhere" },
+            faq2_a3: { vi: "Kết quả phụ thuộc vào ảnh gốc; bạn có thể sửa lại mặt nạ của từng lớp nếu cạnh chưa đẹp", en: "Results depend on the original photo; you can touch up each layer's mask if an edge isn't clean" },
 
-            faq3_q: { vi: "3. Tính năng Xoá nền và Tăng độ phân giải AI hoạt động ra sao?", en: "3. How do the AI Remove Background and Upscale features work?" },
-            faq3_a1: { vi: "Cả hai tính năng chạy bằng mô hình AI ngay trên máy của bạn, không cần Internet trong hầu hết trường hợp", en: "Both features run using AI models directly on your device, with no internet needed in most cases" },
-            faq3_a2: { vi: "Với ảnh có độ phân giải rất lớn vượt khả năng xử lý trên máy, ứng dụng có thể cần gửi ảnh đó tới máy chủ để xử lý — xem chi tiết tại Chính Sách Quyền Riêng Tư", en: "For photos with very high resolution beyond what the device can process, the app may need to send that photo to a server for processing — see our Privacy Policy for details" },
+            faq3_q: { vi: "3. Làm sao để mở và lưu file PSD?", en: "3. How do I open and save PSD files?" },
+            faq3_a1: { vi: "Mở file PSD hoặc ORA từ Tệp, AirDrop hay bảng chia sẻ; nhóm, mặt nạ và tên lớp được giữ nguyên", en: "Open a PSD or ORA from Files, AirDrop or the share sheet; groups, masks and layer names are kept" },
+            faq3_a2: { vi: "Tài liệu mở từ PSD/ORA được lưu lại đúng định dạng đó; xuất PSD/ORA giữ lớp cần Fotolayra Pro", en: "Documents opened from PSD/ORA save back to that format; layered PSD/ORA export needs Fotolayra Pro" },
+            faq3_a3: { vi: "Một số thành phần nâng cao từ phần mềm khác có thể hiển thị khác đi — hãy giữ bản gốc của file quan trọng", en: "Some advanced elements from other software may look different — keep the originals of important files" },
 
-            faq4_q: { vi: "4. Fotify có cần kết nối mạng không?", en: "4. Does Fotify require an internet connection?" },
-            faq4_a1: { vi: "Không bắt buộc. Chỉnh sửa layer, bộ lọc và các công cụ AI đều xử lý ngay trên máy", en: "Not required. Layer editing, filters, and AI tools are all processed on-device" },
-            faq4_a2: { vi: "Dự án chỉnh sửa chỉ lưu trên thiết bị của bạn, không đồng bộ lên Cloud", en: "Editing projects are stored only on your device, with no cloud syncing" },
+            faq4_q: { vi: "4. Làm mockup thế nào?", en: "4. How do I make a mockup?" },
+            faq4_a1: { vi: "Chọn lớp giữ chỗ (màn hình, tranh in, ảnh trong mẫu) rồi dùng Thay nội dung — ảnh của bạn được kéo khớp bốn góc, giữ nguyên mặt nạ, hiệu ứng và bộ lọc", en: "Select a placeholder layer (a screen, a print, a template photo) and use Replace Contents — your photo is warped onto its corners, keeping its mask, style and filters" },
+            faq4_a2: { vi: "Dùng \"Mỗi ảnh một mockup\" để đưa cả bộ ảnh vào cùng một mockup và lưu vào Ảnh", en: "Use \"One mockup per photo\" to run a whole set through the same mockup and save them to Photos" },
 
-            faq5_q: { vi: "5. Fotify Premium khác gì bản miễn phí?", en: "5. How is Fotify Premium different from the free version?" },
-            faq5_a1: { vi: "Fotify Premium (gói tháng hoặc năm) tắt toàn bộ quảng cáo hiển thị trong ứng dụng", en: "Fotify Premium (monthly or yearly) turns off all ads shown in the app" },
-            faq5_a2: { vi: "Tất cả tính năng chỉnh sửa, layer, bộ lọc và công cụ AI đều dùng được ở cả hai phiên bản", en: "All editing features, layers, filters, and AI tools are available in both versions" },
+            faq5_q: { vi: "5. Fotolayra Pro khác gì bản miễn phí?", en: "5. How is Fotolayra Pro different from the free version?" },
+            faq5_a1: { vi: "Bản miễn phí không có quảng cáo: lớp, mặt nạ, vùng chọn, retouch, bộ lọc và xuất ảnh thường đều dùng được", en: "The free version has no ads: layers, masks, selections, retouching, filters and flat exports are all included" },
+            faq5_a2: { vi: "Fotolayra Pro (gói tháng hoặc năm) thêm tách nền không giới hạn, xuất PSD/ORA giữ lớp và bỏ hình mờ khi xuất", en: "Fotolayra Pro (monthly or yearly) adds unlimited Cutout and layered PSD/ORA export, and removes the export watermark" },
+            faq5_a3: { vi: "Đã mua trên máy khác? Gói Pro tự động khôi phục khi bạn đăng nhập cùng Apple ID", en: "Bought on another device? Pro restores automatically when you sign in with the same Apple ID" },
+            faq5_a4: { vi: "Quản lý hoặc huỷ gói tại Cài đặt > [tên bạn] > Đăng ký trên iPhone/iPad", en: "Manage or cancel in Settings > [your name] > Subscriptions on your iPhone/iPad" },
 
             faq6_q: { vi: "6. Ứng dụng có thu thập thông tin cá nhân không?", en: "6. Does the app collect personal information?" },
-            faq6_a1: { vi: "Không, Fotify không yêu cầu tài khoản và không thu thập thông tin cá nhân của bạn", en: "No, Fotify does not require an account and does not collect your personal information" },
-            faq6_a2: { vi: 'Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a>', en: 'See details in our <a href="privacy.html" style="color: #667eea;">Privacy Policy</a>' },
+            faq6_a1: { vi: "Không cần tài khoản, không quảng cáo, không theo dõi. Ảnh và tài liệu chỉ lưu trên máy bạn", en: "No account, no ads, no tracking. Your photos and documents stay on your device" },
+            faq6_a2: { vi: "Ứng dụng chỉ dùng số liệu sử dụng ẩn danh và thông báo (nếu bạn cho phép)", en: "The app only uses anonymous usage metrics and notifications (if you allow them)" },
+            faq6_a3: { vi: 'Xem chi tiết tại <a href="privacy.html" style="color: #667eea;">Chính Sách Quyền Riêng Tư</a>', en: 'See details in our <a href="privacy.html" style="color: #667eea;">Privacy Policy</a>' },
 
-            faq7_q: { vi: "7. Làm sao để xóa dự án hoặc dữ liệu?", en: "7. How do I delete a project or my data?" },
-            faq7_a1: { vi: "Bạn có thể xóa từng dự án ngay trong màn hình chính của ứng dụng", en: "You can delete individual projects right from the app's home screen" },
-            faq7_a2: { vi: "Hoặc xóa toàn bộ dữ liệu bằng cách gỡ cài đặt ứng dụng", en: "Or remove all data by uninstalling the app" },
+            faq7_q: { vi: "7. Làm sao để xoá tài liệu hoặc sao lưu?", en: "7. How do I delete or back up documents?" },
+            faq7_a1: { vi: "Xoá từng tài liệu ngay trong màn hình chính, hoặc xoá toàn bộ bằng cách gỡ cài đặt ứng dụng", en: "Delete individual documents from Home, or remove everything by uninstalling the app" },
+            faq7_a2: { vi: "Tài liệu không được đồng bộ lên máy chủ — hãy xuất PSD/ORA để giữ bản sao những tài liệu quan trọng", en: "Documents aren't synced to any server — export a PSD/ORA to keep a copy of important ones" },
 
             bugreport_h2: { vi: "Báo Lỗi", en: "Report a Bug" },
             bugreport_p: { vi: "Nếu bạn gặp lỗi trong quá trình sử dụng, vui lòng gửi email cho chúng tôi kèm theo:", en: "If you encounter a bug while using the app, please email us with the following:" },
             bugreport_li1: { vi: "Mô tả chi tiết lỗi (đang làm gì thì xảy ra lỗi)", en: "A detailed description of the issue (what you were doing when it occurred)" },
-            bugreport_li2: { vi: "Thiết bị và phiên bản hệ điều hành", en: "Your device and operating system version" },
-            bugreport_li3: { vi: "Ảnh chụp màn hình (nếu có)", en: "Screenshots (if available)" },
+            bugreport_li2: { vi: "Thiết bị, phiên bản hệ điều hành và phiên bản ứng dụng", en: "Your device, OS version and app version" },
+            bugreport_li3: { vi: "Ảnh chụp màn hình, hoặc file PSD/ORA gây lỗi (nếu bạn đồng ý chia sẻ)", en: "Screenshots, or the PSD/ORA file that causes it (if you're happy to share it)" },
 
             feedback_h2: { vi: "Góp Ý & Đề Xuất Tính Năng", en: "Feedback & Feature Requests" },
             feedback_p: { vi: "Chúng tôi rất mong nhận được ý kiến đóng góp từ bạn! Hãy gửi email cho chúng tôi với:", en: "We'd love to hear your feedback! Please email us with:" },
-            feedback_li1: { vi: "Bộ lọc, sticker hoặc công cụ chỉnh sửa bạn muốn thêm vào", en: "Filters, stickers, or editing tools you'd like to see added" },
-            feedback_li2: { vi: "Cải tiến giao diện", en: "Interface improvements" },
+            feedback_li1: { vi: "Công cụ, bộ lọc, mẫu hoặc mockup bạn muốn thêm vào", en: "Tools, filters, templates or mockups you'd like to see added" },
+            feedback_li2: { vi: "Cải tiến giao diện trên iPhone hoặc iPad", en: "Interface improvements on iPhone or iPad" },
             feedback_li3: { vi: "Bất kỳ ý tưởng nào khác", en: "Any other ideas" },
 
             moreinfo_h2: { vi: "Thông Tin Thêm", en: "More Information" },
@@ -366,7 +376,7 @@
             moreinfo_website_label: { vi: "🌐 Website:", en: "🌐 Website:" },
             moreinfo_email_label: { vi: "📧 Email:", en: "📧 Email:" },
 
-            footer_updated: { vi: "Cập nhật lần cuối: 01/09/2026", en: "Last updated: Sep 1, 2026" }
+            footer_updated: { vi: "Cập nhật lần cuối: 31/10/2026", en: "Last updated: Oct 31, 2026" }
         };
 
         function setLang(lang) {
